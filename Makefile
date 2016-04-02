@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -D_JUDGE_ -ansi -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++0x -D_GLIBCXX_DEBUG
-SOURCES = main.cc
+SOURCES = *.cc
 OBJECTS = $(SOURCES: .cc = .o)
 EXECUTABLE = program.exe
 
