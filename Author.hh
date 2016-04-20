@@ -36,7 +36,6 @@ public:
     // Destructor
     ~Author();
 
-
 };
 
 #endif //PRO2_PRAC_AUTHOR_HH

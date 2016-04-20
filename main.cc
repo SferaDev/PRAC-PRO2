@@ -9,6 +9,7 @@
 
 #include "Library.hh"
 #include <iostream>
+#include <sstream>
 #include <string>
 using namespace std;
 
@@ -42,5 +43,8 @@ const string QUIT = "sortir";
 
 /** @brief Main Procedure of main.cc */
 int main() {
-    //TODO
+    string inputLine;
+    while (getline(cin, inputLine)) {
+        // TODO
+    }
 }
