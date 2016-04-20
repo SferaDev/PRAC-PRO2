@@ -10,12 +10,29 @@ Book::Book() {
     // TODO
 }
 
+Book::Book(string title, string author) {
+    bookTitle = title;
+    authorName = author;
+}
+
 Book::~Book() {
     // no-op
 }
 
-string Book::getBookName() {
-    return bookName;
+void Book::readBookContent() {
+    string input;
+    int pos = 0;
+    getline(cin, input);
+    while (input != "") {
+        int pos = input.find_first_of(".?!");
+        cout << input.substr(0, pos) << endl;
+        bookContent.push_back(input.substr(0, pos));
+        input = input.substr(pos);
+    }
+}
+
+string Book::getBookTitle() const {
+    return bookTitle;
 }
 
 string Book::getAuthorName() {
@@ -31,10 +48,10 @@ int Book::getBookWords() {
 }
 
 void Book::replaceWords(string oldWord, string newWord) {
-    // Edit the contents of the book
-    for (int i = 0; i < bookContent.size(); ++i) {
+    // TODO: Edit the contents of the book
+    /*for (int i = 0; i < bookContent.size(); ++i) {
         bookContent[i].replace(oldWord, newWord);
-    }
+    }*/
     // TODO: Edit the dictionary
 }
 

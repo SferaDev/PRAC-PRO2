@@ -14,8 +14,11 @@ Library::~Library() {
     // no-op
 }
 
-void Library::insertBook(const Book& book) {
-    bookCollection.insert(pair<string, Book>(book.getBookName(), book));
+void Library::readBook(string title, string author) {
+    Book book(title, author);
+    book.readBookContent();
+    bookCollection[title] = book;
+    cout << title << " " << author << endl;
 }
 
 void Library::selectBook(string query) {
@@ -31,7 +34,7 @@ void Library::deleteQuote(string id) {
 }
 
 Book Library::getBook() {
-    return *currentBook;
+    return currentBook->second;
 }
 
 void Library::printAuthors() {

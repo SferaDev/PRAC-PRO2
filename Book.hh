@@ -20,7 +20,7 @@ private:
     string authorName;
 
     // Name of the book (ID of current element)
-    string bookName;
+    string bookTitle;
 
     // Content of the book
     // Position is the line ID and value is the content
@@ -42,12 +42,16 @@ private:
 public:
     // Constructor
     Book();
+    Book(string title, string author);
 
     // Destructor
     ~Book();
 
+    // Read bookContent
+    void readBookContent();
+
     // Returns bookName
-    string getBookName();
+    string getBookTitle() const;
 
     // Returns authorName
     string getAuthorName();

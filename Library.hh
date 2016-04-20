@@ -38,7 +38,7 @@ public:
     ~Library();
 
     // Inserts a new book to the bookCollection
-    void insertBook(const Book& book);
+    void readBook(string title, string author);
 
     // Selects a book from the collection at currentBook iterator
     // foreach Author find on its dictionary by size
