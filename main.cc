@@ -41,10 +41,15 @@ const string QUERY_QUOTE_INFO = "info cita";
 
 const string QUIT = "sortir";
 
+void executeAction(Library& library, string input) {
+    // TODO
+}
+
 /** @brief Main Procedure of main.cc */
 int main() {
+    Library mainLibrary;
     string inputLine;
     while (getline(cin, inputLine)) {
-        // TODO
+        executeAction(mainLibrary, inputLine);
     }
 }
