@@ -7,11 +7,9 @@ EXECUTABLE = program.exe
 all: $(EXECUTABLE)
 
 # Configuration for main program compilation
-# We provide a clean build environment (hence we delete the auto-gen linker *.o files)
 $(EXECUTABLE):
 	$(CC) $(FLAGS) -c $(SOURCES)
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
-	rm *.o
 
 # Configuration to build final tar
 jutge: documentation
@@ -25,4 +23,3 @@ documentation:
 clean:
 	rm *.o
 	rm *.exe
-	rm *.tar
