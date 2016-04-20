@@ -13,3 +13,7 @@ Quote::Quote() {
 Quote::~Quote() {
     // no-op
 }
+
+void Quote::printQuoteInformation() {
+    // TODO
+}

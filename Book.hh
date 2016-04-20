@@ -46,6 +46,9 @@ public:
     // Destructor
     ~Book();
 
+    // Returns bookName
+    string getBookName();
+
     // Returns authorName
     string getAuthorName();
 

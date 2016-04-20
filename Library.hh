@@ -44,10 +44,10 @@ public:
     // foreach Author find on its dictionary by size
     void selectBook(string query);
 
-    // Deletes currentBook iterator from the collection
+    // Deletes currentBook iterator from the bookCollection
     void deleteBook();
 
-    // Deletes currentBook iterator from the collection
+    // Deletes a quote from the quoteCollection
     void deleteQuote(string id);
 
     // Get implicit currentBook

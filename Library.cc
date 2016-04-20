@@ -15,7 +15,7 @@ Library::~Library() {
 }
 
 void Library::insertBook(const Book& book) {
-    // TODO
+    bookCollection.insert(pair<string, Book>(book.getBookName(), book));
 }
 
 void Library::selectBook(string query) {
@@ -23,15 +23,15 @@ void Library::selectBook(string query) {
 }
 
 void Library::deleteBook() {
-    // TODO
+    bookCollection.erase(currentBook);
 }
 
 void Library::deleteQuote(string id) {
-    // TODO
+    quoteCollection.erase(id);
 }
 
 Book Library::getBook() {
-    // TODO
+    return *currentBook;
 }
 
 void Library::printAuthors() {
