@@ -38,6 +38,9 @@ public:
     // Deletes currentBook iterator from the collection
     void deleteBook();
 
+    // Deletes currentBook iterator from the collection
+    void deleteQuote(string id);
+
     // Get implicit currentBook
     Book getBook();
 
@@ -48,8 +51,14 @@ public:
     // foreach Author bring its books (already ordered)
     void printBooks();
 
+    // Print Quotes info stored on quoteCollection
+    void printQuotes();
+
     // Print Books by Author
     void printBooksByAuthor(string author);
+
+    // Print Quotes by Author
+    void printQuotesByAuthor(string author);
 };
 
 #endif //PRO2_PRAC_LIBRARY_HH

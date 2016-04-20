@@ -14,7 +14,11 @@ private:
 
     // Ordered collection of books
     // The value of the item is the ID of the parent bookCollection
-    set<string> books;
+    set<string> authorBooks;
+
+    // Ordered collection of quotes
+    // The value of the item is the ID of the parent quoteCollection
+    set<string> authorQuotes;
 
 public:
     // Constructor

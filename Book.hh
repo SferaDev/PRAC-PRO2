@@ -24,6 +24,10 @@ private:
     int bookLines;
     int bookWords;
 
+    // Ordered collection of quotes
+    // The value of the item is the ID of the parent quoteCollection
+    set<string> bookQuotes;
+
 public:
     // Constructor
     Book();
