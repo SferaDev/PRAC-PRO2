@@ -1,5 +1,14 @@
+/**
+  @file Author.hh
+  @brief Data model that hosts information about an Author
+*/
+
 #ifndef PRO2_PRAC_AUTHOR_HH
 #define PRO2_PRAC_AUTHOR_HH
+
+#include <set>
+#include <string>
+using namespace std;
 
 class Author {
 
@@ -14,7 +23,11 @@ private:
 
     // Ordered collection of books
     // The value of the item is the ID of the parent bookCollection
-    set<string> books;
+    set<string> authorBooks;
+
+    // Ordered collection of quotes
+    // The value of the item is the ID of the parent quoteCollection
+    set<string> authorQuotes;
 
 public:
     // Constructor
@@ -22,7 +35,6 @@ public:
 
     // Destructor
     ~Author();
-
 
 };
 

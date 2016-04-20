@@ -1,8 +1,19 @@
+/**
+  @file Library.hh
+  @brief Main structure of our Library with several dependant data childs.
+*/
+
 #ifndef PRO2_PRAC_LIBRARY_HH
 #define PRO2_PRAC_LIBRARY_HH
 
 #include "Author.hh"
 #include "Book.hh"
+#include "Quote.hh"
+
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
 
 class Library {
 
@@ -19,8 +30,6 @@ private:
     // Current book iterator
     map<string, Book>::iterator currentBook;
 
-    //TODO: Set of private actions
-
 public:
     // Constructor
     Library();
@@ -35,8 +44,11 @@ public:
     // foreach Author find on its dictionary by size
     void selectBook(string query);
 
-    // Deletes currentBook iterator from the collection
+    // Deletes currentBook iterator from the bookCollection
     void deleteBook();
+
+    // Deletes a quote from the quoteCollection
+    void deleteQuote(string id);
 
     // Get implicit currentBook
     Book getBook();
@@ -48,8 +60,14 @@ public:
     // foreach Author bring its books (already ordered)
     void printBooks();
 
+    // Print Quotes info stored on quoteCollection
+    void printQuotes();
+
     // Print Books by Author
     void printBooksByAuthor(string author);
+
+    // Print Quotes by Author
+    void printQuotesByAuthor(string author);
 };
 
 #endif //PRO2_PRAC_LIBRARY_HH

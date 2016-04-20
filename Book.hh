@@ -1,5 +1,17 @@
+/**
+  @file Book.hh
+  @brief Data model that hosts information about a Book
+*/
+
 #ifndef PRO2_PRAC_BOOK_HH
 #define PRO2_PRAC_BOOK_HH
+
+#include <iostream>
+#include <map>
+#include <set>
+#include <string>
+#include <vector>
+using namespace std;
 
 class Book {
 
@@ -11,21 +23,21 @@ private:
     string bookName;
 
     // Content of the book
+    // Position is the line ID and value is the content
     vector<string> bookContent;
 
     // Content dictionary with frequencies
     // On the main map the key is the length of the word
     // On the inner map it has a word (without marks) and its frequencies
-    map<int, map<string, int>> bookDictionary;
+    map<int, map<string, int> > bookDictionary;
 
     // Size of Book's collection
-    int bookQuotes;
     int bookLines;
     int bookWords;
 
-    // Ordered collection of books
-    // The value of the item is the ID of the parent bookCollection
-    set<string> books;
+    // Ordered collection of quotes
+    // The value of the item is the ID of the parent quoteCollection
+    set<string> bookQuotes;
 
 public:
     // Constructor
@@ -33,6 +45,9 @@ public:
 
     // Destructor
     ~Book();
+
+    // Returns bookName
+    string getBookName();
 
     // Returns authorName
     string getAuthorName();
