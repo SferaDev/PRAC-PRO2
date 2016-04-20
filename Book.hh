@@ -11,6 +11,7 @@ private:
     string bookName;
 
     // Content of the book
+    // Position is the line ID and value is the content
     vector<string> bookContent;
 
     // Content dictionary with frequencies
@@ -22,10 +23,6 @@ private:
     int bookQuotes;
     int bookLines;
     int bookWords;
-
-    // Ordered collection of books
-    // The value of the item is the ID of the parent bookCollection
-    set<string> books;
 
 public:
     // Constructor
