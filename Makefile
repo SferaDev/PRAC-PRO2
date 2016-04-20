@@ -12,8 +12,8 @@ $(EXECUTABLE):
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final tar
-PRO2-PRAC.tar: documentation
-	tar -cvf PRO2-PRAC.tar *.hh *.cc Makefile Doxyfile documentation.tar jp_*.txt
+jutge: documentation
+	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile documentation.tar jp_*.txt
 
 # Configuration to build Documentation tar
 documentation:
