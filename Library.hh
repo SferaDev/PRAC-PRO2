@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <map>
+#include <string>
 using namespace std;
 
 class Library {
@@ -28,8 +29,6 @@ private:
 
     // Current book iterator
     map<string, Book>::iterator currentBook;
-
-    //TODO: Set of private actions
 
 public:
     // Constructor

@@ -7,6 +7,7 @@
 #define PRO2_PRAC_AUTHOR_HH
 
 #include <set>
+#include <string>
 using namespace std;
 
 class Author {

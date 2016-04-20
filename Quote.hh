@@ -6,6 +6,7 @@
 #ifndef PRO2_PRAC_QUOTE_HH
 #define PRO2_PRAC_QUOTE_HH
 
+#include <string>
 #include <vector>
 using namespace std;
 
