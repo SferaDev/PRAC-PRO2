@@ -1,5 +1,13 @@
+/**
+  @file Author.hh
+  @brief Data model that hosts information about an Author
+*/
+
 #ifndef PRO2_PRAC_AUTHOR_HH
 #define PRO2_PRAC_AUTHOR_HH
+
+#include <set>
+using namespace std;
 
 class Author {
 

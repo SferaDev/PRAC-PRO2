@@ -1,8 +1,18 @@
+/**
+  @file Library.hh
+  @brief Main structure of our Library with several dependant data childs.
+*/
+
 #ifndef PRO2_PRAC_LIBRARY_HH
 #define PRO2_PRAC_LIBRARY_HH
 
 #include "Author.hh"
 #include "Book.hh"
+#include "Quote.hh"
+
+#include <iostream>
+#include <map>
+using namespace std;
 
 class Library {
 

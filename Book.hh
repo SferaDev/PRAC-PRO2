@@ -1,5 +1,16 @@
+/**
+  @file Book.hh
+  @brief Data model that hosts information about a Book
+*/
+
 #ifndef PRO2_PRAC_BOOK_HH
 #define PRO2_PRAC_BOOK_HH
+
+#include <iostream>
+#include <map>
+#include <set>
+#include <vector>
+using namespace std;
 
 class Book {
 
@@ -17,10 +28,9 @@ private:
     // Content dictionary with frequencies
     // On the main map the key is the length of the word
     // On the inner map it has a word (without marks) and its frequencies
-    map<int, map<string, int>> bookDictionary;
+    map<int, map<string, int> > bookDictionary;
 
     // Size of Book's collection
-    int bookQuotes;
     int bookLines;
     int bookWords;
 
