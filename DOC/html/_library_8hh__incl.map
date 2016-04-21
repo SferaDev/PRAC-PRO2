@@ -1,0 +1,5 @@
+<map id="Library.hh" name="Library.hh">
+<area shape="rect" id="node2" href="$_author_8hh.html" title="Data model that hosts information about an Author. " alt="" coords="65,80,149,107"/>
+<area shape="rect" id="node5" href="$_book_8hh.html" title="Data model that hosts information about a Book. " alt="" coords="173,80,248,107"/>
+<area shape="rect" id="node9" href="$_quote_8hh.html" title="Data model that hosts information about a Quote. " alt="" coords="374,80,455,107"/>
+</map>

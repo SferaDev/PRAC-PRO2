@@ -1,0 +1,345 @@
+\hypertarget{main_8cc}{\section{main.\+cc File Reference}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+}
+
+
+Main program that handles the I/\+O operations with the end user.  
+
+
+Include dependency graph for main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{read\+Actions} (\hyperlink{class_library}{Library} \&library)
+\item 
+int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Main Procedure of \hyperlink{main_8cc}{main.\+cc}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T} = \char`\"{}afegir text\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E} = \char`\"{}eliminar text\char`\"{}
+\item 
+const string \hyperlink{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T} = \char`\"{}triar text\char`\"{}
+\item 
+const string \hyperlink{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D} = \char`\"{}substitueix\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T} = \char`\"{}afegir cita\char`\"{}
+\item 
+const string \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E} = \char`\"{}eliminar cita\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S} = \char`\"{}tots autors ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L} = \char`\"{}tots textos ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_aed2de80402367f772f44d697495062b2}{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R} = \char`\"{}textos autor\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R} = \char`\"{}autor ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T} = \char`\"{}contingut ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O} = \char`\"{}info ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N} = \char`\"{}frases\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S} = \char`\"{}nombre de frases ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S} = \char`\"{}nombre de paraules ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y} = \char`\"{}taula de frequencies ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S} = \char`\"{}cites ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L} = \char`\"{}totes cites ?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R} = \char`\"{}cites autor\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O} = \char`\"{}info cita\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{Q\+U\+I\+T} = \char`\"{}sortir\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main program that handles the I/\+O operations with the end user. 
+
+
+
+Definition in file \hyperlink{main_8cc_source}{main.\+cc}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{\index{main.\+cc@{main.\+cc}!read\+Actions@{read\+Actions}}
+\index{read\+Actions@{read\+Actions}!main.\+cc@{main.\+cc}}
+\subsubsection[{read\+Actions}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Actions (
+\begin{DoxyParamCaption}
+\item[{{\bf Library} \&}]{library}
+\end{DoxyParamCaption}
+)}}\label{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}
+
+
+Definition at line 44 of file main.\+cc.
+
+
+\begin{DoxyCode}
+44                                    \{
+45     \textcolor{keywordtype}{string} input;
+46     \textcolor{keywordflow}{while} (getline(cin, input)) \{
+47         \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{BOOK\_INSERT}.length()) == \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{BOOK\_INSERT}) \{
+48             \textcolor{keywordtype}{string} title, author;
+49             title = input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+50             getline(cin, input);
+51             author = input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+52             library.\hyperlink{class_library_ab6fb1208e63af938df64fa831cbacb40}{readBook}(title, author);
+53         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{BOOK\_DELETE}.length()) == 
+      \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{BOOK\_DELETE}) \{
+54             library.\hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{deleteBook}();
+55         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{BOOK\_SELECT}.length()) == 
+      \hyperlink{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{BOOK\_SELECT}) \{
+56             library.\hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{selectBook}(input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\{"})
+       + 1));
+57         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{BOOK\_REPLACE\_WORD}.length()) == 
+      \hyperlink{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{BOOK\_REPLACE\_WORD}) \{
+58             \textcolor{keywordtype}{string} oldWord, newWord;
+59             \textcolor{comment}{// TODO: Substring from input}
+60             library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_aaf182e24b86624b6ff54fba2581094a4}{replaceWords}(oldWord, newWord);
+61         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT}.length()) == 
+      \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT}) \{
+62             \textcolor{comment}{// TODO}
+63         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{QUOTE\_DELETE}.length()) == 
+      \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{QUOTE\_DELETE}) \{
+64             \textcolor{keywordtype}{string} reference;
+65             \textcolor{comment}{// TODO: Substring refernce from input}
+66             library.\hyperlink{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}{deleteQuote}(reference);
+67         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{QUERY\_AUTHORS}.length()) == 
+      \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{QUERY\_AUTHORS}) \{
+68             \textcolor{comment}{// TODO}
+69         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{QUERY\_BOOKS\_ALL}.length()) == 
+      \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{QUERY\_BOOKS\_ALL}) \{
+70             \textcolor{comment}{// TODO}
+71         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_aed2de80402367f772f44d697495062b2}{QUERY\_BOOKS\_BY\_AUTHOR}.length()) == 
+      \hyperlink{main_8cc_aed2de80402367f772f44d697495062b2}{QUERY\_BOOKS\_BY\_AUTHOR}) \{
+72             \textcolor{comment}{// TODO}
+73         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{QUERY\_CURRENT\_AUTHOR}.length()) == 
+      \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{QUERY\_CURRENT\_AUTHOR}) \{
+74             \textcolor{comment}{// TODO}
+75         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{QUERY\_CURRENT\_CONTENT}.length()) == 
+      \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{QUERY\_CURRENT\_CONTENT}) \{
+76             \textcolor{comment}{// TODO}
+77         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{QUERY\_CURRENT\_INFO}.length()) == 
+      \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{QUERY\_CURRENT\_INFO}) \{
+78             \textcolor{comment}{// TODO}
+79         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{QUERY\_CURRENT\_EXPRESION}.length()) == 
+      \hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{QUERY\_CURRENT\_EXPRESION}) \{
+80             \textcolor{comment}{// TODO}
+81         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{QUERY\_CURRENT\_LINES}.length()) == 
+      \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{QUERY\_CURRENT\_LINES}) \{
+82             \textcolor{comment}{// TODO}
+83         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{QUERY\_CURRENT\_WORDS}.length()) == 
+      \hyperlink{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{QUERY\_CURRENT\_WORDS}) \{
+84             \textcolor{comment}{// TODO}
+85         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{QUERY\_CURRENT\_FREQUENCY}.length()) == 
+      \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{QUERY\_CURRENT\_FREQUENCY}) \{
+86             \textcolor{comment}{// TODO}
+87         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{QUERY\_CURRENT\_QUOTES}.length()) == 
+      \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{QUERY\_CURRENT\_QUOTES}) \{
+88             \textcolor{comment}{// TODO}
+89         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{QUERY\_QUOTES\_ALL}.length()) == 
+      \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{QUERY\_QUOTES\_ALL}) \{
+90             library.\hyperlink{class_library_a819acb04f4b8aea0547db50918b1c5fa}{printQuotes}();
+91         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{QUERY\_QUOTES\_BY\_AUTHOR}.length()) == 
+      \hyperlink{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{QUERY\_QUOTES\_BY\_AUTHOR}) \{
+92             \textcolor{keywordtype}{string} author;
+93             \textcolor{comment}{// TODO: Substring author from input}
+94             library.\hyperlink{class_library_aa13544bfe57c61164d9953518e88dcb0}{printQuotesByAuthor}(author);
+95         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{QUERY\_QUOTE\_INFO}.length()) == 
+      \hyperlink{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{QUERY\_QUOTE\_INFO}) \{
+96             \textcolor{keywordtype}{string} reference;
+97             \textcolor{comment}{// TODO: Substring reference from input}
+98             library.\hyperlink{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{getQuote}(reference).\hyperlink{class_quote_afdfb9eeaf4f528a5a5b8aee3e9dc47f4}{printQuoteInformation}();
+99         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input.substr(0, \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{QUIT}.length()) == \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{QUIT}) \{
+100             \textcolor{comment}{// TODO}
+101         \}
+102     \}
+103 \}
+\end{DoxyCode}
+\hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Main Procedure of \hyperlink{main_8cc}{main.\+cc}. 
+
+
+
+Definition at line 106 of file main.\+cc.
+
+
+\begin{DoxyCode}
+106            \{
+107     \hyperlink{class_library}{Library} mainLibrary;
+108     \hyperlink{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{readActions}(mainLibrary);
+109 \}\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{\index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T}}
+\index{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T}!main.\+cc@{main.\+cc}}
+\subsubsection[{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T = \char`\"{}afegir text\char`\"{}}}\label{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}
+
+
+Definition at line 17 of file main.\+cc.
+
+\hypertarget{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{\index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E@{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E}}
+\index{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E@{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E}!main.\+cc@{main.\+cc}}
+\subsubsection[{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+T\+E = \char`\"{}eliminar text\char`\"{}}}\label{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}
+
+
+Definition at line 18 of file main.\+cc.
+
+\hypertarget{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{\index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T@{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T}}
+\index{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T@{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T}!main.\+cc@{main.\+cc}}
+\subsubsection[{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+C\+T = \char`\"{}triar text\char`\"{}}}\label{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}
+
+
+Definition at line 19 of file main.\+cc.
+
+\hypertarget{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{\index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D@{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D}}
+\index{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D@{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D}!main.\+cc@{main.\+cc}}
+\subsubsection[{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+R\+D = \char`\"{}substitueix\char`\"{}}}\label{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}
+
+
+Definition at line 20 of file main.\+cc.
+
+\hypertarget{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{\index{main.\+cc@{main.\+cc}!Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T}}
+\index{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+R\+T = \char`\"{}afegir cita\char`\"{}}}\label{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}
+
+
+Definition at line 22 of file main.\+cc.
+
+\hypertarget{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{\index{main.\+cc@{main.\+cc}!Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E@{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E}}
+\index{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E@{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+T\+E = \char`\"{}eliminar cita\char`\"{}}}\label{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}
+
+
+Definition at line 23 of file main.\+cc.
+
+\hypertarget{main_8cc_a929725ac33851ab44a874af097622fac}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S@{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S@{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+R\+S = \char`\"{}tots autors ?\char`\"{}}}\label{main_8cc_a929725ac33851ab44a874af097622fac}
+
+
+Definition at line 25 of file main.\+cc.
+
+\hypertarget{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+L\+L = \char`\"{}tots textos ?\char`\"{}}}\label{main_8cc_a799ed9876b238eaeca57d69dfeac5712}
+
+
+Definition at line 26 of file main.\+cc.
+
+\hypertarget{main_8cc_aed2de80402367f772f44d697495062b2}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R = \char`\"{}textos autor\char`\"{}}}\label{main_8cc_aed2de80402367f772f44d697495062b2}
+
+
+Definition at line 27 of file main.\+cc.
+
+\hypertarget{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+O\+R = \char`\"{}autor ?\char`\"{}}}\label{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}
+
+
+Definition at line 29 of file main.\+cc.
+
+\hypertarget{main_8cc_a7463e07bfee66a1652cea25521f25d36}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+N\+T = \char`\"{}contingut ?\char`\"{}}}\label{main_8cc_a7463e07bfee66a1652cea25521f25d36}
+
+
+Definition at line 30 of file main.\+cc.
+
+\hypertarget{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+F\+O = \char`\"{}info ?\char`\"{}}}\label{main_8cc_a6d6573826f2957d81a4ff133305ae03c}
+
+
+Definition at line 31 of file main.\+cc.
+
+\hypertarget{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+O\+N = \char`\"{}frases\char`\"{}}}\label{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}
+
+
+Definition at line 32 of file main.\+cc.
+
+\hypertarget{main_8cc_a221416125c781868b41105b22fb97623}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+E\+S = \char`\"{}nombre de frases ?\char`\"{}}}\label{main_8cc_a221416125c781868b41105b22fb97623}
+
+
+Definition at line 33 of file main.\+cc.
+
+\hypertarget{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+D\+S = \char`\"{}nombre de paraules ?\char`\"{}}}\label{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}
+
+
+Definition at line 34 of file main.\+cc.
+
+\hypertarget{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y = \char`\"{}taula de frequencies ?\char`\"{}}}\label{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}
+
+
+Definition at line 35 of file main.\+cc.
+
+\hypertarget{main_8cc_a609fa4997165643203e0cb255ca772c6}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+E\+S = \char`\"{}cites ?\char`\"{}}}\label{main_8cc_a609fa4997165643203e0cb255ca772c6}
+
+
+Definition at line 36 of file main.\+cc.
+
+\hypertarget{main_8cc_ae38061f0fadacde833c2da1403793f06}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+L\+L = \char`\"{}totes cites ?\char`\"{}}}\label{main_8cc_ae38061f0fadacde833c2da1403793f06}
+
+
+Definition at line 38 of file main.\+cc.
+
+\hypertarget{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+O\+R = \char`\"{}cites autor\char`\"{}}}\label{main_8cc_abcd8e2524f8645d5d6c12e0062838147}
+
+
+Definition at line 39 of file main.\+cc.
+
+\hypertarget{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O}}
+\index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+F\+O = \char`\"{}info cita\char`\"{}}}\label{main_8cc_a29278b52bf17327ade47b5ea1cb41899}
+
+
+Definition at line 40 of file main.\+cc.
+
+\hypertarget{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{\index{main.\+cc@{main.\+cc}!Q\+U\+I\+T@{Q\+U\+I\+T}}
+\index{Q\+U\+I\+T@{Q\+U\+I\+T}!main.\+cc@{main.\+cc}}
+\subsubsection[{Q\+U\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+I\+T = \char`\"{}sortir\char`\"{}}}\label{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}
+
+
+Definition at line 42 of file main.\+cc.
+

@@ -1,0 +1,6 @@
+<map id="main.cc" name="main.cc">
+<area shape="rect" id="node2" href="$_library_8hh.html" title="Main structure of our Library with several dependant data childs. " alt="" coords="287,80,369,107"/>
+<area shape="rect" id="node3" href="$_author_8hh.html" title="Data model that hosts information about an Author. " alt="" coords="182,155,266,181"/>
+<area shape="rect" id="node6" href="$_book_8hh.html" title="Data model that hosts information about a Book. " alt="" coords="291,155,365,181"/>
+<area shape="rect" id="node10" href="$_quote_8hh.html" title="Data model that hosts information about a Quote. " alt="" coords="25,155,106,181"/>
+</map>
