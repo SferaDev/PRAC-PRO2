@@ -66,7 +66,6 @@ void Book::replaceWords(string oldWord, string newWord) {
 
 void Book::printAllLines() {
     printSelectLines(1, bookContent.size());
-    // TODO
 }
 
 void Book::printLines(string query) {
