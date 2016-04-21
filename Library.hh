@@ -50,6 +50,9 @@ public:
     // Deletes currentBook iterator from the bookCollection
     void deleteBook();
 
+    // Replaces currentBook words
+    void replaceWordsOnBook(string input);
+
     // Deletes a quote from the quoteCollection
     void deleteQuote(string id);
 

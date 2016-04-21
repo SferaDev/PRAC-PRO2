@@ -55,9 +55,7 @@ void readActions(Library& library) {
         } else if (input.substr(0, BOOK_SELECT.length()) == BOOK_SELECT) {
             library.selectBook(input.erase(input.length() - 1, 1).substr(input.find_first_of("{") + 1));
         } else if (input.substr(0, BOOK_REPLACE_WORD.length()) == BOOK_REPLACE_WORD) {
-            string oldWord, newWord;
-            // TODO: Substring from input
-            library.getBook().replaceWords(oldWord, newWord);
+            library.replaceWordsOnBook(input);
         } else if (input.substr(0, QUOTE_INSERT.length()) == QUOTE_INSERT) {
             // TODO
         } else if (input.substr(0, QUOTE_DELETE.length()) == QUOTE_DELETE) {
@@ -73,7 +71,8 @@ void readActions(Library& library) {
         } else if (input.substr(0, QUERY_CURRENT_AUTHOR.length()) == QUERY_CURRENT_AUTHOR) {
             // TODO
         } else if (input.substr(0, QUERY_CURRENT_CONTENT.length()) == QUERY_CURRENT_CONTENT) {
-            // TODO
+            if (library.isBookSelected()) library.getBook().printAllLines();
+            else cout << "error" << endl;
         } else if (input.substr(0, QUERY_CURRENT_INFO.length()) == QUERY_CURRENT_INFO) {
             // TODO
         } else if (input.substr(0, QUERY_CURRENT_EXPRESION.length()) == QUERY_CURRENT_EXPRESION) {

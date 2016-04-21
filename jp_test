@@ -1,6 +1,6 @@
 afegir text "La ciencia. Su metodo y su filosofia"
 autor "Mario Bunge"
-Lulz. Hi j. Aa. A, B, c. Hi. J. Ja. JB.
+In for the Lulz. Lulz.
 ****
 
 afegir text "La ciencia. Su metodo y su filosofia"
@@ -9,6 +9,14 @@ Por de medio de la investigacion cientifica, el hombre ha alcanzado. una reconst
 ****
 
 triar text {Bunge}
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "Lulz" per "Ohaio"
+
+contingut ?
 
 taula de frequencies ?
 

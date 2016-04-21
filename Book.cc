@@ -61,11 +61,21 @@ int Book::getBookWords() {
 }
 
 void Book::replaceWords(string oldWord, string newWord) {
-    // TODO: Edit the contents of the book
-    /*for (int i = 0; i < bookContent.size(); ++i) {
-        bookContent[i].replace(oldWord, newWord);
-    }*/
-    // TODO: Edit the dictionary
+    // Edit the contents of the book
+    for (int i = 0; i < bookContent.size(); ++i) {
+        int pos = bookContent[i].find(oldWord);
+        if (pos != bookContent[i].npos)
+            bookContent[i].replace(pos, oldWord.length(), newWord);
+    }
+    // Edit the dictionary
+    wordDictionary[oldWord.length()].erase(oldWord);
+    wordDictionary[newWord.length()].insert(newWord);
+    // Edit the frequency Map
+    wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
+    wordFrequencyMap.erase(oldWord);
+    // Update the frequency vector
+    // TODO: FIXME Efficiency
+    generateFrequencyTable();
 }
 
 bool Book::findWord(string word) {
@@ -73,7 +83,8 @@ bool Book::findWord(string word) {
 }
 
 void Book::generateFrequencyTable() {
-    // FIXME: Efficiency?
+    // Check if vector was previously generated
+    if (wordFrequencyVector.size() > 0) wordFrequencyVector.clear();
     for (map<string, int>::iterator it = wordFrequencyMap.begin();
          it != wordFrequencyMap.end(); ++it) {
         wordFrequencyVector.push_back(make_pair(it->first, it->second));
