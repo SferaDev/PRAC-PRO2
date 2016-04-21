@@ -43,7 +43,7 @@ void Library::selectBook(string query) {
         it++;
     }
     // TODO: FIXME: Build FrequencyTable Vector upon select
-    if (!error) currentBook->second.generateFrequencyTable();
+    if (currentBook != bookCollection.end()) currentBook->second.generateFrequencyTable();
 }
 
 void Library::deleteBook() {
