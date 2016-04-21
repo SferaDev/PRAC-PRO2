@@ -40,6 +40,9 @@ public:
     // Inserts a new book to the bookCollection
     void readBook(string title, string author);
 
+    // Returns whether we have a chosen book or not
+    bool isBookSelected();
+
     // Selects a book from the collection at currentBook iterator
     // foreach Author find on its dictionary by size
     void selectBook(string query);
@@ -68,8 +71,6 @@ public:
 
     // Print Books by Author
     void printBooksByAuthor(string author);
-
-    //
 
     // Print Quotes by Author
     void printQuotesByAuthor(string author);

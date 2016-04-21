@@ -21,6 +21,10 @@ void Library::readBook(string title, string author) {
     bookCollection[title + "-" + author] = book;
 }
 
+bool Library::isBookSelected() {
+    return currentBook != bookCollection.end();
+}
+
 void Library::selectBook(string query) {
     // Erase currentBook iterator (end position is erased)
     currentBook = bookCollection.end();
@@ -38,7 +42,7 @@ void Library::selectBook(string query) {
                     (it->second.findWord(word));
         }
         if (bContinue) {
-            if (currentBook == bookCollection.end()) currentBook = it;
+            if (!isBookSelected()) currentBook = it;
             else {
                 cout << "error" << endl;
                 error = true;
@@ -47,11 +51,11 @@ void Library::selectBook(string query) {
         it++;
     }
     // TODO: FIXME: Build FrequencyTable Vector upon select
-    if (currentBook != bookCollection.end()) currentBook->second.generateFrequencyTable();
+    if (isBookSelected()) currentBook->second.generateFrequencyTable();
 }
 
 void Library::deleteBook() {
-    if (currentBook != bookCollection.end()) {
+    if (isBookSelected()) {
         bookCollection.erase(currentBook);
     } else cout << "error" << endl;
 }
@@ -63,7 +67,6 @@ void Library::deleteQuote(string id) {
 }
 
 Book Library::getBook() {
-    // TODO: Throw exception
     return currentBook->second;
 }
 

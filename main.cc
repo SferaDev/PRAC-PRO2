@@ -62,7 +62,7 @@ void readActions(Library& library) {
             // TODO
         } else if (input.substr(0, QUOTE_DELETE.length()) == QUOTE_DELETE) {
             string reference;
-            // TODO: Substring refernce from input
+            // TODO: Substring reference from input
             library.deleteQuote(reference);
         } else if (input.substr(0, QUERY_AUTHORS.length()) == QUERY_AUTHORS) {
             // TODO
@@ -79,11 +79,14 @@ void readActions(Library& library) {
         } else if (input.substr(0, QUERY_CURRENT_EXPRESION.length()) == QUERY_CURRENT_EXPRESION) {
             // TODO
         } else if (input.substr(0, QUERY_CURRENT_LINES.length()) == QUERY_CURRENT_LINES) {
-            // TODO
+            if (library.isBookSelected()) cout << library.getBook().getBookLines() << endl;
+            else cout << "error" << endl;
         } else if (input.substr(0, QUERY_CURRENT_WORDS.length()) == QUERY_CURRENT_WORDS) {
-            // TODO
+            if (library.isBookSelected()) cout << library.getBook().getBookWords() << endl;
+            else cout << "error" << endl;
         } else if (input.substr(0, QUERY_CURRENT_FREQUENCY.length()) == QUERY_CURRENT_FREQUENCY) {
-            // TODO
+            if (library.isBookSelected()) library.getBook().printFrequencyTable();
+            else cout << "error" << endl;
         } else if (input.substr(0, QUERY_CURRENT_QUOTES.length()) == QUERY_CURRENT_QUOTES) {
             // TODO
         } else if (input.substr(0, QUERY_QUOTES_ALL.length()) == QUERY_QUOTES_ALL) {
