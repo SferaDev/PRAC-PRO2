@@ -1,0 +1,21 @@
+digraph "Library.hh"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Library.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Author.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_author_8hh.html",tooltip="Data model that hosts information about an Author. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="set",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Book.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_book_8hh.html",tooltip="Data model that hosts information about a Book. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Quote.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_quote_8hh.html",tooltip="Data model that hosts information about a Quote. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="map",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

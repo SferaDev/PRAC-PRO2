@@ -1,142 +1,294 @@
-\hypertarget{class_book}{\section{Book Class Reference}
+\hypertarget{class_book}{}\section{Book Class Reference}
 \label{class_book}\index{Book@{Book}}
-}
+
+
+Data model for Books (textos) from \hyperlink{class_library}{Library}.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_book_a2eac9e235a08763158f78533f7a83e1f}{Book} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 \hyperlink{class_book_a98dad89c9f945e0d846c81ce7e459fbc}{Book} (string title, string author)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 \hyperlink{class_book_a0ba8eceb34ea1301bc08942e37824767}{$\sim$\+Book} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{read\+Book\+Content} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads the content of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 string \hyperlink{class_book_aae6e165b712f111beb53574cd2f53776}{get\+Book\+Title} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the title of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 string \hyperlink{class_book_a651503f226fbf2c9c050f9527a3b983e}{get\+Author\+Name} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the name of the author of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 int \hyperlink{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{get\+Book\+Lines} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the number of lines of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 int \hyperlink{class_book_a6f0ccce41fd8db486578e0d325605813}{get\+Book\+Words} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the number of words of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_aaf182e24b86624b6ff54fba2581094a4}{replace\+Words} (string old\+Word, string new\+Word)
+\begin{DoxyCompactList}\small\item\em Replaces one word for another word in the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{find\+Word} (string word)
+\item 
+void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\+Frequency\+Table} ()
 \item 
 void \hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{print\+All\+Lines} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{print\+Lines} (string query)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{print\+Select\+Lines} (int start, int end)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints lines from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{print\+Frequency\+Table} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints all words of the content of the implicit book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Data model for Books (textos) from \hyperlink{class_library}{Library}. 
 
-
-Definition at line 16 of file Book.\+hh.
+Definition at line 22 of file Book.\+hh.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_book_a2eac9e235a08763158f78533f7a83e1f}{\index{Book@{Book}!Book@{Book}}
+\hypertarget{class_book_a2eac9e235a08763158f78533f7a83e1f}{}\index{Book@{Book}!Book@{Book}}
 \index{Book@{Book}!Book@{Book}}
 \subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a2eac9e235a08763158f78533f7a83e1f}
-\hypertarget{class_book_a98dad89c9f945e0d846c81ce7e459fbc}{\index{Book@{Book}!Book@{Book}}
+)}\label{class_book_a2eac9e235a08763158f78533f7a83e1f}
+
+
+Creates an empty \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns an implicit empty book 
+\end{DoxyPostcond}
+\hypertarget{class_book_a98dad89c9f945e0d846c81ce7e459fbc}{}\index{Book@{Book}!Book@{Book}}
 \index{Book@{Book}!Book@{Book}}
 \subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
 \begin{DoxyParamCaption}
 \item[{string}]{title, }
 \item[{string}]{author}
 \end{DoxyParamCaption}
-)}}\label{class_book_a98dad89c9f945e0d846c81ce7e459fbc}
-\hypertarget{class_book_a0ba8eceb34ea1301bc08942e37824767}{\index{Book@{Book}!````~Book@{$\sim$\+Book}}
+)}\label{class_book_a98dad89c9f945e0d846c81ce7e459fbc}
+
+
+Creates a \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns an implicit book with the title and the author 
+\end{DoxyPostcond}
+\hypertarget{class_book_a0ba8eceb34ea1301bc08942e37824767}{}\index{Book@{Book}!````~Book@{$\sim$\+Book}}
 \index{````~Book@{$\sim$\+Book}!Book@{Book}}
 \subsubsection[{$\sim$\+Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::$\sim$\+Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a0ba8eceb34ea1301bc08942e37824767}
+)}\label{class_book_a0ba8eceb34ea1301bc08942e37824767}
+
+
+Destructs the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Deletes the implicit book 
+\end{DoxyPostcond}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{\index{Book@{Book}!read\+Book\+Content@{read\+Book\+Content}}
+\hypertarget{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{}\index{Book@{Book}!read\+Book\+Content@{read\+Book\+Content}}
 \index{read\+Book\+Content@{read\+Book\+Content}!Book@{Book}}
 \subsubsection[{read\+Book\+Content}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::read\+Book\+Content (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}
-\hypertarget{class_book_aae6e165b712f111beb53574cd2f53776}{\index{Book@{Book}!get\+Book\+Title@{get\+Book\+Title}}
+)}\label{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}
+
+
+Reads the content of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The content of the implicit \hyperlink{class_book}{Book} 
+\end{DoxyPostcond}
+\hypertarget{class_book_aae6e165b712f111beb53574cd2f53776}{}\index{Book@{Book}!get\+Book\+Title@{get\+Book\+Title}}
 \index{get\+Book\+Title@{get\+Book\+Title}!Book@{Book}}
 \subsubsection[{get\+Book\+Title}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Book\+Title (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const}}\label{class_book_aae6e165b712f111beb53574cd2f53776}
-\hypertarget{class_book_a651503f226fbf2c9c050f9527a3b983e}{\index{Book@{Book}!get\+Author\+Name@{get\+Author\+Name}}
+) const}\label{class_book_aae6e165b712f111beb53574cd2f53776}
+
+
+Returns the title of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The title of the implicit book 
+\end{DoxyPostcond}
+\hypertarget{class_book_a651503f226fbf2c9c050f9527a3b983e}{}\index{Book@{Book}!get\+Author\+Name@{get\+Author\+Name}}
 \index{get\+Author\+Name@{get\+Author\+Name}!Book@{Book}}
 \subsubsection[{get\+Author\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Author\+Name (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a651503f226fbf2c9c050f9527a3b983e}
-\hypertarget{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{\index{Book@{Book}!get\+Book\+Lines@{get\+Book\+Lines}}
+)}\label{class_book_a651503f226fbf2c9c050f9527a3b983e}
+
+
+Returns the name of the author of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The name of the author of the implicit book 
+\end{DoxyPostcond}
+\hypertarget{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{}\index{Book@{Book}!get\+Book\+Lines@{get\+Book\+Lines}}
 \index{get\+Book\+Lines@{get\+Book\+Lines}!Book@{Book}}
 \subsubsection[{get\+Book\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Book\+Lines (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a8f241d57fb5525e3008b3f3d6ba81291}
-\hypertarget{class_book_a6f0ccce41fd8db486578e0d325605813}{\index{Book@{Book}!get\+Book\+Words@{get\+Book\+Words}}
+)}\label{class_book_a8f241d57fb5525e3008b3f3d6ba81291}
+
+
+Returns the number of lines of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of the lines of the implicit book 
+\end{DoxyPostcond}
+\hypertarget{class_book_a6f0ccce41fd8db486578e0d325605813}{}\index{Book@{Book}!get\+Book\+Words@{get\+Book\+Words}}
 \index{get\+Book\+Words@{get\+Book\+Words}!Book@{Book}}
 \subsubsection[{get\+Book\+Words}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Book\+Words (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a6f0ccce41fd8db486578e0d325605813}
-\hypertarget{class_book_aaf182e24b86624b6ff54fba2581094a4}{\index{Book@{Book}!replace\+Words@{replace\+Words}}
+)}\label{class_book_a6f0ccce41fd8db486578e0d325605813}
+
+
+Returns the number of words of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The words of lines of the implicit book 
+\end{DoxyPostcond}
+\hypertarget{class_book_aaf182e24b86624b6ff54fba2581094a4}{}\index{Book@{Book}!replace\+Words@{replace\+Words}}
 \index{replace\+Words@{replace\+Words}!Book@{Book}}
 \subsubsection[{replace\+Words}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::replace\+Words (
 \begin{DoxyParamCaption}
 \item[{string}]{old\+Word, }
 \item[{string}]{new\+Word}
 \end{DoxyParamCaption}
-)}}\label{class_book_aaf182e24b86624b6ff54fba2581094a4}
-\hypertarget{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{\index{Book@{Book}!print\+All\+Lines@{print\+All\+Lines}}
+)}\label{class_book_aaf182e24b86624b6ff54fba2581094a4}
+
+
+Replaces one word for another word in the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book}, the old word that we replaces and the new word 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The implicit book with the old word replaced for the new word 
+\end{DoxyPostcond}
+\hypertarget{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{}\index{Book@{Book}!find\+Word@{find\+Word}}
+\index{find\+Word@{find\+Word}!Book@{Book}}
+\subsubsection[{find\+Word}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::find\+Word (
+\begin{DoxyParamCaption}
+\item[{string}]{word}
+\end{DoxyParamCaption}
+)}\label{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}
+\hypertarget{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{}\index{Book@{Book}!generate\+Frequency\+Table@{generate\+Frequency\+Table}}
+\index{generate\+Frequency\+Table@{generate\+Frequency\+Table}!Book@{Book}}
+\subsubsection[{generate\+Frequency\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::generate\+Frequency\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_book_a8d232eaeb4207707d77bc18e6dd467cd}
+\hypertarget{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{}\index{Book@{Book}!print\+All\+Lines@{print\+All\+Lines}}
 \index{print\+All\+Lines@{print\+All\+Lines}!Book@{Book}}
 \subsubsection[{print\+All\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+All\+Lines (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_a07076ae8fe5e924f18bf7527e0ba5092}
-\hypertarget{class_book_a0c019a8318999229bf506f7f64e67a85}{\index{Book@{Book}!print\+Lines@{print\+Lines}}
+)}\label{class_book_a07076ae8fe5e924f18bf7527e0ba5092}
+
+
+Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints all lines of the content of the implicit book with its number in increasingly ordered for the number 
+\end{DoxyPostcond}
+\hypertarget{class_book_a0c019a8318999229bf506f7f64e67a85}{}\index{Book@{Book}!print\+Lines@{print\+Lines}}
 \index{print\+Lines@{print\+Lines}!Book@{Book}}
 \subsubsection[{print\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Lines (
 \begin{DoxyParamCaption}
 \item[{string}]{query}
 \end{DoxyParamCaption}
-)}}\label{class_book_a0c019a8318999229bf506f7f64e67a85}
-\hypertarget{class_book_a7193030998d6251851be26196762f8e6}{\index{Book@{Book}!print\+Select\+Lines@{print\+Select\+Lines}}
+)}\label{class_book_a0c019a8318999229bf506f7f64e67a85}
+
+
+Prints the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} and logical expression match 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints the number of the line and the line of the implicit book that keep the logical expression 
+\end{DoxyPostcond}
+\hypertarget{class_book_a7193030998d6251851be26196762f8e6}{}\index{Book@{Book}!print\+Select\+Lines@{print\+Select\+Lines}}
 \index{print\+Select\+Lines@{print\+Select\+Lines}!Book@{Book}}
 \subsubsection[{print\+Select\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Select\+Lines (
 \begin{DoxyParamCaption}
 \item[{int}]{start, }
 \item[{int}]{end}
 \end{DoxyParamCaption}
-)}}\label{class_book_a7193030998d6251851be26196762f8e6}
-\hypertarget{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{\index{Book@{Book}!print\+Frequency\+Table@{print\+Frequency\+Table}}
+)}\label{class_book_a7193030998d6251851be26196762f8e6}
+
+
+Prints lines from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book}, and the range 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints the lines of the range and its number of the implicit book 
+\end{DoxyPostcond}
+\hypertarget{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{}\index{Book@{Book}!print\+Frequency\+Table@{print\+Frequency\+Table}}
 \index{print\+Frequency\+Table@{print\+Frequency\+Table}!Book@{Book}}
 \subsubsection[{print\+Frequency\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Frequency\+Table (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}
+)}\label{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}
+
+
+Prints all words of the content of the implicit book. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints all words of the content and its frequencies in decreasingly ordered by frequencies 
+\end{DoxyPostcond}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

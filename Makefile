@@ -12,12 +12,17 @@ $(EXECUTABLE):
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final tar
-jutge: documentation
-	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile documentation.tar jp_*.txt
+jutge: docs
+	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile docs.tar jp_*.txt
 
 # Configuration to build Documentation tar
-documentation:
-	tar -cvf documentation.tar DOC/
+docs:
+	rm -rf DOC/
+	doxygen Doxyfile
+	cd DOC/latex/
+	make
+	cd ../../
+	tar -cvf docs.tar DOC/
 
 # Configuration for make clean
 clean:

@@ -4,7 +4,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = utf-8
-PROJECT_NAME           = "Gestor de textos i cites | Alexis Rico and Jordi Romero"
+PROJECT_NAME           = "Alexis Rico and Jordi Romero"
 PROJECT_NUMBER         = "P001"
 OUTPUT_DIRECTORY       = "./DOC"
 CREATE_SUBDIRS         = NO

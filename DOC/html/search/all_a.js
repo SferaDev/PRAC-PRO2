@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7eauthor',['~Author',['../class_author.html#ae1d4db056b321487cf7c07a2045d4a2d',1,'Author']]],
-  ['_7ebook',['~Book',['../class_book.html#a0ba8eceb34ea1301bc08942e37824767',1,'Book']]],
-  ['_7elibrary',['~Library',['../class_library.html#a62120f28a9b50cc5b151d868e42ab936',1,'Library']]],
-  ['_7equote',['~Quote',['../class_quote.html#a9b4324f3ee83827f2445177c8301482b',1,'Quote']]]
+  ['readactions',['readActions',['../main_8cc.html#ac08d8a3d49c58bde936b980d1f69ce52',1,'main.cc']]],
+  ['readbook',['readBook',['../class_library.html#ab6fb1208e63af938df64fa831cbacb40',1,'Library']]],
+  ['readbookcontent',['readBookContent',['../class_book.html#a3e62d70f19bf6fa8ebef5556882b3ed7',1,'Book']]],
+  ['replacewords',['replaceWords',['../class_book.html#aaf182e24b86624b6ff54fba2581094a4',1,'Book']]]
 ];

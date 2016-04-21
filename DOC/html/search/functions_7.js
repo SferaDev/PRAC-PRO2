@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quote',['Quote',['../class_quote.html#ae160077e513fe6346eeba294a195038b',1,'Quote']]]
+  ['main',['main',['../main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cc']]]
 ];
