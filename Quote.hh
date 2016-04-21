@@ -6,37 +6,46 @@
 #ifndef PRO2_PRAC_QUOTE_HH
 #define PRO2_PRAC_QUOTE_HH
 
+#ifndef NO_DIAGRAM
 #include <string>
 #include <vector>
+#endif
+
 using namespace std;
 
+/** @class Quote
+    @brief Data model for Quotes (cites) from Books.
+    */
 class Quote {
 
 private:
-    // Identifier of the Quote
-    string quoteReference;
+    string quoteReference; // Identifier of the Quote
 
-    // Identifier of the Author
-    string quoteAuthor;
+    string quoteAuthor; // Identifier of the Author
 
-    // Identifier of the Book
-    string quoteBook;
+    string quoteBook; // Identifier of the Book
 
-    // Identifier of the lines
-    int quoteStart, quoteEnd;
+    int quoteStart, quoteEnd; // Identifier of the lines
 
-    // Content of the Quote
-    // Position is the line ID and value is the content
-    vector<string> quoteContent;
+    vector<string> quoteContent; // Content of the Quote (ID: position | Value: content)
 
 public:
-    // Constructor
+    /** @brief Creates an empty Quote
+        \pre True
+        \post Returns an implicit empty quote
+    */
     Quote();
 
-    // Destructor
+    /** @brief Destructs the implicit Quote
+        \pre An implicit Quote
+        \post Deletes the implicit quote
+    */
     ~Quote();
 
-    // Print all the info related (info cita "<referencia>" ?)
+    /** @brief Print all the information of the implicit Quote
+        \pre An implicit Quote
+        \post Prints all the information
+    */
     void printQuoteInformation();
 };
 
