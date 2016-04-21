@@ -36,6 +36,10 @@ Book Library::getBook() {
     return currentBook->second;
 }
 
+Quote Library::getQuote(string id) {
+    return quoteCollection[id];
+}
+
 void Library::printAuthors() {
     // TODO
 }

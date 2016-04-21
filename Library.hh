@@ -53,6 +53,9 @@ public:
     // Get implicit currentBook
     Book getBook();
 
+    // Get a Quote by reference
+    Quote getQuote(string id);
+
     // Print Author's info
     void printAuthors();
 
@@ -65,6 +68,8 @@ public:
 
     // Print Books by Author
     void printBooksByAuthor(string author);
+
+    //
 
     // Print Quotes by Author
     void printQuotesByAuthor(string author);

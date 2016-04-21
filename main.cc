@@ -61,7 +61,9 @@ void readActions(Library& library) {
         } else if (input.substr(0, QUOTE_INSERT.length()) == QUOTE_INSERT) {
             // TODO
         } else if (input.substr(0, QUOTE_DELETE.length()) == QUOTE_DELETE) {
-            // TODO
+            string reference;
+            // TODO: Substring refernce from input
+            library.deleteQuote(reference);
         } else if (input.substr(0, QUERY_AUTHORS.length()) == QUERY_AUTHORS) {
             // TODO
         } else if (input.substr(0, QUERY_BOOKS_ALL.length()) == QUERY_BOOKS_ALL) {
@@ -85,11 +87,15 @@ void readActions(Library& library) {
         } else if (input.substr(0, QUERY_CURRENT_QUOTES.length()) == QUERY_CURRENT_QUOTES) {
             // TODO
         } else if (input.substr(0, QUERY_QUOTES_ALL.length()) == QUERY_QUOTES_ALL) {
-            // TODO
+            library.printQuotes();
         } else if (input.substr(0, QUERY_QUOTES_BY_AUTHOR.length()) == QUERY_QUOTES_BY_AUTHOR) {
-            // TODO
+            string author;
+            // TODO: Substring author from input
+            library.printQuotesByAuthor(author);
         } else if (input.substr(0, QUERY_QUOTE_INFO.length()) == QUERY_QUOTE_INFO) {
-            // TODO
+            string reference;
+            // TODO: Substring reference from input
+            library.getQuote(reference).printQuoteInformation();
         } else if (input.substr(0, QUIT.length()) == QUIT) {
             // TODO
         }
