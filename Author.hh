@@ -13,27 +13,32 @@ using namespace std;
 class Author {
 
 private:
-    // Name of the author
-    string authorName;
+
+    string authorName; // Name of the author
 
     // Size of Author's collection
     int totalBooks;
     int totalLines;
     int totalWords;
 
-    // Ordered collection of books
-    // The value of the item is the ID of the parent bookCollection
-    set<string> authorBooks;
+    set<string> authorBooks; // Ordered collection of books
+                             // Value: the ID of the parent bookCollection
 
-    // Ordered collection of quotes
-    // The value of the item is the ID of the parent quoteCollection
-    set<string> authorQuotes;
+
+    set<string> authorQuotes; // Ordered collection of quotes
+                              // Value: the ID of the parent quoteCollection
 
 public:
-    // Constructor
+    /** @brief Creates an empty Author
+        \pre True
+        \post Returns an implicit empty author
+    */
     Author();
 
-    // Destructor
+    /** @brief Destructs the implicit Author
+        \pre An implicit Author
+        \post Deletes the implicit author
+    */
     ~Author();
 
 };
