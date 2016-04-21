@@ -22,15 +22,19 @@ void Library::readBook(string title, string author) {
 }
 
 void Library::selectBook(string query) {
+    // Erase currentBook iterator (end position is erased)
     currentBook = bookCollection.end();
     map<string, Book>::iterator it = bookCollection.begin();
     bool error = false;
+    // Loop through all books while there're no errors
     while (it != bookCollection.end() and !error) {
         istringstream iss(query);
         string word;
         bool bContinue = true;
+        // Loop through all words (each word must be on the text)
         while (iss >> word and bContinue) {
-            bContinue = (it->first.find(word, 0) != string::npos) or
+            // Check if author/title contains or content contains
+            bContinue = (it->first.find(word, 0) != word.npos) or
                     (it->second.findWord(word));
         }
         if (bContinue) {
@@ -39,7 +43,7 @@ void Library::selectBook(string query) {
                 cout << "error" << endl;
                 error = true;
             }
-        } else cout << "error" << endl;
+        }
         it++;
     }
     // TODO: FIXME: Build FrequencyTable Vector upon select
