@@ -49,8 +49,24 @@ private:
     // Comparator for the frequency sort
     struct frequencyComparator {
         bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
-            // CHECKME: I'm a blind ninja
-            if (a.second == b.second) return a.first < b.first;
+            // Special case: Same frequency
+            if (a.second == b.second) {
+                // Special case: Same length
+                if (a.first.length() == b.first.length()) {
+                    // Make a lower case copy of the strings and compare them
+                    string aString = a.first;
+                    string bString = b.first;
+                    // Inv: They have the same length
+                    for (int i = 0; i < aString.length(); ++i) {
+                        aString[i] = tolower(aString[i]);
+                        bString[i] = tolower(bString[i]);
+                    }
+                    return aString < bString;
+                }
+                // Base case: Order by length in asc order
+                return a.first.length() < b.first.length();
+            }
+            // Base case: Order by frequency in desc order
             return a.second > b.second;
         }
     };
