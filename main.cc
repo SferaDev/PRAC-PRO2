@@ -51,13 +51,13 @@ void readActions(Library& library) {
             author = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
             library.readBook(title, author);
         } else if (input.substr(0, BOOK_DELETE.length()) == BOOK_DELETE) {
-            // TODO
             library.deleteBook();
-
         } else if (input.substr(0, BOOK_SELECT.length()) == BOOK_SELECT) {
-            // TODO
+            library.selectBook(input.erase(input.length() - 1, 1).substr(input.find_first_of("{") + 1));
         } else if (input.substr(0, BOOK_REPLACE_WORD.length()) == BOOK_REPLACE_WORD) {
-            // TODO
+            string oldWord, newWord;
+            // TODO: Substring from input
+            library.getBook().replaceWords(oldWord, newWord);
         } else if (input.substr(0, QUOTE_INSERT.length()) == QUOTE_INSERT) {
             // TODO
         } else if (input.substr(0, QUOTE_DELETE.length()) == QUOTE_DELETE) {
