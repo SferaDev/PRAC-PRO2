@@ -4,6 +4,7 @@
 */
 
 #include "Book.hh"
+#include <sstream>
 using namespace std;
 
 Book::Book() {
@@ -27,10 +28,14 @@ void Book::readBookContent() {
         while (iss >> word) {
             if (!content.empty()) content += " ";
             content += word;
+            if (word.find_last_of(",;:") == word.length() - 1)
+                word.erase(word.length() - 1, 1);
             if (word.find_last_of(".?!") == word.length() - 1) {
                 bookContent.push_back(content);
                 content.clear();
+                word.erase(word.length() - 1, 1);
             }
+            bookDictionary[word.length()][word] += 1;
         }
     }
 }
