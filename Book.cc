@@ -64,6 +64,10 @@ void Book::replaceWords(string oldWord, string newWord) {
     // TODO: Edit the dictionary
 }
 
+bool Book::findWord(string word) {
+    return bookDictionary[word.length()].find(word) != bookDictionary[word.length()].end();
+}
+
 void Book::printAllLines() {
     printSelectLines(1, bookContent.size());
 }

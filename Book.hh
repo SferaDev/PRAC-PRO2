@@ -65,6 +65,9 @@ public:
     // Replace contents on currentBook
     void replaceWords(string oldWord, string newWord);
 
+    // Finds if a word is on the content
+    bool findWord(string word);
+
     // Calls printSelectLines from 1 to bookContent.size()
     void printAllLines();
 

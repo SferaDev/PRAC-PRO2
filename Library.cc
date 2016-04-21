@@ -4,10 +4,11 @@
 */
 
 #include "Library.hh"
+#include <sstream>
 using namespace std;
 
 Library::Library() {
-    currentBook = bookCollection.begin();
+    currentBook = bookCollection.end();
 }
 
 Library::~Library() {
@@ -21,18 +22,43 @@ void Library::readBook(string title, string author) {
 }
 
 void Library::selectBook(string query) {
-    // TODO
+    currentBook = bookCollection.end();
+    map<string, Book>::iterator it = bookCollection.begin();
+    bool error = false;
+    while (it != bookCollection.end() and !error) {
+        istringstream iss(query);
+        string word;
+        bool bContinue = true;
+        while (iss >> word and bContinue) {
+            cout << word << endl;
+            bContinue = (it->first.find(word, 0) != string::npos) or
+                    (it->second.findWord(word));
+        }
+        if (bContinue) {
+            if (currentBook == bookCollection.end()) currentBook = it;
+            else {
+                cout << "error" << endl;
+                error = true;
+            }
+        } else cout << "error" << endl;
+        it++;
+    }
 }
 
 void Library::deleteBook() {
-    bookCollection.erase(currentBook);
+    if (currentBook != bookCollection.end()) {
+        bookCollection.erase(currentBook);
+    } else cout << "error" << endl;
 }
 
 void Library::deleteQuote(string id) {
-    quoteCollection.erase(id);
+    if (!quoteCollection.erase(id)) {
+        cout << "error" << endl;
+    }
 }
 
 Book Library::getBook() {
+    // TODO: Throw exception
     return currentBook->second;
 }
 
