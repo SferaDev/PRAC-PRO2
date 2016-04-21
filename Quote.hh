@@ -36,6 +36,15 @@ public:
     */
     Quote();
 
+    /** @brief Creates an empty Quote
+        \param reference = The reference ID
+        \param author = The Quote Author
+        \param book = The book from the Quote
+        \pre True
+        \post Returns an implicit empty quote
+    */
+    Quote(string reference, string author, string book);
+
     /** @brief Destructs the implicit Quote
         \pre An implicit Quote
         \post Deletes the implicit quote
@@ -47,6 +56,22 @@ public:
         \post Prints all the information
     */
     void printQuoteInformation();
-};
+
+    /** @brief Print all the information of the implicit Quote
+        \param start = Start line
+        \param end = End line
+        \pre An implicit Quote
+        \post Updates the Quote start/end lines
+    */
+    void setQuoteLines(int start, int end);
+
+    /** @brief Print all the information of the implicit Quote
+        \param content = Content of the Quote
+        \pre An implicit Quote
+        \post Updates the Quote content
+    */
+    void setContent(vector<string> content);
+
+    };
 
 #endif //PRO2_PRAC_QUOTE_HH
