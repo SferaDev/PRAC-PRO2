@@ -73,8 +73,8 @@ void Book::printLines(string query) {
 }
 
 void Book::printSelectLines(int start, int end) {
-    for ( int i = x; i <= y; ++i) {
-        cout <<  bookContent[i - 1] << endl;
+    for (int i = start; i <= end; ++i) {
+        cout <<  i << ". " << bookContent[i - 1] << endl;
     }
     // TODO
 }
