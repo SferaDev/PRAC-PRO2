@@ -17,7 +17,7 @@ Library::~Library() {
 void Library::readBook(string title, string author) {
     Book book(title, author);
     book.readBookContent();
-    bookCollection[title] = book;
+    bookCollection[title + "-" + author] = book;
 }
 
 void Library::selectBook(string query) {
