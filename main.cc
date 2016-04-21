@@ -52,6 +52,8 @@ void readActions(Library& library) {
             library.readBook(title, author);
         } else if (input.substr(0, BOOK_DELETE.length()) == BOOK_DELETE) {
             // TODO
+            library.deleteBook();
+
         } else if (input.substr(0, BOOK_SELECT.length()) == BOOK_SELECT) {
             // TODO
         } else if (input.substr(0, BOOK_REPLACE_WORD.length()) == BOOK_REPLACE_WORD) {
