@@ -65,6 +65,7 @@ void Book::replaceWords(string oldWord, string newWord) {
 }
 
 void Book::printAllLines() {
+    printSelectLines(1, bookContent.size());
     // TODO
 }
 
@@ -73,6 +74,9 @@ void Book::printLines(string query) {
 }
 
 void Book::printSelectLines(int start, int end) {
+    for ( int i = x; i <= y; ++i) {
+        cout <<  bookContent[i - 1] << endl;
+    }
     // TODO
 }
 
