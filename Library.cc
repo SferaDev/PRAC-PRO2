@@ -57,6 +57,7 @@ void Library::selectBook(string query) {
 void Library::deleteBook() {
     if (isBookSelected()) {
         bookCollection.erase(currentBook);
+        currentBook = bookCollection.end();
     } else cout << "error" << endl;
 }
 
