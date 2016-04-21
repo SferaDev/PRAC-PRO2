@@ -9,12 +9,13 @@
 using namespace std;
 
 Book::Book() {
-    // TODO
+    bookWords = 0;
 }
 
 Book::Book(string title, string author) {
     bookTitle = title;
     authorName = author;
+    bookWords = 0;
 }
 
 Book::~Book() {
@@ -29,6 +30,7 @@ void Book::readBookContent() {
         while (iss >> word) {
             if (!content.empty()) content += " ";
             content += word;
+            bookWords += 1;
             if (word.find_last_of(",;:") == word.length() - 1)
                 word.erase(word.length() - 1, 1);
             if (word.find_last_of(".?!") == word.length() - 1) {
@@ -51,7 +53,7 @@ string Book::getAuthorName() {
 }
 
 int Book::getBookLines() {
-    return bookLines;
+    return bookContent.size();
 }
 
 int Book::getBookWords() {

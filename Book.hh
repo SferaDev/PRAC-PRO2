@@ -41,7 +41,6 @@ private:
     vector<pair<string, int> > wordFrequencyVector;
 
     // Size of Book's collection
-    int bookLines;
     int bookWords;
 
     set<string> bookQuotes; // Ordered collection of quotes
