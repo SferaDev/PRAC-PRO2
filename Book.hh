@@ -26,10 +26,16 @@ private:
     // Position is the line ID and value is the content
     vector<string> bookContent;
 
-    // Content dictionary with frequencies
+    // Content dictionary
     // On the main map the key is the length of the word
-    // On the inner map it has a word (without marks) and its frequencies
-    map<int, map<string, int> > bookDictionary;
+    // On the inner map it has a word (without marks)
+    map<int, set<string> > wordDictionary;
+
+    // Content dictionary with frequencies
+    // The key is the length of the word
+    // The value is its frequencies
+    map<string, int> wordFrequencyMap;
+    vector<pair<string, int> > wordFrequencyVector;
 
     // Size of Book's collection
     int bookLines;
@@ -38,6 +44,15 @@ private:
     // Ordered collection of quotes
     // The value of the item is the ID of the parent quoteCollection
     set<string> bookQuotes;
+
+    // Comparator for the frequency sort
+    struct frequencyComparator {
+        bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
+            // CHECKME: I'm a blind ninja
+            if (a.second == b.second) return a.first < b.first;
+            return a.second > b.second;
+        }
+    };
 
 public:
     // Constructor
@@ -67,6 +82,9 @@ public:
 
     // Finds if a word is on the content
     bool findWord(string word);
+
+    // Generates the FrequencyTable Vector
+    void generateFrequencyTable();
 
     // Calls printSelectLines from 1 to bookContent.size()
     void printAllLines();

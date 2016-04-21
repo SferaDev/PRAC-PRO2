@@ -30,7 +30,6 @@ void Library::selectBook(string query) {
         string word;
         bool bContinue = true;
         while (iss >> word and bContinue) {
-            cout << word << endl;
             bContinue = (it->first.find(word, 0) != string::npos) or
                     (it->second.findWord(word));
         }
@@ -43,6 +42,8 @@ void Library::selectBook(string query) {
         } else cout << "error" << endl;
         it++;
     }
+    // TODO: FIXME: Build FrequencyTable Vector upon select
+    if (!error) currentBook->second.generateFrequencyTable();
 }
 
 void Library::deleteBook() {
