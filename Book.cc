@@ -20,14 +20,18 @@ Book::~Book() {
 }
 
 void Book::readBookContent() {
-    string input;
-    int pos = 0;
-    getline(cin, input);
-    while (input != "") {
-        int pos = input.find_first_of(".?!");
-        cout << input.substr(0, pos) << endl;
-        bookContent.push_back(input.substr(0, pos));
-        input = input.substr(pos);
+    string input, content;
+    while (getline(cin, input) && input != "****") {
+        string word;
+        istringstream iss(input);
+        while (iss >> word) {
+            if (!content.empty()) content += " ";
+            content += word;
+            if (word.find_last_of(".?!") == word.length() - 1) {
+                bookContent.push_back(content);
+                content.clear();
+            }
+        }
     }
 }
 
