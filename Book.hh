@@ -126,10 +126,17 @@ public:
     */
     void replaceWords(string oldWord, string newWord);
 
-    // Finds if a word is on the content
+    /** @brief Finds if a word is on the content of the implicit Book
+        \pre The wordDictionary of the implicit Book and a word that we want to find
+        \post The result tell us if the word is on the content of the implicit book
+    */
     bool findWord(string word);
 
     // Generates the FrequencyTable Vector
+    /** @brief Generates the FrequencyTable Vector
+        \pre An implicit Book
+        \post Generates the frequency table ordered
+    */
     void generateFrequencyTable();
 
     /** @brief Prints all lines of the implicit Book, from 1 to bookContent.size()

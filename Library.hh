@@ -10,41 +10,56 @@
 #include "Book.hh"
 #include "Quote.hh"
 
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
 #include <string>
+#endif
+
 using namespace std;
 
 class Library {
 
 private:
-    // Collection of Books
-    map<string, Book> bookCollection;
 
-    // Collection of Authors
-    map<string, Author> authorCollection;
+    map<string, Book> bookCollection;// Collection of Books
 
-    // Collection of Quotes
-    map<string, Quote> quoteCollection;
+    map<string, Author> authorCollection;// Collection of Authors
 
-    // Current book iterator
-    map<string, Book>::iterator currentBook;
+    map<string, Quote> quoteCollection;// Collection of Quotes
+
+    map<string, Book>::iterator currentBook;// Current book iterator
 
 public:
-    // Constructor
+    /** @brief Creates an empty Library
+        \pre True
+        \post Returns an implicit empty library
+    */
     Library();
 
-    // Destructor
+    /** @brief Destructs the implicit Library
+        \pre An implicit Library
+        \post Deletes the implicit library
+    */
     ~Library();
 
-    // Inserts a new book to the bookCollection
+    /** @brief Inserts a new book to the bookCollection
+        \pre An implicit Library,  the title and the author of the new book
+        \post The implicit library with a new book
+    */
     void readBook(string title, string author);
 
-    // Returns whether we have a chosen book or not
+    /** @brief Returns whether we have a chosen book or not
+        \pre An implicit Library
+        \post The result tell us if we choose a book
+    */
     bool isBookSelected();
 
-    // Selects a book from the collection at currentBook iterator
-    // foreach Author find on its dictionary by size
+    // TODO
+    /** @brief Selects a book from the collection at currentBook iterator foreach Author find on its dictionary by size
+        \pre An implicit Library an
+        \post The implicit library with a new book
+    */
     void selectBook(string query);
 
     // Deletes currentBook iterator from the bookCollection

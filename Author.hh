@@ -6,8 +6,11 @@
 #ifndef PRO2_PRAC_AUTHOR_HH
 #define PRO2_PRAC_AUTHOR_HH
 
+#ifndef NO_DIAGRAM
 #include <set>
 #include <string>
+#endif
+
 using namespace std;
 
 class Author {
