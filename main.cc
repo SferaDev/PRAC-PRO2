@@ -41,65 +41,73 @@ const string QUERY_QUOTE_INFO = "info cita";
 
 const string QUIT = "sortir";
 
+bool startsWith(string input, string compare) {
+    return input.substr(0, compare.length()) == compare;
+}
+
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
-        if (input.substr(0, BOOK_INSERT.length()) == BOOK_INSERT) {
+        if (startsWith(input, BOOK_INSERT)) {
             string title, author;
             title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
             getline(cin, input);
             author = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
             library.readBook(title, author);
-        } else if (input.substr(0, BOOK_DELETE.length()) == BOOK_DELETE) {
+        } else if (startsWith(input, BOOK_DELETE)) {
             library.deleteBook();
-        } else if (input.substr(0, BOOK_SELECT.length()) == BOOK_SELECT) {
+        } else if (startsWith(input, BOOK_SELECT)) {
             library.selectBook(input.erase(input.length() - 1, 1).substr(input.find_first_of("{") + 1));
-        } else if (input.substr(0, BOOK_REPLACE_WORD.length()) == BOOK_REPLACE_WORD) {
+        } else if (startsWith(input, BOOK_REPLACE_WORD)) {
             library.replaceWordsOnBook(input);
-        } else if (input.substr(0, QUOTE_INSERT.length()) == QUOTE_INSERT) {
+        } else if (startsWith(input, QUOTE_INSERT)) {
             // TODO
-        } else if (input.substr(0, QUOTE_DELETE.length()) == QUOTE_DELETE) {
+        } else if (startsWith(input, QUOTE_DELETE)) {
             string reference;
             // TODO: Substring reference from input
             library.deleteQuote(reference);
-        } else if (input.substr(0, QUERY_AUTHORS.length()) == QUERY_AUTHORS) {
+        } else if (startsWith(input, QUERY_AUTHORS)) {
             // TODO
-        } else if (input.substr(0, QUERY_BOOKS_ALL.length()) == QUERY_BOOKS_ALL) {
+        } else if (startsWith(input, QUERY_BOOKS_ALL)) {
             // TODO
-        } else if (input.substr(0, QUERY_BOOKS_BY_AUTHOR.length()) == QUERY_BOOKS_BY_AUTHOR) {
+        } else if (startsWith(input, QUERY_BOOKS_BY_AUTHOR)) {
             // TODO
-        } else if (input.substr(0, QUERY_CURRENT_AUTHOR.length()) == QUERY_CURRENT_AUTHOR) {
+        } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {
             // TODO
-        } else if (input.substr(0, QUERY_CURRENT_CONTENT.length()) == QUERY_CURRENT_CONTENT) {
-            if (library.isBookSelected()) library.getBook().printAllLines();
+        } else if (startsWith(input, QUERY_CURRENT_CONTENT)) {
+            if (library.isBookSelected())
+                library.getBook().printAllLines();
             else cout << "error" << endl;
-        } else if (input.substr(0, QUERY_CURRENT_INFO.length()) == QUERY_CURRENT_INFO) {
+        } else if (startsWith(input, QUERY_CURRENT_INFO)) {
             // TODO
-        } else if (input.substr(0, QUERY_CURRENT_EXPRESION.length()) == QUERY_CURRENT_EXPRESION) {
+        } else if (startsWith(input, QUERY_CURRENT_EXPRESION)) {
             // TODO
-        } else if (input.substr(0, QUERY_CURRENT_LINES.length()) == QUERY_CURRENT_LINES) {
-            if (library.isBookSelected()) cout << library.getBook().getBookLines() << endl;
+        } else if (startsWith(input, QUERY_CURRENT_LINES)) {
+            if (library.isBookSelected())
+                cout << library.getBook().getBookLines() << endl;
             else cout << "error" << endl;
-        } else if (input.substr(0, QUERY_CURRENT_WORDS.length()) == QUERY_CURRENT_WORDS) {
-            if (library.isBookSelected()) cout << library.getBook().getBookWords() << endl;
+        } else if (startsWith(input, QUERY_CURRENT_WORDS)) {
+            if (library.isBookSelected())
+                cout << library.getBook().getBookWords() << endl;
             else cout << "error" << endl;
-        } else if (input.substr(0, QUERY_CURRENT_FREQUENCY.length()) == QUERY_CURRENT_FREQUENCY) {
-            if (library.isBookSelected()) library.getBook().printFrequencyTable();
+        } else if (startsWith(input, QUERY_CURRENT_FREQUENCY)) {
+            if (library.isBookSelected())
+                library.getBook().printFrequencyTable();
             else cout << "error" << endl;
-        } else if (input.substr(0, QUERY_CURRENT_QUOTES.length()) == QUERY_CURRENT_QUOTES) {
+        } else if (startsWith(input, QUERY_CURRENT_QUOTES)) {
             // TODO
-        } else if (input.substr(0, QUERY_QUOTES_ALL.length()) == QUERY_QUOTES_ALL) {
+        } else if (startsWith(input, QUERY_QUOTES_ALL)) {
             library.printQuotes();
-        } else if (input.substr(0, QUERY_QUOTES_BY_AUTHOR.length()) == QUERY_QUOTES_BY_AUTHOR) {
+        } else if (startsWith(input, QUERY_QUOTES_BY_AUTHOR)) {
             string author;
             // TODO: Substring author from input
             library.printQuotesByAuthor(author);
-        } else if (input.substr(0, QUERY_QUOTE_INFO.length()) == QUERY_QUOTE_INFO) {
+        } else if (startsWith(input, QUERY_QUOTE_INFO)) {
             string reference;
             // TODO: Substring reference from input
             library.getQuote(reference).printQuoteInformation();
-        } else if (input.substr(0, QUIT.length()) == QUIT) {
-            // TODO
+        } else if (startsWith(input, QUIT)) {
+            return;
         }
     }
 }
