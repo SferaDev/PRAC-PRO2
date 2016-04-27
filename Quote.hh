@@ -13,9 +13,10 @@
 
 using namespace std;
 
-/** @class Quote
-    @brief Data model for Quotes (cites) from Books.
-    */
+/**
+  @class Quote
+  @brief Data model for Quotes (cites) from Books.
+*/
 class Quote {
 
 private:
@@ -41,7 +42,7 @@ public:
         \param author = The Quote Author
         \param book = The book from the Quote
         \pre True
-        \post Returns an implicit empty quote
+        \post Returns an implicit quote with the reference, author and book
     */
     Quote(string reference, string author, string book);
 
@@ -53,11 +54,11 @@ public:
 
     /** @brief Print all the information of the implicit Quote
         \pre An implicit Quote
-        \post Prints all the information
+        \post Prints all the quote information
     */
     void printQuoteInformation();
 
-    /** @brief Print all the information of the implicit Quote
+    /** @brief Update the start/end line values
         \param start = Start line
         \param end = End line
         \pre An implicit Quote
@@ -65,7 +66,7 @@ public:
     */
     void setQuoteLines(int start, int end);
 
-    /** @brief Print all the information of the implicit Quote
+    /** @brief Update the quote content
         \param content = Content of the Quote
         \pre An implicit Quote
         \post Updates the Quote content

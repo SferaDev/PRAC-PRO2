@@ -18,6 +18,10 @@
 
 using namespace std;
 
+/**
+  @class Library
+  @brief Main storage of all the Books, Authors and Quotes.
+*/
 class Library {
 
 private:
@@ -44,53 +48,89 @@ public:
     ~Library();
 
     /** @brief Inserts a new book to the bookCollection
-        \pre An implicit Library,  the title and the author of the new book
-        \post The implicit library with a new book
+        \param title = The book title
+        \param author = The book author
+        \pre An implicit Library
+        \post The implicit library with a new book (identified by title and author)
     */
     void readBook(string title, string author);
 
     /** @brief Returns whether we have a chosen book or not
         \pre An implicit Library
-        \post The result tell us if we choose a book
+        \post True
     */
     bool isBookSelected();
 
-    // TODO
-    /** @brief Selects a book from the collection at currentBook iterator foreach Author find on its dictionary by size
-        \pre An implicit Library an
-        \post The implicit library with a new book
+    /** @brief Selects a book from the collection
+        \param query = Query to select a book
+        \pre An implicit Library
+        \post currentBook iterator has the desired book
     */
     void selectBook(string query);
 
-    // Deletes currentBook iterator from the bookCollection
+    /** @brief Deletes a book from the collection
+        \pre An implicit Library and a selected book
+        \post The implicit library without the previous currentBook
+    */
     void deleteBook();
 
-    // Replaces currentBook words
+    /** @brief Replaces a word with anopther one in a book from the collection
+        \param input = Pattern from the IO channel to replace words
+        \pre An implicit Library and a selected book
+        \post The implicit library with the replaced words on currentBook
+    */
     void replaceWordsOnBook(string input);
 
-    // Deletes a quote from the quoteCollection
+    /** @brief Deletes a quote from the library
+        \param id = Quote ID
+        \pre An implicit Library and a quote with that id
+        \post The implicit library without the referenced quote
+    */
     void deleteQuote(string id);
 
-    // Get implicit currentBook
+    /** @brief Returns the selected book
+        \pre An implicit Library and a selected book
+        \post Returns currentBook
+    */
     Book getBook();
 
-    // Get a Quote by reference
+    /** @brief Returns a quote from its ID
+        \param id = Quote ID
+        \pre An implicit Library and a quote with that id
+        \post Returns the quote referenced by id
+    */
     Quote getQuote(string id);
 
-    // Print Author's info
+    /** @brief Prints information about the Authors
+        \pre An implicit Library
+        \post True
+    */
     void printAuthors();
 
-    // Print Books info stored on bookCollection
-    // foreach Author bring its books (already ordered)
+    /** @brief Prints information about the Books
+        \pre An implicit Library
+        \post True
+    */
     void printBooks();
 
-    // Print Quotes info stored on quoteCollection
+    /** @brief Prints information about the Quotes
+        \pre An implicit Library
+        \post True
+    */
     void printQuotes();
 
-    // Print Books by Author
+    /** @brief Prints information about the Books (by Author)
+        \param author = Author name
+        \pre An implicit Library
+        \post True
+    */
     void printBooksByAuthor(string author);
 
-    // Print Quotes by Author
+    /** @brief Prints information about the Quotes (by Author)
+        \param author = Author name
+        \pre An implicit Library
+        \post True
+    */
     void printQuotesByAuthor(string author);
 };
 

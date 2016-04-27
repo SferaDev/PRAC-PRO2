@@ -16,9 +16,10 @@
 
 using namespace std;
 
-/** @class Book
-    @brief Data model for Books (textos) from Library.
-    */
+/**
+  @class Book
+  @brief Data model for Books (textos) from Library.
+*/
 class Book {
 
 private:
@@ -78,9 +79,11 @@ public:
     */
     Book();
 
-    /** @brief Creates a Book
+    /** @brief Creates a Book with title and author
+        \param title = Book title
+        \param author = Book author
         \pre True
-        \post Returns an implicit book with the title and the author
+        \post Returns an implicit book with title and the author
     */
     Book(string title, string author);
 
@@ -121,18 +124,20 @@ public:
     int getBookWords();
 
     /** @brief Replaces one word for another word in the implicit Book
+        \param oldWord = Word (old)
+        \param newWord = Word (new)
         \pre An implicit Book, the old word that we replaces and the new word
         \post The implicit book with the old word replaced for the new word
     */
     void replaceWords(string oldWord, string newWord);
 
     /** @brief Finds if a word is on the content of the implicit Book
+        \param word = Word to find on the book
         \pre The wordDictionary of the implicit Book and a word that we want to find
-        \post The result tell us if the word is on the content of the implicit book
+        \post Returns true if the word is on the content of the implicit book
     */
     bool findWord(string word);
 
-    // Generates the FrequencyTable Vector
     /** @brief Generates the FrequencyTable Vector
         \pre An implicit Book
         \post Generates the frequency table ordered
@@ -146,12 +151,15 @@ public:
     void printAllLines();
 
     /** @brief Prints the lines by logical expression match of the implicit Book
+        \param query = Query to find the lines to print
         \pre An implicit Book and logical expression match
         \post Prints the number of the line and the line of the implicit book that keep the logical expression
     */
     void printLines(string query);
 
     /** @brief Prints lines from [start - 1] to [end - 1]
+        \param start = Start line
+        \param end = end line
         \pre An implicit Book, and the range
         \post Prints the lines of the range and its number of the implicit book
     */

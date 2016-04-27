@@ -13,6 +13,10 @@
 
 using namespace std;
 
+/**
+  @class Author
+  @brief Data model for Authors (autors) from Library.
+*/
 class Author {
 
 private:
