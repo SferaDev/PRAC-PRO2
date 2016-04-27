@@ -19,6 +19,7 @@ void Library::readBook(string title, string author) {
     Book book(title, author);
     book.readBookContent();
     bookCollection[title + "-" + author] = book;
+    // TODO: Add new Author (or update existing)
 }
 
 bool Library::isBookSelected() {
@@ -101,8 +102,10 @@ void Library::printQuotes() {
 
 void Library::printBooksByAuthor(string author) {
     // TODO
+    authorCollection[author].printBooks();
 }
 
 void Library::printQuotesByAuthor(string author) {
     // TODO
+    authorCollection[author].printQuotes();
 }

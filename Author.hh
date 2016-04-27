@@ -41,12 +41,47 @@ public:
         \post Returns an implicit empty author
     */
     Author();
+    
+    /** @brief Creates an empty Author
+        \param name = Name of the Author
+        \pre True
+        \post Returns an implicit author with name
+    */
+    Author(string name);
 
     /** @brief Destructs the implicit Author
         \pre An implicit Author
         \post Deletes the implicit author
     */
     ~Author();
+    
+    void incrementBookCount(int value);
+    
+    void incrementLineCount(int value);
+    
+    void incrementWordCount(int value);
+    
+    void addBook();
+    
+    void addQuote();
+    
+    void deleteBook(string id);
+    
+    void deleteQuote(string id);
+    
+    /** @brief Prints information about the Books
+        \pre An implicit Author
+        \post True
+    */
+    void printBooks();
+
+    /** @brief Prints information about the Quotes
+        \pre An implicit Author
+        \post True
+    */
+    void printQuotes();
+    
+}
 
 };
 
