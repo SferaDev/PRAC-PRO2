@@ -112,7 +112,7 @@ void Library::insertQuote(int start, int end) {
     while (iss >> aux) reference += aux[0];
     // Check if there's an existing Quote with these lines of the same book
     map<string, Quote>::iterator it = quoteCollection.begin();
-    while (it != quoteCollection.end() and it->second.getReference() < reference) {
+    while (it != quoteCollection.end()) {
         if (it->second.getReference().substr(0, reference.length()) == reference) {
             if (it->second.getBookTitle() == currentBook->second.getBookTitle()
                     and it->second.getStartLine() == start
