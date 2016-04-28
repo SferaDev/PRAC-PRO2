@@ -86,8 +86,6 @@ public:
         \post True
     */
     void printQuotes();
-    
-}
 
 };
 
