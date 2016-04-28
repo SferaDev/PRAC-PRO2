@@ -72,6 +72,7 @@ void readActions(Library& library) {
         } else if (startsWith(input, QUERY_BOOKS_ALL)) {
             library.printBooks();
         } else if (startsWith(input, QUERY_BOOKS_BY_AUTHOR)) {
+	    string authorName;
             // TODO: Substring author
 	    library.printBooksByAuthor(authorName);
         } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {

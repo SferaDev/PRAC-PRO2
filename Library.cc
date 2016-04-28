@@ -21,17 +21,17 @@ void Library::readBook(string title, string authorName) {
     book.readBookContent();
     bookCollection[authorName + "-" + title] = book;
     // Add or update Author with ID: authorName
-    authorCollection.find(authorName);
+    map<string, Author>::iterator it = authorCollection.find(authorName);
     if (it == authorCollection.end()) {
         Author author(authorName);
         author.incrementBookCount(1);
         author.incrementLineCount(book.getBookLines());
-        author.incrementWordCount((book.getBookWords());
+        author.incrementWordCount(book.getBookWords());
         authorCollection[authorName] = author;
     } else {
-        (*it).incrementBookCount(1);
-        (*it).incrementLineCount(book.getBookLines());
-        (*it).incrementWordCount((book.getBookWords());
+        (it->second).incrementBookCount(1);
+        (it->second).incrementLineCount(book.getBookLines());
+        (it->second).incrementWordCount(book.getBookWords());
     }
 }
 
@@ -102,16 +102,16 @@ Quote Library::getQuote(string id) {
 }
 
 void Library::printAuthors() {
-    map<string, Author>::const_iterator it = authorCollection.begin();
+    map<string, Author>::iterator it = authorCollection.begin();
     while (it != authorCollection.end()) {
-        (*it).printInformation();
+        (it->second).printInformation();
     }
 }
 
 void Library::printBooks() {
-    map<string, Book>::const_iterator it = bookCollection.begin();
+    map<string, Book>::iterator it = bookCollection.begin();
     while (it != bookCollection.end()) {
-        (*it).printInformation();
+        (it->second).printInformation();
     }
 }
 

@@ -7,6 +7,7 @@
 #define PRO2_PRAC_AUTHOR_HH
 
 #ifndef NO_DIAGRAM
+#include <iostream>
 #include <set>
 #include <string>
 #endif

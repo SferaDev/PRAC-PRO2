@@ -7,6 +7,7 @@
 #define PRO2_PRAC_QUOTE_HH
 
 #ifndef NO_DIAGRAM
+#include <iostream>
 #include <string>
 #include <vector>
 #endif
