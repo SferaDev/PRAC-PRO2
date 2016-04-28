@@ -126,3 +126,16 @@ void Library::printBooksByAuthor(string author) {
 void Library::printQuotesByAuthor(string author) {
     authorCollection[author].printQuotes();
 }
+
+void Library::printCurrentInformation() {
+    cout << currentBook->second.getAuthorName();
+    cout << currentBook->second.getBookTitle();
+    cout << currentBook->second.getBookLines();
+    cout << currentBook->second.getBookWords() << endl;
+    cout "Cites Associades:" << endl;
+    set<string> quotes = currentBook->second.getBookQuotes();
+    set<string>::iterator it = quotes.begin();
+    while (it != quotes.end()) {
+        quoteCollection[*it].printInformation();
+    }
+}

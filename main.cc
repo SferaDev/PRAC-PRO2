@@ -76,7 +76,9 @@ void readActions(Library& library) {
             // TODO: Substring author
 	    library.printBooksByAuthor(authorName);
         } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {
-            // TODO
+            if (library.isBookSelected())
+                cout << library.getBook().getAuthorName() << endl;
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_CONTENT)) {
             if (library.isBookSelected())
                 library.getBook().printAllLines();

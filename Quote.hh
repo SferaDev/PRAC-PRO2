@@ -57,7 +57,7 @@ public:
         \pre An implicit Quote
         \post Prints all the quote information
     */
-    void printQuoteInformation();
+    void printInformation();
 
     /** @brief Update the start/end line values
         \param start = Start line

@@ -30,6 +30,10 @@ void Quote::setContent(vector<string> content) {
     quoteContent = content;
 }
 
-void Quote::printQuoteInformation() {
-    // TODO
+void Quote::printInformation() {
+    cout << quoteReference << endl;
+    for (int i = 0; i < quoteContent.size(); ++i) {
+        cout << i + quoteStart;
+        cout << quoteContent[i] << endl;
+    }
 }

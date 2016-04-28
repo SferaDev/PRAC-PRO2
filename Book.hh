@@ -143,6 +143,12 @@ public:
         \post Generates the frequency table ordered
     */
     void generateFrequencyTable();
+
+    /** @brief Returns the book quotes
+        \pre An implicit Book
+        \post Returns the bookQuotes set
+    */
+    set<string> Book:getBookQuotes();
     
     /** @brief Prints the information of the implicit book
         \pre An implicit Book
