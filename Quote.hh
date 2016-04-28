@@ -63,7 +63,7 @@ public:
         \pre An implicit Quote
         \post Returns bookTitle
     */
-    string getBookTitle() {
+    string getBookTitle();
 
     /** @brief Return Quote start line
         \pre An implicit Quote
