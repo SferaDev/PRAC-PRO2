@@ -1,148 +1,392 @@
-\hypertarget{class_library}{}\section{Library Class Reference}
+\hypertarget{class_library}{\section{Library Class Reference}
 \label{class_library}\index{Library@{Library}}
+}
+
+
+Main storage of all the Books, Authors and Quotes.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_library_a82338219d8bf51962ff5f60a0db21b19}{Library} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
 \hyperlink{class_library_a62120f28a9b50cc5b151d868e42ab936}{$\sim$\+Library} ()
-\item 
-void \hyperlink{class_library_ab6fb1208e63af938df64fa831cbacb40}{read\+Book} (string title, string author)
-\item 
+\begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
+void \hyperlink{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}{read\+Book} (string title, string author\+Name)
+\begin{DoxyCompactList}\small\item\em Inserts a new book to the book\+Collection. \end{DoxyCompactList}\item 
 bool \hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{is\+Book\+Selected} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns whether we have a chosen book or not. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{select\+Book} (string query)
-\item 
+\begin{DoxyCompactList}\small\item\em Selects a book from the collection. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{delete\+Book} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Deletes a book from the collection. \end{DoxyCompactList}\item 
+void \hyperlink{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{replace\+Words\+On\+Book} (string input)
+\begin{DoxyCompactList}\small\item\em Replaces a word with anopther one in a book from the collection. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}{delete\+Quote} (string id)
-\item 
+\begin{DoxyCompactList}\small\item\em Deletes a quote from the library. \end{DoxyCompactList}\item 
 \hyperlink{class_book}{Book} \hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{get\+Book} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the selected book. \end{DoxyCompactList}\item 
 \hyperlink{class_quote}{Quote} \hyperlink{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{get\+Quote} (string id)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a quote from its I\+D. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{print\+Authors} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints information about the Authors. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{print\+Books} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints information about the Books. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a819acb04f4b8aea0547db50918b1c5fa}{print\+Quotes} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints information about the Quotes. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a6e22621933979ff5cb4e95de3f54b72c}{print\+Books\+By\+Author} (string author)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints information about the Books (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aa13544bfe57c61164d9953518e88dcb0}{print\+Quotes\+By\+Author} (string author)
+\begin{DoxyCompactList}\small\item\em Prints information about the Quotes (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \hyperlink{class_book}{Book} $>$ \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{book\+Collection}
+\item 
+map$<$ string, \hyperlink{class_author}{Author} $>$ \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{author\+Collection}
+\item 
+map$<$ string, \hyperlink{class_quote}{Quote} $>$ \hyperlink{class_library_a84be5207332f4b2456af95907d0a43b5}{quote\+Collection}
+\item 
+map$<$ string, \hyperlink{class_book}{Book} $>$\+::iterator \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{current\+Book}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Main storage of all the Books, Authors and Quotes. 
 
-
-Definition at line 18 of file Library.\+hh.
+Definition at line 25 of file Library.\+hh.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_library_a82338219d8bf51962ff5f60a0db21b19}{}\index{Library@{Library}!Library@{Library}}
+\hypertarget{class_library_a82338219d8bf51962ff5f60a0db21b19}{\index{Library@{Library}!Library@{Library}}
 \index{Library@{Library}!Library@{Library}}
 \subsubsection[{Library}]{\setlength{\rightskip}{0pt plus 5cm}Library\+::\+Library (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a82338219d8bf51962ff5f60a0db21b19}
-\hypertarget{class_library_a62120f28a9b50cc5b151d868e42ab936}{}\index{Library@{Library}!````~Library@{$\sim$\+Library}}
+)}}\label{class_library_a82338219d8bf51962ff5f60a0db21b19}
+
+
+Creates an empty \hyperlink{class_library}{Library}. 
+
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns an implicit empty library 
+\end{DoxyPostcond}
+\hypertarget{class_library_a62120f28a9b50cc5b151d868e42ab936}{\index{Library@{Library}!````~Library@{$\sim$\+Library}}
 \index{````~Library@{$\sim$\+Library}!Library@{Library}}
 \subsubsection[{$\sim$\+Library}]{\setlength{\rightskip}{0pt plus 5cm}Library\+::$\sim$\+Library (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a62120f28a9b50cc5b151d868e42ab936}
+)}}\label{class_library_a62120f28a9b50cc5b151d868e42ab936}
+
+
+Destructs the implicit \hyperlink{class_library}{Library}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Deletes the implicit library 
+\end{DoxyPostcond}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_library_ab6fb1208e63af938df64fa831cbacb40}{}\index{Library@{Library}!read\+Book@{read\+Book}}
+\hypertarget{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}{\index{Library@{Library}!read\+Book@{read\+Book}}
 \index{read\+Book@{read\+Book}!Library@{Library}}
 \subsubsection[{read\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::read\+Book (
 \begin{DoxyParamCaption}
 \item[{string}]{title, }
-\item[{string}]{author}
+\item[{string}]{author\+Name}
 \end{DoxyParamCaption}
-)}\label{class_library_ab6fb1208e63af938df64fa831cbacb40}
-\hypertarget{class_library_a04ff0757054c2813e89036cdd3f7f91f}{}\index{Library@{Library}!is\+Book\+Selected@{is\+Book\+Selected}}
+)}}\label{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}
+
+
+Inserts a new book to the book\+Collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & = The book title \\
+\hline
+{\em author} & = The book author \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The implicit library with a new book (identified by title and author) 
+\end{DoxyPostcond}
+\hypertarget{class_library_a04ff0757054c2813e89036cdd3f7f91f}{\index{Library@{Library}!is\+Book\+Selected@{is\+Book\+Selected}}
 \index{is\+Book\+Selected@{is\+Book\+Selected}!Library@{Library}}
 \subsubsection[{is\+Book\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}bool Library\+::is\+Book\+Selected (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a04ff0757054c2813e89036cdd3f7f91f}
-\hypertarget{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{}\index{Library@{Library}!select\+Book@{select\+Book}}
+)}}\label{class_library_a04ff0757054c2813e89036cdd3f7f91f}
+
+
+Returns whether we have a chosen book or not. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\hypertarget{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{\index{Library@{Library}!select\+Book@{select\+Book}}
 \index{select\+Book@{select\+Book}!Library@{Library}}
 \subsubsection[{select\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::select\+Book (
 \begin{DoxyParamCaption}
 \item[{string}]{query}
 \end{DoxyParamCaption}
-)}\label{class_library_a6dd541a183a89a4d35a80834ed9d8d71}
-\hypertarget{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{}\index{Library@{Library}!delete\+Book@{delete\+Book}}
+)}}\label{class_library_a6dd541a183a89a4d35a80834ed9d8d71}
+
+
+Selects a book from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & = Query to select a book \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+current\+Book iterator has the desired book 
+\end{DoxyPostcond}
+\hypertarget{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{\index{Library@{Library}!delete\+Book@{delete\+Book}}
 \index{delete\+Book@{delete\+Book}!Library@{Library}}
 \subsubsection[{delete\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::delete\+Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}
-\hypertarget{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}{}\index{Library@{Library}!delete\+Quote@{delete\+Quote}}
+)}}\label{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}
+
+
+Deletes a book from the collection. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} and a selected book 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The implicit library without the previous current\+Book 
+\end{DoxyPostcond}
+\hypertarget{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{\index{Library@{Library}!replace\+Words\+On\+Book@{replace\+Words\+On\+Book}}
+\index{replace\+Words\+On\+Book@{replace\+Words\+On\+Book}!Library@{Library}}
+\subsubsection[{replace\+Words\+On\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::replace\+Words\+On\+Book (
+\begin{DoxyParamCaption}
+\item[{string}]{input}
+\end{DoxyParamCaption}
+)}}\label{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}
+
+
+Replaces a word with anopther one in a book from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & = Pattern from the I\+O channel to replace words \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} and a selected book 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The implicit library with the replaced words on current\+Book 
+\end{DoxyPostcond}
+\hypertarget{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}{\index{Library@{Library}!delete\+Quote@{delete\+Quote}}
 \index{delete\+Quote@{delete\+Quote}!Library@{Library}}
 \subsubsection[{delete\+Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::delete\+Quote (
 \begin{DoxyParamCaption}
 \item[{string}]{id}
 \end{DoxyParamCaption}
-)}\label{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}
-\hypertarget{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{}\index{Library@{Library}!get\+Book@{get\+Book}}
+)}}\label{class_library_a705ee20f1edab1ebf274c9e2cbb4d7a3}
+
+
+Deletes a quote from the library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & = \hyperlink{class_quote}{Quote} I\+D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} and a quote with that id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The implicit library without the referenced quote 
+\end{DoxyPostcond}
+\hypertarget{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{\index{Library@{Library}!get\+Book@{get\+Book}}
 \index{get\+Book@{get\+Book}!Library@{Library}}
 \subsubsection[{get\+Book}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Book} Library\+::get\+Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a67ccad51c76c3abfb0d46fa533f46e03}
-\hypertarget{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{}\index{Library@{Library}!get\+Quote@{get\+Quote}}
+)}}\label{class_library_a67ccad51c76c3abfb0d46fa533f46e03}
+
+
+Returns the selected book. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} and a selected book 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns current\+Book 
+\end{DoxyPostcond}
+\hypertarget{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{\index{Library@{Library}!get\+Quote@{get\+Quote}}
 \index{get\+Quote@{get\+Quote}!Library@{Library}}
 \subsubsection[{get\+Quote}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quote} Library\+::get\+Quote (
 \begin{DoxyParamCaption}
 \item[{string}]{id}
 \end{DoxyParamCaption}
-)}\label{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}
-\hypertarget{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{}\index{Library@{Library}!print\+Authors@{print\+Authors}}
+)}}\label{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}
+
+
+Returns a quote from its I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & = \hyperlink{class_quote}{Quote} I\+D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} and a quote with that id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the quote referenced by id 
+\end{DoxyPostcond}
+\hypertarget{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{\index{Library@{Library}!print\+Authors@{print\+Authors}}
 \index{print\+Authors@{print\+Authors}!Library@{Library}}
 \subsubsection[{print\+Authors}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Authors (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}
-\hypertarget{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{}\index{Library@{Library}!print\+Books@{print\+Books}}
+)}}\label{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}
+
+
+Prints information about the Authors. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\hypertarget{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{\index{Library@{Library}!print\+Books@{print\+Books}}
 \index{print\+Books@{print\+Books}!Library@{Library}}
 \subsubsection[{print\+Books}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Books (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}
-\hypertarget{class_library_a819acb04f4b8aea0547db50918b1c5fa}{}\index{Library@{Library}!print\+Quotes@{print\+Quotes}}
+)}}\label{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}
+
+
+Prints information about the Books. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\hypertarget{class_library_a819acb04f4b8aea0547db50918b1c5fa}{\index{Library@{Library}!print\+Quotes@{print\+Quotes}}
 \index{print\+Quotes@{print\+Quotes}!Library@{Library}}
 \subsubsection[{print\+Quotes}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Quotes (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_library_a819acb04f4b8aea0547db50918b1c5fa}
-\hypertarget{class_library_a6e22621933979ff5cb4e95de3f54b72c}{}\index{Library@{Library}!print\+Books\+By\+Author@{print\+Books\+By\+Author}}
+)}}\label{class_library_a819acb04f4b8aea0547db50918b1c5fa}
+
+
+Prints information about the Quotes. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\hypertarget{class_library_a6e22621933979ff5cb4e95de3f54b72c}{\index{Library@{Library}!print\+Books\+By\+Author@{print\+Books\+By\+Author}}
 \index{print\+Books\+By\+Author@{print\+Books\+By\+Author}!Library@{Library}}
 \subsubsection[{print\+Books\+By\+Author}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Books\+By\+Author (
 \begin{DoxyParamCaption}
 \item[{string}]{author}
 \end{DoxyParamCaption}
-)}\label{class_library_a6e22621933979ff5cb4e95de3f54b72c}
-\hypertarget{class_library_aa13544bfe57c61164d9953518e88dcb0}{}\index{Library@{Library}!print\+Quotes\+By\+Author@{print\+Quotes\+By\+Author}}
+)}}\label{class_library_a6e22621933979ff5cb4e95de3f54b72c}
+
+
+Prints information about the Books (by \hyperlink{class_author}{Author}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em author} & = \hyperlink{class_author}{Author} name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\hypertarget{class_library_aa13544bfe57c61164d9953518e88dcb0}{\index{Library@{Library}!print\+Quotes\+By\+Author@{print\+Quotes\+By\+Author}}
 \index{print\+Quotes\+By\+Author@{print\+Quotes\+By\+Author}!Library@{Library}}
 \subsubsection[{print\+Quotes\+By\+Author}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Quotes\+By\+Author (
 \begin{DoxyParamCaption}
 \item[{string}]{author}
 \end{DoxyParamCaption}
-)}\label{class_library_aa13544bfe57c61164d9953518e88dcb0}
+)}}\label{class_library_aa13544bfe57c61164d9953518e88dcb0}
+
+
+Prints information about the Quotes (by \hyperlink{class_author}{Author}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em author} & = \hyperlink{class_author}{Author} name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_library}{Library} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{\index{Library@{Library}!book\+Collection@{book\+Collection}}
+\index{book\+Collection@{book\+Collection}!Library@{Library}}
+\subsubsection[{book\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, {\bf Book}$>$ Library\+::book\+Collection\hspace{0.3cm}{\ttfamily [private]}}}\label{class_library_a5807d6d006ac0aa0a184831f0f2e5415}
+
+
+Definition at line 29 of file Library.\+hh.
+
+\hypertarget{class_library_a7a6958a0dc85a1c816ca35727306cd62}{\index{Library@{Library}!author\+Collection@{author\+Collection}}
+\index{author\+Collection@{author\+Collection}!Library@{Library}}
+\subsubsection[{author\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, {\bf Author}$>$ Library\+::author\+Collection\hspace{0.3cm}{\ttfamily [private]}}}\label{class_library_a7a6958a0dc85a1c816ca35727306cd62}
+
+
+Definition at line 31 of file Library.\+hh.
+
+\hypertarget{class_library_a84be5207332f4b2456af95907d0a43b5}{\index{Library@{Library}!quote\+Collection@{quote\+Collection}}
+\index{quote\+Collection@{quote\+Collection}!Library@{Library}}
+\subsubsection[{quote\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, {\bf Quote}$>$ Library\+::quote\+Collection\hspace{0.3cm}{\ttfamily [private]}}}\label{class_library_a84be5207332f4b2456af95907d0a43b5}
+
+
+Definition at line 33 of file Library.\+hh.
+
+\hypertarget{class_library_a78a4071e8d610da671b3886c71900dae}{\index{Library@{Library}!current\+Book@{current\+Book}}
+\index{current\+Book@{current\+Book}!Library@{Library}}
+\subsubsection[{current\+Book}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, {\bf Book}$>$\+::iterator Library\+::current\+Book\hspace{0.3cm}{\ttfamily [private]}}}\label{class_library_a78a4071e8d610da671b3886c71900dae}
+
+
+Definition at line 35 of file Library.\+hh.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

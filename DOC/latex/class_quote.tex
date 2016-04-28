@@ -1,5 +1,6 @@
-\hypertarget{class_quote}{}\section{Quote Class Reference}
+\hypertarget{class_quote}{\section{Quote Class Reference}
 \label{class_quote}\index{Quote@{Quote}}
+}
 
 
 Data model for Quotes (cites) from Books.  
@@ -14,29 +15,44 @@ Data model for Quotes (cites) from Books.
 \begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 \hyperlink{class_quote_a9b4324f3ee83827f2445177c8301482b}{$\sim$\+Quote} ()
 \begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
-void \hyperlink{class_quote_afdfb9eeaf4f528a5a5b8aee3e9dc47f4}{print\+Quote\+Information} ()
+void \hyperlink{class_quote_a460613985a5f9540850b0f840f013e8e}{print\+Information} ()
 \begin{DoxyCompactList}\small\item\em Print all the information of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}{set\+Quote\+Lines} (int start, int end)
-\begin{DoxyCompactList}\small\item\em Print all the information of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Update the start/end line values. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{set\+Content} (vector$<$ string $>$ content)
-\begin{DoxyCompactList}\small\item\em Print all the information of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update the quote content. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}{quote\+Reference}
+\item 
+string \hyperlink{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}{quote\+Author}
+\item 
+string \hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quote\+Book}
+\item 
+int \hyperlink{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{quote\+Start}
+\item 
+int \hyperlink{class_quote_aa5953a477b96183c8dc2fc8a42001c29}{quote\+End}
+\item 
+vector$<$ string $>$ \hyperlink{class_quote_a0ffcb584920e14d7dd5c45820997f989}{quote\+Content}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Data model for Quotes (cites) from Books. 
 
-Definition at line 19 of file Quote.\+hh.
+Definition at line 21 of file Quote.\+hh.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_quote_ae160077e513fe6346eeba294a195038b}{}\index{Quote@{Quote}!Quote@{Quote}}
+\hypertarget{class_quote_ae160077e513fe6346eeba294a195038b}{\index{Quote@{Quote}!Quote@{Quote}}
 \index{Quote@{Quote}!Quote@{Quote}}
 \subsubsection[{Quote}]{\setlength{\rightskip}{0pt plus 5cm}Quote\+::\+Quote (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_quote_ae160077e513fe6346eeba294a195038b}
+)}}\label{class_quote_ae160077e513fe6346eeba294a195038b}
 
 
 Creates an empty \hyperlink{class_quote}{Quote}. 
@@ -47,7 +63,7 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit empty quote 
 \end{DoxyPostcond}
-\hypertarget{class_quote_a12fee26be3fcdf003691e394f256b2c8}{}\index{Quote@{Quote}!Quote@{Quote}}
+\hypertarget{class_quote_a12fee26be3fcdf003691e394f256b2c8}{\index{Quote@{Quote}!Quote@{Quote}}
 \index{Quote@{Quote}!Quote@{Quote}}
 \subsubsection[{Quote}]{\setlength{\rightskip}{0pt plus 5cm}Quote\+::\+Quote (
 \begin{DoxyParamCaption}
@@ -55,7 +71,7 @@ Returns an implicit empty quote
 \item[{string}]{author, }
 \item[{string}]{book}
 \end{DoxyParamCaption}
-)}\label{class_quote_a12fee26be3fcdf003691e394f256b2c8}
+)}}\label{class_quote_a12fee26be3fcdf003691e394f256b2c8}
 
 
 Creates an empty \hyperlink{class_quote}{Quote}. 
@@ -73,15 +89,15 @@ Creates an empty \hyperlink{class_quote}{Quote}.
 True 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns an implicit empty quote 
+Returns an implicit quote with the reference, author and book 
 \end{DoxyPostcond}
-\hypertarget{class_quote_a9b4324f3ee83827f2445177c8301482b}{}\index{Quote@{Quote}!````~Quote@{$\sim$\+Quote}}
+\hypertarget{class_quote_a9b4324f3ee83827f2445177c8301482b}{\index{Quote@{Quote}!````~Quote@{$\sim$\+Quote}}
 \index{````~Quote@{$\sim$\+Quote}!Quote@{Quote}}
 \subsubsection[{$\sim$\+Quote}]{\setlength{\rightskip}{0pt plus 5cm}Quote\+::$\sim$\+Quote (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_quote_a9b4324f3ee83827f2445177c8301482b}
+)}}\label{class_quote_a9b4324f3ee83827f2445177c8301482b}
 
 
 Destructs the implicit \hyperlink{class_quote}{Quote}. 
@@ -95,13 +111,13 @@ Deletes the implicit quote
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_quote_afdfb9eeaf4f528a5a5b8aee3e9dc47f4}{}\index{Quote@{Quote}!print\+Quote\+Information@{print\+Quote\+Information}}
-\index{print\+Quote\+Information@{print\+Quote\+Information}!Quote@{Quote}}
-\subsubsection[{print\+Quote\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::print\+Quote\+Information (
+\hypertarget{class_quote_a460613985a5f9540850b0f840f013e8e}{\index{Quote@{Quote}!print\+Information@{print\+Information}}
+\index{print\+Information@{print\+Information}!Quote@{Quote}}
+\subsubsection[{print\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::print\+Information (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_quote_afdfb9eeaf4f528a5a5b8aee3e9dc47f4}
+)}}\label{class_quote_a460613985a5f9540850b0f840f013e8e}
 
 
 Print all the information of the implicit \hyperlink{class_quote}{Quote}. 
@@ -110,19 +126,19 @@ Print all the information of the implicit \hyperlink{class_quote}{Quote}.
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Prints all the information 
+Prints all the quote information 
 \end{DoxyPostcond}
-\hypertarget{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}{}\index{Quote@{Quote}!set\+Quote\+Lines@{set\+Quote\+Lines}}
+\hypertarget{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}{\index{Quote@{Quote}!set\+Quote\+Lines@{set\+Quote\+Lines}}
 \index{set\+Quote\+Lines@{set\+Quote\+Lines}!Quote@{Quote}}
 \subsubsection[{set\+Quote\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::set\+Quote\+Lines (
 \begin{DoxyParamCaption}
 \item[{int}]{start, }
 \item[{int}]{end}
 \end{DoxyParamCaption}
-)}\label{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}
+)}}\label{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}
 
 
-Print all the information of the implicit \hyperlink{class_quote}{Quote}. 
+Update the start/end line values. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -137,16 +153,16 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Updates the \hyperlink{class_quote}{Quote} start/end lines 
 \end{DoxyPostcond}
-\hypertarget{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{}\index{Quote@{Quote}!set\+Content@{set\+Content}}
+\hypertarget{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{\index{Quote@{Quote}!set\+Content@{set\+Content}}
 \index{set\+Content@{set\+Content}!Quote@{Quote}}
 \subsubsection[{set\+Content}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::set\+Content (
 \begin{DoxyParamCaption}
 \item[{vector$<$ string $>$}]{content}
 \end{DoxyParamCaption}
-)}\label{class_quote_ab3af36f8b5649b115fca7eecbb294a59}
+)}}\label{class_quote_ab3af36f8b5649b115fca7eecbb294a59}
 
 
-Print all the information of the implicit \hyperlink{class_quote}{Quote}. 
+Update the quote content. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -159,6 +175,51 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Updates the \hyperlink{class_quote}{Quote} content 
 \end{DoxyPostcond}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}{\index{Quote@{Quote}!quote\+Reference@{quote\+Reference}}
+\index{quote\+Reference@{quote\+Reference}!Quote@{Quote}}
+\subsubsection[{quote\+Reference}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::quote\+Reference\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}
+
+
+Definition at line 24 of file Quote.\+hh.
+
+\hypertarget{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}{\index{Quote@{Quote}!quote\+Author@{quote\+Author}}
+\index{quote\+Author@{quote\+Author}!Quote@{Quote}}
+\subsubsection[{quote\+Author}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::quote\+Author\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}
+
+
+Definition at line 26 of file Quote.\+hh.
+
+\hypertarget{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{\index{Quote@{Quote}!quote\+Book@{quote\+Book}}
+\index{quote\+Book@{quote\+Book}!Quote@{Quote}}
+\subsubsection[{quote\+Book}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::quote\+Book\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}
+
+
+Definition at line 28 of file Quote.\+hh.
+
+\hypertarget{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{\index{Quote@{Quote}!quote\+Start@{quote\+Start}}
+\index{quote\+Start@{quote\+Start}!Quote@{Quote}}
+\subsubsection[{quote\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::quote\+Start\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_ac426122ac24638740b2a5c5e8342e8c9}
+
+
+Definition at line 30 of file Quote.\+hh.
+
+\hypertarget{class_quote_aa5953a477b96183c8dc2fc8a42001c29}{\index{Quote@{Quote}!quote\+End@{quote\+End}}
+\index{quote\+End@{quote\+End}!Quote@{Quote}}
+\subsubsection[{quote\+End}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::quote\+End\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_aa5953a477b96183c8dc2fc8a42001c29}
+
+
+Definition at line 30 of file Quote.\+hh.
+
+\hypertarget{class_quote_a0ffcb584920e14d7dd5c45820997f989}{\index{Quote@{Quote}!quote\+Content@{quote\+Content}}
+\index{quote\+Content@{quote\+Content}!Quote@{Quote}}
+\subsubsection[{quote\+Content}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Quote\+::quote\+Content\hspace{0.3cm}{\ttfamily [private]}}}\label{class_quote_a0ffcb584920e14d7dd5c45820997f989}
+
+
+Definition at line 32 of file Quote.\+hh.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

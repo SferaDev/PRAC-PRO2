@@ -1,0 +1,59 @@
+\hypertarget{struct_book_1_1frequency_comparator}{\section{Book\+:\+:frequency\+Comparator Struct Reference}
+\label{struct_book_1_1frequency_comparator}\index{Book\+::frequency\+Comparator@{Book\+::frequency\+Comparator}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_book_1_1frequency_comparator_ae54c5fbeff5d340a44c3dff664a6e827}{operator()} (const pair$<$ string, int $>$ \&a, const pair$<$ string, int $>$ \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 51 of file Book.\+hh.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_book_1_1frequency_comparator_ae54c5fbeff5d340a44c3dff664a6e827}{\index{Book\+::frequency\+Comparator@{Book\+::frequency\+Comparator}!operator()@{operator()}}
+\index{operator()@{operator()}!Book\+::frequency\+Comparator@{Book\+::frequency\+Comparator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::frequency\+Comparator\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const pair$<$ string, int $>$ \&}]{a, }
+\item[{const pair$<$ string, int $>$ \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{struct_book_1_1frequency_comparator_ae54c5fbeff5d340a44c3dff664a6e827}
+
+
+Definition at line 52 of file Book.\+hh.
+
+
+\begin{DoxyCode}
+52                                                                                 \{
+53             \textcolor{comment}{// Special case: Same frequency}
+54             \textcolor{keywordflow}{if} (a.second == b.second) \{
+55                 \textcolor{comment}{// Special case: Same length}
+56                 \textcolor{keywordflow}{if} (a.first.length() == b.first.length()) \{
+57                     \textcolor{comment}{// Make a lower case copy of the strings and compare them}
+58                     \textcolor{keywordtype}{string} aString = a.first;
+59                     \textcolor{keywordtype}{string} bString = b.first;
+60                     \textcolor{comment}{// Inv: They have the same length}
+61                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < aString.length(); ++i) \{
+62                         aString[i] = tolower(aString[i]);
+63                         bString[i] = tolower(bString[i]);
+64                     \}
+65                     \textcolor{keywordflow}{return} aString < bString;
+66                 \}
+67                 \textcolor{comment}{// Base case: Order by length in asc order}
+68                 \textcolor{keywordflow}{return} a.first.length() < b.first.length();
+69             \}
+70             \textcolor{comment}{// Base case: Order by frequency in desc order}
+71             \textcolor{keywordflow}{return} a.second > b.second;
+72         \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_book_8hh}{Book.\+hh}\end{DoxyCompactItemize}

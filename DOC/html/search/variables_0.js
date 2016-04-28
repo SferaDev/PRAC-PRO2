@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['book_5fdelete',['BOOK_DELETE',['../main_8cc.html#a7749b7f479d011a8d3311aa8b5fbb4b5',1,'main.cc']]],
-  ['book_5finsert',['BOOK_INSERT',['../main_8cc.html#a2b15fbc1759d69bee062c54b05dc462b',1,'main.cc']]],
-  ['book_5freplace_5fword',['BOOK_REPLACE_WORD',['../main_8cc.html#abe8ee09135d5fdb707b7d2a35528f5de',1,'main.cc']]],
-  ['book_5fselect',['BOOK_SELECT',['../main_8cc.html#aa9363d09f3d16e41e1a0cf3ec842e975',1,'main.cc']]]
+  ['authorbooks',['authorBooks',['../class_author.html#ad9ffe450cdafed2242936f6fcafa22b4',1,'Author']]],
+  ['authorcollection',['authorCollection',['../class_library.html#a7a6958a0dc85a1c816ca35727306cd62',1,'Library']]],
+  ['authorname',['authorName',['../class_author.html#a146b76b89d701097c36fb5d29df27bc4',1,'Author::authorName()'],['../class_book.html#a0dcb8f78ffb56c34e28f5d672b422e2a',1,'Book::authorName()']]],
+  ['authorquotes',['authorQuotes',['../class_author.html#ad505d991f439d28c4831828952e01fb6',1,'Author']]]
 ];

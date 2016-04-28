@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cc']]],
-  ['main_2ecc',['main.cc',['../main_8cc.html',1,'']]]
+  ['library',['Library',['../class_library.html',1,'Library'],['../class_library.html#a82338219d8bf51962ff5f60a0db21b19',1,'Library::Library()']]],
+  ['library_2ehh',['Library.hh',['../_library_8hh.html',1,'']]]
 ];
