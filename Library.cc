@@ -29,9 +29,9 @@ void Library::readBook(string title, string authorName) {
         author.incrementWordCount((book.getBookWords());
         authorCollection[authorName] = author;
     } else {
-        *it.incrementBookCount(1);
-        *it.incrementLineCount(book.getBookLines());
-        *it.incrementWordCount((book.getBookWords());
+        (*it).incrementBookCount(1);
+        (*it).incrementLineCount(book.getBookLines());
+        (*it).incrementWordCount((book.getBookWords());
     }
 }
 
@@ -102,7 +102,10 @@ Quote Library::getQuote(string id) {
 }
 
 void Library::printAuthors() {
-    // TODO
+    map<string, Author>::const_iterator it = authorCollection.begin();
+    while (it != authorCollection.end()) {
+        (*it).printInformation();
+    }
 }
 
 void Library::printBooks() {

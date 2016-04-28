@@ -69,6 +69,12 @@ public:
     
     void deleteQuote(string id);
     
+    /** @brief Prints information about the Author
+        \pre An implicit Author
+        \post True
+    */
+    void printInformation();
+
     /** @brief Prints information about the Books
         \pre An implicit Author
         \post True

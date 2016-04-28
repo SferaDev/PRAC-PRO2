@@ -67,11 +67,12 @@ void readActions(Library& library) {
             // TODO: Substring reference from input
             library.deleteQuote(reference);
         } else if (startsWith(input, QUERY_AUTHORS)) {
-            // TODO
+            library.printAuthors();
         } else if (startsWith(input, QUERY_BOOKS_ALL)) {
-            // TODO
+            library.printBooks();
         } else if (startsWith(input, QUERY_BOOKS_BY_AUTHOR)) {
-            // TODO
+            // TODO: Substring author
+	    library.printBooksByAuthor(authorName);
         } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {
             // TODO
         } else if (startsWith(input, QUERY_CURRENT_CONTENT)) {

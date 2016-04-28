@@ -50,7 +50,12 @@ void Author::deleteBook(string title) {
 void Author::deleteQuote(string id) {
     // TODO
 }
-    
+
+void Author::printInformation() {
+    cout << authorName << totalBooks << totalLines << totalWords;
+    cout << endl;
+}
+
 void Author::printBooks() {
     set<string>::const_iterator it = authorBooks.begin();
     while (it != authorBooks.end()) {
