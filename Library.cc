@@ -16,10 +16,10 @@ Library::~Library() {
 }
 
 void Library::readBook(string title, string authorName) {
-    // Add new Book with ID: title-authorName
+    // Add new Book with ID: authorName-title
     Book book(title, authorName);
     book.readBookContent();
-    bookCollection[title + "-" + authorName] = book;
+    bookCollection[authorName + "-" + title] = book;
     // Add or update Author with ID: authorName
     authorCollection.find(authorName);
     if (it == authorCollection.end()) {
@@ -109,7 +109,10 @@ void Library::printAuthors() {
 }
 
 void Library::printBooks() {
-    // TODO
+    map<string, Book>::const_iterator it = bookCollection.begin();
+    while (it != bookCollection.end()) {
+        (*it).printInformation();
+    }
 }
 
 void Library::printQuotes() {

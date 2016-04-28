@@ -143,6 +143,12 @@ public:
         \post Generates the frequency table ordered
     */
     void generateFrequencyTable();
+    
+    /** @brief Prints the information of the implicit book
+        \pre An implicit Book
+        \post Prints the title and author of the book
+    */
+    void printInformation();
 
     /** @brief Prints all lines of the implicit Book, from 1 to bookContent.size()
         \pre An implicit Book

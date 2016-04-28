@@ -92,6 +92,10 @@ void Book::generateFrequencyTable() {
     sort(wordFrequencyVector.begin(), wordFrequencyVector.end(), frequencyComparator());
 }
 
+void Book::printInformation() {
+    cout << bookTitle << authorName << endl;
+}
+
 void Book::printAllLines() {
     printSelectLines(1, bookContent.size());
 }
