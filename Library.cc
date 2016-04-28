@@ -64,7 +64,7 @@ void Library::selectBook(string query) {
         }
         it++;
     }
-    // TODO: FIXME: Build FrequencyTable Vector upon select
+    // Build FrequencyTable Vector upon select
     if (isBookSelected()) currentBook->second.generateFrequencyTable();
 }
 
@@ -120,11 +120,9 @@ void Library::printQuotes() {
 }
 
 void Library::printBooksByAuthor(string author) {
-    // TODO
     authorCollection[author].printBooks();
 }
 
 void Library::printQuotesByAuthor(string author) {
-    // TODO
     authorCollection[author].printQuotes();
 }
