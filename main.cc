@@ -48,6 +48,7 @@ bool startsWith(string input, string compare) {
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
+        cout << input << endl;
         if (startsWith(input, BOOK_INSERT)) {
             string title, author;
             title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
