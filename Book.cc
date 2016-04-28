@@ -92,7 +92,7 @@ void Book::generateFrequencyTable() {
     sort(wordFrequencyVector.begin(), wordFrequencyVector.end(), frequencyComparator());
 }
 
-set<string> Book:getBookQuotes() {
+set<string> Book::getBookQuotes() {
     return bookQuotes;
 }
 

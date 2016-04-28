@@ -110,7 +110,7 @@ void readActions(Library& library) {
         } else if (startsWith(input, QUERY_QUOTE_INFO)) {
             string reference;
             // TODO: Substring reference from input
-            library.getQuote(reference).printQuoteInformation();
+            // TODO: library.getQuote(reference).printQuoteInformation();
         } else if (startsWith(input, QUIT)) {
             return;
         }

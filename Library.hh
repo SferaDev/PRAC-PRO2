@@ -132,6 +132,12 @@ public:
         \post True
     */
     void printQuotesByAuthor(string author);
+
+    /** @brief Prints information about current book
+        \pre An implicit Library and currentBook
+        \post True
+    */
+    void printCurrentInformation();
 };
 
 #endif //PRO2_PRAC_LIBRARY_HH

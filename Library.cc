@@ -132,7 +132,7 @@ void Library::printCurrentInformation() {
     cout << currentBook->second.getBookTitle();
     cout << currentBook->second.getBookLines();
     cout << currentBook->second.getBookWords() << endl;
-    cout "Cites Associades:" << endl;
+    cout << "Cites Associades:" << endl;
     set<string> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {

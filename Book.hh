@@ -148,7 +148,7 @@ public:
         \pre An implicit Book
         \post Returns the bookQuotes set
     */
-    set<string> Book:getBookQuotes();
+    set<string> getBookQuotes();
     
     /** @brief Prints the information of the implicit book
         \pre An implicit Book

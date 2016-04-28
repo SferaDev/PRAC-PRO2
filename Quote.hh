@@ -53,12 +53,6 @@ public:
     */
     ~Quote();
 
-    /** @brief Print all the information of the implicit Quote
-        \pre An implicit Quote
-        \post Prints all the quote information
-    */
-    void printInformation();
-
     /** @brief Update the start/end line values
         \param start = Start line
         \param end = End line
@@ -73,7 +67,19 @@ public:
         \post Updates the Quote content
     */
     void setContent(vector<string> content);
+    
+    /** @brief Print content of the implicit Quote
+        \pre An implicit Quote
+        \post Prints quote content
+    */
+    void printInformation();
+    
+    /** @brief Print all the information of the implicit Quote
+        \pre An implicit Quote
+        \post Prints all the quote information
+    */
+    void printInformationComplex();
 
-    };
+};
 
 #endif //PRO2_PRAC_QUOTE_HH

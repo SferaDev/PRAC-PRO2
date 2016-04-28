@@ -4,6 +4,8 @@
 */
 
 #include "Quote.hh"
+#include <sstream>
+
 using namespace std;
 
 Quote::Quote() {
@@ -33,7 +35,12 @@ void Quote::setContent(vector<string> content) {
 void Quote::printInformation() {
     cout << quoteReference << endl;
     for (int i = 0; i < quoteContent.size(); ++i) {
-        cout << i + quoteStart;
+        cout << i + quoteStart << " ";
         cout << quoteContent[i] << endl;
     }
+}
+
+void Quote::printInformationComplex() {
+    printInformation();
+    cout << quoteAuthor << " " << quoteBook;
 }
