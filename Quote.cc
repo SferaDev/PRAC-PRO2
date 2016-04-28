@@ -61,6 +61,8 @@ void Quote::printInformation(bool reference, bool startend) {
 }
 
 void Quote::printInformationComplex() {
-    printInformation(true, false);
-    cout << quoteAuthor << " \"" << quoteBook << "\" " << endl;
+    if (!quoteAuthor.empty() and !quoteBook.empty()) {
+        printInformation(true, false);
+        cout << quoteAuthor << " \"" << quoteBook << "\" " << endl;
+    }
 }
