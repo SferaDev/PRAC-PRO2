@@ -122,9 +122,11 @@ void readActions(Library& library) {
         } else if (startsWith(input, QUERY_QUOTE_INFO)) {
             string reference = input.erase(input.length() - 3, 3);
             reference = reference.substr(input.find_first_of("\"") + 1);
-            Quote quote = library.getQuote(reference);
-            cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
-            library.getQuote(reference).printInformation(false, true);
+            if (library.quoteExists(reference)) {
+                Quote quote = library.getQuote(reference);
+                cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
+                quote.printInformation(false, true);
+            } else cout << "error" << endl;
         }
     }
 }

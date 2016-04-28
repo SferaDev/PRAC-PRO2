@@ -104,6 +104,13 @@ public:
     */
     Book getBook();
 
+    /** @brief Returns if a quote exists with that reference
+        \param id = Quote ID
+        \pre An implicit Library and a quote with that id
+        \post Returns if it exists
+    */
+    bool quoteExists(string id);
+
     /** @brief Returns a quote from its ID
         \param id = Quote ID
         \pre An implicit Library and a quote with that id

@@ -163,6 +163,11 @@ Book Library::getBook() {
     return currentBook->second;
 }
 
+bool Library::quoteExists(string id) {
+    map<string, Quote>::const_iterator it = quoteCollection.find(id);
+    return it != quoteCollection.end();
+}
+
 Quote Library::getQuote(string id) {
     return quoteCollection[id];
 }
