@@ -105,7 +105,11 @@ void Library::replaceWordsOnBook(string input) {
 }
 
 void Library::insertQuote(int start, int end) {
-    // TODO: FIXME: Error if end < start
+    // Error conditions if invalid start/end is given
+    if ((end < start) or (start < 1) or (end > currentBook->second.getBookLines())) {
+        cout << "error" << endl;
+        return;
+    }
     // Assign new Reference (check what was the last one)
     string reference, aux;
     istringstream iss(currentBook->second.getAuthorName());
