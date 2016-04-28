@@ -23,8 +23,8 @@ using namespace std;
 class Book {
 
 private:
-
-    string authorName; // Name of the author (ID on parent authorCollection)
+    /** @brief Name of the author (ID on parent authorCollection) */
+    string authorName;
 
     string bookTitle; // Name of the book (ID of current element)
 
