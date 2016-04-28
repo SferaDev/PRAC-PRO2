@@ -54,15 +54,8 @@ private:
             if (a.second == b.second) {
                 // Special case: Same length
                 if (a.first.length() == b.first.length()) {
-                    // Make a lower case copy of the strings and compare them
-                    string aString = a.first;
-                    string bString = b.first;
-                    // Inv: They have the same length
-                    for (int i = 0; i < aString.length(); ++i) {
-                        aString[i] = tolower(aString[i]);
-                        bString[i] = tolower(bString[i]);
-                    }
-                    return aString < bString;
+                    //FIXME: Ask if it should lower case compare
+                    return a.first < b.first;
                 }
                 // Base case: Order by length in asc order
                 return a.first.length() < b.first.length();
@@ -154,7 +147,7 @@ public:
         \pre An implicit Book
         \post Returns the lines from the vector (pos - 1)
     */
-    void getLines(vector<string> vector, int start, int end);
+    vector<string> getLines(int start, int end);
 
     /** @brief Adds new Quote to Book
         \pre An implicit Book
