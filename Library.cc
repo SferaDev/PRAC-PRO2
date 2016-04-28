@@ -19,10 +19,17 @@ void Library::readBook(string title, string authorName) {
     // Add new Book with ID: authorName-title
     Book book(title, authorName);
     book.readBookContent();
-    bookCollection[authorName + "-" + title] = book;
+    // If same book with same author exists return error!
+    map<string, Book>::iterator bookIt = bookCollection.find(authorName + "-" + title);
+    if (bookIt == bookCollection.end()) {
+        bookCollection[authorName + "-" + title] = book;
+    } else {
+        cout << "error" << endl;
+        return;
+    }
     // Add or update Author with ID: authorName
-    map<string, Author>::iterator it = authorCollection.find(authorName);
-    if (it == authorCollection.end()) {
+    map<string, Author>::iterator authorIt = authorCollection.find(authorName);
+    if (authorIt == authorCollection.end()) {
         Author author(authorName);
         author.incrementBookCount(1);
         author.incrementLineCount(book.getBookLines());
@@ -30,10 +37,10 @@ void Library::readBook(string title, string authorName) {
         author.addBook(title);
         authorCollection[authorName] = author;
     } else {
-        it->second.incrementBookCount(1);
-        it->second.incrementLineCount(book.getBookLines());
-        it->second.incrementWordCount(book.getBookWords());
-        it->second.addBook(title);
+        authorIt->second.incrementBookCount(1);
+        authorIt->second.incrementLineCount(book.getBookLines());
+        authorIt->second.incrementWordCount(book.getBookWords());
+        authorIt->second.addBook(title);
     }
 }
 
