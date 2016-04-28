@@ -87,9 +87,53 @@ void Library::replaceWordsOnBook(string input) {
     } else cout << "error" << endl;
 }
 
-void Library::deleteQuote(string id) {
-    if (!quoteCollection.erase(id)) {
+void Library::insertQuote(int start, int end) {
+    // Assign new Reference (check what was the last one)
+    string reference, aux;
+    istringstream iss(currentBook->second.getAuthorName());
+    while (iss >> aux) reference += aux[0];
+    // Check if there's an existing Quote with these lines of the same book
+    map<string, Quote>::iterator it = quoteCollection.begin();
+    int pos = 1;
+    while (it != quoteCollection.end() and it->second.getReference() < reference) {
+        if (it->second.getReference().substr(0, reference.length()) == reference) {
+            if (it->second.getBookTitle() == currentBook->second.getBookTitle()
+                    and it->second.getStartLine() == start
+                    and it->second.getEndLine() == end) {
+                cout << "error" << endl;
+                return;
+            } else pos += 1;
+        }
+    }
+    // Set position on the reference
+    reference += pos;
+    // Get lines from book vector<string> (1-size)
+    vector<string> lines(end - start + 1);
+    currentBook->second.getLines(lines, start, end);
+    // Store them into new Quote
+    Quote quote(reference, currentBook->second.getAuthorName(),
+                currentBook->second.getBookTitle());
+    quote.setContent(lines);
+    quote.setQuoteLines(start, end);
+    // Store the Quote in quoteCollection
+    quoteCollection[reference] = quote;
+    // Add ID to Book
+    currentBook->second.addQuote(reference);
+    // Add ID to Author
+    authorCollection[currentBook->second.getAuthorName()].addQuote(reference);
+}
+
+void Library::deleteQuote(string reference) {
+    map<string, Quote>::iterator it = quoteCollection.find(reference);
+    if (it == quoteCollection.end()) {
         cout << "error" << endl;
+    } else {
+        // Remove Quote from Book
+        currentBook->second.deleteQuote(reference);
+        // Remove Quote from Author
+        authorCollection[currentBook->second.getAuthorName()].deleteQuote(reference);
+        // Delete the Quote from the collection
+        quoteCollection.erase(it);
     }
 }
 

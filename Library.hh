@@ -81,12 +81,20 @@ public:
     */
     void replaceWordsOnBook(string input);
 
+    /** @brief Inserts a new quote (currentBook) to the library
+        \param start = Start line
+        \param end = End line
+        \pre An implicit Library and implicit book
+        \post The implicit library with a new quote
+    */
+    void insertQuote(int start, int end);
+
     /** @brief Deletes a quote from the library
         \param id = Quote ID
         \pre An implicit Library and a quote with that id
         \post The implicit library without the referenced quote
     */
-    void deleteQuote(string id);
+    void deleteQuote(string reference);
 
     /** @brief Returns the selected book
         \pre An implicit Library and a selected book

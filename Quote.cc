@@ -22,6 +22,22 @@ Quote::~Quote() {
     // no-op
 }
 
+string Quote::getReference() {
+    return quoteReference;
+}
+
+string Quote::getBookTitle() {
+    return quoteBook;
+}
+
+int Quote::getStartLine() {
+    return quoteStart;
+}
+
+int Quote::getEndLine() {
+    return quoteEnd;
+}
+
 void Quote::setQuoteLines(int start, int end) {
     quoteStart = start;
     quoteEnd = end;

@@ -53,6 +53,30 @@ public:
     */
     ~Quote();
 
+    /** @brief Return Quote reference
+        \pre An implicit Quote
+        \post Returns quoteReference
+    */
+    string getReference();
+
+    /** @brief Return Quote's book title
+        \pre An implicit Quote
+        \post Returns bookTitle
+    */
+    string getBookTitle() {
+
+    /** @brief Return Quote start line
+        \pre An implicit Quote
+        \post Returns quoteStart
+    */
+    int getStartLine();
+
+    /** @brief Return Quote end line
+        \pre An implicit Quote
+        \post Returns quoteEnd
+    */
+    int getEndLine();
+
     /** @brief Update the start/end line values
         \param start = Start line
         \param end = End line

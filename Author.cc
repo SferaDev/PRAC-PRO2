@@ -39,16 +39,16 @@ void Author::addBook(string title) {
     authorBooks.insert(title);
 }
     
-void Author::addQuote() {
-    // TODO
+void Author::addQuote(string reference) {
+    authorQuotes.insert(reference);
 }
     
 void Author::deleteBook(string title) {
     authorBooks.erase(title);
 }
     
-void Author::deleteQuote(string id) {
-    // TODO
+void Author::deleteQuote(string reference) {
+    authorQuotes.erase(reference);
 }
 
 void Author::printInformation() {

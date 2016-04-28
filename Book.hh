@@ -47,7 +47,7 @@ private:
     set<string> bookQuotes; // Ordered collection of quotes
                             // The value of the item is the ID of the parent quoteCollection
 
-    // Comparator for the frequency sort
+    /** @brief Comparator for the frequencyTable */
     struct frequencyComparator {
         bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
             // Special case: Same frequency
@@ -149,7 +149,25 @@ public:
         \post Returns the bookQuotes set
     */
     set<string> getBookQuotes();
-    
+
+    /** @brief Returns the lines from start to end
+        \pre An implicit Book
+        \post Returns the lines from the vector (pos - 1)
+    */
+    void getLines(vector<string> vector, int start, int end);
+
+    /** @brief Adds new Quote to Book
+        \pre An implicit Book
+        \post bookQuotes has a new element
+    */
+    void addQuote(string reference);
+
+    /** @brief Removes a  Quote from Book
+        \pre An implicit Book
+        \post bookQuotes has one less element
+    */
+    void deleteQuote(string reference);
+
     /** @brief Prints the information of the implicit book
         \pre An implicit Book
         \post Prints the title and author of the book

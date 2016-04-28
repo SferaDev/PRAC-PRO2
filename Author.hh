@@ -63,12 +63,20 @@ public:
     void incrementWordCount(int value);
     
     void addBook(string title);
-    
-    void addQuote();
-    
+
+    /** @brief Adds new Quote to Book
+        \pre An implicit Book
+        \post bookQuotes has a new element
+    */
+    void addQuote(string reference);
+
     void deleteBook(string title);
-    
-    void deleteQuote(string id);
+
+    /** @brief Removes a  Quote from Book
+        \pre An implicit Book
+        \post bookQuotes has one less element
+    */
+    void deleteQuote(string reference);
     
     /** @brief Prints information about the Author
         \pre An implicit Author
