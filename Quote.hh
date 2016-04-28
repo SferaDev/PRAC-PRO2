@@ -59,6 +59,12 @@ public:
     */
     string getReference();
 
+    /** @brief Return Quote's author name
+        \pre An implicit Quote
+        \post Returns bookAuthor
+    */
+    string getAuthor();
+
     /** @brief Return Quote's book title
         \pre An implicit Quote
         \post Returns bookTitle
@@ -96,7 +102,7 @@ public:
         \pre An implicit Quote
         \post Prints quote content
     */
-    void printInformation();
+    void printInformation(bool reference, bool startend);
     
     /** @brief Print all the information of the implicit Quote
         \pre An implicit Quote

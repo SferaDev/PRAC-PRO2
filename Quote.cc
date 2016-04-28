@@ -26,6 +26,10 @@ string Quote::getReference() {
     return quoteReference;
 }
 
+string Quote::getAuthor() {
+    return quoteAuthor;
+}
+
 string Quote::getBookTitle() {
     return quoteBook;
 }
@@ -48,15 +52,15 @@ void Quote::setContent(vector<string> content) {
     quoteContent = content;
 }
 
-void Quote::printInformation() {
-    cout << quoteReference << endl;
+void Quote::printInformation(bool reference, bool startend) {
+    if (reference) cout << quoteReference << endl;
+    if (startend) cout << quoteStart << "-" << quoteEnd << endl;
     for (int i = 0; i < quoteContent.size(); ++i) {
-        cout << i + quoteStart << " ";
-        cout << quoteContent[i] << endl;
+        cout << i + quoteStart << " " << quoteContent[i] << endl;
     }
 }
 
 void Quote::printInformationComplex() {
-    printInformation();
-    cout << quoteAuthor << " " << quoteBook;
+    printInformation(true, false);
+    cout << quoteAuthor << " \"" << quoteBook << "\" " << endl;
 }

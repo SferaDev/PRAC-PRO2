@@ -96,10 +96,12 @@ set<string> Book::getBookQuotes() {
     return bookQuotes;
 }
 
-void Book::getLines(vector<string> vector, int start, int end) {
-    for (int i = start; i < end; ++i) {
+vector<string> Book::getLines(int start, int end) {
+    vector<string> vector(end - start + 1);
+    for (int i = start; i <= end; ++i) {
         vector[i - start] = bookContent[i - 1];
     }
+    return vector;
 }
 
 void Book::addQuote(string reference) {
@@ -111,7 +113,7 @@ void Book::deleteQuote(string reference) {
 }
 
 void Book::printInformation() {
-    cout << bookTitle << authorName << endl;
+    cout << authorName << " \"" <<  bookTitle << "\" " << endl;
 }
 
 void Book::printAllLines() {

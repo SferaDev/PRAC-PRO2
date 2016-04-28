@@ -51,18 +51,23 @@ void Author::deleteQuote(string reference) {
     authorQuotes.erase(reference);
 }
 
+set<string> Author::getAuthorQuotes() {
+    return authorQuotes;
+}
+
+bool Author::isEmpty() {
+    return authorBooks.empty();
+}
+
 void Author::printInformation() {
-    cout << authorName << totalBooks << totalLines << totalWords;
+    cout << authorName << " " << totalBooks << " " << totalLines << " " << totalWords;
     cout << endl;
 }
 
 void Author::printBooks() {
     set<string>::const_iterator it = authorBooks.begin();
     while (it != authorBooks.end()) {
-        cout << *it << endl;
+        cout << "\"" << *it << "\"" << endl;
+        ++it;
     }
-}
-
-void Author::printQuotes() {
-    // TODO
 }

@@ -32,6 +32,8 @@ private:
 
     map<string, Quote> quoteCollection;// Collection of Quotes
 
+    map<string, int> quoteIdentifiers;// ID of Quotes
+
     map<string, Book>::iterator currentBook;// Current book iterator
 
 public:
@@ -146,6 +148,12 @@ public:
         \post True
     */
     void printCurrentInformation();
+
+    /** @brief Prints quotes of current book
+        \pre An implicit Library and currentBook
+        \post True
+    */
+    void printCurrentQuotes();
 };
 
 #endif //PRO2_PRAC_LIBRARY_HH

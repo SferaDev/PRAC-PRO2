@@ -77,6 +77,18 @@ public:
         \post bookQuotes has one less element
     */
     void deleteQuote(string reference);
+
+    /** @brief Returns the author quotes
+        \pre An implicit Author
+        \post Returns the authorQuotes set
+    */
+    set<string> getAuthorQuotes();
+
+    /** @brief Returns if Author has any book
+        \pre An implicit Author
+        \post Returns true if books is not empty
+    */
+    bool isEmpty();
     
     /** @brief Prints information about the Author
         \pre An implicit Author
@@ -89,12 +101,6 @@ public:
         \post True
     */
     void printBooks();
-
-    /** @brief Prints information about the Quotes
-        \pre An implicit Author
-        \post True
-    */
-    void printQuotes();
 
 };
 

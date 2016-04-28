@@ -48,7 +48,11 @@ bool startsWith(string input, string compare) {
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
-        cout << input << endl;
+        // Quit command returns void
+        if (startsWith(input, QUIT)) {
+            return;
+        } else cout << input << endl;
+        // Handle the rest of commands
         if (startsWith(input, BOOK_INSERT)) {
             string title, author;
             title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
@@ -62,19 +66,23 @@ void readActions(Library& library) {
         } else if (startsWith(input, BOOK_REPLACE_WORD)) {
             library.replaceWordsOnBook(input);
         } else if (startsWith(input, QUOTE_INSERT)) {
-            // TODO
+            int start, end;
+            input = input.substr(QUOTE_INSERT.length());
+            istringstream iss(input);
+            iss >> start >> end;
+            library.insertQuote(start, end);
         } else if (startsWith(input, QUOTE_DELETE)) {
-            string reference;
-            // TODO: Substring reference from input
+            string reference = input.erase(input.length() - 1, 1);
+            reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
         } else if (startsWith(input, QUERY_AUTHORS)) {
             library.printAuthors();
         } else if (startsWith(input, QUERY_BOOKS_ALL)) {
             library.printBooks();
         } else if (startsWith(input, QUERY_BOOKS_BY_AUTHOR)) {
-	    string authorName;
-            // TODO: Substring author
-	    library.printBooksByAuthor(authorName);
+	        string authorName = input.erase(input.length() - 3, 3);
+            authorName = authorName.substr(input.find_first_of("\"") + 1);
+	        library.printBooksByAuthor(authorName);
         } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {
             if (library.isBookSelected())
                 cout << library.getBook().getAuthorName() << endl;
@@ -84,9 +92,11 @@ void readActions(Library& library) {
                 library.getBook().printAllLines();
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_INFO)) {
-            // TODO
+            if (library.isBookSelected())
+                library.printCurrentInformation();
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_EXPRESION)) {
-            // TODO
+            // TODO: Jordi Recursiiiiive
         } else if (startsWith(input, QUERY_CURRENT_LINES)) {
             if (library.isBookSelected())
                 cout << library.getBook().getBookLines() << endl;
@@ -100,19 +110,21 @@ void readActions(Library& library) {
                 library.getBook().printFrequencyTable();
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_QUOTES)) {
-            // TODO
+            if (library.isBookSelected())
+                library.printCurrentQuotes();
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_QUOTES_ALL)) {
             library.printQuotes();
         } else if (startsWith(input, QUERY_QUOTES_BY_AUTHOR)) {
-            string author;
-            // TODO: Substring author from input
-            library.printQuotesByAuthor(author);
+            string authorName = input.erase(input.length() - 3, 3);
+            authorName = authorName.substr(input.find_first_of("\"") + 1);
+            library.printQuotesByAuthor(authorName);
         } else if (startsWith(input, QUERY_QUOTE_INFO)) {
-            string reference;
-            // TODO: Substring reference from input
-            // TODO: library.getQuote(reference).printQuoteInformation();
-        } else if (startsWith(input, QUIT)) {
-            return;
+            string reference = input.erase(input.length() - 3, 3);
+            reference = reference.substr(input.find_first_of("\"") + 1);
+            Quote quote = library.getQuote(reference);
+            cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
+            library.getQuote(reference).printInformation(false, true);
         }
     }
 }
