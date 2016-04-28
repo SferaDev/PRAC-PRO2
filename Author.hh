@@ -61,11 +61,11 @@ public:
     
     void incrementWordCount(int value);
     
-    void addBook();
+    void addBook(string title);
     
     void addQuote();
     
-    void deleteBook(string id);
+    void deleteBook(string title);
     
     void deleteQuote(string id);
     

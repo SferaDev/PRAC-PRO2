@@ -7,11 +7,16 @@
 using namespace std;
 
 Author::Author() {
-    // no-op
+    totalBooks = 0;
+    totalLines = 0;
+    totalWords = 0;
 }
 
 Author::Author(string name) {
     authorName = name;
+    totalBooks = 0;
+    totalLines = 0;
+    totalWords = 0;
 }
 
 Author::~Author() {
@@ -19,27 +24,27 @@ Author::~Author() {
 }
 
 void Author::incrementBookCount(int value) {
-    // TODO
+    totalBooks += value;
 }
 
 void Author::incrementLineCount(int value) {
-    // TODO
+    totalLines += value;
 }
     
 void Author::incrementWordCount(int value) {
-    // TODO
+    totalWords += value;
 }
     
-void Author::addBook() {
-    // TODO
+void Author::addBook(string title) {
+    authorBooks.insert(title);
 }
     
 void Author::addQuote() {
     // TODO
 }
     
-void Author::deleteBook(string id) {
-    // TODO
+void Author::deleteBook(string title) {
+    authorBooks.erase(title);
 }
     
 void Author::deleteQuote(string id) {
@@ -47,7 +52,10 @@ void Author::deleteQuote(string id) {
 }
     
 void Author::printBooks() {
-    // TODO
+    set<string>::const_iterator it = authorBooks.begin();
+    while (it != authorBooks.end()) {
+        cout << *it << endl;
+    }
 }
 
 void Author::printQuotes() {

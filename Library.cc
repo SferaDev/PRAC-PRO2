@@ -15,11 +15,24 @@ Library::~Library() {
     // no-op
 }
 
-void Library::readBook(string title, string author) {
-    Book book(title, author);
+void Library::readBook(string title, string authorName) {
+    // Add new Book with ID: title-authorName
+    Book book(title, authorName);
     book.readBookContent();
-    bookCollection[title + "-" + author] = book;
-    // TODO: Add new Author (or update existing)
+    bookCollection[title + "-" + authorName] = book;
+    // Add or update Author with ID: authorName
+    authorCollection.find(authorName);
+    if (it == authorCollection.end()) {
+        Author author(authorName);
+        author.incrementBookCount(1);
+        author.incrementLineCount(book.getBookLines());
+        author.incrementWordCount((book.getBookWords());
+        authorCollection[authorName] = author;
+    } else {
+        *it.incrementBookCount(1);
+        *it.incrementLineCount(book.getBookLines());
+        *it.incrementWordCount((book.getBookWords());
+    }
 }
 
 bool Library::isBookSelected() {

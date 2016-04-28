@@ -53,7 +53,7 @@ public:
         \pre An implicit Library
         \post The implicit library with a new book (identified by title and author)
     */
-    void readBook(string title, string author);
+    void readBook(string title, string authorName);
 
     /** @brief Returns whether we have a chosen book or not
         \pre An implicit Library
