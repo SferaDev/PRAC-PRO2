@@ -45,6 +45,25 @@ bool startsWith(string input, string compare) {
     return input.substr(0, compare.length()) == compare;
 }
 
+void analyzeExpression(string input)  {
+    // Delete '?' from query
+    input = input.erase(input.length() - 1 , 1);
+    // Erase 'frases ' from input channel
+    input = input.substr(QUERY_CURRENT_EXPRESION.length() + 1);
+    // If it's a digit call {frases x y ?} otherwise call the recursive
+    if (isdigit(input[0])) {
+        int x, y;
+        istringstream iss(input);
+        iss >> x >> y;
+        // TODO: Call function
+    } else if (input[0] == '\"') {
+        // TODO: Remove the " from input string
+        // TODO: Call function
+    } else {
+        // TODO: Call function
+    }
+}
+
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
@@ -96,27 +115,9 @@ void readActions(Library& library) {
                 library.printCurrentInformation();
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_EXPRESION)) {
-            // TODO: JORDI
             if (library.isBookSelected()) {
-                string input2 = input.erase(input.length() - 1 , 1);
-                char parent,y;
-                istringstream iss(input);
-                cout << input;
-                iss >> parent;
-                cout << parent;
-                if (parent < '0' or parent > '9') {
-                    string query;
-                    query = input.erase(input.length() - 1, 1).substr(input.find_first_of("(") + 1);
-                    library.getBook().printLines(query);
-                } else {
-                    int x = (int) parent;
-                    int y;
-                    iss >> y;
-                    cout << y;
-                    library.getBook().printSelectLines(x,y);
-                }
+                analyzeExpression(input);
             } else cout << "error" << endl;
-            // TODO: Jordi Recursiiiiive
         } else if (startsWith(input, QUERY_CURRENT_LINES)) {
             if (library.isBookSelected())
                 cout << library.getBook().getBookLines() << endl;
