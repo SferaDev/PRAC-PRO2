@@ -13,56 +13,58 @@ Data model for Authors (autors) from \hyperlink{class_library}{Library}.
 \begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 \hyperlink{class_author_a4a8afd3af0d6f7492bd04dcd44dc9f95}{Author} (string name)
 \begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
-\hyperlink{class_author_ae1d4db056b321487cf7c07a2045d4a2d}{$\sim$\+Author} ()
+\hyperlink{class_author_ae1d4db056b321487cf7c07a2045d4a2d}{$\sim$\-Author} ()
 \begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
-void \hyperlink{class_author_afa8dc68382f3e9828112ed440c3677d3}{increment\+Book\+Count} (int value)
-\item 
-void \hyperlink{class_author_a73814ef0d8d840880415c4020a4d5bf9}{increment\+Line\+Count} (int value)
-\item 
-void \hyperlink{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{increment\+Word\+Count} (int value)
-\item 
-void \hyperlink{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{add\+Book} (string title)
-\item 
-void \hyperlink{class_author_ad284127163d234bad55e54e078521e8c}{add\+Quote} ()
-\item 
-void \hyperlink{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{delete\+Book} (string title)
-\item 
-void \hyperlink{class_author_aad88fc33465c64222cc86eaab8268f51}{delete\+Quote} (string id)
-\item 
-void \hyperlink{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{print\+Information} ()
+void \hyperlink{class_author_afa8dc68382f3e9828112ed440c3677d3}{increment\-Book\-Count} (int value)
+\begin{DoxyCompactList}\small\item\em Increments the number of books of the implicit author. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_a73814ef0d8d840880415c4020a4d5bf9}{increment\-Line\-Count} (int value)
+\begin{DoxyCompactList}\small\item\em Increments the number of lines of the implicit author. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{increment\-Word\-Count} (int value)
+\begin{DoxyCompactList}\small\item\em Increments the number of the words of the implicit author. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{add\-Book} (string title)
+\begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_book}{Book} to \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_a8605dbbab320ca251f3c64e782cf40b3}{add\-Quote} (string reference)
+\begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{delete\-Book} (string title)
+\begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_book}{Book} from \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_a41078931f76f02641f92521a3da5b286}{delete\-Quote} (string reference)
+\begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+set$<$ string $>$ \hyperlink{class_author_a81435140eb694eb7ed54ea567aa38984}{get\-Author\-Quotes} ()
+\begin{DoxyCompactList}\small\item\em Returns the author quotes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_author_ab0752a3f061a07c6460e52e4386ea5c3}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em Returns if \hyperlink{class_author}{Author} has any book. \end{DoxyCompactList}\item 
+void \hyperlink{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{print\-Information} ()
 \begin{DoxyCompactList}\small\item\em Prints information about the \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
-void \hyperlink{class_author_a108714e7e120b05eaf431bb4a55b9383}{print\+Books} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the Books. \end{DoxyCompactList}\item 
-void \hyperlink{class_author_ab37db4641af2bae8c9b72702526460a7}{print\+Quotes} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the Quotes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_author_a108714e7e120b05eaf431bb4a55b9383}{print\-Books} ()
+\begin{DoxyCompactList}\small\item\em Prints information about the Books. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{class_author_a146b76b89d701097c36fb5d29df27bc4}{author\+Name}
-\item 
-int \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{total\+Books}
-\item 
-int \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{total\+Lines}
-\item 
-int \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{total\+Words}
-\item 
-set$<$ string $>$ \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{author\+Books}
-\item 
-set$<$ string $>$ \hyperlink{class_author_ad505d991f439d28c4831828952e01fb6}{author\+Quotes}
-\end{DoxyCompactItemize}
+string \hyperlink{class_author_a146b76b89d701097c36fb5d29df27bc4}{author\-Name}
+\begin{DoxyCompactList}\small\item\em Name of the author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{total\-Books}
+\begin{DoxyCompactList}\small\item\em Number of total books of the author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{total\-Lines}
+\begin{DoxyCompactList}\small\item\em Number of total lines of all of books of the author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{total\-Words}
+\begin{DoxyCompactList}\small\item\em Number of total words of all of books of the author. \end{DoxyCompactList}\item 
+set$<$ string $>$ \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{author\-Books}
+\begin{DoxyCompactList}\small\item\em Ordered collection of books. \end{DoxyCompactList}\item 
+set$<$ string $>$ \hyperlink{class_author_ad505d991f439d28c4831828952e01fb6}{author\-Quotes}
+\begin{DoxyCompactList}\small\item\em Ordered collection of quotes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Data model for Authors (autors) from \hyperlink{class_library}{Library}. 
 
-Definition at line 21 of file Author.\+hh.
+Definition at line 21 of file Author.\-hh.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_author_a5f7059590a8e823fe0713faf66126b17}{\index{Author@{Author}!Author@{Author}}
 \index{Author@{Author}!Author@{Author}}
-\subsubsection[{Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::\+Author (
+\subsubsection[{Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\-::\-Author (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -79,7 +81,7 @@ Returns an implicit empty author
 \end{DoxyPostcond}
 \hypertarget{class_author_a4a8afd3af0d6f7492bd04dcd44dc9f95}{\index{Author@{Author}!Author@{Author}}
 \index{Author@{Author}!Author@{Author}}
-\subsubsection[{Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::\+Author (
+\subsubsection[{Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\-::\-Author (
 \begin{DoxyParamCaption}
 \item[{string}]{name}
 \end{DoxyParamCaption}
@@ -99,9 +101,9 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit author with name 
 \end{DoxyPostcond}
-\hypertarget{class_author_ae1d4db056b321487cf7c07a2045d4a2d}{\index{Author@{Author}!````~Author@{$\sim$\+Author}}
-\index{````~Author@{$\sim$\+Author}!Author@{Author}}
-\subsubsection[{$\sim$\+Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::$\sim$\+Author (
+\hypertarget{class_author_ae1d4db056b321487cf7c07a2045d4a2d}{\index{Author@{Author}!$\sim$\-Author@{$\sim$\-Author}}
+\index{$\sim$\-Author@{$\sim$\-Author}!Author@{Author}}
+\subsubsection[{$\sim$\-Author}]{\setlength{\rightskip}{0pt plus 5cm}Author\-::$\sim$\-Author (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -119,58 +121,197 @@ Deletes the implicit author
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_author_afa8dc68382f3e9828112ed440c3677d3}{\index{Author@{Author}!increment\+Book\+Count@{increment\+Book\+Count}}
-\index{increment\+Book\+Count@{increment\+Book\+Count}!Author@{Author}}
-\subsubsection[{increment\+Book\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::increment\+Book\+Count (
+\hypertarget{class_author_afa8dc68382f3e9828112ed440c3677d3}{\index{Author@{Author}!increment\-Book\-Count@{increment\-Book\-Count}}
+\index{increment\-Book\-Count@{increment\-Book\-Count}!Author@{Author}}
+\subsubsection[{increment\-Book\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::increment\-Book\-Count (
 \begin{DoxyParamCaption}
 \item[{int}]{value}
 \end{DoxyParamCaption}
 )}}\label{class_author_afa8dc68382f3e9828112ed440c3677d3}
-\hypertarget{class_author_a73814ef0d8d840880415c4020a4d5bf9}{\index{Author@{Author}!increment\+Line\+Count@{increment\+Line\+Count}}
-\index{increment\+Line\+Count@{increment\+Line\+Count}!Author@{Author}}
-\subsubsection[{increment\+Line\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::increment\+Line\+Count (
+
+
+Increments the number of books of the implicit author. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & = Number of news books \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The total\-Books of the implicit author increased 
+\end{DoxyPostcond}
+\hypertarget{class_author_a73814ef0d8d840880415c4020a4d5bf9}{\index{Author@{Author}!increment\-Line\-Count@{increment\-Line\-Count}}
+\index{increment\-Line\-Count@{increment\-Line\-Count}!Author@{Author}}
+\subsubsection[{increment\-Line\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::increment\-Line\-Count (
 \begin{DoxyParamCaption}
 \item[{int}]{value}
 \end{DoxyParamCaption}
 )}}\label{class_author_a73814ef0d8d840880415c4020a4d5bf9}
-\hypertarget{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{\index{Author@{Author}!increment\+Word\+Count@{increment\+Word\+Count}}
-\index{increment\+Word\+Count@{increment\+Word\+Count}!Author@{Author}}
-\subsubsection[{increment\+Word\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::increment\+Word\+Count (
+
+
+Increments the number of lines of the implicit author. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & = Number of lines of news books \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The total\-Lines of the implicit author increased 
+\end{DoxyPostcond}
+\hypertarget{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{\index{Author@{Author}!increment\-Word\-Count@{increment\-Word\-Count}}
+\index{increment\-Word\-Count@{increment\-Word\-Count}!Author@{Author}}
+\subsubsection[{increment\-Word\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::increment\-Word\-Count (
 \begin{DoxyParamCaption}
 \item[{int}]{value}
 \end{DoxyParamCaption}
 )}}\label{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}
-\hypertarget{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{\index{Author@{Author}!add\+Book@{add\+Book}}
-\index{add\+Book@{add\+Book}!Author@{Author}}
-\subsubsection[{add\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::add\+Book (
+
+
+Increments the number of the words of the implicit author. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & = Number of words of news books \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The total\-Words of the implicit author increased 
+\end{DoxyPostcond}
+\hypertarget{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{\index{Author@{Author}!add\-Book@{add\-Book}}
+\index{add\-Book@{add\-Book}!Author@{Author}}
+\subsubsection[{add\-Book}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::add\-Book (
 \begin{DoxyParamCaption}
 \item[{string}]{title}
 \end{DoxyParamCaption}
 )}}\label{class_author_a5836c0e00e740d4e9e9049e94f032cc3}
-\hypertarget{class_author_ad284127163d234bad55e54e078521e8c}{\index{Author@{Author}!add\+Quote@{add\+Quote}}
-\index{add\+Quote@{add\+Quote}!Author@{Author}}
-\subsubsection[{add\+Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::add\+Quote (
+
+
+Adds new \hyperlink{class_book}{Book} to \hyperlink{class_author}{Author}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & = \hyperlink{class_book}{Book} title \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+author\-Book has a new element 
+\end{DoxyPostcond}
+\hypertarget{class_author_a8605dbbab320ca251f3c64e782cf40b3}{\index{Author@{Author}!add\-Quote@{add\-Quote}}
+\index{add\-Quote@{add\-Quote}!Author@{Author}}
+\subsubsection[{add\-Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::add\-Quote (
 \begin{DoxyParamCaption}
-{}
+\item[{string}]{reference}
 \end{DoxyParamCaption}
-)}}\label{class_author_ad284127163d234bad55e54e078521e8c}
-\hypertarget{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{\index{Author@{Author}!delete\+Book@{delete\+Book}}
-\index{delete\+Book@{delete\+Book}!Author@{Author}}
-\subsubsection[{delete\+Book}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::delete\+Book (
+)}}\label{class_author_a8605dbbab320ca251f3c64e782cf40b3}
+
+
+Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_author}{Author}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & I\-D of the \hyperlink{class_quote}{Quote} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+author\-Quotes has a new element 
+\end{DoxyPostcond}
+\hypertarget{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{\index{Author@{Author}!delete\-Book@{delete\-Book}}
+\index{delete\-Book@{delete\-Book}!Author@{Author}}
+\subsubsection[{delete\-Book}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::delete\-Book (
 \begin{DoxyParamCaption}
 \item[{string}]{title}
 \end{DoxyParamCaption}
 )}}\label{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}
-\hypertarget{class_author_aad88fc33465c64222cc86eaab8268f51}{\index{Author@{Author}!delete\+Quote@{delete\+Quote}}
-\index{delete\+Quote@{delete\+Quote}!Author@{Author}}
-\subsubsection[{delete\+Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::delete\+Quote (
+
+
+Removes a \hyperlink{class_book}{Book} from \hyperlink{class_author}{Author}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & = \hyperlink{class_book}{Book} title \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+author\-Book has one less element 
+\end{DoxyPostcond}
+\hypertarget{class_author_a41078931f76f02641f92521a3da5b286}{\index{Author@{Author}!delete\-Quote@{delete\-Quote}}
+\index{delete\-Quote@{delete\-Quote}!Author@{Author}}
+\subsubsection[{delete\-Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::delete\-Quote (
 \begin{DoxyParamCaption}
-\item[{string}]{id}
+\item[{string}]{reference}
 \end{DoxyParamCaption}
-)}}\label{class_author_aad88fc33465c64222cc86eaab8268f51}
-\hypertarget{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{\index{Author@{Author}!print\+Information@{print\+Information}}
-\index{print\+Information@{print\+Information}!Author@{Author}}
-\subsubsection[{print\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Information (
+)}}\label{class_author_a41078931f76f02641f92521a3da5b286}
+
+
+Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_author}{Author}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & I\-D of the \hyperlink{class_quote}{Quote} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+author\-Quotes has one less element 
+\end{DoxyPostcond}
+\hypertarget{class_author_a81435140eb694eb7ed54ea567aa38984}{\index{Author@{Author}!get\-Author\-Quotes@{get\-Author\-Quotes}}
+\index{get\-Author\-Quotes@{get\-Author\-Quotes}!Author@{Author}}
+\subsubsection[{get\-Author\-Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Author\-::get\-Author\-Quotes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_author_a81435140eb694eb7ed54ea567aa38984}
+
+
+Returns the author quotes. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the author\-Quotes set 
+\end{DoxyPostcond}
+\hypertarget{class_author_ab0752a3f061a07c6460e52e4386ea5c3}{\index{Author@{Author}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Author@{Author}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Author\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_author_ab0752a3f061a07c6460e52e4386ea5c3}
+
+
+Returns if \hyperlink{class_author}{Author} has any book. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if books is not empty 
+\end{DoxyPostcond}
+\hypertarget{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{\index{Author@{Author}!print\-Information@{print\-Information}}
+\index{print\-Information@{print\-Information}!Author@{Author}}
+\subsubsection[{print\-Information}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::print\-Information (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -185,9 +326,9 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
-\hypertarget{class_author_a108714e7e120b05eaf431bb4a55b9383}{\index{Author@{Author}!print\+Books@{print\+Books}}
-\index{print\+Books@{print\+Books}!Author@{Author}}
-\subsubsection[{print\+Books}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Books (
+\hypertarget{class_author_a108714e7e120b05eaf431bb4a55b9383}{\index{Author@{Author}!print\-Books@{print\-Books}}
+\index{print\-Books@{print\-Books}!Author@{Author}}
+\subsubsection[{print\-Books}]{\setlength{\rightskip}{0pt plus 5cm}void Author\-::print\-Books (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -202,70 +343,87 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
-\hypertarget{class_author_ab37db4641af2bae8c9b72702526460a7}{\index{Author@{Author}!print\+Quotes@{print\+Quotes}}
-\index{print\+Quotes@{print\+Quotes}!Author@{Author}}
-\subsubsection[{print\+Quotes}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Quotes (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_author_ab37db4641af2bae8c9b72702526460a7}
-
-
-Prints information about the Quotes. 
-
-\begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_author}{Author} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-True 
-\end{DoxyPostcond}
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_author_a146b76b89d701097c36fb5d29df27bc4}{\index{Author@{Author}!author\+Name@{author\+Name}}
-\index{author\+Name@{author\+Name}!Author@{Author}}
-\subsubsection[{author\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string Author\+::author\+Name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a146b76b89d701097c36fb5d29df27bc4}
+\hypertarget{class_author_a146b76b89d701097c36fb5d29df27bc4}{\index{Author@{Author}!author\-Name@{author\-Name}}
+\index{author\-Name@{author\-Name}!Author@{Author}}
+\subsubsection[{author\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Author\-::author\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a146b76b89d701097c36fb5d29df27bc4}
 
 
-Definition at line 25 of file Author.\+hh.
-
-\hypertarget{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{\index{Author@{Author}!total\+Books@{total\+Books}}
-\index{total\+Books@{total\+Books}!Author@{Author}}
-\subsubsection[{total\+Books}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::total\+Books\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}
-
-
-Definition at line 28 of file Author.\+hh.
-
-\hypertarget{class_author_a8d818414bbd909287641b388601bf61a}{\index{Author@{Author}!total\+Lines@{total\+Lines}}
-\index{total\+Lines@{total\+Lines}!Author@{Author}}
-\subsubsection[{total\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::total\+Lines\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a8d818414bbd909287641b388601bf61a}
-
-
-Definition at line 29 of file Author.\+hh.
-
-\hypertarget{class_author_a478c72fff965eb1ee8fcaddfe173715b}{\index{Author@{Author}!total\+Words@{total\+Words}}
-\index{total\+Words@{total\+Words}!Author@{Author}}
-\subsubsection[{total\+Words}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::total\+Words\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a478c72fff965eb1ee8fcaddfe173715b}
-
-
-Definition at line 30 of file Author.\+hh.
-
-\hypertarget{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{\index{Author@{Author}!author\+Books@{author\+Books}}
-\index{author\+Books@{author\+Books}!Author@{Author}}
-\subsubsection[{author\+Books}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Author\+::author\+Books\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ad9ffe450cdafed2242936f6fcafa22b4}
-
-
-Definition at line 32 of file Author.\+hh.
-
-\hypertarget{class_author_ad505d991f439d28c4831828952e01fb6}{\index{Author@{Author}!author\+Quotes@{author\+Quotes}}
-\index{author\+Quotes@{author\+Quotes}!Author@{Author}}
-\subsubsection[{author\+Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Author\+::author\+Quotes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ad505d991f439d28c4831828952e01fb6}
-
-
-Definition at line 36 of file Author.\+hh.
+Name of the author. 
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 26 of file Author.\-hh.
+
+\hypertarget{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{\index{Author@{Author}!total\-Books@{total\-Books}}
+\index{total\-Books@{total\-Books}!Author@{Author}}
+\subsubsection[{total\-Books}]{\setlength{\rightskip}{0pt plus 5cm}int Author\-::total\-Books\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}
+
+
+Number of total books of the author. 
+
+
+
+Definition at line 29 of file Author.\-hh.
+
+\hypertarget{class_author_a8d818414bbd909287641b388601bf61a}{\index{Author@{Author}!total\-Lines@{total\-Lines}}
+\index{total\-Lines@{total\-Lines}!Author@{Author}}
+\subsubsection[{total\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Author\-::total\-Lines\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a8d818414bbd909287641b388601bf61a}
+
+
+Number of total lines of all of books of the author. 
+
+
+
+Definition at line 32 of file Author.\-hh.
+
+\hypertarget{class_author_a478c72fff965eb1ee8fcaddfe173715b}{\index{Author@{Author}!total\-Words@{total\-Words}}
+\index{total\-Words@{total\-Words}!Author@{Author}}
+\subsubsection[{total\-Words}]{\setlength{\rightskip}{0pt plus 5cm}int Author\-::total\-Words\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_a478c72fff965eb1ee8fcaddfe173715b}
+
+
+Number of total words of all of books of the author. 
+
+
+
+Definition at line 35 of file Author.\-hh.
+
+\hypertarget{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{\index{Author@{Author}!author\-Books@{author\-Books}}
+\index{author\-Books@{author\-Books}!Author@{Author}}
+\subsubsection[{author\-Books}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Author\-::author\-Books\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ad9ffe450cdafed2242936f6fcafa22b4}
+
+
+Ordered collection of books. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & = the I\-D of the parent book\-Collection \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Author.\-hh.
+
+\hypertarget{class_author_ad505d991f439d28c4831828952e01fb6}{\index{Author@{Author}!author\-Quotes@{author\-Quotes}}
+\index{author\-Quotes@{author\-Quotes}!Author@{Author}}
+\subsubsection[{author\-Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Author\-::author\-Quotes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_author_ad505d991f439d28c4831828952e01fb6}
+
+
+Ordered collection of quotes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & = the I\-D of the parent quote\-Collection \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Author.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_author_8hh}{Author.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_author_8hh}{Author.\-hh}\end{DoxyCompactItemize}

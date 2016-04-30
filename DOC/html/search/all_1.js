@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['book',['Book',['../class_book.html',1,'Book'],['../class_book.html#a5fea5dce5ba03d79378b2000f255de49',1,'Book::Book()'],['../class_book.html#a2eac9e235a08763158f78533f7a83e1f',1,'Book::Book()'],['../class_book.html#a98dad89c9f945e0d846c81ce7e459fbc',1,'Book::Book(string title, string author)']]],
+  ['book',['Book',['../class_book.html',1,'Book'],['../class_book.html#a2eac9e235a08763158f78533f7a83e1f',1,'Book::Book()'],['../class_book.html#a98dad89c9f945e0d846c81ce7e459fbc',1,'Book::Book(string title, string author)']]],
   ['book_2ehh',['Book.hh',['../_book_8hh.html',1,'']]],
   ['book_5fdelete',['BOOK_DELETE',['../main_8cc.html#a7749b7f479d011a8d3311aa8b5fbb4b5',1,'main.cc']]],
   ['book_5finsert',['BOOK_INSERT',['../main_8cc.html#a2b15fbc1759d69bee062c54b05dc462b',1,'main.cc']]],

@@ -26,15 +26,32 @@ class Library {
 
 private:
 
-    map<string, Book> bookCollection;// Collection of Books
+    /** @brief Collection of Books
+        \param string: Key of the identifier
+        \param Book: Books of the Library
+    */
+    map<string, Book> bookCollection;
 
-    map<string, Author> authorCollection;// Collection of Authors
+    /** @brief Collection of Authors
+        \param string: Key of the identifier
+        \param Book: Authors of the Library
+    */
+    map<string, Author> authorCollection;
 
-    map<string, Quote> quoteCollection;// Collection of Quotes
+    /** @brief Collection of Quotes
+        \param string: Key of the identifier
+        \param Book: Quotes of the Library
+    */
+    map<string, Quote> quoteCollection;
 
-    map<string, int> quoteIdentifiers;// ID of Quotes
+    /** @brief Identifier of Quotes
+        \param string: Key of the identifier
+        \param int:
+    */
+    map<string, int> quoteIdentifiers;
 
-    map<string, Book>::iterator currentBook;// Current book iterator
+    /** @brief Current book iterator */
+    map<string, Book>::iterator currentBook;
 
 public:
     /** @brief Creates an empty Library
@@ -50,8 +67,8 @@ public:
     ~Library();
 
     /** @brief Inserts a new book to the bookCollection
-        \param title = The book title
-        \param author = The book author
+        \param title: The book title
+        \param author: The book author
         \pre An implicit Library
         \post The implicit library with a new book (identified by title and author)
     */
@@ -64,7 +81,7 @@ public:
     bool isBookSelected();
 
     /** @brief Selects a book from the collection
-        \param query = Query to select a book
+        \param query: Query to select a book
         \pre An implicit Library
         \post currentBook iterator has the desired book
     */
@@ -77,22 +94,22 @@ public:
     void deleteBook();
 
     /** @brief Replaces a word with anopther one in a book from the collection
-        \param input = Pattern from the IO channel to replace words
+        \param input: Pattern from the IO channel to replace words
         \pre An implicit Library and a selected book
         \post The implicit library with the replaced words on currentBook
     */
     void replaceWordsOnBook(string input);
 
     /** @brief Inserts a new quote (currentBook) to the library
-        \param start = Start line
-        \param end = End line
+        \param start: Start line
+        \param end: End line
         \pre An implicit Library and implicit book
         \post The implicit library with a new quote
     */
     void insertQuote(int start, int end);
 
     /** @brief Deletes a quote from the library
-        \param id = Quote ID
+        \param id: Quote ID
         \pre An implicit Library and a quote with that id
         \post The implicit library without the referenced quote
     */
@@ -105,14 +122,14 @@ public:
     Book getBook();
 
     /** @brief Returns if a quote exists with that reference
-        \param id = Quote ID
+        \param id: Quote ID
         \pre An implicit Library and a quote with that id
         \post Returns if it exists
     */
     bool quoteExists(string id);
 
     /** @brief Returns a quote from its ID
-        \param id = Quote ID
+        \param id: Quote ID
         \pre An implicit Library and a quote with that id
         \post Returns the quote referenced by id
     */
@@ -137,14 +154,14 @@ public:
     void printQuotes();
 
     /** @brief Prints information about the Books (by Author)
-        \param author = Author name
+        \param author: Author name
         \pre An implicit Library
         \post True
     */
     void printBooksByAuthor(string author);
 
     /** @brief Prints information about the Quotes (by Author)
-        \param author = Author name
+        \param author: Author name
         \pre An implicit Library
         \post True
     */

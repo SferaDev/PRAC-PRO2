@@ -22,19 +22,27 @@ class Author {
 
 private:
 
-    string authorName; // Name of the author
+    /** @brief Name of the author */
+    string authorName; //
 
-    // Size of Author's collection
+    /** @brief Number of total books of the author */
     int totalBooks;
+
+    /** @brief Number of total lines of all of books of the author */
     int totalLines;
+
+    /** @brief Number of total words of all of books of the author */
     int totalWords;
 
-    set<string> authorBooks; // Ordered collection of books
-                             // Value: the ID of the parent bookCollection
+    /** @brief Ordered collection of books
+        \param string: the ID of the parent bookCollection
+     */
+    set<string> authorBooks;
 
-
-    set<string> authorQuotes; // Ordered collection of quotes
-                              // Value: the ID of the parent quoteCollection
+    /** @brief Ordered collection of quotes
+        \param string: the ID of the parent quoteCollection
+    */
+    set<string> authorQuotes;
 
 public:
     /** @brief Creates an empty Author
@@ -44,7 +52,7 @@ public:
     Author();
     
     /** @brief Creates an empty Author
-        \param name = Name of the Author
+        \param name: Name of the Author
         \pre True
         \post Returns an implicit author with name
     */
@@ -55,26 +63,53 @@ public:
         \post Deletes the implicit author
     */
     ~Author();
-    
+
+    /** @brief Increments the number of books of the implicit author
+        \param value: Number of news books
+        \pre An implicit Author
+        \post The totalBooks of the implicit author increased
+    */
     void incrementBookCount(int value);
-    
+
+    /** @brief Increments the number of lines of the implicit author
+        \param value: Number of lines of news books
+        \pre An implicit Author
+        \post The totalLines of the implicit author increased
+    */
     void incrementLineCount(int value);
-    
+
+    /** @brief Increments the number of the words of the implicit author
+        \param value: Number of words of news books
+        \pre An implicit Author
+        \post The totalWords of the implicit author increased
+    */
     void incrementWordCount(int value);
-    
+
+    /** @brief Adds new Book to Author
+        \param title: Book title
+        \pre An implicit Author
+        \post authorBook has a new element
+    */
     void addBook(string title);
 
-    /** @brief Adds new Quote to Book
+    /** @brief Adds new Quote to Author
+        \param reference: ID of the Quote
         \pre An implicit Book
-        \post bookQuotes has a new element
+        \post authorQuotes has a new element
     */
     void addQuote(string reference);
 
+    /** @brief Removes a Book from Author
+        \param title: Book title
+        \pre An implicit Author
+        \post authorBook has one less element
+    */
     void deleteBook(string title);
 
-    /** @brief Removes a  Quote from Book
+    /** @brief Removes a Quote from Author
+        \param reference: ID of the Quote
         \pre An implicit Book
-        \post bookQuotes has one less element
+        \post authorQuotes has one less element
     */
     void deleteQuote(string reference);
 

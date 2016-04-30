@@ -21,15 +21,22 @@ using namespace std;
 class Quote {
 
 private:
-    string quoteReference; // Identifier of the Quote
 
-    string quoteAuthor; // Identifier of the Author
+    /** @brief Identifier of the Quote */
+    string quoteReference;
 
-    string quoteBook; // Identifier of the Book
+    /** @brief Identifier of the Author */
+    string quoteAuthor;
 
-    int quoteStart, quoteEnd; // Identifier of the lines
+    /** @brief Identifier of the Book */
+    string quoteBook;
 
-    vector<string> quoteContent; // Content of the Quote (ID: position | Value: content)
+    /** @brief Identifier of the lines */
+    int quoteStart, quoteEnd;
+
+    /** @brief Content of the Quote */
+    /** @brief: The ID is the position and the value is the content of the Quote */
+    vector<string> quoteContent;
 
 public:
     /** @brief Creates an empty Quote
@@ -39,9 +46,9 @@ public:
     Quote();
 
     /** @brief Creates an empty Quote
-        \param reference = The reference ID
-        \param author = The Quote Author
-        \param book = The book from the Quote
+        \param reference: The reference ID
+        \param author: The Quote Author
+        \param book: The book from the Quote
         \pre True
         \post Returns an implicit quote with the reference, author and book
     */
@@ -84,15 +91,15 @@ public:
     int getEndLine();
 
     /** @brief Update the start/end line values
-        \param start = Start line
-        \param end = End line
+        \param start: Start line
+        \param end: End line
         \pre An implicit Quote
         \post Updates the Quote start/end lines
     */
     void setQuoteLines(int start, int end);
 
     /** @brief Update the quote content
-        \param content = Content of the Quote
+        \param content: Content of the Quote
         \pre An implicit Quote
         \post Updates the Quote content
     */

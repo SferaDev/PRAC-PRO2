@@ -22,6 +22,7 @@ var searchData=
   ['quotecollection',['quoteCollection',['../class_library.html#a84be5207332f4b2456af95907d0a43b5',1,'Library']]],
   ['quotecontent',['quoteContent',['../class_quote.html#a0ffcb584920e14d7dd5c45820997f989',1,'Quote']]],
   ['quoteend',['quoteEnd',['../class_quote.html#aa5953a477b96183c8dc2fc8a42001c29',1,'Quote']]],
+  ['quoteidentifiers',['quoteIdentifiers',['../class_library.html#a58c1f12a0278872cd0299e586551bb7a',1,'Library']]],
   ['quotereference',['quoteReference',['../class_quote.html#a9c7b2deff2ee9a0a216c360fe304202a',1,'Quote']]],
   ['quotestart',['quoteStart',['../class_quote.html#ac426122ac24638740b2a5c5e8342e8c9',1,'Quote']]]
 ];

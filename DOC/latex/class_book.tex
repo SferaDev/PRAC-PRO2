@@ -9,8 +9,8 @@ Data model for Books (textos) from \hyperlink{class_library}{Library}.
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{struct_book_1_1frequency_comparator}{frequency\+Comparator}
-\end{DoxyCompactItemize}
+struct \hyperlink{struct_book_1_1frequency_comparator}{frequency\-Comparator}
+\begin{DoxyCompactList}\small\item\em Comparator for the frequency\-Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,71 +18,74 @@ struct \hyperlink{struct_book_1_1frequency_comparator}{frequency\+Comparator}
 \begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 \hyperlink{class_book_a98dad89c9f945e0d846c81ce7e459fbc}{Book} (string title, string author)
 \begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_book}{Book} with title and author. \end{DoxyCompactList}\item 
-\hyperlink{class_book_a0ba8eceb34ea1301bc08942e37824767}{$\sim$\+Book} ()
+\hyperlink{class_book_a0ba8eceb34ea1301bc08942e37824767}{$\sim$\-Book} ()
 \begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{read\+Book\+Content} ()
+void \hyperlink{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{read\-Book\-Content} ()
 \begin{DoxyCompactList}\small\item\em Reads the content of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-string \hyperlink{class_book_aae6e165b712f111beb53574cd2f53776}{get\+Book\+Title} () const 
+string \hyperlink{class_book_aae6e165b712f111beb53574cd2f53776}{get\-Book\-Title} () const 
 \begin{DoxyCompactList}\small\item\em Returns the title of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-string \hyperlink{class_book_a651503f226fbf2c9c050f9527a3b983e}{get\+Author\+Name} ()
+string \hyperlink{class_book_a651503f226fbf2c9c050f9527a3b983e}{get\-Author\-Name} ()
 \begin{DoxyCompactList}\small\item\em Returns the name of the author of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-int \hyperlink{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{get\+Book\+Lines} ()
+int \hyperlink{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{get\-Book\-Lines} ()
 \begin{DoxyCompactList}\small\item\em Returns the number of lines of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-int \hyperlink{class_book_a6f0ccce41fd8db486578e0d325605813}{get\+Book\+Words} ()
+int \hyperlink{class_book_a6f0ccce41fd8db486578e0d325605813}{get\-Book\-Words} ()
 \begin{DoxyCompactList}\small\item\em Returns the number of words of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_aaf182e24b86624b6ff54fba2581094a4}{replace\+Words} (string old\+Word, string new\+Word)
+void \hyperlink{class_book_aaf182e24b86624b6ff54fba2581094a4}{replace\-Words} (string old\-Word, string new\-Word)
 \begin{DoxyCompactList}\small\item\em Replaces one word for another word in the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-bool \hyperlink{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{find\+Word} (string word)
+bool \hyperlink{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{find\-Word} (string word)
 \begin{DoxyCompactList}\small\item\em Finds if a word is on the content of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\+Frequency\+Table} ()
-\begin{DoxyCompactList}\small\item\em Generates the Frequency\+Table Vector. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a5b67f59017da9d2654c27fa27927a419}{print\+Information} ()
+void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\-Frequency\-Table} ()
+\begin{DoxyCompactList}\small\item\em Generates the Frequency\-Table Vector. \end{DoxyCompactList}\item 
+set$<$ string $>$ \hyperlink{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}{get\-Book\-Quotes} ()
+\begin{DoxyCompactList}\small\item\em Returns the book quotes. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{class_book_acb5eaff231b512901cac3e3220ee2960}{get\-Lines} (int start, int end)
+\begin{DoxyCompactList}\small\item\em Returns the lines from start to end. \end{DoxyCompactList}\item 
+void \hyperlink{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{add\-Quote} (string reference)
+\begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+void \hyperlink{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}{delete\-Quote} (string reference)
+\begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+void \hyperlink{class_book_a5b67f59017da9d2654c27fa27927a419}{print\-Information} ()
 \begin{DoxyCompactList}\small\item\em Prints the information of the implicit book. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{print\+All\+Lines} ()
-\begin{DoxyCompactList}\small\item\em Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{print\+Lines} (string query)
+void \hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{print\-All\-Lines} ()
+\begin{DoxyCompactList}\small\item\em Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\-Content.\-size() \end{DoxyCompactList}\item 
+void \hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{print\-Lines} (string query)
 \begin{DoxyCompactList}\small\item\em Prints the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{print\+Select\+Lines} (int start, int end)
+void \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{print\-Select\-Lines} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Prints lines from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. \end{DoxyCompactList}\item 
-void \hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{print\+Frequency\+Table} ()
+void \hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{print\-Frequency\-Table} ()
 \begin{DoxyCompactList}\small\item\em Prints all words of the content of the implicit book. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-set$<$ string $>$ \hyperlink{class_book_a5fea5dce5ba03d79378b2000f255de49}{Book}\+:get\+Book\+Quotes()
-\begin{DoxyCompactList}\small\item\em Returns the book quotes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{author\+Name}
-\begin{DoxyCompactList}\small\item\em Name of the author (I\+D on parent author\+Collection) \end{DoxyCompactList}\item 
-string \hyperlink{class_book_a111d7b30bddd6166bd09764f050cfee3}{book\+Title}
-\item 
-vector$<$ string $>$ \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{book\+Content}
-\item 
-map$<$ int, set$<$ string $>$ $>$ \hyperlink{class_book_a3e21a804bd433b6c1b05790856ec973f}{word\+Dictionary}
-\item 
-map$<$ string, int $>$ \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{word\+Frequency\+Map}
-\item 
-vector$<$ pair$<$ string, int $>$ $>$ \hyperlink{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}{word\+Frequency\+Vector}
-\item 
-int \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{book\+Words}
-\item 
-set$<$ string $>$ \hyperlink{class_book_a370478eab144c20de936e1b68923e1c0}{book\+Quotes}
-\end{DoxyCompactItemize}
+string \hyperlink{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{author\-Name}
+\begin{DoxyCompactList}\small\item\em Name of the author. \end{DoxyCompactList}\item 
+string \hyperlink{class_book_a111d7b30bddd6166bd09764f050cfee3}{book\-Title}
+\begin{DoxyCompactList}\small\item\em Name of the book. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{book\-Content}
+\begin{DoxyCompactList}\small\item\em Content of the book. \end{DoxyCompactList}\item 
+map$<$ int, set$<$ string $>$ $>$ \hyperlink{class_book_a3e21a804bd433b6c1b05790856ec973f}{word\-Dictionary}
+\begin{DoxyCompactList}\small\item\em Content dictionary. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{word\-Frequency\-Map}
+\begin{DoxyCompactList}\small\item\em Content dictionary with frequencies. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ string, int $>$ $>$ \hyperlink{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}{word\-Frequency\-Vector}
+\begin{DoxyCompactList}\small\item\em Content dictionary with frequencies in correct order. \end{DoxyCompactList}\item 
+int \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{book\-Words}
+\begin{DoxyCompactList}\small\item\em Size of \hyperlink{class_book}{Book}'s collection. \end{DoxyCompactList}\item 
+set$<$ string $>$ \hyperlink{class_book_a370478eab144c20de936e1b68923e1c0}{book\-Quotes}
+\begin{DoxyCompactList}\small\item\em Ordered collection of quotes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Data model for Books (textos) from \hyperlink{class_library}{Library}. 
 
-Definition at line 23 of file Book.\+hh.
+Definition at line 23 of file Book.\-hh.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_book_a2eac9e235a08763158f78533f7a83e1f}{\index{Book@{Book}!Book@{Book}}
 \index{Book@{Book}!Book@{Book}}
-\subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
+\subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\-::\-Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -99,7 +102,7 @@ Returns an implicit empty book
 \end{DoxyPostcond}
 \hypertarget{class_book_a98dad89c9f945e0d846c81ce7e459fbc}{\index{Book@{Book}!Book@{Book}}
 \index{Book@{Book}!Book@{Book}}
-\subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
+\subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\-::\-Book (
 \begin{DoxyParamCaption}
 \item[{string}]{title, }
 \item[{string}]{author}
@@ -122,9 +125,9 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit book with title and the author 
 \end{DoxyPostcond}
-\hypertarget{class_book_a0ba8eceb34ea1301bc08942e37824767}{\index{Book@{Book}!````~Book@{$\sim$\+Book}}
-\index{````~Book@{$\sim$\+Book}!Book@{Book}}
-\subsubsection[{$\sim$\+Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::$\sim$\+Book (
+\hypertarget{class_book_a0ba8eceb34ea1301bc08942e37824767}{\index{Book@{Book}!$\sim$\-Book@{$\sim$\-Book}}
+\index{$\sim$\-Book@{$\sim$\-Book}!Book@{Book}}
+\subsubsection[{$\sim$\-Book}]{\setlength{\rightskip}{0pt plus 5cm}Book\-::$\sim$\-Book (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -142,9 +145,9 @@ Deletes the implicit book
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{\index{Book@{Book}!read\+Book\+Content@{read\+Book\+Content}}
-\index{read\+Book\+Content@{read\+Book\+Content}!Book@{Book}}
-\subsubsection[{read\+Book\+Content}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::read\+Book\+Content (
+\hypertarget{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{\index{Book@{Book}!read\-Book\-Content@{read\-Book\-Content}}
+\index{read\-Book\-Content@{read\-Book\-Content}!Book@{Book}}
+\subsubsection[{read\-Book\-Content}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::read\-Book\-Content (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -159,9 +162,9 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The content of the implicit \hyperlink{class_book}{Book} 
 \end{DoxyPostcond}
-\hypertarget{class_book_aae6e165b712f111beb53574cd2f53776}{\index{Book@{Book}!get\+Book\+Title@{get\+Book\+Title}}
-\index{get\+Book\+Title@{get\+Book\+Title}!Book@{Book}}
-\subsubsection[{get\+Book\+Title}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Book\+Title (
+\hypertarget{class_book_aae6e165b712f111beb53574cd2f53776}{\index{Book@{Book}!get\-Book\-Title@{get\-Book\-Title}}
+\index{get\-Book\-Title@{get\-Book\-Title}!Book@{Book}}
+\subsubsection[{get\-Book\-Title}]{\setlength{\rightskip}{0pt plus 5cm}string Book\-::get\-Book\-Title (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -176,9 +179,9 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The title of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_a651503f226fbf2c9c050f9527a3b983e}{\index{Book@{Book}!get\+Author\+Name@{get\+Author\+Name}}
-\index{get\+Author\+Name@{get\+Author\+Name}!Book@{Book}}
-\subsubsection[{get\+Author\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Author\+Name (
+\hypertarget{class_book_a651503f226fbf2c9c050f9527a3b983e}{\index{Book@{Book}!get\-Author\-Name@{get\-Author\-Name}}
+\index{get\-Author\-Name@{get\-Author\-Name}!Book@{Book}}
+\subsubsection[{get\-Author\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Book\-::get\-Author\-Name (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -193,9 +196,9 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The name of the author of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{\index{Book@{Book}!get\+Book\+Lines@{get\+Book\+Lines}}
-\index{get\+Book\+Lines@{get\+Book\+Lines}!Book@{Book}}
-\subsubsection[{get\+Book\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Book\+Lines (
+\hypertarget{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{\index{Book@{Book}!get\-Book\-Lines@{get\-Book\-Lines}}
+\index{get\-Book\-Lines@{get\-Book\-Lines}!Book@{Book}}
+\subsubsection[{get\-Book\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Book\-::get\-Book\-Lines (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -210,9 +213,9 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The number of the lines of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_a6f0ccce41fd8db486578e0d325605813}{\index{Book@{Book}!get\+Book\+Words@{get\+Book\+Words}}
-\index{get\+Book\+Words@{get\+Book\+Words}!Book@{Book}}
-\subsubsection[{get\+Book\+Words}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Book\+Words (
+\hypertarget{class_book_a6f0ccce41fd8db486578e0d325605813}{\index{Book@{Book}!get\-Book\-Words@{get\-Book\-Words}}
+\index{get\-Book\-Words@{get\-Book\-Words}!Book@{Book}}
+\subsubsection[{get\-Book\-Words}]{\setlength{\rightskip}{0pt plus 5cm}int Book\-::get\-Book\-Words (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -227,12 +230,12 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The words of lines of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_aaf182e24b86624b6ff54fba2581094a4}{\index{Book@{Book}!replace\+Words@{replace\+Words}}
-\index{replace\+Words@{replace\+Words}!Book@{Book}}
-\subsubsection[{replace\+Words}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::replace\+Words (
+\hypertarget{class_book_aaf182e24b86624b6ff54fba2581094a4}{\index{Book@{Book}!replace\-Words@{replace\-Words}}
+\index{replace\-Words@{replace\-Words}!Book@{Book}}
+\subsubsection[{replace\-Words}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::replace\-Words (
 \begin{DoxyParamCaption}
-\item[{string}]{old\+Word, }
-\item[{string}]{new\+Word}
+\item[{string}]{old\-Word, }
+\item[{string}]{new\-Word}
 \end{DoxyParamCaption}
 )}}\label{class_book_aaf182e24b86624b6ff54fba2581094a4}
 
@@ -241,9 +244,9 @@ Replaces one word for another word in the implicit \hyperlink{class_book}{Book}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em old\+Word} & = Word (old) \\
+{\em old\-Word} & = Word (old) \\
 \hline
-{\em new\+Word} & = Word (new) \\
+{\em new\-Word} & = Word (new) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
@@ -252,9 +255,9 @@ An implicit \hyperlink{class_book}{Book}, the old word that we replaces and the 
 \begin{DoxyPostcond}{Postcondition}
 The implicit book with the old word replaced for the new word 
 \end{DoxyPostcond}
-\hypertarget{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{\index{Book@{Book}!find\+Word@{find\+Word}}
-\index{find\+Word@{find\+Word}!Book@{Book}}
-\subsubsection[{find\+Word}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::find\+Word (
+\hypertarget{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{\index{Book@{Book}!find\-Word@{find\-Word}}
+\index{find\-Word@{find\-Word}!Book@{Book}}
+\subsubsection[{find\-Word}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\-::find\-Word (
 \begin{DoxyParamCaption}
 \item[{string}]{word}
 \end{DoxyParamCaption}
@@ -269,21 +272,21 @@ Finds if a word is on the content of the implicit \hyperlink{class_book}{Book}.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-The word\+Dictionary of the implicit \hyperlink{class_book}{Book} and a word that we want to find 
+The word\-Dictionary of the implicit \hyperlink{class_book}{Book} and a word that we want to find 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 Returns true if the word is on the content of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{\index{Book@{Book}!generate\+Frequency\+Table@{generate\+Frequency\+Table}}
-\index{generate\+Frequency\+Table@{generate\+Frequency\+Table}!Book@{Book}}
-\subsubsection[{generate\+Frequency\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::generate\+Frequency\+Table (
+\hypertarget{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{\index{Book@{Book}!generate\-Frequency\-Table@{generate\-Frequency\-Table}}
+\index{generate\-Frequency\-Table@{generate\-Frequency\-Table}!Book@{Book}}
+\subsubsection[{generate\-Frequency\-Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::generate\-Frequency\-Table (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_book_a8d232eaeb4207707d77bc18e6dd467cd}
 
 
-Generates the Frequency\+Table Vector. 
+Generates the Frequency\-Table Vector. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -291,9 +294,78 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Generates the frequency table ordered 
 \end{DoxyPostcond}
-\hypertarget{class_book_a5b67f59017da9d2654c27fa27927a419}{\index{Book@{Book}!print\+Information@{print\+Information}}
-\index{print\+Information@{print\+Information}!Book@{Book}}
-\subsubsection[{print\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Information (
+\hypertarget{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}{\index{Book@{Book}!get\-Book\-Quotes@{get\-Book\-Quotes}}
+\index{get\-Book\-Quotes@{get\-Book\-Quotes}!Book@{Book}}
+\subsubsection[{get\-Book\-Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\-::get\-Book\-Quotes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}
+
+
+Returns the book quotes. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the book\-Quotes set 
+\end{DoxyPostcond}
+\hypertarget{class_book_acb5eaff231b512901cac3e3220ee2960}{\index{Book@{Book}!get\-Lines@{get\-Lines}}
+\index{get\-Lines@{get\-Lines}!Book@{Book}}
+\subsubsection[{get\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Book\-::get\-Lines (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{class_book_acb5eaff231b512901cac3e3220ee2960}
+
+
+Returns the lines from start to end. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the lines from the vector (pos -\/ 1) 
+\end{DoxyPostcond}
+\hypertarget{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{\index{Book@{Book}!add\-Quote@{add\-Quote}}
+\index{add\-Quote@{add\-Quote}!Book@{Book}}
+\subsubsection[{add\-Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::add\-Quote (
+\begin{DoxyParamCaption}
+\item[{string}]{reference}
+\end{DoxyParamCaption}
+)}}\label{class_book_a97c2374d514327be5d8f74abd0ff4ea3}
+
+
+Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+book\-Quotes has a new element 
+\end{DoxyPostcond}
+\hypertarget{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}{\index{Book@{Book}!delete\-Quote@{delete\-Quote}}
+\index{delete\-Quote@{delete\-Quote}!Book@{Book}}
+\subsubsection[{delete\-Quote}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::delete\-Quote (
+\begin{DoxyParamCaption}
+\item[{string}]{reference}
+\end{DoxyParamCaption}
+)}}\label{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}
+
+
+Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_book}{Book}. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+book\-Quotes has one less element 
+\end{DoxyPostcond}
+\hypertarget{class_book_a5b67f59017da9d2654c27fa27927a419}{\index{Book@{Book}!print\-Information@{print\-Information}}
+\index{print\-Information@{print\-Information}!Book@{Book}}
+\subsubsection[{print\-Information}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::print\-Information (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -308,16 +380,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Prints the title and author of the book 
 \end{DoxyPostcond}
-\hypertarget{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{\index{Book@{Book}!print\+All\+Lines@{print\+All\+Lines}}
-\index{print\+All\+Lines@{print\+All\+Lines}!Book@{Book}}
-\subsubsection[{print\+All\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+All\+Lines (
+\hypertarget{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{\index{Book@{Book}!print\-All\-Lines@{print\-All\-Lines}}
+\index{print\-All\-Lines@{print\-All\-Lines}!Book@{Book}}
+\subsubsection[{print\-All\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::print\-All\-Lines (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_book_a07076ae8fe5e924f18bf7527e0ba5092}
 
 
-Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() 
+Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\-Content.\-size() 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -325,9 +397,9 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Prints all lines of the content of the implicit book with its number in increasingly ordered for the number 
 \end{DoxyPostcond}
-\hypertarget{class_book_a0c019a8318999229bf506f7f64e67a85}{\index{Book@{Book}!print\+Lines@{print\+Lines}}
-\index{print\+Lines@{print\+Lines}!Book@{Book}}
-\subsubsection[{print\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Lines (
+\hypertarget{class_book_a0c019a8318999229bf506f7f64e67a85}{\index{Book@{Book}!print\-Lines@{print\-Lines}}
+\index{print\-Lines@{print\-Lines}!Book@{Book}}
+\subsubsection[{print\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::print\-Lines (
 \begin{DoxyParamCaption}
 \item[{string}]{query}
 \end{DoxyParamCaption}
@@ -347,9 +419,9 @@ An implicit \hyperlink{class_book}{Book} and logical expression match
 \begin{DoxyPostcond}{Postcondition}
 Prints the number of the line and the line of the implicit book that keep the logical expression 
 \end{DoxyPostcond}
-\hypertarget{class_book_a7193030998d6251851be26196762f8e6}{\index{Book@{Book}!print\+Select\+Lines@{print\+Select\+Lines}}
-\index{print\+Select\+Lines@{print\+Select\+Lines}!Book@{Book}}
-\subsubsection[{print\+Select\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Select\+Lines (
+\hypertarget{class_book_a7193030998d6251851be26196762f8e6}{\index{Book@{Book}!print\-Select\-Lines@{print\-Select\-Lines}}
+\index{print\-Select\-Lines@{print\-Select\-Lines}!Book@{Book}}
+\subsubsection[{print\-Select\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::print\-Select\-Lines (
 \begin{DoxyParamCaption}
 \item[{int}]{start, }
 \item[{int}]{end}
@@ -372,9 +444,9 @@ An implicit \hyperlink{class_book}{Book}, and the range
 \begin{DoxyPostcond}{Postcondition}
 Prints the lines of the range and its number of the implicit book 
 \end{DoxyPostcond}
-\hypertarget{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{\index{Book@{Book}!print\+Frequency\+Table@{print\+Frequency\+Table}}
-\index{print\+Frequency\+Table@{print\+Frequency\+Table}!Book@{Book}}
-\subsubsection[{print\+Frequency\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Frequency\+Table (
+\hypertarget{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{\index{Book@{Book}!print\-Frequency\-Table@{print\-Frequency\-Table}}
+\index{print\-Frequency\-Table@{print\-Frequency\-Table}!Book@{Book}}
+\subsubsection[{print\-Frequency\-Table}]{\setlength{\rightskip}{0pt plus 5cm}void Book\-::print\-Frequency\-Table (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -392,85 +464,115 @@ Prints all words of the content and its frequencies in decreasingly ordered by f
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{\index{Book@{Book}!author\+Name@{author\+Name}}
-\index{author\+Name@{author\+Name}!Book@{Book}}
-\subsubsection[{author\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::author\+Name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}
+\hypertarget{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{\index{Book@{Book}!author\-Name@{author\-Name}}
+\index{author\-Name@{author\-Name}!Book@{Book}}
+\subsubsection[{author\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Book\-::author\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}
 
 
-Name of the author (I\+D on parent author\+Collection) 
+Name of the author. 
+
+The I\-D on parent author\-Collection 
+
+Definition at line 28 of file Book.\-hh.
+
+\hypertarget{class_book_a111d7b30bddd6166bd09764f050cfee3}{\index{Book@{Book}!book\-Title@{book\-Title}}
+\index{book\-Title@{book\-Title}!Book@{Book}}
+\subsubsection[{book\-Title}]{\setlength{\rightskip}{0pt plus 5cm}string Book\-::book\-Title\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a111d7b30bddd6166bd09764f050cfee3}
+
+
+Name of the book. 
+
+The I\-D of current element 
+
+Definition at line 32 of file Book.\-hh.
+
+\hypertarget{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{\index{Book@{Book}!book\-Content@{book\-Content}}
+\index{book\-Content@{book\-Content}!Book@{Book}}
+\subsubsection[{book\-Content}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Book\-::book\-Content\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}
+
+
+Content of the book. 
+
+The line I\-D is the position and the value is the content of the book 
+
+Definition at line 36 of file Book.\-hh.
+
+\hypertarget{class_book_a3e21a804bd433b6c1b05790856ec973f}{\index{Book@{Book}!word\-Dictionary@{word\-Dictionary}}
+\index{word\-Dictionary@{word\-Dictionary}!Book@{Book}}
+\subsubsection[{word\-Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, set$<$string$>$ $>$ Book\-::word\-Dictionary\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a3e21a804bd433b6c1b05790856ec973f}
+
+
+Content dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & = Key of the main map and the length of the word \\
+\hline
+{\em set$<$string$>$} & = All the words (without marks) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Book.\-hh.
+
+\hypertarget{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{\index{Book@{Book}!word\-Frequency\-Map@{word\-Frequency\-Map}}
+\index{word\-Frequency\-Map@{word\-Frequency\-Map}!Book@{Book}}
+\subsubsection[{word\-Frequency\-Map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, int$>$ Book\-::word\-Frequency\-Map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}
+
+
+Content dictionary with frequencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & = Key of the identifier \\
+\hline
+{\em int} & = Frequencies of the words \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Book.\-hh.
+
+\hypertarget{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}{\index{Book@{Book}!word\-Frequency\-Vector@{word\-Frequency\-Vector}}
+\index{word\-Frequency\-Vector@{word\-Frequency\-Vector}!Book@{Book}}
+\subsubsection[{word\-Frequency\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<$string, int$>$ $>$ Book\-::word\-Frequency\-Vector\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}
+
+
+Content dictionary with frequencies in correct order. 
 
 
 
-Definition at line 27 of file Book.\+hh.
+Definition at line 51 of file Book.\-hh.
 
-\hypertarget{class_book_a111d7b30bddd6166bd09764f050cfee3}{\index{Book@{Book}!book\+Title@{book\+Title}}
-\index{book\+Title@{book\+Title}!Book@{Book}}
-\subsubsection[{book\+Title}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::book\+Title\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a111d7b30bddd6166bd09764f050cfee3}
-
-
-Definition at line 29 of file Book.\+hh.
-
-\hypertarget{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{\index{Book@{Book}!book\+Content@{book\+Content}}
-\index{book\+Content@{book\+Content}!Book@{Book}}
-\subsubsection[{book\+Content}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Book\+::book\+Content\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}
+\hypertarget{class_book_a36f1e0b30a0ad17606976556cab45a23}{\index{Book@{Book}!book\-Words@{book\-Words}}
+\index{book\-Words@{book\-Words}!Book@{Book}}
+\subsubsection[{book\-Words}]{\setlength{\rightskip}{0pt plus 5cm}int Book\-::book\-Words\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a36f1e0b30a0ad17606976556cab45a23}
 
 
-Definition at line 31 of file Book.\+hh.
-
-\hypertarget{class_book_a3e21a804bd433b6c1b05790856ec973f}{\index{Book@{Book}!word\+Dictionary@{word\+Dictionary}}
-\index{word\+Dictionary@{word\+Dictionary}!Book@{Book}}
-\subsubsection[{word\+Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, set$<$string$>$ $>$ Book\+::word\+Dictionary\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a3e21a804bd433b6c1b05790856ec973f}
-
-
-Definition at line 36 of file Book.\+hh.
-
-\hypertarget{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{\index{Book@{Book}!word\+Frequency\+Map@{word\+Frequency\+Map}}
-\index{word\+Frequency\+Map@{word\+Frequency\+Map}!Book@{Book}}
-\subsubsection[{word\+Frequency\+Map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$string, int$>$ Book\+::word\+Frequency\+Map\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}
-
-
-Definition at line 41 of file Book.\+hh.
-
-\hypertarget{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}{\index{Book@{Book}!word\+Frequency\+Vector@{word\+Frequency\+Vector}}
-\index{word\+Frequency\+Vector@{word\+Frequency\+Vector}!Book@{Book}}
-\subsubsection[{word\+Frequency\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<$string, int$>$ $>$ Book\+::word\+Frequency\+Vector\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_ac58a87d14a302f7d437c1eaa1f1901fb}
-
-
-Definition at line 42 of file Book.\+hh.
-
-\hypertarget{class_book_a36f1e0b30a0ad17606976556cab45a23}{\index{Book@{Book}!book\+Words@{book\+Words}}
-\index{book\+Words@{book\+Words}!Book@{Book}}
-\subsubsection[{book\+Words}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::book\+Words\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a36f1e0b30a0ad17606976556cab45a23}
-
-
-Definition at line 45 of file Book.\+hh.
-
-\hypertarget{class_book_a370478eab144c20de936e1b68923e1c0}{\index{Book@{Book}!book\+Quotes@{book\+Quotes}}
-\index{book\+Quotes@{book\+Quotes}!Book@{Book}}
-\subsubsection[{book\+Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\+::book\+Quotes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a370478eab144c20de936e1b68923e1c0}
-
-
-Definition at line 47 of file Book.\+hh.
-
-\hypertarget{class_book_a5fea5dce5ba03d79378b2000f255de49}{\index{Book@{Book}!Book@{Book}}
-\index{Book@{Book}!Book@{Book}}
-\subsubsection[{Book}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\+::\+Book}}\label{class_book_a5fea5dce5ba03d79378b2000f255de49}
-
-
-Returns the book quotes. 
-
-\begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_book}{Book} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Returns the book\+Quotes set 
-\end{DoxyPostcond}
-
-
-Definition at line 151 of file Book.\+hh.
+Size of \hyperlink{class_book}{Book}'s collection. 
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 54 of file Book.\-hh.
+
+\hypertarget{class_book_a370478eab144c20de936e1b68923e1c0}{\index{Book@{Book}!book\-Quotes@{book\-Quotes}}
+\index{book\-Quotes@{book\-Quotes}!Book@{Book}}
+\subsubsection[{book\-Quotes}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\-::book\-Quotes\hspace{0.3cm}{\ttfamily [private]}}}\label{class_book_a370478eab144c20de936e1b68923e1c0}
+
+
+Ordered collection of quotes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & = The I\-D of the parent quote\-Collection \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file Book.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_book_8hh}{Book.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_book_8hh}{Book.\-hh}\end{DoxyCompactItemize}

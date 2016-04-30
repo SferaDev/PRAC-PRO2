@@ -23,29 +23,40 @@ using namespace std;
 class Book {
 
 private:
-    /** @brief Name of the author (ID on parent authorCollection) */
+    /** @brief Name of the author */
+    /** @brief The ID on parent authorCollection */
     string authorName;
 
-    string bookTitle; // Name of the book (ID of current element)
+    /** @brief Name of the book */
+    /** @brief The ID of current element */
+    string bookTitle;
 
-    vector<string> bookContent; // Content of the book (The line ID: position | Value: content)
+    /** @brief Content of the book */
+    /** @brief The line ID is the position and the value is the content of the book */
+    vector<string> bookContent;
 
-    // Content dictionary
-    // On the main map the key is the length of the word
-    // On the inner map it has a word (without marks)
+    /** @brief Content dictionary
+        \param int: Key of the main map and the length of the word
+        \param set<string>: All the words (without marks)
+    */
     map<int, set<string> > wordDictionary;
 
-    // Content dictionary with frequencies
-    // The key is the length of the word
-    // The value is its frequencies
+    /** @brief Content dictionary with frequencies
+        \param string: Key of the identifier
+        \param int: Frequencies of the words
+    */
     map<string, int> wordFrequencyMap;
+
+    /** @brief Content dictionary with frequencies in correct order */
     vector<pair<string, int> > wordFrequencyVector;
 
-    // Size of Book's collection
+    /** @brief Size of Book's collection */
     int bookWords;
 
-    set<string> bookQuotes; // Ordered collection of quotes
-                            // The value of the item is the ID of the parent quoteCollection
+    /** @brief Ordered collection of quotes
+        \param string: The ID of the parent quoteCollection
+    */
+    set<string> bookQuotes;
 
     /** @brief Comparator for the frequencyTable */
     struct frequencyComparator {
@@ -73,8 +84,8 @@ public:
     Book();
 
     /** @brief Creates a Book with title and author
-        \param title = Book title
-        \param author = Book author
+        \param title: Book title
+        \param author: Book author
         \pre True
         \post Returns an implicit book with title and the author
     */
@@ -117,8 +128,8 @@ public:
     int getBookWords();
 
     /** @brief Replaces one word for another word in the implicit Book
-        \param oldWord = Word (old)
-        \param newWord = Word (new)
+        \param oldWord: Word (old)
+        \param newWord: Word (new)
         \pre An implicit Book, the old word that we replaces and the new word
         \post The implicit book with the old word replaced for the new word
     */
@@ -174,15 +185,15 @@ public:
     void printAllLines();
 
     /** @brief Prints the lines by logical expression match of the implicit Book
-        \param query = Query to find the lines to print
+        \param query: Query to find the lines to print
         \pre An implicit Book and logical expression match
         \post Prints the number of the line and the line of the implicit book that keep the logical expression
     */
     void printLines(string query);
 
     /** @brief Prints lines from [start - 1] to [end - 1]
-        \param start = Start line
-        \param end = end line
+        \param start: Start line
+        \param end: end line
         \pre An implicit Book, and the range
         \post Prints the lines of the range and its number of the implicit book
     */
