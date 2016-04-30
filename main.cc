@@ -45,7 +45,7 @@ bool startsWith(string input, string compare) {
     return input.substr(0, compare.length()) == compare;
 }
 
-void analyzeExpression(string input)  {
+void analyzeExpression(string input, Library& library)  {
     // Delete '?' from query
     input = input.erase(input.length() - 1 , 1);
     // Erase 'frases ' from input channel
@@ -55,8 +55,10 @@ void analyzeExpression(string input)  {
         int x, y;
         istringstream iss(input);
         iss >> x >> y;
-        // TODO: Call function
+        library.getBook().printSelectLines(x,y);
     } else if (input[0] == '\"') {
+        input = input.erase(0, 1);
+        library.getBook().printLines(input);
         // TODO: Remove the " from input string
         // TODO: Call function
     } else {
@@ -116,7 +118,7 @@ void readActions(Library& library) {
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_EXPRESION)) {
             if (library.isBookSelected()) {
-                analyzeExpression(input);
+                analyzeExpression(input, library);
             } else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_LINES)) {
             if (library.isBookSelected())
