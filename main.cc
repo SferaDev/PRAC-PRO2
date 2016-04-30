@@ -58,11 +58,9 @@ void analyzeExpression(string input, Library& library)  {
         library.getBook().printSelectLines(x,y);
     } else if (input[0] == '\"') {
         input = input.erase(0, 1);
-        library.getBook().printLines(input);
-        // TODO: Remove the " from input string
-        // TODO: Call function
+        library.getBook().printWordsConsecutivesLines(input);
     } else {
-        // TODO: Call function
+        library.getBook().printLines(input);
     }
 }
 

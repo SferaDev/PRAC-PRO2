@@ -191,6 +191,13 @@ public:
     */
     void printLines(string query);
 
+    /** @brief Prints the lines that contains the consecutive words of the implicit Book
+        \param query: sequence of words to find the lines to print
+        \pre An implicit Book and sequence of words
+        \post Prints the number of the line and the line of the implicit book that contain all the words of the sequence
+    */
+    void printWordsConsecutivesLines(string query);
+
     /** @brief Prints lines from [start - 1] to [end - 1]
         \param start: Start line
         \param end: end line

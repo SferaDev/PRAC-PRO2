@@ -121,7 +121,11 @@ void Book::printAllLines() {
 }
 
 void Book::printLines(string query) {
-    // TODO
+    // TODO: JORDI
+}
+
+void Book::printWordsConsecutivesLines(string query){
+    // TODO:JORDI
 }
 
 void Book::printSelectLines(int start, int end) {
