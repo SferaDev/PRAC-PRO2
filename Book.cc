@@ -154,6 +154,10 @@ void Book::printWordsConsecutivesLines(string query){
 }
 
 void Book::printSelectLines(int start, int end) {
+    if ((end < start) or (start < 1) or (end > bookContent.size())) {
+        cout << "error" << endl;
+        return;
+    }
     for (int i = start; i <= end; ++i) {
         cout <<  i << " " << bookContent[i - 1] << endl;
     }
