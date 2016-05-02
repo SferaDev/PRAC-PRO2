@@ -122,10 +122,33 @@ void Book::printAllLines() {
 
 void Book::printLines(string query) {
     // TODO: JORDI
+    // TODO: Call the immersive recursive: bool found with items query and int[] with the lines where found
 }
 
 void Book::printWordsConsecutivesLines(string query){
     // TODO: JORDI
+    // FIXME: Possible efficiency: Si las palabras no estan en el diccionario del currentBook -> error
+    istringstream issQuery(query);
+    string wordQuery;
+    while (issQuery >> wordQuery) {
+        if (!findWord(wordQuery)) {
+            cout << "error" << endl;
+            return;
+        }
+    }
+    issQuery.seekg(0);
+    // foreach line -> load line into iss -> Check if it's there?
+    for (int i = 0; i < bookContent.size(); ++i) {
+        istringstream issContent(bookContent[i]);
+        string wordContent;
+        issQuery >> wordQuery;
+        // TODO: Add a bool to check if found
+        while (issContent >> wordContent) {
+            // TODO: If equals -> found = true and issQuery >> wordQuery
+            // TODO: If found and not equals false positive break and move to next line!
+        }
+        // TODO: rewind issQuery: issQuery.seekg(0);
+    }
 }
 
 void Book::printSelectLines(int start, int end) {
