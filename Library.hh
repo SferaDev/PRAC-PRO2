@@ -34,19 +34,19 @@ private:
 
     /** @brief Collection of Authors
         \param string: Key of the identifier
-        \param Book: Authors of the Library
+        \param Author: Authors of the Library
     */
     map<string, Author> authorCollection;
 
     /** @brief Collection of Quotes
         \param string: Key of the identifier
-        \param Book: Quotes of the Library
+        \param Quote: Quotes of the Library
     */
     map<string, Quote> quoteCollection;
 
     /** @brief Identifier of Quotes
-        \param string: Key of the identifier
-        \param int:
+        \param string: Quote ID (without number)
+        \param int: Last integer reference for the Quote ID
     */
     map<string, int> quoteIdentifiers;
 
