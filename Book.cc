@@ -64,8 +64,10 @@ void Book::replaceWords(string oldWord, string newWord) {
     // Edit the contents of the book
     for (int i = 0; i < bookContent.size(); ++i) {
         int pos = bookContent[i].find(oldWord);
-        if (pos != bookContent[i].npos)
+        while (pos != bookContent[i].npos) {
             bookContent[i].replace(pos, oldWord.length(), newWord);
+            pos = bookContent[i].find(oldWord);
+        }
     }
     // Edit the dictionary
     wordDictionary[oldWord.length()].erase(oldWord);
