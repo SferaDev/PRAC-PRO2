@@ -12,5 +12,6 @@ var searchData=
   ['printlines',['printLines',['../class_book.html#a0c019a8318999229bf506f7f64e67a85',1,'Book']]],
   ['printquotes',['printQuotes',['../class_library.html#a819acb04f4b8aea0547db50918b1c5fa',1,'Library']]],
   ['printquotesbyauthor',['printQuotesByAuthor',['../class_library.html#aa13544bfe57c61164d9953518e88dcb0',1,'Library']]],
-  ['printselectlines',['printSelectLines',['../class_book.html#a7193030998d6251851be26196762f8e6',1,'Book']]]
+  ['printselectlines',['printSelectLines',['../class_book.html#a7193030998d6251851be26196762f8e6',1,'Book']]],
+  ['printwordsconsecutiveslines',['printWordsConsecutivesLines',['../class_book.html#abd81439092f60b2b6f8cd56fc92f8b2a',1,'Book']]]
 ];

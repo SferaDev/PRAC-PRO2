@@ -22,7 +22,6 @@ docs:
 	cd DOC/latex/
 	make
 	cd ../../
-	tar -cvf docs.tar DOC/
 
 # Configuration for make clean
 clean:
