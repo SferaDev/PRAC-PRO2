@@ -198,9 +198,9 @@ son 1
 sur 1
 Peru 1
 agua 1
+anos 1
 eran 1
 para 1
-años 1
 entre 1
 forma 1
 hasta 1
@@ -318,4 +318,3 @@ Maurice Sendak "Where the wild things are"
 MS4
 1 No se puede tener todo: una agricultura ecologica, una ganaderia extensiva, dejar los bosques como estan y comer carne como lo hacemos. 
 Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
-
