@@ -91,8 +91,7 @@ void Book::replaceWords(string oldWord, string newWord) {
     // Edit the frequency Map
     wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
-    // Update the frequency vector
-    // TODO: FIXME Efficiency
+    // FIXME: Update the frequency vector (slow?)
     generateFrequencyTable();
 }
 
@@ -144,7 +143,7 @@ void Book::printLines(string query) {
 }
 
 void Book::printWordsConsecutivesLines(string query){
-    // FIXME: Possible efficiency: Si las palabras no estan en el diccionario del currentBook -> error
+    // FIXME: Check if words are in the dictionary (slow?)
     istringstream issQuery(query);
     string wordQuery;
     while (issQuery >> wordQuery) {

@@ -127,8 +127,8 @@ void Library::insertQuote(int start, int end) {
         }
         it++;
     }
-    // Set position on the reference (FIXME)
     quoteIdentifiers[reference]++;
+    // FIXME: Using a stringstream for this doesn't look good  at all
     stringstream ss;
     ss << quoteIdentifiers[reference];
     reference += ss.str();
