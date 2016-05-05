@@ -5,6 +5,7 @@
 
 #include "Book.hh"
 #include <algorithm>
+#include <queue>
 #include <sstream>
 using namespace std;
 
@@ -147,6 +148,23 @@ void Book::printLines(string query) {
     // TODO: JORDI
     // TODO: Call the immersive recursive: bool found with items query and int[] with the lines where found
 }
+
+/*bool findExpression(string query, set<int>& pos) {
+    // IF () are found then call recursively with the substr and replace with 1 or 0.
+    int pPos = query.find_first_of('(');
+    if (pPos != string::npos) {
+        int ePos = query.find_last_of(')');
+        // ePos - pPos < 0 or ePos == npos -> error
+        query.replace(pPos, ePos - pPos, " " + findExpression(query.substr(pPos + 1, ePos - pPos)) + " ");
+    }
+    // Split string on & and | and add to queue reducing query
+    queue<string> queryQueue;
+    while (!query.empty()) {
+        //
+    }
+    // Evaluate expressions in order queue
+
+}*/
 
 void Book::printWordsConsecutivesLines(string query){
     // FIXME: Check if words are in the dictionary (slow?)
