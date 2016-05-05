@@ -22,6 +22,22 @@ Book::~Book() {
     // no-op
 }
 
+struct frequencyComparator {
+    bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
+        // Special case: Same frequency
+        if (a.second == b.second) {
+            // Special case: Same length
+            if (a.first.length() == b.first.length()) {
+                return a.first < b.first;
+            }
+            // Base case: Order by length in asc order
+            return a.first.length() < b.first.length();
+        }
+        // Base case: Order by frequency in desc order
+        return a.second > b.second;
+    }
+};
+
 void Book::readBookContent() {
     string input, content;
     while (getline(cin, input) && input != "****") {
