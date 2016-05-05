@@ -57,7 +57,9 @@ void analyzeExpression(string input, Library& library)  {
         iss >> x >> y;
         library.getBook().printSelectLines(x,y);
     } else if (input[0] == '\"') {
+        input = input.substr(0, input.length() - 1);
         input = input.erase(0, 1);
+        input = input.substr(0, input.length() - 1);
         library.getBook().printWordsConsecutivesLines(input);
     } else {
         library.getBook().printLines(input);

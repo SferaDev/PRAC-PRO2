@@ -128,7 +128,6 @@ void Book::printLines(string query) {
 }
 
 void Book::printWordsConsecutivesLines(string query){
-    // TODO: JORDI
     // FIXME: Possible efficiency: Si las palabras no estan en el diccionario del currentBook -> error
     istringstream issQuery(query);
     string wordQuery;
@@ -138,18 +137,11 @@ void Book::printWordsConsecutivesLines(string query){
             return;
         }
     }
-    issQuery.seekg(0);
     // foreach line -> load line into iss -> Check if it's there?
     for (int i = 0; i < bookContent.size(); ++i) {
-        istringstream issContent(bookContent[i]);
-        string wordContent;
-        issQuery >> wordQuery;
-        // TODO: Add a bool to check if found
-        while (issContent >> wordContent) {
-            // TODO: If equals -> found = true and issQuery >> wordQuery
-            // TODO: If found and not equals false positive break and move to next line!
+        if (bookContent[i].find(query) != bookContent[i].npos) {
+            printSelectLines(i + 1, i + 1);
         }
-        // TODO: rewind issQuery: issQuery.seekg(0);
     }
 }
 
