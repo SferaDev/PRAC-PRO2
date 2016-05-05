@@ -60,7 +60,7 @@ void analyzeExpression(string input, Library& library)  {
         input = input.substr(0, input.length() - 1);
         input = input.erase(0, 1);
         input = input.substr(0, input.length() - 1);
-        library.getBook().printWordsConsecutivesLines(input);
+        library.getBook().printWordsConsecutiveLines(input);
     } else {
         library.getBook().printLines(input);
     }

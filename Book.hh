@@ -42,8 +42,8 @@ private:
     map<int, set<string> > wordDictionary;
 
     /** @brief Content dictionary by words with lines
-        \param int: Key of the main map and the length of the word
-        \param set<string>: All the words (without marks)
+        \param int: Key of the main map and a word
+        \param vector<int>: All the lines with that contents a determinate word (without marks)
     */
     map<string, vector<int> > lineDictionary;
 
@@ -184,7 +184,7 @@ public:
         \pre An implicit Book and sequence of words
         \post Prints the number of the line and the line of the implicit book that contain all the words of the sequence
     */
-    void printWordsConsecutivesLines(string query);
+    void printWordsConsecutiveLines(string query);
 
     /** @brief Prints lines from [start - 1] to [end - 1]
         \param start: Start line

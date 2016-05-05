@@ -166,7 +166,7 @@ void Book::printLines(string query) {
 
 }*/
 
-void Book::printWordsConsecutivesLines(string query){
+void Book::printWordsConsecutiveLines(string query) {
     // FIXME: Check if words are in the dictionary (slow?)
     istringstream issQuery(query);
     string wordQuery;
