@@ -60,19 +60,19 @@ void Book::readBookContent() {
     }
 }
 
-string Book::getBookTitle() const {
+string Book::getTitle() const {
     return bookTitle;
 }
 
-string Book::getAuthorName() {
+string Book::getAuthor() {
     return authorName;
 }
 
-int Book::getBookLines() {
+int Book::getLineCount() {
     return bookContent.size();
 }
 
-int Book::getBookWords() {
+int Book::getWordCount() {
     return bookWords;
 }
 

@@ -106,7 +106,7 @@ void readActions(Library& library) {
 	        library.printBooksByAuthor(authorName);
         } else if (startsWith(input, QUERY_CURRENT_AUTHOR)) {
             if (library.isBookSelected())
-                cout << library.getBook().getAuthorName() << endl;
+                cout << library.getBook().getAuthor() << endl;
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_CONTENT)) {
             if (library.isBookSelected())
@@ -122,11 +122,11 @@ void readActions(Library& library) {
             } else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_LINES)) {
             if (library.isBookSelected())
-                cout << library.getBook().getBookLines() << endl;
+                cout << library.getBook().getLineCount() << endl;
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_WORDS)) {
             if (library.isBookSelected())
-                cout << library.getBook().getBookWords() << endl;
+                cout << library.getBook().getWordCount() << endl;
             else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_FREQUENCY)) {
             if (library.isBookSelected())

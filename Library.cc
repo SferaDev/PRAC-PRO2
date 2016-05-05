@@ -32,14 +32,14 @@ void Library::readBook(string title, string authorName) {
     if (authorIt == authorCollection.end()) {
         Author author(authorName);
         author.incrementBookCount(1);
-        author.incrementLineCount(book.getBookLines());
-        author.incrementWordCount(book.getBookWords());
+        author.incrementLineCount(book.getLineCount());
+        author.incrementWordCount(book.getWordCount());
         author.addBook(title);
         authorCollection[authorName] = author;
     } else {
         authorIt->second.incrementBookCount(1);
-        authorIt->second.incrementLineCount(book.getBookLines());
-        authorIt->second.incrementWordCount(book.getBookWords());
+        authorIt->second.incrementLineCount(book.getLineCount());
+        authorIt->second.incrementWordCount(book.getWordCount());
         authorIt->second.addBook(title);
     }
 }
@@ -81,10 +81,10 @@ void Library::selectBook(string query) {
 void Library::deleteBook() {
     if (isBookSelected()) {
         // Delete book on Author
-        authorCollection[currentBook->second.getAuthorName()].deleteBook(currentBook->second.getBookTitle());
+        authorCollection[currentBook->second.getAuthor()].deleteBook(currentBook->second.getTitle());
         // If author has no books delete it too
-        if (authorCollection[currentBook->second.getAuthorName()].isEmpty())
-            authorCollection.erase(currentBook->second.getAuthorName());
+        if (authorCollection[currentBook->second.getAuthor()].isEmpty())
+            authorCollection.erase(currentBook->second.getAuthor());
         // Delete the book
         bookCollection.erase(currentBook);
         // Reset the currentBook iterator
@@ -106,19 +106,19 @@ void Library::replaceWordsOnBook(string input) {
 
 void Library::insertQuote(int start, int end) {
     // Error conditions if invalid start/end is given
-    if ((end < start) or (start < 1) or (end > currentBook->second.getBookLines())) {
+    if ((end < start) or (start < 1) or (end > currentBook->second.getLineCount())) {
         cout << "error" << endl;
         return;
     }
     // Assign new Reference (check what was the last one)
     string reference, aux;
-    istringstream iss(currentBook->second.getAuthorName());
+    istringstream iss(currentBook->second.getAuthor());
     while (iss >> aux) reference += aux[0];
     // Check if there's an existing Quote with these lines of the same book
     map<string, Quote>::iterator it = quoteCollection.begin();
     while (it != quoteCollection.end()) {
         if (it->second.getReference().substr(0, reference.length()) == reference) {
-            if (it->second.getBookTitle() == currentBook->second.getBookTitle()
+            if (it->second.getBookTitle() == currentBook->second.getTitle()
                     and it->second.getStartLine() == start
                     and it->second.getEndLine() == end) {
                 cout << "error" << endl;
@@ -133,8 +133,8 @@ void Library::insertQuote(int start, int end) {
     ss << quoteIdentifiers[reference];
     reference += ss.str();
     // Store them into new Quote
-    Quote quote(reference, currentBook->second.getAuthorName(),
-                currentBook->second.getBookTitle());
+    Quote quote(reference, currentBook->second.getAuthor(),
+                currentBook->second.getTitle());
     quote.setContent(currentBook->second.getLines(start, end));
     quote.setQuoteLines(start, end);
     // Store the Quote in quoteCollection
@@ -142,7 +142,7 @@ void Library::insertQuote(int start, int end) {
     // Add ID to Book
     currentBook->second.addQuote(reference);
     // Add ID to Author
-    authorCollection[currentBook->second.getAuthorName()].addQuote(reference);
+    authorCollection[currentBook->second.getAuthor()].addQuote(reference);
 }
 
 void Library::deleteQuote(string reference) {
@@ -210,10 +210,10 @@ void Library::printQuotesByAuthor(string author) {
 }
 
 void Library::printCurrentInformation() {
-    cout << currentBook->second.getAuthorName() << " \"";
-    cout << currentBook->second.getBookTitle() << "\" ";
-    cout << currentBook->second.getBookLines() << " ";
-    cout << currentBook->second.getBookWords() << endl;
+    cout << currentBook->second.getAuthor() << " \"";
+    cout << currentBook->second.getTitle() << "\" ";
+    cout << currentBook->second.getLineCount() << " ";
+    cout << currentBook->second.getWordCount() << endl;
     cout << "Cites Associades:" << endl;
     set<string> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();

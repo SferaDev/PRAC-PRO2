@@ -81,7 +81,7 @@ public:
 
     /** @brief Reads the content of the implicit Book
         \pre An implicit Book
-        \post The content of the implicit Book
+        \post The content of the implicit Book in the input channel
     */
     void readBookContent();
 
@@ -89,25 +89,25 @@ public:
         \pre An implicit Book
         \post The title of the implicit book
     */
-    string getBookTitle() const;
+    string getTitle() const;
 
     /** @brief Returns the name of the author of the implicit Book
         \pre An implicit Book
         \post The name of the author of the implicit book
     */
-    string getAuthorName();
+    string getAuthor();
 
     /** @brief Returns the number of lines of the implicit Book
         \pre An implicit Book
         \post The number of the lines of the implicit book
     */
-    int getBookLines();
+    int getLineCount();
 
     /** @brief Returns the number of words of the implicit Book
         \pre An implicit Book
         \post The words of lines of the implicit book
     */
-    int getBookWords();
+    int getWordCount();
 
     /** @brief Replaces one word for another word in the implicit Book
         \param oldWord: Word (old)
