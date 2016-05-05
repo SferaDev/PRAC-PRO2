@@ -53,6 +53,9 @@ void Book::readBookContent() {
                 bookContent.push_back(content);
                 content.clear();
                 word.erase(word.length() - 1, 1);
+                lineDictionary[word].push_back(bookContent.size());
+            } else {
+                lineDictionary[word].push_back(bookContent.size() + 1);
             }
             wordDictionary[word.length()].insert(word);
             wordFrequencyMap[word] += 1;
@@ -85,9 +88,12 @@ void Book::replaceWords(string oldWord, string newWord) {
             pos = bookContent[i].find(oldWord);
         }
     }
-    // Edit the dictionary
+    // Edit the word dictionary
     wordDictionary[oldWord.length()].erase(oldWord);
     wordDictionary[newWord.length()].insert(newWord);
+    // Edit the line dictionary
+    lineDictionary[newWord] = lineDictionary[oldWord];
+    lineDictionary[oldWord].clear();
     // Edit the frequency Map
     wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
@@ -152,7 +158,7 @@ void Book::printWordsConsecutivesLines(string query){
             return;
         }
     }
-    // foreach line -> load line into iss -> Check if it's there?
+    // Loop all the lines
     for (int i = 0; i < bookContent.size(); ++i) {
         if (bookContent[i].find(query) != bookContent[i].npos) {
             printSelectLines(i + 1, i + 1);
