@@ -65,7 +65,6 @@ private:
             if (a.second == b.second) {
                 // Special case: Same length
                 if (a.first.length() == b.first.length()) {
-                    //FIXME: Ask if it should lower case compare
                     return a.first < b.first;
                 }
                 // Base case: Order by length in asc order
