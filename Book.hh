@@ -179,6 +179,8 @@ public:
     */
     void printLines(string query);
 
+    void findExpression(string query, set<int>& pos);
+
     /** @brief Prints the lines that contains the consecutive words of the implicit Book
         \param query: sequence of words to find the lines to print
         \pre An implicit Book and sequence of words

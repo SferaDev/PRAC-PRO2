@@ -154,7 +154,7 @@ void Book::printLines(string query) {
     }
 }
 
-void findExpression(string query, set<int>& pos) {
+void Book::findExpression(string query, set<int>& pos) {
     // TODO: Jordi
 }
 
