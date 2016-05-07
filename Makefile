@@ -12,8 +12,8 @@ $(EXECUTABLE):
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final tar
-jutge: docs
-	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile docs.tar jp_*.txt
+jutge:
+	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile
 
 # Configuration to build Documentation tar
 docs:
