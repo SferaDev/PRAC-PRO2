@@ -175,10 +175,16 @@ public:
     /** @brief Prints the lines by logical expression match of the implicit Book
         \param query: Query to find the lines to print
         \pre An implicit Book and logical expression match
-        \post Prints the number of the line and the line of the implicit book that keep the logical expression
+        \post Prints the lines that keep the logical expression
     */
     void printLines(string query);
 
+    /** @brief Finds the lines that keep the logical expression
+        \param query: Query to find the lines to print
+        \param pos: Set with all the positions that keep the logical expression
+        \pre An implicit Book and logical expression match and empty set
+        \post The number of lines that keep the logical expression
+    */
     void findExpression(string query, set<int>& pos);
 
     /** @brief Prints the lines that contains the consecutive words of the implicit Book
