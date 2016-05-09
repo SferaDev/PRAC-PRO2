@@ -183,16 +183,24 @@ void Book::findExpression(string query, set<int>& pos) {
     if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
         // Base case: Return true/false with positions where found
         query = query.substr(1, query.length() - 2);
-        // TODO: Fix AND of words
-        istringstream iss(query);
-        string word;
-        while (iss >> word) {
-            map<string, vector<int> >::const_iterator it = lineDictionary.find(word);
+        int posSpace = query.find_first_of(" ");
+        if (posSpace == string::npos) {
+            map<string, vector<int> >::const_iterator it = lineDictionary.find(query);
             if (it != lineDictionary.end()) {
                 for (int i = 0; i < it->second.size(); ++i) {
                     pos.insert(it->second[i]);
                 }
             }
+        } else {
+            istringstream iss(query);
+            query.clear();
+            string word;
+            iss >> word;
+            query += "{" + word + "}";
+            while (iss >> word) {
+                query += " & {" + word + "}";
+            }
+            findExpression(query, pos);
         }
     } else {
         int posAnd = query.find_first_of('&');
