@@ -14,12 +14,6 @@
 using namespace std;
 
 /* Constants */
-const string QUERY_INSERT = "afegir";
-const string QUERY_DELETE = "eliminar";
-const string QUERY_ALL = "tots";
-const string QUERY_INFO = "info";
-const string QUERY_NUMBER = "nombre";
-const string QUERY_QUOTES = "cites";
 const string BOOK_INSERT = "afegir text";
 const string BOOK_DELETE = "eliminar text";
 const string BOOK_SELECT = "triar text";
@@ -72,82 +66,6 @@ void analyzeExpression(string input, Library& library)  {
     }
 }
 
-
-void insertFuncions (string input, Library& library) {
-    if (startsWith(input, BOOK_INSERT)) {
-        string title, author;
-        title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
-        getline(cin, input);
-        author = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
-        library.readBook(title, author);
-    } else if (startsWith(input, QUOTE_INSERT)) {
-        int start, end;
-        input = input.substr(QUOTE_INSERT.length());
-        istringstream iss(input);
-        iss >> start >> end;
-        library.insertQuote(start, end);
-    }
-}
-
-void deletesFuncions (string input, Library& library) {
-    if (startsWith(input, BOOK_DELETE)) {
-        library.deleteBook();
-    } else if (startsWith(input, QUOTE_DELETE)) {
-        string reference = input.erase(input.length() - 1, 1);
-        reference = reference.substr(input.find_first_of("\"") + 1);
-        library.deleteQuote(reference);
-    }
-
-}
-
-void all_authors_books (string input, Library& library){
-    if (startsWith(input, QUERY_BOOKS_ALL)) {
-        library.printBooks();
-    } else if (startsWith(input, QUERY_AUTHORS)) {
-        library.printAuthors();
-    }
-}
-
-void info_quotes (string input, Library& library) {
-    if (startsWith(input, QUERY_CURRENT_INFO)) {
-        if (library.isBookSelected())
-            library.printCurrentInformation();
-        else cout << "error" << endl;
-    } else if (startsWith(input, QUERY_QUOTE_INFO)) {
-        string reference = input.erase(input.length() - 3, 3);
-        reference = reference.substr(input.find_first_of("\"") + 1);
-        if (library.quoteExists(reference)) {
-            Quote quote = library.getQuote(reference);
-            cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
-            quote.printInformation(false, true);
-        } else cout << "error" << endl;
-    }
-
-}
-
-void number_lines_words (string input, Library& library) {
-    //TODO: CORRECT ????
-    if (startsWith(input, QUERY_CURRENT_LINES)) {
-            cout << library.getBook().getLineCount() << endl;
-    } else if (startsWith(input, QUERY_CURRENT_WORDS)) {
-         cout << library.getBook().getWordCount() << endl;
-    }
-}
-
-
-void quotes (string input, Library& library) {
-    if (startsWith(input, QUERY_CURRENT_QUOTES)) {
-        if (library.isBookSelected())
-            library.printCurrentQuotes();
-        else cout << "error" << endl;
-    } else if (startsWith(input, QUERY_QUOTES_BY_AUTHOR)) {
-        string authorName = input.erase(input.length() - 3, 3);
-        authorName = authorName.substr(input.find_first_of("\"") + 1);
-        library.printQuotesByAuthor(authorName);
-    }
-
-}
-
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
@@ -156,24 +74,32 @@ void readActions(Library& library) {
             return;
         } else cout << input << endl;
         // Handle the rest of commands
-        if (startsWith(input, QUERY_INSERT)) {
-            insertFuncions(input, library);
-        } else if (startsWith(input, QUERY_DELETE)) {
-            deletesFuncions(input, library);
+        if (startsWith(input, BOOK_INSERT)) {
+            string title, author;
+            title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
+            getline(cin, input);
+            author = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
+            library.readBook(title, author);
+        } else if (startsWith(input, BOOK_DELETE)) {
+            library.deleteBook();
         } else if (startsWith(input, BOOK_SELECT)) {
             library.selectBook(input.erase(input.length() - 1, 1).substr(input.find_first_of("{") + 1));
         } else if (startsWith(input, BOOK_REPLACE_WORD)) {
             library.replaceWordsOnBook(input);
-        } else if (startsWith(input, QUERY_ALL)) {
-            all_authors_books(input, library);
-        } else if (startsWith(input, QUERY_INFO)) {
-            info_quotes(input, library);
-        } else if (startsWith(input, QUERY_NUMBER)) {
-            if (library.isBookSelected())
-                number_lines_words(input, library);
-            else cout << "error" << endl;
-        } else if (startsWith(input, QUERY_QUOTES)) {
-            quotes(input, library);
+        } else if (startsWith(input, QUOTE_INSERT)) {
+            int start, end;
+            input = input.substr(QUOTE_INSERT.length());
+            istringstream iss(input);
+            iss >> start >> end;
+            library.insertQuote(start, end);
+        } else if (startsWith(input, QUOTE_DELETE)) {
+            string reference = input.erase(input.length() - 1, 1);
+            reference = reference.substr(input.find_first_of("\"") + 1);
+            library.deleteQuote(reference);
+        } else if (startsWith(input, QUERY_AUTHORS)) {
+            library.printAuthors();
+        } else if (startsWith(input, QUERY_BOOKS_ALL)) {
+            library.printBooks();
         } else if (startsWith(input, QUERY_BOOKS_BY_AUTHOR)) {
 	        string authorName = input.erase(input.length() - 3, 3);
             authorName = authorName.substr(input.find_first_of("\"") + 1);
@@ -186,16 +112,44 @@ void readActions(Library& library) {
             if (library.isBookSelected())
                 library.getBook().printAllLines();
             else cout << "error" << endl;
+        } else if (startsWith(input, QUERY_CURRENT_INFO)) {
+            if (library.isBookSelected())
+                library.printCurrentInformation();
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_EXPRESION)) {
             if (library.isBookSelected()) {
                 analyzeExpression(input, library);
             } else cout << "error" << endl;
+        } else if (startsWith(input, QUERY_CURRENT_LINES)) {
+            if (library.isBookSelected())
+                cout << library.getBook().getLineCount() << endl;
+            else cout << "error" << endl;
+        } else if (startsWith(input, QUERY_CURRENT_WORDS)) {
+            if (library.isBookSelected())
+                cout << library.getBook().getWordCount() << endl;
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_CURRENT_FREQUENCY)) {
             if (library.isBookSelected())
                 library.getBook().printFrequencyTable();
             else cout << "error" << endl;
+        } else if (startsWith(input, QUERY_CURRENT_QUOTES)) {
+            if (library.isBookSelected())
+                library.printCurrentQuotes();
+            else cout << "error" << endl;
         } else if (startsWith(input, QUERY_QUOTES_ALL)) {
             library.printQuotes();
+        } else if (startsWith(input, QUERY_QUOTES_BY_AUTHOR)) {
+            string authorName = input.erase(input.length() - 3, 3);
+            authorName = authorName.substr(input.find_first_of("\"") + 1);
+            library.printQuotesByAuthor(authorName);
+        } else if (startsWith(input, QUERY_QUOTE_INFO)) {
+            string reference = input.erase(input.length() - 3, 3);
+            reference = reference.substr(input.find_first_of("\"") + 1);
+            if (library.quoteExists(reference)) {
+                Quote quote = library.getQuote(reference);
+                cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
+                quote.printInformation(false, true);
+            } else cout << "error" << endl;
         }
     }
 }
