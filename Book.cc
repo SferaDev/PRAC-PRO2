@@ -80,6 +80,7 @@ int Book::getWordCount() {
     return bookWords;
 }
 
+// FIXME: Jutge fails on private3
 void Book::replaceWords(string oldWord, string newWord) {
     // Edit the contents of the book
     for (int i = 0; i < bookContent.size(); ++i) {
@@ -97,9 +98,18 @@ void Book::replaceWords(string oldWord, string newWord) {
     lineDictionary[oldWord].clear();
     // Edit the frequency Map
     wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
+    int freq = wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
-    // FIXME: Update the frequency vector (slow?)
-    generateFrequencyTable();
+    // TODO: Don't use two conditions to check the continuity of the for (use while instead)
+    bool found = false;
+    for (int i = 0; i < wordFrequencyVector.size() and !found; ++i) {
+        if (wordFrequencyVector[i].first == oldWord) {
+            wordFrequencyVector.erase(wordFrequencyVector.begin() + i);
+        } else if (wordFrequencyVector[i].first > newWord) {
+            found = true;
+            wordFrequencyVector.insert(wordFrequencyVector.begin() + i, make_pair(newWord, freq));
+        }
+    }
 }
 
 bool Book::findWord(string word) {
@@ -160,14 +170,14 @@ bool Book::findExpression(string query, set<int>& pos) {
         query = query.substr(1, query.length() - 2);
         istringstream iss(query);
         string word;
-        while (iss >> word) {
+        /*while (iss >> word) {
             map<string, vector>::const_iterator it = lineDictionary.find(word);
             if (it != lineDictionary.end()) {
                 for (int i = 0; i < it->second.size(); ++i) {
                     pos.insert(it->second[i]);
                 }
             }
-        }
+        }*/
     } else {
 
     }
