@@ -154,8 +154,23 @@ void Book::printLines(string query) {
     }
 }
 
-void Book::findExpression(string query, set<int>& pos) {
-    // TODO: Jordi
+bool Book::findExpression(string query, set<int>& pos) {
+    if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
+        // Base case: Return true/false with positions where found
+        query = query.substr(1, query.length() - 2);
+        istringstream iss(query);
+        string word;
+        while (iss >> word) {
+            map<string, vector>::const_iterator it = lineDictionary.find(word);
+            if (it != lineDictionary.end()) {
+                for (int i = 0; i < it->second.size(); ++i) {
+                    pos.insert(it->second[i]);
+                }
+            }
+        }
+    } else {
+
+    }
 }
 
 void Book::printWordsConsecutiveLines(string query) {
