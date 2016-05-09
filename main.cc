@@ -41,8 +41,14 @@ const string QUERY_QUOTE_INFO = "info cita";
 
 const string QUIT = "sortir";
 
-bool startsWith(string input, string compare) {
-    return input.substr(0, compare.length()) == compare;
+bool startsWith(string a, string b) {
+    if (b.size() > a.size()) return false;
+    return std::equal(a.begin(), a.begin() + b.size(), b.begin());
+}
+
+bool endsWith(string a, string b) {
+    if (b.size() > a.size()) return false;
+    return std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
 }
 
 void analyzeExpression(string input, Library& library)  {
