@@ -185,7 +185,7 @@ public:
         \pre An implicit Book and logical expression match and empty set
         \post The number of lines that keep the logical expression
     */
-    bool findExpression(string query, set<int>& pos);
+    void findExpression(string query, set<int>& pos);
 
     /** @brief Prints the lines that contains the consecutive words of the implicit Book
         \param query: sequence of words to find the lines to print
