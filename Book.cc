@@ -164,13 +164,26 @@ void Book::printLines(string query) {
     }
 }
 
-void Book::findExpression(string query, set<int>& pos) {
+bool betweenPar(string query, int position) {
+    int state = 0;
+    for (int i = 0; i < position; ++i) {
+        if (query[i] == '(') state++;
+        if (query[i] == ')') state--;
+    }
+    return state != 0;
+}
+
+void trimString(string& query) {
     while (query[0] == ' ') query.erase(0, 1);
     while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
-    cout << "Start Recursion: " << query << endl;
+}
+
+void Book::findExpression(string query, set<int>& pos) {
+    trimString(query);
     if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
         // Base case: Return true/false with positions where found
         query = query.substr(1, query.length() - 2);
+        // TODO: Fix AND of words
         istringstream iss(query);
         string word;
         while (iss >> word) {
@@ -183,8 +196,7 @@ void Book::findExpression(string query, set<int>& pos) {
         }
     } else {
         int posAnd = query.find_first_of('&');
-        while (posAnd != string::npos and
-                (posAnd > query.find_last_of('(') and posAnd < query.find_first_of(')'))) {
+        while (posAnd != string::npos and betweenPar(query, posAnd)) {
             posAnd = query.find_first_of('&', posAnd + 1);
         }
         if (posAnd != string::npos) {
@@ -194,8 +206,7 @@ void Book::findExpression(string query, set<int>& pos) {
             set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
         } else {
             int posOr = query.find_first_of('|');
-            while (posOr != string::npos and
-                   (posOr > query.find_last_of('(') and posOr < query.find_first_of(')'))) {
+            while (posOr != string::npos and betweenPar(query, posOr)) {
                 posOr = query.find_first_of('|', posOr + 1);
             }
             if (posOr != string::npos) {
@@ -203,13 +214,11 @@ void Book::findExpression(string query, set<int>& pos) {
                 findExpression(query.substr(0, posOr - 1), set1);
                 findExpression(query.substr(posOr + 1), set2);
                 set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
-            } else if (query.find_last_of('(') == 0
-                       and query.find_first_of(')') == query.length() - 1) {
+            } else if (!betweenPar(query, query.length())) {
                 findExpression(query.substr(1, query.length() - 2), pos);
             } //TODO: else error
         }
     }
-    cout << "End Recursion with: " << pos.size() << " line[s]" << endl;
 }
 
 void Book::printWordsConsecutiveLines(string query) {
