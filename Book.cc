@@ -147,7 +147,7 @@ void Book::deleteQuote(string reference) {
 }
 
 void Book::printInformation() {
-    cout << authorName << " \"" <<  bookTitle << "\" " << endl;
+    cout << authorName << " \"" <<  bookTitle << "\"" << endl;
 }
 
 void Book::printAllLines() {
@@ -245,7 +245,7 @@ void Book::printSelectLines(int start, int end) {
         return;
     }
     for (int i = start; i <= end; ++i) {
-        cout <<  i << " " << bookContent[i - 1] << endl;
+        cout <<  i << " " << bookContent[i - 1] << " " <<  endl;
     }
 }
 
