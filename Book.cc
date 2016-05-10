@@ -156,11 +156,11 @@ void trimString(string& query) {
 void Book::findExpression(string query, set<int>& pos) {
     trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
-        // noop: Error, malformed
+        // Base case: Malformed expression
     } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
-        // Base case: Return true/false with positions where found
         query = query.substr(1, query.length() - 2);
         if (query.find_first_of(" ") == string::npos) {
+            // Base case: One word, return lines where found
             map<string, list<int> >::const_iterator it1 = lineDictionary.find(query);
             if (it1 != lineDictionary.end()) {
                 list<int>::const_iterator it2 = it1->second.begin();
@@ -170,6 +170,7 @@ void Book::findExpression(string query, set<int>& pos) {
                 }
             }
         } else {
+            // Recursive case: More than one word, replace spaces with &
             istringstream iss(query);
             query.clear();
             string word;
@@ -186,6 +187,7 @@ void Book::findExpression(string query, set<int>& pos) {
             posAnd = query.find_first_of('&', posAnd + 1);
         }
         if (posAnd != string::npos) {
+            // Recursive case: Call recursion of both expressions and intersect them
             set<int> set1, set2;
             findExpression(query.substr(0, posAnd - 1), set1);
             findExpression(query.substr(posAnd + 1), set2);
@@ -196,13 +198,15 @@ void Book::findExpression(string query, set<int>& pos) {
                 posOr = query.find_first_of('|', posOr + 1);
             }
             if (posOr != string::npos) {
+                // Recursive case: Call recursion of both expressions and union them
                 set<int> set1, set2;
                 findExpression(query.substr(0, posOr - 1), set1);
                 findExpression(query.substr(posOr + 1), set2);
                 set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
             } else if (!betweenPar(query, query.length())) {
+                // Recursive case: Call recursion of inner parentheses expression
                 findExpression(query.substr(1, query.length() - 2), pos);
-            }
+            } // Base case: else: Malformed parentheses/operators
         }
     }
 }
