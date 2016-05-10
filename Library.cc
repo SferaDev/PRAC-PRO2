@@ -19,6 +19,8 @@ void Library::readBook(string title, string authorName) {
     // Add new Book with ID: authorName-title
     Book book(title, authorName);
     book.readBookContent();
+    // Don't add book if title, author or content is null
+    if (title == "" or authorName == "" or book.getLineCount() == 0) return;
     // If same book with same author exists return error!
     map<string, Book>::iterator bookIt = bookCollection.find(authorName + "-" + title);
     if (bookIt == bookCollection.end()) {
