@@ -230,7 +230,7 @@ void Book::findExpression(string query, set<int>& pos) {
                 set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
             } else if (!betweenPar(query, query.length())) {
                 findExpression(query.substr(1, query.length() - 2), pos);
-            } //TODO: else error
+            }
         }
     }
 }
