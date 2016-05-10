@@ -184,7 +184,9 @@ void trimString(string& query) {
 
 void Book::findExpression(string query, set<int>& pos) {
     trimString(query);
-    if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
+    if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
+        // noop: Error, malformed
+    } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
         // Base case: Return true/false with positions where found
         query = query.substr(1, query.length() - 2);
         int posSpace = query.find_first_of(" ");
