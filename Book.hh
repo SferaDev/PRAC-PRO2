@@ -8,6 +8,7 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+#include <list>
 #include <map>
 #include <set>
 #include <string>
@@ -54,7 +55,7 @@ private:
     map<string, int> wordFrequencyMap;
 
     /** @brief Content dictionary with frequencies in correct order */
-    vector<pair<string, int> > wordFrequencyVector;
+    list<pair<string, int> > wordFrequencyList;
 
     /** @brief Size of Book's collection */
     int bookWords;

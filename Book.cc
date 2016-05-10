@@ -104,14 +104,14 @@ void Book::replaceWords(string oldWord, string newWord) {
     wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
     int freq = wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
-    // TODO: Don't use two conditions to check the continuity of the for (use while instead)
     bool found = false;
-    for (int i = 0; i < wordFrequencyVector.size() and !found; ++i) {
-        if (wordFrequencyVector[i].first == oldWord) {
-            wordFrequencyVector.erase(wordFrequencyVector.begin() + i);
-        } else if (wordFrequencyVector[i].first > newWord) {
+    list<pair<string, int> >::iterator it = wordFrequencyList.begin();
+    while (it != wordFrequencyList.end() and !found)  {
+        if (it->first == oldWord) {
+            wordFrequencyList.erase(it);
+        } else if (it->first > newWord) {
             found = true;
-            wordFrequencyVector.insert(wordFrequencyVector.begin() + i, make_pair(newWord, freq));
+            wordFrequencyList.insert(it, make_pair(newWord, freq));
         }
     }
 }
@@ -121,13 +121,13 @@ bool Book::findWord(string word) {
 }
 
 void Book::generateFrequencyTable() {
-    // Check if vector was previously generated
-    if (wordFrequencyVector.size() > 0) wordFrequencyVector.clear();
+    // Check if list was previously generated
+    if (wordFrequencyList.size() > 0) wordFrequencyList.clear();
     for (map<string, int>::iterator it = wordFrequencyMap.begin();
          it != wordFrequencyMap.end(); ++it) {
-        wordFrequencyVector.push_back(make_pair(it->first, it->second));
+        wordFrequencyList.insert(wordFrequencyList.end(), make_pair(it->first, it->second));
     }
-    sort(wordFrequencyVector.begin(), wordFrequencyVector.end(), frequencyComparator());
+    wordFrequencyList.sort(frequencyComparator());
 }
 
 set<string> Book::getBookQuotes() {
@@ -264,7 +264,9 @@ void Book::printSelectLines(int start, int end) {
 }
 
 void Book::printFrequencyTable() {
-    for (int i = 0; i < wordFrequencyVector.size(); ++i) {
-        cout << wordFrequencyVector[i].first << " " << wordFrequencyVector[i].second << endl;
+    list<pair<string, int> >::const_iterator it = wordFrequencyList.begin();
+    while (it != wordFrequencyList.end()) {
+        cout << it->first << " " << it->second << endl;
+        it++;
     }
 }
