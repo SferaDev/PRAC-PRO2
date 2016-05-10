@@ -108,12 +108,12 @@ void Book::replaceWords(string oldWord, string newWord) {
     list<pair<string, int> >::iterator it = wordFrequencyList.begin();
     while (it != wordFrequencyList.end() and !found)  {
         if (it->first == oldWord) {
-            wordFrequencyList.erase(it);
-        } else if (it->first > newWord) {
             found = true;
-            wordFrequencyList.insert(it, make_pair(newWord, freq));
-        }
+            wordFrequencyList.erase(it);
+        } else it++;
     }
+    wordFrequencyList.insert(wordFrequencyList.end(), make_pair(newWord, freq));
+    wordFrequencyList.sort(frequencyComparator());
 }
 
 bool Book::findWord(string word) {
