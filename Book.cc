@@ -21,20 +21,26 @@ Book::~Book() {
 }
 
 void Book::readBookContent() {
-    string input, content;
-    string word;
+    string input, content, word;
+    bool error = false;
     while (getline(cin, input) && input != "****") {
         istringstream iss(input);
         while (iss >> word) {
             if (!content.empty()) content += " ";
             content += word;
             bookWords += 1;
-            if (word.find_last_of(",;:") == word.length() - 1)
-                if (word.length() > 0) word.erase(word.length() - 1, 1);
-            if (word.find_last_of(".?!") == word.length() - 1) {
+            if (word.find_last_of(",;:") == word.length() - 1) {
+                if (word.length() > 0) {
+                    word.erase(word.length() - 1, 1);
+                    if (word.find_last_of(",;:.?!") == word.length() - 1) error = true;
+                }
+            } else if (word.find_last_of(".?!") == word.length() - 1) {
                 bookContent.push_back(content);
                 content.clear();
-                if (word.length() > 0) word.erase(word.length() - 1, 1);
+                if (word.length() > 0) {
+                    word.erase(word.length() - 1, 1);
+                    if (word.find_last_of(",;:.?!") == word.length() - 1) error = true;
+                }
                 lineDictionary[word].push_back(bookContent.size());
             } else {
                 lineDictionary[word].push_back(bookContent.size() + 1);
@@ -51,6 +57,7 @@ void Book::readBookContent() {
         bookContent.push_back(content);
         lineDictionary[word].push_back(bookContent.size());
     }
+    if (error) bookContent.clear();
 }
 
 string Book::getTitle() const {
