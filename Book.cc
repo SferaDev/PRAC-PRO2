@@ -155,12 +155,13 @@ void Book::findExpression(string query, set<int>& pos) {
     } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
         // Base case: Return true/false with positions where found
         query = query.substr(1, query.length() - 2);
-        int posSpace = query.find_first_of(" ");
-        if (posSpace == string::npos) {
-            map<string, vector<int> >::const_iterator it = lineDictionary.find(query);
-            if (it != lineDictionary.end()) {
-                for (int i = 0; i < it->second.size(); ++i) {
-                    pos.insert(it->second[i]);
+        if (query.find_first_of(" ") == string::npos) {
+            map<string, list<int> >::const_iterator it1 = lineDictionary.find(query);
+            if (it1 != lineDictionary.end()) {
+                list<int>::const_iterator it2 = it1->second.begin();
+                while (it2 != it1->second.end()) {
+                    pos.insert(*it2);
+                    it2++;
                 }
             }
         } else {

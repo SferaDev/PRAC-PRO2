@@ -49,7 +49,7 @@ private:
         \param int: Key of the main map and a word
         \param vector<int>: All the lines with that contents a determinate word (without marks)
     */
-    map<string, vector<int> > lineDictionary;
+    map<string, list<int> > lineDictionary;
 
     /** @brief Content dictionary with frequencies
         \param string: Key of the identifier
