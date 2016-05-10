@@ -41,8 +41,8 @@ struct frequencyComparator {
 
 void Book::readBookContent() {
     string input, content;
+    string word;
     while (getline(cin, input) && input != "****") {
-        string word;
         istringstream iss(input);
         while (iss >> word) {
             if (!content.empty()) content += " ";
@@ -61,6 +61,10 @@ void Book::readBookContent() {
             wordDictionary[word.length()].insert(word);
             wordFrequencyMap[word] += 1;
         }
+    }
+    if (input == "****" and !content.empty()) {
+        bookContent.push_back(content);
+        lineDictionary[word].push_back(bookContent.size());
     }
 }
 
