@@ -69,6 +69,7 @@ void Library::selectBook(string query) {
             else {
                 cout << "error" << endl;
                 error = true;
+                currentBook = bookCollection.end();
             }
         }
         it++;
