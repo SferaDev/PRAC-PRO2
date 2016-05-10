@@ -67,7 +67,6 @@ void Library::selectBook(string query) {
         if (bContinue) {
             if (!isBookSelected()) currentBook = it;
             else {
-                cout << "error" << endl;
                 error = true;
                 currentBook = bookCollection.end();
             }
