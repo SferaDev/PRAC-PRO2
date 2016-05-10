@@ -97,7 +97,9 @@ void readActions(Library& library) {
             input = input.substr(QUOTE_INSERT.length());
             istringstream iss(input);
             iss >> start >> end;
-            library.insertQuote(start, end);
+            if (library.isBookSelected())
+                library.insertQuote(start, end);
+            else cout << "error" << endl;
         } else if (startsWith(input, QUOTE_DELETE)) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
