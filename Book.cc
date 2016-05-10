@@ -49,11 +49,11 @@ void Book::readBookContent() {
             content += word;
             bookWords += 1;
             if (word.find_last_of(",;:") == word.length() - 1)
-                word.erase(word.length() - 1, 1);
+                if (word.length() > 0) word.erase(word.length() - 1, 1);
             if (word.find_last_of(".?!") == word.length() - 1) {
                 bookContent.push_back(content);
                 content.clear();
-                word.erase(word.length() - 1, 1);
+                if (word.length() > 0) word.erase(word.length() - 1, 1);
                 lineDictionary[word].push_back(bookContent.size());
             } else {
                 lineDictionary[word].push_back(bookContent.size() + 1);
