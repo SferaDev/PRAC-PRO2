@@ -37,7 +37,7 @@ private:
 
     /** @brief Content of the book */
     /** @brief The line ID is the position and the value is the content of the book */
-    vector<string> bookContent;
+    list<string> bookContent;
 
     /** @brief Content dictionary by length with words
         \param int: Key of the main map and the length of the word

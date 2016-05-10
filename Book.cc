@@ -72,12 +72,14 @@ int Book::getWordCount() {
 // FIXME: Jutge fails on private3
 void Book::replaceWords(string oldWord, string newWord) {
     // Edit the contents of the book
-    for (int i = 0; i < bookContent.size(); ++i) {
-        int pos = bookContent[i].find(oldWord);
-        while (pos != bookContent[i].npos) {
-            bookContent[i].replace(pos, oldWord.length(), newWord);
-            pos = bookContent[i].find(oldWord);
+    list<string>::iterator it = bookContent.begin();
+    while (it != bookContent.end()) {
+        int pos = (*it).find(oldWord);
+        while (pos != string::npos) {
+            (*it).replace(pos, oldWord.length(), newWord);
+            pos = (*it).find(oldWord);
         }
+        it++;
     }
     // Edit the word dictionary
     wordDictionary[oldWord.length()].erase(oldWord);
@@ -102,8 +104,11 @@ set<string> Book::getBookQuotes() {
 
 vector<string> Book::getLines(int start, int end) {
     vector<string> vector(end - start + 1);
+    list<string>::const_iterator it = bookContent.begin();
+    advance(it, start - 1);
     for (int i = start; i <= end; ++i) {
-        vector[i - start] = bookContent[i - 1];
+        vector[i - start] = *it;
+        it++;
     }
     return vector;
 }
@@ -213,10 +218,13 @@ void Book::printWordsConsecutiveLines(string query) {
         }
     }
     // Loop all the lines
-    for (int i = 0; i < bookContent.size(); ++i) {
-        if (bookContent[i].find(query) != bookContent[i].npos) {
-            printSelectLines(i + 1, i + 1);
+    list<string>::iterator it = bookContent.begin();
+    while (it != bookContent.end()) {
+        if ((*it).find(query) != string::npos) {
+            int line = distance(bookContent.begin(), it) + 1;
+            printSelectLines(line, line);
         }
+        it++;
     }
 }
 
@@ -225,8 +233,13 @@ void Book::printSelectLines(int start, int end) {
         cout << "error" << endl;
         return;
     }
-    for (int i = start; i <= end; ++i) {
-        cout <<  i << " " << bookContent[i - 1] << " " <<  endl;
+    list<string>::iterator it = bookContent.begin();
+    advance(it, start - 1);
+    list<string>::iterator endIt = bookContent.begin();
+    advance(endIt, end);
+    while (it != endIt) {
+        cout <<  distance(bookContent.begin(), it) + 1 << " " << *it << " " <<  endl;
+        it++;
     }
 }
 
