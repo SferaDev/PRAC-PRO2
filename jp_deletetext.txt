@@ -1,0 +1,31 @@
+afegir text "hola"
+autor "Jordi ROMERO MORCILLO SANTOS ARCAS RIBAS DONOSTI"
+Hola como estas. Me alegro mucho de eso.
+HOLA COMO ESTAS. ME ALEGRO XD
+****
+
+triar text {Jordi}
+
+afegir cita 1 1
+
+substitueix "Hola" per "ADEU"
+
+contingut ?
+
+eliminar cita "JRMSARD1"
+
+eliminar text
+
+afegir text "hola"
+autor "P"
+Hola como estas. Me alegro mucho de eso.
+HOLA COMO ESTAS. ME ALEGRO XD
+****
+
+tots textos ?
+
+eliminar text
+
+tots textos ?
+
+sortir
