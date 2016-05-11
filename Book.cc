@@ -172,24 +172,6 @@ void Book::deleteQuote(string reference) {
     bookQuotes.erase(reference);
 }
 
-void Book::printInformation() {
-    cout << authorName << " \"" <<  bookTitle << "\"" << endl;
-}
-
-void Book::printAllLines() {
-    printSelectLines(1, bookContent.size());
-}
-
-void Book::printLines(string query) {
-    set<int> lines;
-    findExpression(query, lines);
-    set<int>::const_iterator it = lines.begin();
-    while (it != lines.end()) {
-        printSelectLines(*it, *it);
-        it++;
-    }
-}
-
 void Book::findExpression(string query, set<int>& pos) {
     trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
@@ -248,21 +230,33 @@ void Book::findExpression(string query, set<int>& pos) {
     }
 }
 
-void Book::printWordsConsecutiveLines(string query) {
-    // FIXME: Check if words are in the dictionary (slow?)
-    istringstream issQuery(query);
-    string wordQuery;
-    while (issQuery >> wordQuery) {
-        if (!findWord(wordQuery)) {
-            // TODO: cout << "error" << endl;
-            return;
-        }
+void Book::printInformation() {
+    cout << authorName << " \"" <<  bookTitle << "\"" << endl;
+}
+
+void Book::printAllLines() {
+    printSelectLines(1, bookContent.size());
+}
+
+void Book::printLines(string query) {
+    set<int> lines;
+    findExpression(query, lines);
+    set<int>::const_iterator it = lines.begin();
+    while (it != lines.end()) {
+        printSelectLines(*it, *it);
+        it++;
     }
-    // Loop all the lines
-    for (int i = 0; i < bookContent.size(); ++i) {
-        if (bookContent[i].find(query) != bookContent[i].npos) {
-            printSelectLines(i + 1, i + 1);
+}
+
+void Book::printLinesConsecutiveWords(string query) {
+    set<int> lines;
+    findExpression('{' + query + '}', lines);
+    set<int>::const_iterator it = lines.begin();
+    while (it != lines.end()) {
+        if (bookContent[*it - 1].find(query) != string::npos) {
+            printSelectLines(*it, *it);
         }
+        it++;
     }
 }
 

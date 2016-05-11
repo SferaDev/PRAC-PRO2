@@ -159,6 +159,14 @@ public:
     */
     void deleteQuote(string reference);
 
+    /** @brief Finds the lines that keep the logical expression
+        \param query: Query to find the lines to print
+        \param pos: Set with all the positions that keep the logical expression
+        \pre An implicit Book and logical expression match and empty set
+        \post The number of lines that keep the logical expression
+    */
+    void findExpression(string query, set<int>& pos);
+
     /** @brief Prints the information of the implicit book
         \pre An implicit Book
         \post Prints the title and author of the book
@@ -178,20 +186,12 @@ public:
     */
     void printLines(string query);
 
-    /** @brief Finds the lines that keep the logical expression
-        \param query: Query to find the lines to print
-        \param pos: Set with all the positions that keep the logical expression
-        \pre An implicit Book and logical expression match and empty set
-        \post The number of lines that keep the logical expression
-    */
-    void findExpression(string query, set<int>& pos);
-
     /** @brief Prints the lines that contains the consecutive words of the implicit Book
         \param query: sequence of words to find the lines to print
         \pre An implicit Book and sequence of words
         \post Prints the number of the line and the line of the implicit book that contain all the words of the sequence
     */
-    void printWordsConsecutiveLines(string query);
+    void printLinesConsecutiveWords(string query);
 
     /** @brief Prints lines from [start - 1] to [end - 1]
         \param start: Start line
