@@ -224,7 +224,7 @@ void Book::printWordsConsecutiveLines(string query) {
     string wordQuery;
     while (issQuery >> wordQuery) {
         if (!findWord(wordQuery)) {
-            cout << "error" << endl;
+            // TODO: cout << "error" << endl;
             return;
         }
     }
