@@ -4,16 +4,21 @@
 */
 
 #include "Book.hh"
+#include <algorithm>
+#include <queue>
+#include <sstream>
 using namespace std;
 
 Book::Book() {
     bookWords = 0;
+    dirtyFrequency = false;
 }
 
 Book::Book(string title, string author) {
     bookTitle = title;
     authorName = author;
     bookWords = 0;
+    dirtyFrequency = false;
 }
 
 Book::~Book() {
@@ -33,6 +38,22 @@ void trimString(string& query) {
     while (query[0] == ' ') query.erase(0, 1);
     while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
 }
+
+struct frequencyComparator {
+    bool operator() (const pair<string, int>& a, const pair<string, int>& b) {
+        // Special case: Same frequency
+        if (a.second == b.second) {
+            // Special case: Same length
+            if (a.first.length() == b.first.length()) {
+                return a.first < b.first;
+            }
+            // Base case: Order by length in asc order
+            return a.first.length() < b.first.length();
+        }
+        // Base case: Order by frequency in desc order
+        return a.second > b.second;
+    }
+};
 
 void Book::readBookContent() {
     string input, content, word;
@@ -60,11 +81,7 @@ void Book::readBookContent() {
                 lineDictionary[word].push_back(bookContent.size() + 1);
             }
             wordDictionary[word.length()].insert(word);
-            if (wordFrequency.find(word) != wordFrequency.end()) {
-                wordFrequencyOrdered.erase(make_pair(word, wordFrequency[word]));
-            }
-            wordFrequency[word] += 1;
-            wordFrequencyOrdered.insert(make_pair(word, wordFrequency[word]));
+            wordFrequencyMap[word] += 1;
         }
     }
     if (input == "****" and !content.empty()) {
@@ -114,15 +131,25 @@ void Book::replaceWords(string oldWord, string newWord) {
     // Edit the line dictionary
     lineDictionary[newWord] = lineDictionary[oldWord];
     lineDictionary[oldWord].clear();
-    // Edit the frequency
-    wordFrequency[newWord] = wordFrequency[oldWord];
-    wordFrequencyOrdered.erase(make_pair(oldWord, wordFrequency[oldWord]));
-    wordFrequencyOrdered.insert(make_pair(newWord, wordFrequency[newWord]));
-    wordFrequency.erase(oldWord);
+    // Edit the frequency Map
+    wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
+    wordFrequencyMap.erase(oldWord);
+    dirtyFrequency = true;
 }
 
 bool Book::findWord(string word) {
     return wordDictionary[word.length()].find(word) != wordDictionary[word.length()].end();
+}
+
+void Book::generateFrequencyTable() {
+    // Check if list was previously generated
+    dirtyFrequency = false;
+    if (wordFrequencyList.size() > 0) wordFrequencyList.clear();
+    for (map<string, int>::iterator it = wordFrequencyMap.begin();
+         it != wordFrequencyMap.end(); ++it) {
+        wordFrequencyList.push_back(make_pair(it->first, it->second));
+    }
+    wordFrequencyList.sort(frequencyComparator());
 }
 
 set<string> Book::getBookQuotes() {
@@ -250,8 +277,9 @@ void Book::printSelectLines(int start, int end) {
 }
 
 void Book::printFrequencyTable() {
-    set<pair<string, int> >::const_iterator it = wordFrequencyOrdered.begin();
-    while (it != wordFrequencyOrdered.end()) {
+    if (dirtyFrequency) generateFrequencyTable();
+    list<pair<string, int> >::const_iterator it = wordFrequencyList.begin();
+    while (it != wordFrequencyList.end()) {
         if (it->second > 0) cout << it->first << " " << it->second << endl;
         it++;
     }

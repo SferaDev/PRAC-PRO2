@@ -7,14 +7,11 @@
 #define PRO2_PRAC_BOOK_HH
 
 #ifndef NO_DIAGRAM
-#include <algorithm>
 #include <iostream>
-#include <queue>
 #include <list>
 #include <map>
 #include <set>
 #include <string>
-#include <sstream>
 #include <vector>
 #endif
 
@@ -55,26 +52,12 @@ private:
         \param string: Key of the identifier
         \param int: Frequencies of the words
     */
-    map<string, int> wordFrequency;
-
-    struct frequencyComparator {
-        bool operator() (const pair<string, int>& a, const pair<string, int>& b) {
-            // Special case: Same frequency
-            if (a.second == b.second) {
-                // Special case: Same length
-                if (a.first.length() == b.first.length()) {
-                    return a.first < b.first;
-                }
-                // Base case: Order by length in asc order
-                return a.first.length() < b.first.length();
-            }
-            // Base case: Order by frequency in desc order
-            return a.second > b.second;
-        }
-    };
+    map<string, int> wordFrequencyMap;
 
     /** @brief Content dictionary with frequencies in correct order */
-    set<pair<string, int>, frequencyComparator> wordFrequencyOrdered;
+    list<pair<string, int> > wordFrequencyList;
+
+    bool dirtyFrequency;
 
     /** @brief Size of Book's collection */
     int bookWords;
