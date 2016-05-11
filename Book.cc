@@ -80,7 +80,6 @@ void Book::readBookContent() {
             } else {
                 lineDictionary[word].push_back(bookContent.size() + 1);
             }
-            wordDictionary[word.length()].insert(word);
             wordFrequencyMap[word] += 1;
         }
     }
@@ -125,12 +124,9 @@ void Book::replaceWords(string oldWord, string newWord) {
             it2++;
         }
     }
-    // Edit the word dictionary
-    wordDictionary[oldWord.length()].erase(oldWord);
-    wordDictionary[newWord.length()].insert(newWord);
     // Edit the line dictionary
     lineDictionary[newWord] = lineDictionary[oldWord];
-    lineDictionary[oldWord].clear();
+    lineDictionary.erase(oldWord);
     // Edit the frequency Map
     wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
@@ -138,7 +134,7 @@ void Book::replaceWords(string oldWord, string newWord) {
 }
 
 bool Book::findWord(string word) {
-    return wordDictionary[word.length()].find(word) != wordDictionary[word.length()].end();
+    return wordFrequencyMap.find(word) != wordFrequencyMap.end();
 }
 
 void Book::generateFrequencyTable() {

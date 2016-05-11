@@ -36,12 +36,6 @@ private:
     /** @brief The line ID is the position and the value is the content of the book */
     vector<string> bookContent;
 
-    /** @brief Content dictionary by length with words
-        \param int: Key of the main map and the length of the word
-        \param set<string>: All the words (without marks)
-    */
-    map<int, set<string> > wordDictionary;
-
     /** @brief Content dictionary by words with lines
         \param int: Key of the main map and a word
         \param vector<int>: All the lines with that contents a determinate word (without marks)
