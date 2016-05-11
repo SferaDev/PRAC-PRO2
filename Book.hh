@@ -127,6 +127,8 @@ public:
     */
     bool findWord(string word);
 
+    bool isFrequencyDirty();
+
     /** @brief Generates the FrequencyTable Vector
         \pre An implicit Book
         \post Generates the frequency table ordered

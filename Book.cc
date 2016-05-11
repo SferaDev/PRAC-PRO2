@@ -11,14 +11,14 @@ using namespace std;
 
 Book::Book() {
     bookWords = 0;
-    dirtyFrequency = false;
+    dirtyFrequency = true;
 }
 
 Book::Book(string title, string author) {
     bookTitle = title;
     authorName = author;
     bookWords = 0;
-    dirtyFrequency = false;
+    dirtyFrequency = true;
 }
 
 Book::~Book() {
@@ -135,6 +135,10 @@ void Book::replaceWords(string oldWord, string newWord) {
 
 bool Book::findWord(string word) {
     return wordFrequencyMap.find(word) != wordFrequencyMap.end();
+}
+
+bool Book::isFrequencyDirty() {
+    return dirtyFrequency;
 }
 
 void Book::generateFrequencyTable() {

@@ -76,8 +76,9 @@ void Library::selectBook(string query) {
         it++;
     }
     // Build FrequencyTable Vector upon select
-    if (isBookSelected()) currentBook->second.generateFrequencyTable();
-    else cout << "error" << endl;
+    if (isBookSelected()) {
+        if (currentBook->second.isFrequencyDirty()) currentBook->second.generateFrequencyTable();
+    } else cout << "error" << endl;
 }
 
 void Library::deleteBook() {
