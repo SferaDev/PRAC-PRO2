@@ -144,7 +144,7 @@ bool Book::isFrequencyDirty() {
 void Book::generateFrequencyTable() {
     // Check if list was previously generated
     dirtyFrequency = false;
-    if (wordFrequencyList.size() > 0) wordFrequencyList.clear();
+    wordFrequencyList.clear();
     for (map<string, int>::iterator it = wordFrequencyMap.begin();
          it != wordFrequencyMap.end(); ++it) {
         wordFrequencyList.push_back(make_pair(it->first, it->second));
