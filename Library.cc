@@ -63,7 +63,7 @@ void Library::selectBook(string query) {
         // Loop through all words (each word must be on the text)
         while (iss >> word and bContinue) {
             // Check if author/title contains or content contains
-            bContinue = (it->first.find(word, 0) != word.npos) or
+            bContinue = (it->first.find(word, 0) != string::npos) or
                     (it->second.findWord(word));
         }
         if (bContinue) {
