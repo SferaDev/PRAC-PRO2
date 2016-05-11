@@ -20,6 +20,20 @@ Book::~Book() {
     // no-op
 }
 
+bool betweenPar(string query, int position) {
+    int state = 0;
+    for (int i = 0; i < position; ++i) {
+        if (query[i] == '(') state++;
+        if (query[i] == ')') state--;
+    }
+    return state != 0;
+}
+
+void trimString(string& query) {
+    while (query[0] == ' ') query.erase(0, 1);
+    while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
+}
+
 void Book::readBookContent() {
     string input, content, word;
     bool error = false;
@@ -76,17 +90,23 @@ int Book::getWordCount() {
     return bookWords;
 }
 
-// FIXME: Jutge fails on private3
 void Book::replaceWords(string oldWord, string newWord) {
     // Edit the contents of the book
-    list<string>::iterator it = bookContent.begin();
-    while (it != bookContent.end()) {
-        int pos = (*it).find(oldWord);
-        while (pos != string::npos) {
-            (*it).replace(pos, oldWord.length(), newWord);
-            pos = (*it).find(oldWord);
+    map<string, list<int> >::const_iterator it1 = lineDictionary.find(oldWord);
+    if (it1 != lineDictionary.end()) {
+        list<int>::const_iterator it2 = it1->second.begin();
+        while (it2 != it1->second.end()) {
+            istringstream iss(bookContent[*it2 - 1]);
+            string word, line;
+            while (iss >> word) {
+                if (word == oldWord) line += newWord;
+                else line += word;
+                line += ' ';
+            }
+            trimString(line);
+            bookContent[*it2 - 1] = line;
+            it2++;
         }
-        it++;
     }
     // Edit the word dictionary
     wordDictionary[oldWord.length()].erase(oldWord);
@@ -111,11 +131,8 @@ set<string> Book::getBookQuotes() {
 
 vector<string> Book::getLines(int start, int end) {
     vector<string> vector(end - start + 1);
-    list<string>::const_iterator it = bookContent.begin();
-    advance(it, start - 1);
     for (int i = start; i <= end; ++i) {
-        vector[i - start] = *it;
-        it++;
+        vector[i - start] = bookContent[i - 1];
     }
     return vector;
 }
@@ -144,20 +161,6 @@ void Book::printLines(string query) {
         printSelectLines(*it, *it);
         it++;
     }
-}
-
-bool betweenPar(string query, int position) {
-    int state = 0;
-    for (int i = 0; i < position; ++i) {
-        if (query[i] == '(') state++;
-        if (query[i] == ')') state--;
-    }
-    return state != 0;
-}
-
-void trimString(string& query) {
-    while (query[0] == ' ') query.erase(0, 1);
-    while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
 }
 
 void Book::findExpression(string query, set<int>& pos) {
@@ -229,13 +232,10 @@ void Book::printWordsConsecutiveLines(string query) {
         }
     }
     // Loop all the lines
-    list<string>::iterator it = bookContent.begin();
-    while (it != bookContent.end()) {
-        if ((*it).find(query) != string::npos) {
-            int line = distance(bookContent.begin(), it) + 1;
-            printSelectLines(line, line);
+    for (int i = 0; i < bookContent.size(); ++i) {
+        if (bookContent[i].find(query) != bookContent[i].npos) {
+            printSelectLines(i + 1, i + 1);
         }
-        it++;
     }
 }
 
@@ -244,20 +244,15 @@ void Book::printSelectLines(int start, int end) {
         cout << "error" << endl;
         return;
     }
-    list<string>::iterator it = bookContent.begin();
-    advance(it, start - 1);
-    list<string>::iterator endIt = bookContent.begin();
-    advance(endIt, end);
-    while (it != endIt) {
-        cout <<  distance(bookContent.begin(), it) + 1 << " " << *it << " " <<  endl;
-        it++;
+    for (int i = start; i <= end; ++i) {
+        cout <<  i << " " << bookContent[i - 1] << " " <<  endl;
     }
 }
 
 void Book::printFrequencyTable() {
     set<pair<string, int> >::const_iterator it = wordFrequencyOrdered.begin();
     while (it != wordFrequencyOrdered.end()) {
-        cout << it->first << " " << it->second << endl;
+        if (it->second > 0) cout << it->first << " " << it->second << endl;
         it++;
     }
 }
