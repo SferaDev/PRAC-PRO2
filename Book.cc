@@ -55,6 +55,7 @@ struct frequencyComparator {
     }
 };
 
+// TODO: FIXME: THIS IS WRONG!?!?!?!??!?! (Handle punctuation marks correctly!!!)
 void Book::readBookContent() {
     string input, content, word;
     bool error = false;
