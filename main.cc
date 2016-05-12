@@ -14,7 +14,8 @@
 using namespace std;
 
 /* Constants */
-const string BOOK_INSERT = "afegir text";
+const string BOOK_INSERT = "afegir text \"";
+const string BOOK_INSERT_AUTHOR = "autor \"";
 const string BOOK_DELETE = "eliminar text";
 const string BOOK_SELECT = "triar text";
 const string BOOK_REPLACE_WORD = "substitueix";
@@ -121,10 +122,13 @@ void readActions(Library& library) {
         // Handle the rest of commands
         if (startsWith(input, BOOK_INSERT)) {
             string title, author;
-            title = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
+            title = input.erase(input.length() - 1, 1).substr(BOOK_INSERT.length());
             getline(cin, input);
-            author = input.erase(input.length() - 1, 1).substr(input.find_first_of("\"") + 1);
-            library.readBook(title, author);
+            if (startsWith(input, BOOK_INSERT_AUTHOR)) {
+                string author;
+                author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
+                library.readBook(title, author);
+            }
         } else if (startsWith(input, BOOK_DELETE)) {
             library.deleteBook();
         } else if (startsWith(input, BOOK_SELECT)) {
