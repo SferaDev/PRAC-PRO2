@@ -84,13 +84,10 @@ void Library::selectBook(string query) {
 void Library::deleteBook() {
     if (isBookSelected()) {
         map<string, Author>::iterator authorIt = authorCollection.find(currentBook->second.getAuthor());
-        // Delete book on Author
-        authorIt->second.deleteBook(currentBook->second.getTitle());
-        // If author has no other books delete it too
-        // Else decrement the author stats (lines/words/...)
-        if (authorIt->second.isEmpty()) {
-            authorCollection.erase(authorIt);
-        } else {
+        if (authorIt != authorCollection.end()) {
+            // Delete book on Author
+            authorIt->second.deleteBook(currentBook->second.getTitle());
+            // Decrement author stats (lines/words/...)
             authorIt->second.incrementBookCount(-1);
             authorIt->second.incrementLineCount(-(currentBook->second.getLineCount()));
             authorIt->second.incrementWordCount(-(currentBook->second.getWordCount()));
@@ -181,7 +178,7 @@ Quote Library::getQuote(string id) {
 void Library::printAuthors() {
     map<string, Author>::iterator it = authorCollection.begin();
     while (it != authorCollection.end()) {
-        it->second.printInformation();
+        if (it->second.getBookCount() > 0) it->second.printInformation();
         it++;
     }
 }

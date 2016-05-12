@@ -34,6 +34,20 @@ void Author::incrementLineCount(int value) {
 void Author::incrementWordCount(int value) {
     totalWords += value;
 }
+
+int Author::getBookCount() {
+    return totalBooks;
+}
+
+
+int Author::getLineCount(){
+    return totalLines;
+}
+
+
+int Author::getWordCount(){
+    return totalWords;
+}
     
 void Author::addBook(string title) {
     authorBooks.insert(title);

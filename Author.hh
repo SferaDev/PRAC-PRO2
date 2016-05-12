@@ -85,6 +85,12 @@ public:
     */
     void incrementWordCount(int value);
 
+    int getBookCount();
+
+    int getLineCount();
+
+    int getWordCount();
+
     /** @brief Adds new Book to Author
         \param title: Book title
         \pre An implicit Author
