@@ -81,6 +81,9 @@ void Book::readBookContent() {
         }
     }
     if (input == "****" and !content.empty()) {
+        // OPTION 1: Delete content
+        bookContent.clear();
+        /* OPTION 2: Add newline with pendingWords
         bookContent.push_back(content);
         string word;
         istringstream iss(content);
@@ -91,7 +94,7 @@ void Book::readBookContent() {
             lineDictionary[word].push_back(bookContent.size());
             wordFrequencyMap[word] += 1;
             bookWords += 1;
-        }
+        }*/
     }
 }
 
