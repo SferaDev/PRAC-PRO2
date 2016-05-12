@@ -1,13 +1,19 @@
 afegir text "hola"
-autor "Jordi ROMERO MORCILLO SANTOS ARCAS RIBAS DONOSTI"
-!!!!!!!!!!
+autor "jordi-ROMERO"
+333333. 3333333?
 ****
 
-triar text {Jordi}
+tots textos ?
+
+triar text {hola}
 
 contingut ?
 
 afegir cita 1 1
+
+substituex "333333" per "JORDI"
+
+contingut ?
 
 info ?
 

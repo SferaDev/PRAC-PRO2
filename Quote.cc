@@ -12,7 +12,14 @@ Quote::Quote() {
     // TODO
 }
 
+void stringUppercase(string& input) {
+    for (int i = 0; i < input.length(); ++i) {
+        if (!isupper(input[i])) input[i] = toupper(input[i]);
+    }
+}
+
 Quote::Quote(string reference, string author, string book) {
+    stringUppercase(reference);
     quoteReference = reference;
     quoteAuthor = author;
     quoteBook = book;
