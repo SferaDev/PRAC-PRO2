@@ -83,11 +83,18 @@ void Library::selectBook(string query) {
 
 void Library::deleteBook() {
     if (isBookSelected()) {
+        map<string, Author>::iterator authorIt = authorCollection.find(currentBook->second.getAuthor());
         // Delete book on Author
-        authorCollection[currentBook->second.getAuthor()].deleteBook(currentBook->second.getTitle());
-        // If author has no books delete it too
-        if (authorCollection[currentBook->second.getAuthor()].isEmpty())
-            authorCollection.erase(currentBook->second.getAuthor());
+        authorIt->second.deleteBook(currentBook->second.getTitle());
+        // If author has no other books delete it too
+        // Else decrement the author stats (lines/words/...)
+        if (authorIt->second.isEmpty()) {
+            authorCollection.erase(authorIt);
+        } else {
+            authorIt->second.incrementBookCount(-1);
+            authorIt->second.incrementLineCount(-(currentBook->second.getLineCount()));
+            authorIt->second.incrementWordCount(-(currentBook->second.getWordCount()));
+        }
         // Delete the book
         bookCollection.erase(currentBook);
         // Reset the currentBook iterator

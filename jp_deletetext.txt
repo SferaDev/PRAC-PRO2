@@ -4,7 +4,17 @@ Hola como estas. Me alegro mucho de eso.
 HOLA COMO ESTAS. ME ALEGRO XD
 ****
 
-triar text {Jordi}
+tots autors ?
+
+afegir text "adios"
+autor "Jordi ROMERO MORCILLO SANTOS ARCAS RIBAS DONOSTI"
+Hola como estas. Me alegro mucho de eso.
+HOLA COMO ESTAS. ME ALEGRO XD
+****
+
+triar text {adios}
+
+tots autors ?
 
 afegir cita 1 1
 
