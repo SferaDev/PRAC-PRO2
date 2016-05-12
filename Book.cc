@@ -70,7 +70,7 @@ void Book::readBookContent() {
             string word;
             istringstream iss(line);
             while (iss >> word) {
-                if (word.find_last_of(",;:.?!") == word.length() - 1) {
+                while (word.size() > 0 and word.find_last_of(",;:.?!") == word.length() - 1) {
                     word.erase(word.length() - 1, 1);
                 }
                 lineDictionary[word].push_back(bookContent.size());
@@ -85,7 +85,7 @@ void Book::readBookContent() {
         string word;
         istringstream iss(content);
         while (iss >> word) {
-            if (word.find_last_of(",;:.?!") == word.length() - 1) {
+            while (word.find_last_of(",;:.?!") == word.length() - 1) {
                 word.erase(word.length() - 1, 1);
             }
             lineDictionary[word].push_back(bookContent.size());
