@@ -154,9 +154,11 @@ void Library::deleteQuote(string reference) {
         cout << "error" << endl;
     } else {
         // Remove Quote from Book
-        bookCollection[it->second.getBookTitle()].deleteQuote(reference);
+        map<string, Book>::iterator bookIt = bookCollection.find(it->second.getBookTitle());
+        if (bookIt != bookCollection.end()) bookIt->second.deleteQuote(reference);
         // Remove Quote from Author
-        authorCollection[it->second.getAuthor()].deleteQuote(reference);
+        map<string, Author>::iterator authorIt = authorCollection.find(it->second.getAuthor());
+        if (authorIt != authorCollection.end()) authorIt->second.deleteQuote(reference);
         // Delete the Quote from the collection
         quoteCollection.erase(it);
     }

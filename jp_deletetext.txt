@@ -8,6 +8,8 @@ triar text {Jordi}
 
 afegir cita 1 1
 
+totes cites ?
+
 substitueix "Hola" per "ADEU"
 
 contingut ?
@@ -24,8 +26,12 @@ HOLA COMO ESTAS. ME ALEGRO XD
 
 tots textos ?
 
+totes cites ?
+
 eliminar text
 
 tots textos ?
+
+tots autors ?
 
 sortir
