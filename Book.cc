@@ -70,12 +70,22 @@ void Book::readBookContent() {
             string word;
             istringstream iss(line);
             while (iss >> word) {
-                while (word.size() > 0 and word.find_last_of(",;:.?!") == word.length() - 1) {
-                    word.erase(word.length() - 1, 1);
+                int posSeparator = word.find_first_of(",;:");
+                while (posSeparator != string::npos) {
+                    string subWord = word.substr(0, posSeparator);
+                    lineDictionary[subWord].push_back(bookContent.size());
+                    wordFrequencyMap[subWord] += 1;
+                    bookWords += 1;
+                    word = word.substr(posSeparator + 1);
+                    posSeparator = word.find_first_of(",;:.?!");
                 }
-                lineDictionary[word].push_back(bookContent.size());
-                wordFrequencyMap[word] += 1;
-                bookWords += 1;
+                while (word.size() > 0 and word.find_last_of(".?!") == word.length() - 1)
+                    word.erase(word.length() - 1, 1);
+                if (word.size() > 0) {
+                    lineDictionary[word].push_back(bookContent.size());
+                    wordFrequencyMap[word] += 1;
+                    bookWords += 1;
+                }
             }
             posDelimiter = content.find_first_of(".?!");
         }
