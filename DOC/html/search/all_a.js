@@ -10,8 +10,8 @@ var searchData=
   ['printinformation',['printInformation',['../class_author.html#a9dff52e2a8bd67ff4509eb00f9235155',1,'Author::printInformation()'],['../class_book.html#a5b67f59017da9d2654c27fa27927a419',1,'Book::printInformation()'],['../class_quote.html#a0854af3d11ff805991e87ef6e9bebf69',1,'Quote::printInformation()']]],
   ['printinformationcomplex',['printInformationComplex',['../class_quote.html#ae6847b50fefd892540617426a832a1cf',1,'Quote']]],
   ['printlines',['printLines',['../class_book.html#a0c019a8318999229bf506f7f64e67a85',1,'Book']]],
+  ['printlinesconsecutivewords',['printLinesConsecutiveWords',['../class_book.html#ad72be3b32007023b6bb41f12276e81a3',1,'Book']]],
   ['printquotes',['printQuotes',['../class_library.html#a819acb04f4b8aea0547db50918b1c5fa',1,'Library']]],
   ['printquotesbyauthor',['printQuotesByAuthor',['../class_library.html#aa13544bfe57c61164d9953518e88dcb0',1,'Library']]],
-  ['printselectlines',['printSelectLines',['../class_book.html#a7193030998d6251851be26196762f8e6',1,'Book']]],
-  ['printwordsconsecutiveslines',['printWordsConsecutivesLines',['../class_book.html#abd81439092f60b2b6f8cd56fc92f8b2a',1,'Book']]]
+  ['printselectlines',['printSelectLines',['../class_book.html#a7193030998d6251851be26196762f8e6',1,'Book']]]
 ];

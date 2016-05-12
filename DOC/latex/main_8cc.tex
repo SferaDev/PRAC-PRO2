@@ -16,9 +16,13 @@ Include dependency graph for main.\+cc\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{starts\+With} (string input, string compare)
+bool \hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{starts\+With} (string a, string b)
 \item 
-void \hyperlink{main_8cc_a93f031addb7e4407a7d2756e1adb948d}{analyze\+Expression} (string input, \hyperlink{class_library}{Library} \&library)
+bool \hyperlink{main_8cc_a1520556bf8610e0006279f4c462223cd}{ends\+With} (string a, string b)
+\item 
+void \hyperlink{main_8cc_ae5c33360c17fa50709ca21374ad3356b}{action\+Expression} (\hyperlink{class_library}{Library} \&library, string input)
+\item 
+void \hyperlink{main_8cc_a770c0cf70b3553d4f84efe66a0e36382}{action\+Query} (\hyperlink{class_library}{Library} \&library, string input)
 \item 
 void \hyperlink{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{read\+Actions} (\hyperlink{class_library}{Library} \&library)
 \item 
@@ -27,7 +31,9 @@ int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const string \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT} = \char`\"{}afegir text\char`\"{}
+const string \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT} = \char`\"{}afegir text \textbackslash{}\char`\"{}\char`\"{}
+\item 
+const string \hyperlink{main_8cc_ad359c9c1f309c5b661a5ce8f864f3f20}{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR} = \char`\"{}autor \textbackslash{}\char`\"{}\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE} = \char`\"{}eliminar text\char`\"{}
 \item 
@@ -39,19 +45,25 @@ const string \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{Q\+U\+O\+T\+
 \item 
 const string \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE} = \char`\"{}eliminar cita\char`\"{}
 \item 
+const string \hyperlink{main_8cc_a1811f219ecc8c338edfc5e581adecfdf}{Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO} = \char`\"{}info cita\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a6b7b74f942578f3a4b693c8b8ae8d34a}{A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS} = \char`\"{}textos autor\char`\"{}
+\item 
+const string \hyperlink{main_8cc_afab5829e80a41b7f6745e5ee8ad1db79}{A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES} = \char`\"{}cites autor\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a5f1bc2787eb86cda09821fe5c1f86886}{A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY} = \char`\"{}?\char`\"{}
+\item 
+const string \hyperlink{main_8cc_a15f2d4ea57aacd8463ff0146e2b10477}{A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON} = \char`\"{}frases\char`\"{}
+\item 
 const string \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS} = \char`\"{}tots autors ?\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL} = \char`\"{}tots textos ?\char`\"{}
-\item 
-const string \hyperlink{main_8cc_aed2de80402367f772f44d697495062b2}{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR} = \char`\"{}textos autor\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR} = \char`\"{}autor ?\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT} = \char`\"{}contingut ?\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO} = \char`\"{}info ?\char`\"{}
-\item 
-const string \hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON} = \char`\"{}frases\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES} = \char`\"{}nombre de frases ?\char`\"{}
 \item 
@@ -62,10 +74,6 @@ const string \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{Q\+U\+E\+R\+
 const string \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES} = \char`\"{}cites ?\char`\"{}
 \item 
 const string \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL} = \char`\"{}totes cites ?\char`\"{}
-\item 
-const string \hyperlink{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR} = \char`\"{}cites autor\char`\"{}
-\item 
-const string \hyperlink{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO} = \char`\"{}info cita\char`\"{}
 \item 
 const string \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{Q\+U\+IT} = \char`\"{}sortir\char`\"{}
 \end{DoxyCompactItemize}
@@ -79,54 +87,128 @@ Main program that handles the I/O operations with the end user.
 \subsection{Function Documentation}
 \index{main.\+cc@{main.\+cc}!starts\+With@{starts\+With}}
 \index{starts\+With@{starts\+With}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{starts\+With(string input, string compare)}{startsWith(string input, string compare)}}]{\setlength{\rightskip}{0pt plus 5cm}bool starts\+With (
+\subsubsection[{\texorpdfstring{starts\+With(string a, string b)}{startsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool starts\+With (
 \begin{DoxyParamCaption}
-\item[{string}]{input, }
-\item[{string}]{compare}
+\item[{string}]{a, }
+\item[{string}]{b}
 \end{DoxyParamCaption}
-)}\hypertarget{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{}\label{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}
+)}\hypertarget{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{}\label{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}
 
 
-Definition at line 44 of file main.\+cc.
+Definition at line 46 of file main.\+cc.
 
 
 \begin{DoxyCode}
-44                                               \{
-45     \textcolor{keywordflow}{return} input.substr(0, compare.length()) == compare;
-46 \}
+46                                     \{
+47     \textcolor{keywordflow}{if} (b.size() > a.size()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+48     \textcolor{keywordflow}{return} std::equal(a.begin(), a.begin() + b.size(), b.begin());
+49 \}
 \end{DoxyCode}
-\index{main.\+cc@{main.\+cc}!analyze\+Expression@{analyze\+Expression}}
-\index{analyze\+Expression@{analyze\+Expression}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{analyze\+Expression(string input, Library \&library)}{analyzeExpression(string input, Library &library)}}]{\setlength{\rightskip}{0pt plus 5cm}void analyze\+Expression (
+\index{main.\+cc@{main.\+cc}!ends\+With@{ends\+With}}
+\index{ends\+With@{ends\+With}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{ends\+With(string a, string b)}{endsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ends\+With (
 \begin{DoxyParamCaption}
-\item[{string}]{input, }
-\item[{{\bf Library} \&}]{library}
+\item[{string}]{a, }
+\item[{string}]{b}
 \end{DoxyParamCaption}
-)}\hypertarget{main_8cc_a93f031addb7e4407a7d2756e1adb948d}{}\label{main_8cc_a93f031addb7e4407a7d2756e1adb948d}
+)}\hypertarget{main_8cc_a1520556bf8610e0006279f4c462223cd}{}\label{main_8cc_a1520556bf8610e0006279f4c462223cd}
 
 
-Definition at line 48 of file main.\+cc.
+Definition at line 51 of file main.\+cc.
 
 
 \begin{DoxyCode}
-48                                                         \{
-49     \textcolor{comment}{// Delete '?' from query}
-50     input = input.erase(input.length() - 1 , 1);
-51     \textcolor{comment}{// Erase 'frases ' from input channel}
-52     input = input.substr(\hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{QUERY\_CURRENT\_EXPRESION}.length() + 1);
-53     \textcolor{comment}{// If it's a digit call \{frases x y ?\} otherwise call the recursive}
-54     \textcolor{keywordflow}{if} (isdigit(input[0])) \{
-55         \textcolor{keywordtype}{int} x, y;
-56         istringstream iss(input);
-57         iss >> x >> y;
-58         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(x,y);
-59     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input[0] == \textcolor{charliteral}{'\(\backslash\)"'}) \{
-60         input = input.erase(0, 1);
-61         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_abd81439092f60b2b6f8cd56fc92f8b2a}{printWordsConsecutivesLines}(input);
-62     \} \textcolor{keywordflow}{else} \{
-63         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{printLines}(input);
-64     \}
-65 \}
+51                                   \{
+52     \textcolor{keywordflow}{if} (b.size() > a.size()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+53     \textcolor{keywordflow}{return} std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
+54 \}
+\end{DoxyCode}
+\index{main.\+cc@{main.\+cc}!action\+Expression@{action\+Expression}}
+\index{action\+Expression@{action\+Expression}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{action\+Expression(\+Library \&library, string input)}{actionExpression(Library &library, string input)}}]{\setlength{\rightskip}{0pt plus 5cm}void action\+Expression (
+\begin{DoxyParamCaption}
+\item[{{\bf Library} \&}]{library, }
+\item[{string}]{input}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cc_ae5c33360c17fa50709ca21374ad3356b}{}\label{main_8cc_ae5c33360c17fa50709ca21374ad3356b}
+
+
+Definition at line 56 of file main.\+cc.
+
+
+\begin{DoxyCode}
+56                                                        \{
+57     \textcolor{comment}{// Delete '?' from query}
+58     input = input.erase(input.length() - 1 , 1);
+59     \textcolor{comment}{// Erase 'frases ' from input channel}
+60     input = input.substr(\hyperlink{main_8cc_a15f2d4ea57aacd8463ff0146e2b10477}{ACTION\_EXPRESSION}.length() + 1);
+61     \textcolor{comment}{// If it's a digit call \{frases x y ?\} otherwise call the recursive}
+62     \textcolor{keywordflow}{if} (isdigit(input[0])) \{
+63         \textcolor{keywordtype}{int} x, y;
+64         istringstream iss(input);
+65         iss >> x >> y;
+66         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(x,y);
+67     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input[0] == \textcolor{charliteral}{'\(\backslash\)"'}) \{
+68         input = input.substr(0, input.length() - 1);
+69         input = input.erase(0, 1);
+70         input = input.substr(0, input.length() - 1);
+71         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_ad72be3b32007023b6bb41f12276e81a3}{printLinesConsecutiveWords}(input);
+72     \} \textcolor{keywordflow}{else} \{
+73         library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{printLines}(input);
+74     \}
+75 \}
+\end{DoxyCode}
+\index{main.\+cc@{main.\+cc}!action\+Query@{action\+Query}}
+\index{action\+Query@{action\+Query}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{action\+Query(\+Library \&library, string input)}{actionQuery(Library &library, string input)}}]{\setlength{\rightskip}{0pt plus 5cm}void action\+Query (
+\begin{DoxyParamCaption}
+\item[{{\bf Library} \&}]{library, }
+\item[{string}]{input}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cc_a770c0cf70b3553d4f84efe66a0e36382}{}\label{main_8cc_a770c0cf70b3553d4f84efe66a0e36382}
+
+
+Definition at line 77 of file main.\+cc.
+
+
+\begin{DoxyCode}
+77                                                  \{
+78     \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{QUERY\_AUTHORS})) \{
+79         library.\hyperlink{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{printAuthors}();
+80     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{QUERY\_BOOKS\_ALL})) \{
+81         library.\hyperlink{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{printBooks}();
+82     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{QUERY\_CURRENT\_AUTHOR})) \{
+83         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+84             cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a25ca75983de43cbad4386a470b709f9f}{getAuthor}() << endl;
+85         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+86     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{QUERY\_CURRENT\_CONTENT})) \{
+87         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+88             library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{printAllLines}();
+89         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+90     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{QUERY\_CURRENT\_INFO})) \{
+91         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+92             library.\hyperlink{class_library_a449a2d686922007674fa4a5efff89fe7}{printCurrentInformation}();
+93         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+94     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{QUERY\_CURRENT\_LINES})) \{
+95         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+96             cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a97ccb67ee2b4b0d553163d2301d9a00e}{getLineCount}() << endl;
+97         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+98     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{QUERY\_CURRENT\_WORDS})) \{
+99         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+100             cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a29418f8797be1143747a449445f064a9}{getWordCount}() << endl;
+101         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+102     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{QUERY\_CURRENT\_FREQUENCY})) \{
+103         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+104             library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{printFrequencyTable}();
+105         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+106     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{QUERY\_CURRENT\_QUOTES})) \{
+107         \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+108             library.\hyperlink{class_library_a7be02d15c840e3d1c3ec998e204f7bf9}{printCurrentQuotes}();
+109         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+110     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{QUERY\_QUOTES\_ALL})) \{
+111         library.\hyperlink{class_library_a819acb04f4b8aea0547db50918b1c5fa}{printQuotes}();
+112     \}
+113 \}
 \end{DoxyCode}
 \index{main.\+cc@{main.\+cc}!read\+Actions@{read\+Actions}}
 \index{read\+Actions@{read\+Actions}!main.\+cc@{main.\+cc}}
@@ -137,99 +219,73 @@ Definition at line 48 of file main.\+cc.
 )}\hypertarget{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{}\label{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}
 
 
-Definition at line 67 of file main.\+cc.
+Definition at line 115 of file main.\+cc.
 
 
 \begin{DoxyCode}
-67                                    \{
-68     \textcolor{keywordtype}{string} input;
-69     \textcolor{keywordflow}{while} (getline(cin, input)) \{
-70         \textcolor{comment}{// Quit command returns void}
-71         \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{QUIT})) \{
-72             \textcolor{keywordflow}{return};
-73         \} \textcolor{keywordflow}{else} cout << input << endl;
-74         \textcolor{comment}{// Handle the rest of commands}
-75         \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{BOOK\_INSERT})) \{
-76             \textcolor{keywordtype}{string} title, author;
-77             title = input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-78             getline(cin, input);
-79             author = input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-80             library.\hyperlink{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}{readBook}(title, author);
-81         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{BOOK\_DELETE})) \{
-82             library.\hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{deleteBook}();
-83         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{BOOK\_SELECT})) \{
-84             library.\hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{selectBook}(input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\{"})
+115                                    \{
+116     \textcolor{keywordtype}{string} input;
+117     \textcolor{keywordflow}{while} (getline(cin, input)) \{
+118         \textcolor{comment}{// Quit command returns void}
+119         \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{QUIT})) \{
+120             \textcolor{keywordflow}{return};
+121         \} \textcolor{keywordflow}{else} cout << input << endl;
+122         \textcolor{comment}{// Handle the rest of commands}
+123         \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{BOOK\_INSERT})) \{
+124             \textcolor{keywordtype}{string} title, author;
+125             title = input.erase(input.length() - 1, 1).substr(\hyperlink{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{BOOK\_INSERT}.length());
+126             getline(cin, input);
+127             \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_ad359c9c1f309c5b661a5ce8f864f3f20}{BOOK\_INSERT\_AUTHOR})) \{
+128                 \textcolor{keywordtype}{string} author;
+129                 author = input.erase(input.length() - 1, 1).substr(
+      \hyperlink{main_8cc_ad359c9c1f309c5b661a5ce8f864f3f20}{BOOK\_INSERT\_AUTHOR}.length());
+130                 library.\hyperlink{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}{readBook}(title, author);
+131             \}
+132         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{BOOK\_DELETE})) \{
+133             library.\hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{deleteBook}();
+134         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{BOOK\_SELECT})) \{
+135             library.\hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{selectBook}(input.erase(input.length() - 1, 1).substr(input.find\_first\_of(\textcolor{stringliteral}{"\{"})
        + 1));
-85         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{BOOK\_REPLACE\_WORD})) \{
-86             library.\hyperlink{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{replaceWordsOnBook}(input);
-87         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT})) \{
-88             \textcolor{keywordtype}{int} start, end;
-89             input = input.substr(\hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT}.length());
-90             istringstream iss(input);
-91             iss >> start >> end;
-92             library.\hyperlink{class_library_aac2d7d4645a2adda29a0064bc66e6143}{insertQuote}(start, end);
-93         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{QUOTE\_DELETE})) \{
-94             \textcolor{keywordtype}{string} reference = input.erase(input.length() - 1, 1);
-95             reference = reference.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-96             library.\hyperlink{class_library_a8f11e390553184c2a3a549697df3f3a9}{deleteQuote}(reference);
-97         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a929725ac33851ab44a874af097622fac}{QUERY\_AUTHORS})) \{
-98             library.\hyperlink{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{printAuthors}();
-99         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{QUERY\_BOOKS\_ALL})) \{
-100             library.\hyperlink{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{printBooks}();
-101         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_aed2de80402367f772f44d697495062b2}{QUERY\_BOOKS\_BY\_AUTHOR})) \{
-102           \textcolor{keywordtype}{string} authorName = input.erase(input.length() - 3, 3);
-103             authorName = authorName.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-104           library.\hyperlink{class_library_a6e22621933979ff5cb4e95de3f54b72c}{printBooksByAuthor}(authorName);
-105         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{QUERY\_CURRENT\_AUTHOR})) \{
-106             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-107                 cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a651503f226fbf2c9c050f9527a3b983e}{getAuthorName}() << endl;
-108             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-109         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a7463e07bfee66a1652cea25521f25d36}{QUERY\_CURRENT\_CONTENT})) \{
-110             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-111                 library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{printAllLines}();
-112             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-113         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{QUERY\_CURRENT\_INFO})) \{
-114             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-115                 library.\hyperlink{class_library_a449a2d686922007674fa4a5efff89fe7}{printCurrentInformation}();
-116             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-117         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{QUERY\_CURRENT\_EXPRESION})) \{
-118             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \{
-119                 \hyperlink{main_8cc_a93f031addb7e4407a7d2756e1adb948d}{analyzeExpression}(input, library);
-120             \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-121         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a221416125c781868b41105b22fb97623}{QUERY\_CURRENT\_LINES})) \{
-122             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-123                 cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a8f241d57fb5525e3008b3f3d6ba81291}{getBookLines}() << endl;
-124             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-125         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{QUERY\_CURRENT\_WORDS})) \{
-126             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-127                 cout << library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_a6f0ccce41fd8db486578e0d325605813}{getBookWords}() << endl;
-128             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-129         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{QUERY\_CURRENT\_FREQUENCY})) \{
-130             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-131                 library.\hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{getBook}().\hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{printFrequencyTable}();
-132             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-133         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a609fa4997165643203e0cb255ca772c6}{QUERY\_CURRENT\_QUOTES})) \{
-134             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
-135                 library.\hyperlink{class_library_a7be02d15c840e3d1c3ec998e204f7bf9}{printCurrentQuotes}();
-136             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-137         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_ae38061f0fadacde833c2da1403793f06}{QUERY\_QUOTES\_ALL})) \{
-138             library.\hyperlink{class_library_a819acb04f4b8aea0547db50918b1c5fa}{printQuotes}();
-139         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{QUERY\_QUOTES\_BY\_AUTHOR})) \{
-140             \textcolor{keywordtype}{string} authorName = input.erase(input.length() - 3, 3);
-141             authorName = authorName.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-142             library.\hyperlink{class_library_aa13544bfe57c61164d9953518e88dcb0}{printQuotesByAuthor}(authorName);
-143         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a918113e29a6fdf0c89e902e2ac54b35b}{startsWith}(input, \hyperlink{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{QUERY\_QUOTE\_INFO})) \{
-144             \textcolor{keywordtype}{string} reference = input.erase(input.length() - 3, 3);
-145             reference = reference.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
-146             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a4d87e1bd531b56f79d1faa8781f34630}{quoteExists}(reference)) \{
-147                 \hyperlink{class_quote}{Quote} quote = library.\hyperlink{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{getQuote}(reference);
-148                 cout << quote.\hyperlink{class_quote_a609abf6ab14773bafd6445f50b0cefba}{getAuthor}() << \textcolor{stringliteral}{" \(\backslash\)""} << quote.
+136         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{BOOK\_REPLACE\_WORD})) \{
+137             library.\hyperlink{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{replaceWordsOnBook}(input);
+138         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT})) \{
+139             \textcolor{keywordtype}{int} start, end;
+140             input = input.substr(\hyperlink{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{QUOTE\_INSERT}.length());
+141             istringstream iss(input);
+142             iss >> start >> end;
+143             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}())
+144                 library.\hyperlink{class_library_aac2d7d4645a2adda29a0064bc66e6143}{insertQuote}(start, end);
+145             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+146         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{QUOTE\_DELETE})) \{
+147             \textcolor{keywordtype}{string} reference = input.erase(input.length() - 1, 1);
+148             reference = reference.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+149             library.\hyperlink{class_library_a8f11e390553184c2a3a549697df3f3a9}{deleteQuote}(reference);
+150         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a6b7b74f942578f3a4b693c8b8ae8d34a}{AUTHOR\_BOOKS})) \{
+151             \textcolor{keywordtype}{string} authorName = input.erase(input.length() - 3, 3);
+152             authorName = authorName.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+153             library.\hyperlink{class_library_a6e22621933979ff5cb4e95de3f54b72c}{printBooksByAuthor}(authorName);
+154         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_afab5829e80a41b7f6745e5ee8ad1db79}{AUTHOR\_QUOTES})) \{
+155             \textcolor{keywordtype}{string} authorName = input.erase(input.length() - 3, 3);
+156             authorName = authorName.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+157             library.\hyperlink{class_library_aa13544bfe57c61164d9953518e88dcb0}{printQuotesByAuthor}(authorName);
+158         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a1811f219ecc8c338edfc5e581adecfdf}{QUOTE\_INFO})) \{
+159             \textcolor{keywordtype}{string} reference = input.erase(input.length() - 3, 3);
+160             reference = reference.substr(input.find\_first\_of(\textcolor{stringliteral}{"\(\backslash\)""}) + 1);
+161             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a4d87e1bd531b56f79d1faa8781f34630}{quoteExists}(reference)) \{
+162                 \hyperlink{class_quote}{Quote} quote = library.\hyperlink{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{getQuote}(reference);
+163                 cout << quote.\hyperlink{class_quote_a609abf6ab14773bafd6445f50b0cefba}{getAuthor}() << \textcolor{stringliteral}{" \(\backslash\)""} << quote.
       \hyperlink{class_quote_ad571172e7027459ac118b2af4c5abd9e}{getBookTitle}() << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
-149                 quote.\hyperlink{class_quote_a0854af3d11ff805991e87ef6e9bebf69}{printInformation}(\textcolor{keyword}{false}, \textcolor{keyword}{true});
-150             \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-151         \}
-152     \}
-153 \}
+164                 quote.\hyperlink{class_quote_a0854af3d11ff805991e87ef6e9bebf69}{printInformation}(\textcolor{keyword}{false}, \textcolor{keyword}{true});
+165             \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+166         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a34ecc6be10b2b9cf95517fdf6d069d6c}{startsWith}(input, \hyperlink{main_8cc_a15f2d4ea57aacd8463ff0146e2b10477}{ACTION\_EXPRESSION})) \{
+167             \textcolor{keywordflow}{if} (library.\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \{
+168                 \hyperlink{main_8cc_ae5c33360c17fa50709ca21374ad3356b}{actionExpression}(library, input);
+169             \} \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
+170         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{main_8cc_a1520556bf8610e0006279f4c462223cd}{endsWith}(input, \hyperlink{main_8cc_a5f1bc2787eb86cda09821fe5c1f86886}{ACTION\_QUERY})) \{
+171             \hyperlink{main_8cc_a770c0cf70b3553d4f84efe66a0e36382}{actionQuery}(library, input);
+172         \}
+173     \}
+174 \}
 \end{DoxyCode}
 \index{main.\+cc@{main.\+cc}!main@{main}}
 \index{main@{main}!main.\+cc@{main.\+cc}}
@@ -244,162 +300,176 @@ Main Procedure of \hyperlink{main_8cc}{main.\+cc}.
 
 
 
-Definition at line 156 of file main.\+cc.
+Definition at line 177 of file main.\+cc.
 
 
 \begin{DoxyCode}
-156            \{
-157     \hyperlink{class_library}{Library} mainLibrary;
-158     \hyperlink{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{readActions}(mainLibrary);
-159 \}
+177            \{
+178     \hyperlink{class_library}{Library} mainLibrary;
+179     \hyperlink{main_8cc_ac08d8a3d49c58bde936b980d1f69ce52}{readActions}(mainLibrary);
+180 \}
 \end{DoxyCode}
 
 
 \subsection{Variable Documentation}
 \index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT}}
 \index{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT}{BOOK_INSERT}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT = \char`\"{}afegir text\char`\"{}}\hypertarget{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{}\label{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}
+\subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT}{BOOK_INSERT}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+RT = \char`\"{}afegir text \textbackslash{}\char`\"{}\char`\"{}}\hypertarget{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}{}\label{main_8cc_a2b15fbc1759d69bee062c54b05dc462b}
 
 
 Definition at line 17 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR}}
+\index{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR@{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR}{BOOK_INSERT_AUTHOR}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+A\+U\+T\+H\+OR = \char`\"{}autor \textbackslash{}\char`\"{}\char`\"{}}\hypertarget{main_8cc_ad359c9c1f309c5b661a5ce8f864f3f20}{}\label{main_8cc_ad359c9c1f309c5b661a5ce8f864f3f20}
+
+
+Definition at line 18 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE@{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE}}
 \index{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE@{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE}{BOOK_DELETE}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+D\+E\+L\+E\+TE = \char`\"{}eliminar text\char`\"{}}\hypertarget{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}{}\label{main_8cc_a7749b7f479d011a8d3311aa8b5fbb4b5}
 
 
-Definition at line 18 of file main.\+cc.
+Definition at line 19 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT@{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT}}
 \index{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT@{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT}{BOOK_SELECT}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+S\+E\+L\+E\+CT = \char`\"{}triar text\char`\"{}}\hypertarget{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}{}\label{main_8cc_aa9363d09f3d16e41e1a0cf3ec842e975}
 
 
-Definition at line 19 of file main.\+cc.
+Definition at line 20 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD@{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD}}
 \index{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD@{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD}{BOOK_REPLACE_WORD}}]{\setlength{\rightskip}{0pt plus 5cm}const string B\+O\+O\+K\+\_\+\+R\+E\+P\+L\+A\+C\+E\+\_\+\+W\+O\+RD = \char`\"{}substitueix\char`\"{}}\hypertarget{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}{}\label{main_8cc_abe8ee09135d5fdb707b7d2a35528f5de}
 
 
-Definition at line 20 of file main.\+cc.
+Definition at line 21 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT}}
 \index{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT}{QUOTE_INSERT}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+O\+T\+E\+\_\+\+I\+N\+S\+E\+RT = \char`\"{}afegir cita\char`\"{}}\hypertarget{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}{}\label{main_8cc_a25732e97c43c06f1a18cc0e4219e84d6}
 
 
-Definition at line 22 of file main.\+cc.
+Definition at line 23 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE@{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE}}
 \index{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE@{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE}{QUOTE_DELETE}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+O\+T\+E\+\_\+\+D\+E\+L\+E\+TE = \char`\"{}eliminar cita\char`\"{}}\hypertarget{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}{}\label{main_8cc_ab6b50436074ef3d196d57bb2c1a18346}
 
 
-Definition at line 23 of file main.\+cc.
+Definition at line 24 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}}
+\index{Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO@{Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}{QUOTE_INFO}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO = \char`\"{}info cita\char`\"{}}\hypertarget{main_8cc_a1811f219ecc8c338edfc5e581adecfdf}{}\label{main_8cc_a1811f219ecc8c338edfc5e581adecfdf}
+
+
+Definition at line 25 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS@{A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS}}
+\index{A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS@{A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS}{AUTHOR_BOOKS}}]{\setlength{\rightskip}{0pt plus 5cm}const string A\+U\+T\+H\+O\+R\+\_\+\+B\+O\+O\+KS = \char`\"{}textos autor\char`\"{}}\hypertarget{main_8cc_a6b7b74f942578f3a4b693c8b8ae8d34a}{}\label{main_8cc_a6b7b74f942578f3a4b693c8b8ae8d34a}
+
+
+Definition at line 27 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES@{A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES}}
+\index{A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES@{A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES}{AUTHOR_QUOTES}}]{\setlength{\rightskip}{0pt plus 5cm}const string A\+U\+T\+H\+O\+R\+\_\+\+Q\+U\+O\+T\+ES = \char`\"{}cites autor\char`\"{}}\hypertarget{main_8cc_afab5829e80a41b7f6745e5ee8ad1db79}{}\label{main_8cc_afab5829e80a41b7f6745e5ee8ad1db79}
+
+
+Definition at line 28 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY@{A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY}}
+\index{A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY@{A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY}{ACTION_QUERY}}]{\setlength{\rightskip}{0pt plus 5cm}const string A\+C\+T\+I\+O\+N\+\_\+\+Q\+U\+E\+RY = \char`\"{}?\char`\"{}}\hypertarget{main_8cc_a5f1bc2787eb86cda09821fe5c1f86886}{}\label{main_8cc_a5f1bc2787eb86cda09821fe5c1f86886}
+
+
+Definition at line 30 of file main.\+cc.
+
+\index{main.\+cc@{main.\+cc}!A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}}
+\index{A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}!main.\+cc@{main.\+cc}}
+\subsubsection[{\texorpdfstring{A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}{ACTION_EXPRESSION}}]{\setlength{\rightskip}{0pt plus 5cm}const string A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON = \char`\"{}frases\char`\"{}}\hypertarget{main_8cc_a15f2d4ea57aacd8463ff0146e2b10477}{}\label{main_8cc_a15f2d4ea57aacd8463ff0146e2b10477}
+
+
+Definition at line 31 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS@{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS@{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS}{QUERY_AUTHORS}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+A\+U\+T\+H\+O\+RS = \char`\"{}tots autors ?\char`\"{}}\hypertarget{main_8cc_a929725ac33851ab44a874af097622fac}{}\label{main_8cc_a929725ac33851ab44a874af097622fac}
 
 
-Definition at line 25 of file main.\+cc.
+Definition at line 33 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL}{QUERY_BOOKS_ALL}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+A\+LL = \char`\"{}tots textos ?\char`\"{}}\hypertarget{main_8cc_a799ed9876b238eaeca57d69dfeac5712}{}\label{main_8cc_a799ed9876b238eaeca57d69dfeac5712}
 
 
-Definition at line 26 of file main.\+cc.
-
-\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}}
-\index{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}{QUERY_BOOKS_BY_AUTHOR}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+B\+O\+O\+K\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR = \char`\"{}textos autor\char`\"{}}\hypertarget{main_8cc_aed2de80402367f772f44d697495062b2}{}\label{main_8cc_aed2de80402367f772f44d697495062b2}
-
-
-Definition at line 27 of file main.\+cc.
+Definition at line 34 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR}{QUERY_CURRENT_AUTHOR}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+A\+U\+T\+H\+OR = \char`\"{}autor ?\char`\"{}}\hypertarget{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}{}\label{main_8cc_a0daa5c4d40a4733d0c1ebca8839db256}
 
 
-Definition at line 29 of file main.\+cc.
+Definition at line 35 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT}{QUERY_CURRENT_CONTENT}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+NT = \char`\"{}contingut ?\char`\"{}}\hypertarget{main_8cc_a7463e07bfee66a1652cea25521f25d36}{}\label{main_8cc_a7463e07bfee66a1652cea25521f25d36}
 
 
-Definition at line 30 of file main.\+cc.
+Definition at line 36 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO}{QUERY_CURRENT_INFO}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+I\+N\+FO = \char`\"{}info ?\char`\"{}}\hypertarget{main_8cc_a6d6573826f2957d81a4ff133305ae03c}{}\label{main_8cc_a6d6573826f2957d81a4ff133305ae03c}
 
 
-Definition at line 31 of file main.\+cc.
-
-\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON}}
-\index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON}{QUERY_CURRENT_EXPRESION}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+E\+X\+P\+R\+E\+S\+I\+ON = \char`\"{}frases\char`\"{}}\hypertarget{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}{}\label{main_8cc_a76cc671aba9c92c2fbd71a35dc960fcd}
-
-
-Definition at line 32 of file main.\+cc.
+Definition at line 37 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES}{QUERY_CURRENT_LINES}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+L\+I\+N\+ES = \char`\"{}nombre de frases ?\char`\"{}}\hypertarget{main_8cc_a221416125c781868b41105b22fb97623}{}\label{main_8cc_a221416125c781868b41105b22fb97623}
 
 
-Definition at line 33 of file main.\+cc.
+Definition at line 38 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS}{QUERY_CURRENT_WORDS}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+W\+O\+R\+DS = \char`\"{}nombre de paraules ?\char`\"{}}\hypertarget{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}{}\label{main_8cc_aa0dbdd0e7744fe37a953d689ed902adb}
 
 
-Definition at line 34 of file main.\+cc.
+Definition at line 39 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}{QUERY_CURRENT_FREQUENCY}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY = \char`\"{}taula de frequencies ?\char`\"{}}\hypertarget{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}{}\label{main_8cc_af3ba25cc9f066f3cef24711ef73d6a53}
 
 
-Definition at line 35 of file main.\+cc.
+Definition at line 40 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES@{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES}{QUERY_CURRENT_QUOTES}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+Q\+U\+O\+T\+ES = \char`\"{}cites ?\char`\"{}}\hypertarget{main_8cc_a609fa4997165643203e0cb255ca772c6}{}\label{main_8cc_a609fa4997165643203e0cb255ca772c6}
 
 
-Definition at line 36 of file main.\+cc.
+Definition at line 41 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL}}
 \index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL}{QUERY_QUOTES_ALL}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+A\+LL = \char`\"{}totes cites ?\char`\"{}}\hypertarget{main_8cc_ae38061f0fadacde833c2da1403793f06}{}\label{main_8cc_ae38061f0fadacde833c2da1403793f06}
 
 
-Definition at line 38 of file main.\+cc.
-
-\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}}
-\index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR}{QUERY_QUOTES_BY_AUTHOR}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+S\+\_\+\+B\+Y\+\_\+\+A\+U\+T\+H\+OR = \char`\"{}cites autor\char`\"{}}\hypertarget{main_8cc_abcd8e2524f8645d5d6c12e0062838147}{}\label{main_8cc_abcd8e2524f8645d5d6c12e0062838147}
-
-
-Definition at line 39 of file main.\+cc.
-
-\index{main.\+cc@{main.\+cc}!Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}}
-\index{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO@{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}!main.\+cc@{main.\+cc}}
-\subsubsection[{\texorpdfstring{Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO}{QUERY_QUOTE_INFO}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+E\+R\+Y\+\_\+\+Q\+U\+O\+T\+E\+\_\+\+I\+N\+FO = \char`\"{}info cita\char`\"{}}\hypertarget{main_8cc_a29278b52bf17327ade47b5ea1cb41899}{}\label{main_8cc_a29278b52bf17327ade47b5ea1cb41899}
-
-
-Definition at line 40 of file main.\+cc.
+Definition at line 42 of file main.\+cc.
 
 \index{main.\+cc@{main.\+cc}!Q\+U\+IT@{Q\+U\+IT}}
 \index{Q\+U\+IT@{Q\+U\+IT}!main.\+cc@{main.\+cc}}
 \subsubsection[{\texorpdfstring{Q\+U\+IT}{QUIT}}]{\setlength{\rightskip}{0pt plus 5cm}const string Q\+U\+IT = \char`\"{}sortir\char`\"{}}\hypertarget{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}{}\label{main_8cc_a84f0d54b44b855b01f75732c6fa1bc4b}
 
 
-Definition at line 42 of file main.\+cc.
+Definition at line 44 of file main.\+cc.
 

@@ -13,7 +13,7 @@ $(EXECUTABLE):
 
 # Configuration to build final tar
 jutge:
-	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile
+	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile jp/jp_*.txt
 
 # Configuration to build Documentation tar
 docs:

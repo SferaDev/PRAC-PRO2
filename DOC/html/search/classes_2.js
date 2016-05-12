@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['frequencycomparator',['frequencyComparator',['../struct_book_1_1frequency_comparator.html',1,'Book']]]
+  ['library',['Library',['../class_library.html',1,'']]]
 ];
