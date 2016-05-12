@@ -78,17 +78,29 @@ public:
     */
     void incrementLineCount(int value);
 
-    /** @brief Increments the number of the words of the implicit author
+    /** @brief Increments the number of words of the implicit author
         \param value: Number of words of news books
         \pre An implicit Author
         \post The totalWords of the implicit author increased
     */
     void incrementWordCount(int value);
 
+    /** @brief Returns the number of books of the implicit author
+        \pre An implicit Author
+        \post Returns the totalBooks of the implicit author
+    */
     int getBookCount();
 
+    /** @brief Returns the number of lines of all books of the implicit author
+        \pre An implicit Author
+        \post Returns the totalLines of the implicit author
+    */
     int getLineCount();
 
+    /** @brief Returns the number of words of all books of the implicit author
+        \pre An implicit Author
+        \post Returns the totalWords of the implicit author
+    */
     int getWordCount();
 
     /** @brief Adds new Book to Author
