@@ -6,6 +6,7 @@
 #include "Book.hh"
 #include <algorithm>
 #include <queue>
+#include <string>
 #include <sstream>
 using namespace std;
 
@@ -55,40 +56,43 @@ struct frequencyComparator {
     }
 };
 
-// TODO: FIXME: THIS IS WRONG!?!?!?!??!?! (Handle punctuation marks correctly!!!)
 void Book::readBookContent() {
-    string input, content, word;
-    bool error = false;
-    while (getline(cin, input) && input != "****") {
-        istringstream iss(input);
-        while (iss >> word) {
-            if (!content.empty()) content += " ";
-            content += word;
-            bookWords += 1;
-            if (word.find_last_of(",;:") == word.length() - 1) {
-                if (word.length() > 0) {
+    string input, content;
+    while (getline(cin, input) and input != "****") {
+        content += ' ' + input;
+        int posDelimiter = content.find_first_of(".?!");
+        while (posDelimiter != string::npos) {
+            string line = content.substr(0, posDelimiter + 1);
+            content = content.substr(posDelimiter + 1);
+            trimString(line);
+            trimString(content);
+            bookContent.push_back(line);
+            string word;
+            istringstream iss(line);
+            while (iss >> word) {
+                if (word.find_last_of(",;:.?!") == word.length() - 1) {
                     word.erase(word.length() - 1, 1);
-                    if (word.find_last_of(",;:.?!") == word.length() - 1) error = true;
-                }
-            } else if (word.find_last_of(".?!") == word.length() - 1) {
-                bookContent.push_back(content);
-                content.clear();
-                if (word.length() > 0) {
-                    word.erase(word.length() - 1, 1);
-                    if (word.find_last_of(",;:.?!") == word.length() - 1) error = true;
                 }
                 lineDictionary[word].push_back(bookContent.size());
-            } else {
-                lineDictionary[word].push_back(bookContent.size() + 1);
+                wordFrequencyMap[word] += 1;
+                bookWords += 1;
             }
-            wordFrequencyMap[word] += 1;
+            posDelimiter = content.find_first_of(".?!");
         }
     }
     if (input == "****" and !content.empty()) {
         bookContent.push_back(content);
-        lineDictionary[word].push_back(bookContent.size());
+        string word;
+        istringstream iss(content);
+        while (iss >> word) {
+            if (word.find_last_of(",;:.?!") == word.length() - 1) {
+                word.erase(word.length() - 1, 1);
+            }
+            lineDictionary[word].push_back(bookContent.size());
+            wordFrequencyMap[word] += 1;
+            bookWords += 1;
+        }
     }
-    if (error) bookContent.clear();
 }
 
 string Book::getTitle() const {
