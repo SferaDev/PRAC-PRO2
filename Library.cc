@@ -15,16 +15,25 @@ Library::~Library() {
     // no-op
 }
 
+bool contains(string input, string query) {
+    istringstream iss(input);
+    string word;
+    while (iss >> word) {
+        if (word == query) return true;
+    }
+    return false;
+}
+
 void Library::readBook(string title, string authorName) {
-    // Add new Book with ID: authorName-title
+    // Add new Book with ID: authorName:title
     Book book(title, authorName);
     book.readBookContent();
     // Don't add book if title, author or content is null
     if (title == "" or authorName == "" or book.getLineCount() == 0) return;
     // If same book with same author exists return error!
-    map<string, Book>::iterator bookIt = bookCollection.find(authorName + "-" + title);
+    map<string, Book>::iterator bookIt = bookCollection.find(authorName + ':' + title);
     if (bookIt == bookCollection.end()) {
-        bookCollection[authorName + "-" + title] = book;
+        bookCollection[authorName + ':' + title] = book;
     } else {
         cout << "error" << endl;
         return;
@@ -63,8 +72,9 @@ void Library::selectBook(string query) {
         // Loop through all words (each word must be on the text)
         while (iss >> word and bContinue) {
             // Check if author/title contains or content contains
-            bContinue = (it->first.find(word, 0) != string::npos) or
-                    (it->second.findWord(word));
+            string bookId = it->first;
+            bookId = bookId.replace(bookId.find_first_of(':'), 1, " ");
+            bContinue = (contains(bookId, word) or it->second.findWord(word));
         }
         if (bContinue) {
             if (!isBookSelected()) currentBook = it;
