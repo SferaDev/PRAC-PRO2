@@ -102,14 +102,8 @@ void Library::deleteBook() {
     } else cout << "error" << endl;
 }
 
-void Library::replaceWordsOnBook(string input) {
+void Library::replaceWordsOnBook(string oldWord, string newWord) {
     if (isBookSelected()) {
-        int start = input.find_first_of("\"") + 1;
-        int end = input.find_first_of("\"", start);
-        string oldWord = input.substr(start, end - start);
-        start = input.find_first_of("\"", end + 1) + 1;
-        end = input.find_first_of("\"", start);
-        string newWord = input.substr(start, end - start);
         currentBook->second.replaceWords(oldWord, newWord);
     } else cout << "error" << endl;
 }

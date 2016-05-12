@@ -98,7 +98,7 @@ public:
         \pre An implicit Library and a selected book
         \post The implicit library with the replaced words on currentBook
     */
-    void replaceWordsOnBook(string input);
+    void replaceWordsOnBook(string oldWord, string newWord);
 
     /** @brief Inserts a new quote (currentBook) to the library
         \param start: Start line

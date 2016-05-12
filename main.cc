@@ -132,9 +132,17 @@ void readActions(Library& library) {
         } else if (startsWith(input, BOOK_DELETE)) {
             library.deleteBook();
         } else if (startsWith(input, BOOK_SELECT)) {
-            library.selectBook(input.erase(input.length() - 1, 1).substr(input.find_first_of("{") + 1));
+            string query = input.erase(input.length() - 1, 1);
+            query = input.substr(input.find_first_of("{") + 1);
+            library.selectBook(query);
         } else if (startsWith(input, BOOK_REPLACE_WORD)) {
-            library.replaceWordsOnBook(input);
+            int start = input.find_first_of("\"") + 1;
+            int end = input.find_first_of("\"", start);
+            string oldWord = input.substr(start, end - start);
+            start = input.find_first_of("\"", end + 1) + 1;
+            end = input.find_first_of("\"", start);
+            string newWord = input.substr(start, end - start);
+            library.replaceWordsOnBook(oldWord, newWord);
         } else if (startsWith(input, QUOTE_INSERT)) {
             int start, end;
             input = input.substr(QUOTE_INSERT.length());
