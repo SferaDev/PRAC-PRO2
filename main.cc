@@ -53,8 +53,8 @@ bool endsWith(string a, string b) {
     return std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
 }
 
-// TODO: Duplicated we need a Utils class
-void trimDaString(string& query) {
+// TODO: We need a Utils class
+void trimStringComplex(string& query) {
     while (query[0] == ' ' or query[0] == '\"') query.erase(0, 1);
     while (query[query.length() - 1] == ' '  or query[query.length() - 1] == '\"')
         query.erase(query.length() - 1, 1);
@@ -62,7 +62,7 @@ void trimDaString(string& query) {
 
 void actionExpression(Library& library, string input)  {
     // Delete '?' from query
-    trimDaString(input);
+    trimStringComplex(input);
     if (input[input.size() - 1] != '?') return;
     input = input.erase(input.length() - 1 , 1);
     // Erase 'frases ' from input channel
@@ -73,7 +73,7 @@ void actionExpression(Library& library, string input)  {
     iss >> x >> y;
     if (!iss.fail()) library.getBook().printSelectLines(x,y);
     else if (input[0] == '\"' and input[input.length() - 1]) {
-        trimDaString(input);
+        trimStringComplex(input);
         library.getBook().printLinesConsecutiveWords(input);
     } else {
         library.getBook().printLines(input);
@@ -147,8 +147,8 @@ void readActions(Library& library) {
             iss >> oldWord >> oldWord >> newWord >> newWord;
             if (oldWord[0] == '\"' and newWord[0] == '\"' and
                     oldWord[oldWord.length() - 1] == '\"' and newWord[newWord.length() - 1] == '\"') {
-                trimDaString(oldWord);
-                trimDaString(newWord);
+                trimStringComplex(oldWord);
+                trimStringComplex(newWord);
                 library.replaceWordsOnBook(oldWord, newWord);
             }
         } else if (startsWith(input, QUOTE_INSERT)) {
