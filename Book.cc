@@ -49,6 +49,7 @@ void formatString(string& query) {
     pos = query.find_first_of(",;:");
     while (pos != string::npos) {
         while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+        // TODO: Unofficial, we need to ask if this is expected to happen
         if (query[pos + 1] != ' ') query.insert(pos + 1, " ");
         pos = query.find_first_of(",;:", pos + 1);
     }
