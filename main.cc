@@ -72,10 +72,8 @@ void actionExpression(Library& library, string input)  {
     istringstream iss(input);
     iss >> x >> y;
     if (!iss.fail()) library.getBook().printSelectLines(x,y);
-    else if (input[0] == '\"') {
-        input = input.substr(0, input.length() - 1);
-        input = input.erase(0, 1);
-        input = input.substr(0, input.length() - 1);
+    else if (input[0] == '\"' and input[input.length() - 1]) {
+        trimDaString(input);
         library.getBook().printLinesConsecutiveWords(input);
     } else {
         library.getBook().printLines(input);
@@ -151,7 +149,7 @@ void readActions(Library& library) {
                     oldWord[oldWord.length() - 1] == '\"' and newWord[newWord.length() - 1] == '\"') {
                 trimDaString(oldWord);
                 trimDaString(newWord);
-                library.replaceWordsOnBook(oldWord.substr(1, oldWord.length() - 2), newWord);
+                library.replaceWordsOnBook(oldWord, newWord);
             }
         } else if (startsWith(input, QUOTE_INSERT)) {
             int start, end;
