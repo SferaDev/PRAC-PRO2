@@ -77,7 +77,7 @@ void Book::readBookContent() {
                     wordFrequencyMap[subWord] += 1;
                     bookWords += 1;
                     word = word.substr(posSeparator + 1);
-                    posSeparator = word.find_first_of(",;:.?!");
+                    posSeparator = word.find_first_of(",;:");
                 }
                 while (word.size() > 0 and word.find_last_of(".?!") == word.length() - 1)
                     word.erase(word.length() - 1, 1);
@@ -139,12 +139,10 @@ void Book::replaceWords(string oldWord, string newWord) {
                     word.erase(word.length() - 1, 1);
                 }
                 if (word == oldWord) {
-                    cout << "True" << endl;
                     line += auxWord;
                 }
                 else line += word;
                 line += ' ';
-                cout << "DEBUG: " << line << endl;
             }
             trimString(line);
             bookContent[*it2 - 1] = line;
