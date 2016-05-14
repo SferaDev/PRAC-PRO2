@@ -82,7 +82,8 @@ void Book::readBookContent() {
             trimString(line);
             formatString(line);
             trimString(content);
-            bookContent.push_back(line);
+            // TODO: Empty lines should be added or we shouldn't add the text?
+            if (line.substr(0, line.length() - 1) != "") bookContent.push_back(line);
             string word;
             istringstream iss(line);
             while (iss >> word) {
