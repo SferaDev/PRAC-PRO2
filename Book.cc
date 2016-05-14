@@ -133,16 +133,16 @@ void Book::replaceWords(string oldWord, string newWord) {
             istringstream iss(bookContent[*it2 - 1]);
             string word, line;
             while (iss >> word) {
-                string auxWord = newWord;
-                if (word.find_first_of(",;:.?!") == word.length() - 1) {
-                    auxWord += word[word.length() - 1];
-                    word.erase(word.length() - 1, 1);
-                }
+                string auxWord;
                 if (word == oldWord) {
-                    line += auxWord;
+                    auxWord = newWord;
+                    if (word.find_first_of(",;:.?!") == word.length() - 1) {
+                        auxWord += word[word.length() - 1];
+                        word.erase(word.length() - 1, 1);
+                    }
                 }
-                else line += word;
-                line += ' ';
+                else auxWord = word;
+                line += auxWord + ' ';
             }
             trimString(line);
             bookContent[*it2 - 1] = line;
