@@ -53,18 +53,25 @@ bool endsWith(string a, string b) {
     return std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
 }
 
+// TODO: Duplicated we need a Utils class
+void trimDaString(string& query) {
+    while (query[0] == ' ') query.erase(0, 1);
+    while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
+}
+
 void actionExpression(Library& library, string input)  {
     // Delete '?' from query
+    trimDaString(input);
+    if (input[input.size() - 1] != '?') return;
     input = input.erase(input.length() - 1 , 1);
     // Erase 'frases ' from input channel
     input = input.substr(ACTION_EXPRESSION.length() + 1);
     // If it's a digit call {frases x y ?} otherwise call the recursive
-    if (isdigit(input[0])) {
-        int x, y;
-        istringstream iss(input);
-        iss >> x >> y;
-        library.getBook().printSelectLines(x,y);
-    } else if (input[0] == '\"') {
+    int x, y;
+    istringstream iss(input);
+    iss >> x >> y;
+    if (!iss.fail()) library.getBook().printSelectLines(x,y);
+    else if (input[0] == '\"') {
         input = input.substr(0, input.length() - 1);
         input = input.erase(0, 1);
         input = input.substr(0, input.length() - 1);
