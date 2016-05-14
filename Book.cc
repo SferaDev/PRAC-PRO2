@@ -41,9 +41,15 @@ void trimString(string& query) {
 }
 
 void formatString(string& query) {
-    int pos = query.find_first_of(",;:");
+    int pos = query.find("  ");
+    while (pos != string::npos) {
+        query.erase(pos, 1);
+        pos = pos = query.find("  ");
+    }
+    pos = query.find_first_of(",;:");
     while (pos != string::npos) {
         while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+        if (query[pos + 1] != ' ') query.insert(pos + 1, " ");
         pos = query.find_first_of(",;:", pos + 1);
     }
 }
