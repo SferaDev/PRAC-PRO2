@@ -55,8 +55,9 @@ bool endsWith(string a, string b) {
 
 // TODO: Duplicated we need a Utils class
 void trimDaString(string& query) {
-    while (query[0] == ' ') query.erase(0, 1);
-    while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
+    while (query[0] == ' ' or query[0] == '\"') query.erase(0, 1);
+    while (query[query.length() - 1] == ' '  or query[query.length() - 1] == '\"')
+        query.erase(query.length() - 1, 1);
 }
 
 void actionExpression(Library& library, string input)  {
@@ -143,13 +144,15 @@ void readActions(Library& library) {
             query = input.substr(input.find_first_of("{") + 1);
             library.selectBook(query);
         } else if (startsWith(input, BOOK_REPLACE_WORD)) {
-            int start = input.find_first_of("\"") + 1;
-            int end = input.find_first_of("\"", start);
-            string oldWord = input.substr(start, end - start);
-            start = input.find_first_of("\"", end + 1) + 1;
-            end = input.find_first_of("\"", start);
-            string newWord = input.substr(start, end - start);
-            library.replaceWordsOnBook(oldWord, newWord);
+            istringstream iss(input);
+            string oldWord, newWord;
+            iss >> oldWord >> oldWord >> newWord >> newWord;
+            if (oldWord[0] == '\"' and newWord[0] == '\"' and
+                    oldWord[oldWord.length() - 1] == '\"' and newWord[newWord.length() - 1] == '\"') {
+                trimDaString(oldWord);
+                trimDaString(newWord);
+                library.replaceWordsOnBook(oldWord.substr(1, oldWord.length() - 2), newWord);
+            }
         } else if (startsWith(input, QUOTE_INSERT)) {
             int start, end;
             input = input.substr(QUOTE_INSERT.length());
