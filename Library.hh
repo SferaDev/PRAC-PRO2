@@ -9,11 +9,13 @@
 #include "Author.hh"
 #include "Book.hh"
 #include "Quote.hh"
+#include "Utils.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
 #include <string>
+#include <sstream>
 #endif
 
 using namespace std;

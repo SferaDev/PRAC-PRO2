@@ -4,10 +4,6 @@
 */
 
 #include "Book.hh"
-#include <algorithm>
-#include <queue>
-#include <string>
-#include <sstream>
 using namespace std;
 
 Book::Book() {
@@ -24,35 +20,6 @@ Book::Book(string title, string author) {
 
 Book::~Book() {
     // no-op
-}
-
-bool betweenPar(string query, int position) {
-    int state = 0;
-    for (int i = 0; i < position; ++i) {
-        if (query[i] == '(') state++;
-        if (query[i] == ')') state--;
-    }
-    return state != 0;
-}
-
-void trimString(string& query) {
-    while (query[0] == ' ') query.erase(0, 1);
-    while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
-}
-
-void formatString(string& query) {
-    int pos = query.find("  ");
-    while (pos != string::npos) {
-        query.erase(pos, 1);
-        pos = pos = query.find("  ");
-    }
-    pos = query.find_first_of(",;:");
-    while (pos != string::npos) {
-        while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
-        // TODO: Unofficial, we need to ask if this is expected to happen
-        if (query[pos + 1] != ' ') query.insert(pos + 1, " ");
-        pos = query.find_first_of(",;:", pos + 1);
-    }
 }
 
 struct frequencyComparator {
@@ -79,9 +46,9 @@ void Book::readBookContent() {
         while (posDelimiter != string::npos) {
             string line = content.substr(0, posDelimiter + 1);
             content = content.substr(posDelimiter + 1);
-            trimString(line);
-            formatString(line);
-            trimString(content);
+            utils::trimString(line);
+            utils::formatString(line);
+            utils::trimString(content);
             // TODO: Empty lines should be added or we shouldn't add the text?
             if (!line.substr(0, line.length() - 1).empty()) bookContent.push_back(line);
             string word;
@@ -163,7 +130,7 @@ void Book::replaceWords(string oldWord, string newWord) {
                 else auxWord = word;
                 line += auxWord + ' ';
             }
-            trimString(line);
+            utils::trimString(line);
             bookContent[*it2 - 1] = line;
             it2++;
         }
@@ -218,7 +185,7 @@ void Book::deleteQuote(string reference) {
 }
 
 void Book::findExpression(string query, set<int>& pos) {
-    trimString(query);
+    utils::trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
         // Base case: Malformed expression
     } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
@@ -247,7 +214,7 @@ void Book::findExpression(string query, set<int>& pos) {
         }
     } else {
         int posAnd = query.find_first_of('&');
-        while (posAnd != string::npos and betweenPar(query, posAnd)) {
+        while (posAnd != string::npos and utils::betweenPar(query, posAnd)) {
             posAnd = query.find_first_of('&', posAnd + 1);
         }
         if (posAnd != string::npos) {
@@ -258,7 +225,7 @@ void Book::findExpression(string query, set<int>& pos) {
             set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
         } else {
             int posOr = query.find_first_of('|');
-            while (posOr != string::npos and betweenPar(query, posOr)) {
+            while (posOr != string::npos and utils::betweenPar(query, posOr)) {
                 posOr = query.find_first_of('|', posOr + 1);
             }
             if (posOr != string::npos) {
@@ -267,7 +234,7 @@ void Book::findExpression(string query, set<int>& pos) {
                 findExpression(query.substr(0, posOr - 1), set1);
                 findExpression(query.substr(posOr + 1), set2);
                 set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
-            } else if (!betweenPar(query, query.length())) {
+            } else if (!utils::betweenPar(query, query.length())) {
                 // Recursive case: Call recursion of inner parentheses expression
                 findExpression(query.substr(1, query.length() - 2), pos);
             } // Base case: else: Malformed parentheses/operators

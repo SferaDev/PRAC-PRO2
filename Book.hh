@@ -6,13 +6,19 @@
 #ifndef PRO2_PRAC_BOOK_HH
 #define PRO2_PRAC_BOOK_HH
 
+#include "Utils.hh"
+
 #ifndef NO_DIAGRAM
+#include <algorithm>
 #include <iostream>
 #include <list>
 #include <map>
 #include <set>
 #include <string>
+#include <sstream>
+#include <queue>
 #include <vector>
+
 #endif
 
 using namespace std;

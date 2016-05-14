@@ -4,7 +4,6 @@
 */
 
 #include "Library.hh"
-#include <sstream>
 using namespace std;
 
 Library::Library() {
@@ -13,21 +12,6 @@ Library::Library() {
 
 Library::~Library() {
     // no-op
-}
-
-bool contains(string input, string query) {
-    istringstream iss(input);
-    string word;
-    while (iss >> word) {
-        if (word == query) return true;
-    }
-    return false;
-}
-
-void stringUppercase(string& input) {
-    for (int i = 0; i < input.length(); ++i) {
-        if (!isupper(input[i])) input[i] = toupper(input[i]);
-    }
 }
 
 void Library::readBook(string title, string authorName) {
@@ -80,7 +64,7 @@ void Library::selectBook(string query) {
             // Check if author/title contains or content contains
             string bookId = it->first;
             bookId = bookId.replace(bookId.find_first_of(':'), 1, " ");
-            bContinue = (contains(bookId, word) or it->second.findWord(word));
+            bContinue = (utils::contains(bookId, word) or it->second.findWord(word));
         }
         if (bContinue) {
             if (!isBookSelected()) currentBook = it;
@@ -132,7 +116,7 @@ void Library::insertQuote(int start, int end) {
     istringstream iss(currentBook->second.getAuthor());
     while (iss >> aux) reference += aux[0];
     // Pass reference to uppercase
-    stringUppercase(reference);
+    utils::stringUppercase(reference);
     // Check if there's an existing Quote with these lines of the same book
     map<string, Quote>::iterator it = quoteCollection.begin();
     while (it != quoteCollection.end()) {
