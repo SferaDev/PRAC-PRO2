@@ -143,10 +143,11 @@ void Book::replaceWords(string oldWord, string newWord) {
         }
     }
     // Edit the line dictionary
-    lineDictionary[newWord] = lineDictionary[oldWord];
+    lineDictionary[newWord].insert(lineDictionary[newWord].end(),
+                                   lineDictionary[oldWord].begin(), lineDictionary[oldWord].end());
     lineDictionary.erase(oldWord);
     // Edit the frequency Map
-    wordFrequencyMap[newWord] = wordFrequencyMap[oldWord];
+    wordFrequencyMap[newWord] += wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
     dirtyFrequency = true;
 }
