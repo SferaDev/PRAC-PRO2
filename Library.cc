@@ -24,6 +24,12 @@ bool contains(string input, string query) {
     return false;
 }
 
+void stringUppercase(string& input) {
+    for (int i = 0; i < input.length(); ++i) {
+        if (!isupper(input[i])) input[i] = toupper(input[i]);
+    }
+}
+
 void Library::readBook(string title, string authorName) {
     // Add new Book with ID: authorName:title
     Book book(title, authorName);
@@ -125,6 +131,8 @@ void Library::insertQuote(int start, int end) {
     string reference, aux;
     istringstream iss(currentBook->second.getAuthor());
     while (iss >> aux) reference += aux[0];
+    // Pass reference to uppercase
+    stringUppercase(reference);
     // Check if there's an existing Quote with these lines of the same book
     map<string, Quote>::iterator it = quoteCollection.begin();
     while (it != quoteCollection.end()) {
