@@ -123,7 +123,7 @@ void Library::replaceWordsOnBook(string oldWord, string newWord) {
 
 void Library::insertQuote(int start, int end) {
     // Error conditions if invalid start/end is given
-    if ((end < start) or (start < 1) or (end > currentBook->second.getLineCount())) {
+    if (!isBookSelected() or (end < start) or (start < 1) or (end > currentBook->second.getLineCount())) {
         cout << "error" << endl;
         return;
     }
