@@ -133,9 +133,18 @@ void Book::replaceWords(string oldWord, string newWord) {
             istringstream iss(bookContent[*it2 - 1]);
             string word, line;
             while (iss >> word) {
-                if (word == oldWord) line += newWord;
+                string auxWord = newWord;
+                if (word.find_first_of(",;:.?!") == word.length() - 1) {
+                    auxWord += word[word.length() - 1];
+                    word.erase(word.length() - 1, 1);
+                }
+                if (word == oldWord) {
+                    cout << "True" << endl;
+                    line += auxWord;
+                }
                 else line += word;
                 line += ' ';
+                cout << "DEBUG: " << line << endl;
             }
             trimString(line);
             bookContent[*it2 - 1] = line;
