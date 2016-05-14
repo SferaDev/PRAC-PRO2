@@ -108,7 +108,9 @@ void Book::readBookContent() {
         }
     }
     if (input == "****" and !content.empty()) {
-        // OPTION 1: Delete content
+        // TODO: FIXME: HALP
+        // OPTION 0: Do nothing: Ignore them
+        // OPTION 1: Do not add the book
         bookContent.clear();
         /* OPTION 2: Add newline with pendingWords
         bookContent.push_back(content);
