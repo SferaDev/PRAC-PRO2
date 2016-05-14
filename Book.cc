@@ -40,6 +40,14 @@ void trimString(string& query) {
     while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
 }
 
+void formatString(string& query) {
+    int pos = query.find_first_of(",;:");
+    while (pos != string::npos) {
+        while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+        pos = query.find_first_of(",;:", pos + 1);
+    }
+}
+
 struct frequencyComparator {
     bool operator() (const pair<string, int>& a, const pair<string, int>& b) {
         // Special case: Same frequency
@@ -65,6 +73,7 @@ void Book::readBookContent() {
             string line = content.substr(0, posDelimiter + 1);
             content = content.substr(posDelimiter + 1);
             trimString(line);
+            formatString(line);
             trimString(content);
             bookContent.push_back(line);
             string word;
