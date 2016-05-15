@@ -57,6 +57,7 @@ private:
     /** @brief Content dictionary with frequencies in correct order */
     list<pair<string, int> > wordFrequencyList;
 
+    /** @brief Tells if we generate the frequency table */
     bool dirtyFrequency;
 
     /** @brief Size of Book's collection */
@@ -126,13 +127,17 @@ public:
     */
     void replaceWords(string oldWord, string newWord);
 
-    /** @brief Finds if a word is on the content of the implicit Book
+   /** @brief Finds if a word is on the content of the implicit Book
         \param word = Word to find on the book
-        \pre The wordDictionary of the implicit Book and a word that we want to find
+        \pre The wordFrequencyMap of the implicit Book and a word that we want to find
         \post Returns true if the word is on the content of the implicit book
     */
     bool findWord(string word);
 
+    /** @brief Tells if a dirtyFrequency is true or false
+        \pre The dirtyFrequency of the implicit Book
+        \post Returns true if the dirtyFrequency of the implicit Book is true
+    */
     bool isFrequencyDirty();
 
     /** @brief Generates the FrequencyTable Vector

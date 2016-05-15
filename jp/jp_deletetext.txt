@@ -1,20 +1,10 @@
 afegir text "hola"
 autor "jordi-ROMERO"
-333333. 3333333?
+hola            ,           como,                   estas .
 ****
-
-tots textos ?
 
 triar text {hola}
 
 contingut ?
-
-afegir cita 1 1
-
-substituex "333333" per "JORDI"
-
-contingut ?
-
-info ?
 
 sortir
