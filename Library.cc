@@ -122,6 +122,7 @@ void Library::insertQuote(int start, int end) {
     while (it != quoteCollection.end()) {
         if (it->second.getReference().substr(0, reference.length()) == reference) {
             if (it->second.getBookTitle() == currentBook->second.getTitle()
+                    and it->second.getAuthor() == currentBook->second.getAuthor()
                     and it->second.getStartLine() == start
                     and it->second.getEndLine() == end) {
                 cout << "error" << endl;
