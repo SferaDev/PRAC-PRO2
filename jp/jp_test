@@ -3,14 +3,12 @@ autor "oscar wilde"
 a,b,c.hola.
 ****
 
-triar text {Oscar-Wilde}
-
-triar text {ilde}
-
 triar text {wilde}
 
-afegir cita 1 2
+contingut ?
 
-info ?
+substitueix "hola" per "adeu"
+
+contingut ?
 
 sortir

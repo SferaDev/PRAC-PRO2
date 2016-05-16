@@ -120,14 +120,12 @@ void Book::replaceWords(string oldWord, string newWord) {
             string word, line;
             while (iss >> word) {
                 string auxWord;
-                if (word == oldWord) {
-                    auxWord = newWord;
-                    if (word.find_first_of(",;:.?!") == word.length() - 1) {
-                        auxWord += word[word.length() - 1];
-                        word.erase(word.length() - 1, 1);
-                    }
+                if (word.find_first_of(",;:.?!") == word.length() - 1) {
+                    auxWord = word[word.length() - 1];
+                    word.erase(word.length() - 1, 1);
                 }
-                else auxWord = word;
+                if (word == oldWord) auxWord = newWord + auxWord;
+                else auxWord = word + auxWord;
                 line += auxWord + ' ';
             }
             utils::trimString(line);
