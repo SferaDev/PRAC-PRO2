@@ -1,10 +1,13 @@
-afegir text "hola"
-autor "jordi-ROMERO"
-hola            ,           como,                   estas .
+afegir text "hola, como no te voy a querer"
+autor "Juan Rodriguez"
+,Wowo.
 ****
 
-triar text {hola}
+triar text {Wowo}
 
 contingut ?
+
+taula de frequencies ?
+
 
 sortir
