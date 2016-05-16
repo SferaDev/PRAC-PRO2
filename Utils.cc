@@ -1,4 +1,5 @@
 #include "Utils.hh"
+#include <iostream>
 
 namespace utils {
     bool contains(string input, string query) {
@@ -50,14 +51,16 @@ namespace utils {
         int pos = query.find("  ");
         while (pos != string::npos) {
             query.erase(pos, 1);
-            pos = pos = query.find("  ");
+            pos = query.find("  ");
         }
-        pos = query.find_first_of(",;:");
+        pos = query.find_first_of(".!?,;:");
         while (pos != string::npos) {
-            while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+            cout << query << endl;
             // TODO: Unofficial, we need to ask if this is expected to happen
-            if (query[pos + 1] != ' ') query.insert(pos + 1, " ");
-            pos = query.find_first_of(",;:", pos + 1);
+            if (pos + 1 < query.length() and query[pos + 1] != ' ')
+                query.insert(pos + 1, " ");
+            while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+            pos = query.find_first_of(".!?,;:", pos + 1);
         }
     }
 }
