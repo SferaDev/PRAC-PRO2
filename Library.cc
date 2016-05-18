@@ -20,7 +20,8 @@ void Library::readBook(string title, string authorName) {
     book.readBookContent();
     // Don't add book if title, author or content is null
     if (title == "" or authorName == "" or book.getLineCount() == 0) return;
-    // If same book with same author exists return error!
+    // If authorName:bookTitle pair doesn't exist create a new one
+    // Else return error as there's an existing book with same author and title
     map<string, Book>::iterator bookIt = bookCollection.find(authorName + ':' + title);
     if (bookIt == bookCollection.end()) {
         bookCollection[authorName + ':' + title] = book;
@@ -28,7 +29,7 @@ void Library::readBook(string title, string authorName) {
         cout << "error" << endl;
         return;
     }
-    // Add or update Author with ID: authorName
+    // Update Author acc to its ID (if it doesn't exist create new one)
     map<string, Author>::iterator authorIt = authorCollection.find(authorName);
     if (authorIt == authorCollection.end()) {
         Author author(authorName);
@@ -75,9 +76,10 @@ void Library::selectBook(string query) {
         }
         it++;
     }
-    // Build FrequencyTable Vector upon select
+    // Build FrequencyTable Vector upon select if it was not generated previously and/or modified
     if (isBookSelected()) {
-        if (currentBook->second.isFrequencyDirty()) currentBook->second.generateFrequencyTable();
+        if (currentBook->second.isFrequencyDirty())
+            currentBook->second.generateFrequencyTable();
     } else cout << "error" << endl;
 }
 
@@ -132,10 +134,10 @@ void Library::insertQuote(int start, int end) {
         it++;
     }
     quoteIdentifiers[reference]++;
-    // FIXME: Using a stringstream for this doesn't look good  at all
-    stringstream ss;
-    ss << quoteIdentifiers[reference];
-    reference += ss.str();
+    // Append a string with an int (using oss): If there's time find another alternative
+    ostringstream oss;
+    oss << quoteIdentifiers[reference];
+    reference += oss.str();
     // Store them into new Quote
     Quote quote(reference, currentBook->second.getAuthor(),
                 currentBook->second.getTitle());
@@ -151,6 +153,7 @@ void Library::insertQuote(int start, int end) {
 
 void Library::deleteQuote(string reference) {
     map<string, Quote>::iterator it = quoteCollection.find(reference);
+    // If reference doesn't exist: error
     if (it == quoteCollection.end()) {
         cout << "error" << endl;
     } else {

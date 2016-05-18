@@ -55,7 +55,7 @@ private:
     /** @brief Content dictionary with frequencies in correct order */
     list<pair<string, int> > wordFrequencyList;
 
-    /** @brief Tells if we generate the frequency table */
+    /** @brief Tells if we generate the frequency table (not generated previously or modified) */
     bool dirtyFrequency;
 
     /** @brief Size of Book's collection */

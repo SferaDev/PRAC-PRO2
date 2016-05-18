@@ -49,7 +49,6 @@ void Book::readBookContent() {
             utils::trimString(line);
             utils::formatString(line);
             utils::trimString(content);
-            // TODO: Empty lines should be added or we shouldn't add the text?
             if (!line.substr(0, line.length() - 1).empty()) bookContent.push_back(line);
             string word;
             istringstream iss(line);
@@ -75,10 +74,10 @@ void Book::readBookContent() {
         }
     }
     if (input == "****" and !content.empty()) {
-        // TODO: FIXME: HALP
+        // TODO: Ask what's the correct procedure
         // OPTION 0: Do nothing: Ignore them
-        // OPTION 1: Do not add the book
-        bookContent.clear();
+        /* OPTION 1: Do not add the book
+        bookContent.clear(); */
         /* OPTION 2: Add newline with pendingWords
         bookContent.push_back(content);
         string word;
@@ -135,7 +134,8 @@ void Book::replaceWords(string oldWord, string newWord) {
     }
     // Edit the line dictionary
     lineDictionary[newWord].insert(lineDictionary[newWord].end(),
-                                   lineDictionary[oldWord].begin(), lineDictionary[oldWord].end());
+                                   lineDictionary[oldWord].begin(),
+                                   lineDictionary[oldWord].end());
     lineDictionary.erase(oldWord);
     // Edit the frequency Map
     wordFrequencyMap[newWord] += wordFrequencyMap[oldWord];
@@ -152,13 +152,16 @@ bool Book::isFrequencyDirty() {
 }
 
 void Book::generateFrequencyTable() {
-    // Check if list was previously generated
+    // Reset dirty boolean
     dirtyFrequency = false;
+    // Clear the list
     wordFrequencyList.clear();
+    // Copy from the Map to the List
     for (map<string, int>::iterator it = wordFrequencyMap.begin();
          it != wordFrequencyMap.end(); ++it) {
         wordFrequencyList.push_back(make_pair(it->first, it->second));
     }
+    // Sort the list with our custom comparator struct
     wordFrequencyList.sort(frequencyComparator());
 }
 
@@ -183,9 +186,10 @@ void Book::deleteQuote(string reference) {
 }
 
 void Book::findExpression(string query, set<int>& pos) {
+    // Trim spaces of the query
     utils::trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
-        // Base case: Malformed expression
+        // Base case: Malformed expression (not found any word to find)
     } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
         query = query.substr(1, query.length() - 2);
         if (query.find_first_of(" ") == string::npos) {
@@ -211,10 +215,12 @@ void Book::findExpression(string query, set<int>& pos) {
             findExpression(query, pos);
         }
     } else {
+        // Find the first & operator outside parentheses
         int posAnd = query.find_first_of('&');
         while (posAnd != string::npos and utils::betweenPar(query, posAnd)) {
             posAnd = query.find_first_of('&', posAnd + 1);
         }
+        // If found call the recursivity on both sides of the expression
         if (posAnd != string::npos) {
             // Recursive case: Call recursion of both expressions and intersect them
             set<int> set1, set2;
@@ -222,6 +228,7 @@ void Book::findExpression(string query, set<int>& pos) {
             findExpression(query.substr(posAnd + 1), set2);
             set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
         } else {
+            // If no outer & operators, find the first | operator outside parentheses
             int posOr = query.find_first_of('|');
             while (posOr != string::npos and utils::betweenPar(query, posOr)) {
                 posOr = query.find_first_of('|', posOr + 1);
