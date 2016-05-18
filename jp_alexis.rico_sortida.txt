@@ -1,0 +1,317 @@
+afegir text "HODOR"
+
+triar text {Hodor}
+
+contingut ?
+1 Hodor! 
+2 Hodor hodor, hodor; hodor HODOR hodor, hodor hodor; hodor HODOR hodor, hodor hodor! 
+3 Hodor hodor HODOR hodor, hodor hodor hodor? 
+4 Hodor hodor HODOR! 
+5 Hodor hodor; hodor hodor hodor. 
+6 Hodor, hodor HODOR hodor, hodor hodor. 
+7 Hodor hodor hodor. 
+8 Hodor. 
+9 Hodor, hodor, hodor. 
+10 Hodor hodor hodor hodor. 
+11 Hodor! 
+12 Hodor hodor, HODOR hodor, hodor hodor. 
+13 Hodor hodor hodor hodor? 
+14 Hodor. 
+15 Hodor hodor hodor, hodor. 
+16 Hodor hodor? 
+17 Hodor hodor hodor hodor hodor. 
+18 Hodor hodor hodor hodor, hodor, hodor hodor. 
+19 Hodor hodor hodor. 
+20 Hodor hodor hodor hodor hodor? 
+21 Hodor, hodor hodor hodor. 
+22 Hodor hodor HODOR! 
+23 Hodor hodor; hodor hodor! 
+24 Hodor, hodor. 
+25 Hodor. 
+26 Hodor, HODOR hodor, hodor hodor. 
+27 Hodor hodor hodor. 
+28 Hodor, hodor. 
+29 Hodor. 
+30 Hodor, hodor; hodor hodor; hodor hodor, hodor. 
+31 Hodor hodor, hodor, hodor hodor. 
+32 Hodor hodor; hodor hodor. 
+33 Hodor, hodor. 
+34 Hodor hodor hodor. 
+35 Hodor hodor hodor. 
+36 Hodor. 
+37 Hodor hodor, hodor. 
+38 Hodor hodor hodor hodor. 
+39 Hodor. 
+40 Hodor HODOR hodor, hodor hodor. 
+41 Hodor hodor HODOR hodor, hodor HODOR hodor, hodor hodor! 
+42 Hodor! 
+43 Hodor hodor, hodor hodor hodor! 
+44 Hodor! 
+45 Hodor hodor, hodor. 
+46 Hodor hodor hodor! 
+47 Hodor hodor HODOR! 
+48 Hodor hodor. 
+49 Hodor hodor HODOR hodor, hodor hodor. 
+50 Hodor! 
+51 Hodor hodor, hodor; hodor hodor, hodor. 
+52 Hodor hodor, hodor, hodor hodor. 
+53 Hodor hodor hodor hodor, hodor. 
+54 Hodor hodor? 
+55 Hodor. 
+56 Hodor hodor hodor. 
+57 Hodor. 
+58 Hodor HODOR hodor, hodor hodor hodor hodor? 
+59 Hodor hodor hodor; hodor HODOR hodor, hodor hodor. 
+60 Hodor HODOR hodor, hodor hodor hodor hodor hodor! 
+61 Hodor hodor HODOR hodor, hodor hodor, hodor. 
+62 Hodor hodor. 
+63 Hodor hodor HODOR! 
+64 Hodor hodor hodor? 
+65 Hodor! 
+66 Hodor hodor, hodor hodor hodor! 
+67 Hodor. 
+68 Hodor hodor; hodor hodor, hodor. 
+69 Hodor hodor hodor! 
+
+taula de frequencies ?
+hodor 170
+Hodor 69
+HODOR 18
+
+substitueix "HODOR" per "GROOT"
+
+contingut ?
+1 Hodor! 
+2 Hodor hodor, hodor; hodor GROOT hodor, hodor hodor; hodor GROOT hodor, hodor hodor! 
+3 Hodor hodor GROOT hodor, hodor hodor hodor? 
+4 Hodor hodor GROOT! 
+5 Hodor hodor; hodor hodor hodor. 
+6 Hodor, hodor GROOT hodor, hodor hodor. 
+7 Hodor hodor hodor. 
+8 Hodor. 
+9 Hodor, hodor, hodor. 
+10 Hodor hodor hodor hodor. 
+11 Hodor! 
+12 Hodor hodor, GROOT hodor, hodor hodor. 
+13 Hodor hodor hodor hodor? 
+14 Hodor. 
+15 Hodor hodor hodor, hodor. 
+16 Hodor hodor? 
+17 Hodor hodor hodor hodor hodor. 
+18 Hodor hodor hodor hodor, hodor, hodor hodor. 
+19 Hodor hodor hodor. 
+20 Hodor hodor hodor hodor hodor? 
+21 Hodor, hodor hodor hodor. 
+22 Hodor hodor GROOT! 
+23 Hodor hodor; hodor hodor! 
+24 Hodor, hodor. 
+25 Hodor. 
+26 Hodor, GROOT hodor, hodor hodor. 
+27 Hodor hodor hodor. 
+28 Hodor, hodor. 
+29 Hodor. 
+30 Hodor, hodor; hodor hodor; hodor hodor, hodor. 
+31 Hodor hodor, hodor, hodor hodor. 
+32 Hodor hodor; hodor hodor. 
+33 Hodor, hodor. 
+34 Hodor hodor hodor. 
+35 Hodor hodor hodor. 
+36 Hodor. 
+37 Hodor hodor, hodor. 
+38 Hodor hodor hodor hodor. 
+39 Hodor. 
+40 Hodor GROOT hodor, hodor hodor. 
+41 Hodor hodor GROOT hodor, hodor GROOT hodor, hodor hodor! 
+42 Hodor! 
+43 Hodor hodor, hodor hodor hodor! 
+44 Hodor! 
+45 Hodor hodor, hodor. 
+46 Hodor hodor hodor! 
+47 Hodor hodor GROOT! 
+48 Hodor hodor. 
+49 Hodor hodor GROOT hodor, hodor hodor. 
+50 Hodor! 
+51 Hodor hodor, hodor; hodor hodor, hodor. 
+52 Hodor hodor, hodor, hodor hodor. 
+53 Hodor hodor hodor hodor, hodor. 
+54 Hodor hodor? 
+55 Hodor. 
+56 Hodor hodor hodor. 
+57 Hodor. 
+58 Hodor GROOT hodor, hodor hodor hodor hodor? 
+59 Hodor hodor hodor; hodor GROOT hodor, hodor hodor. 
+60 Hodor GROOT hodor, hodor hodor hodor hodor hodor! 
+61 Hodor hodor GROOT hodor, hodor hodor, hodor. 
+62 Hodor hodor. 
+63 Hodor hodor GROOT! 
+64 Hodor hodor hodor? 
+65 Hodor! 
+66 Hodor hodor, hodor hodor hodor! 
+67 Hodor. 
+68 Hodor hodor; hodor hodor, hodor. 
+69 Hodor hodor hodor! 
+
+taula de frequencies ?
+hodor 170
+Hodor 69
+GROOT 18
+
+substitueix "Hodor" per "Groot"
+
+contingut ?
+1 Groot! 
+2 Groot hodor, hodor; hodor GROOT hodor, hodor hodor; hodor GROOT hodor, hodor hodor! 
+3 Groot hodor GROOT hodor, hodor hodor hodor? 
+4 Groot hodor GROOT! 
+5 Groot hodor; hodor hodor hodor. 
+6 Groot, hodor GROOT hodor, hodor hodor. 
+7 Groot hodor hodor. 
+8 Groot. 
+9 Groot, hodor, hodor. 
+10 Groot hodor hodor hodor. 
+11 Groot! 
+12 Groot hodor, GROOT hodor, hodor hodor. 
+13 Groot hodor hodor hodor? 
+14 Groot. 
+15 Groot hodor hodor, hodor. 
+16 Groot hodor? 
+17 Groot hodor hodor hodor hodor. 
+18 Groot hodor hodor hodor, hodor, hodor hodor. 
+19 Groot hodor hodor. 
+20 Groot hodor hodor hodor hodor? 
+21 Groot, hodor hodor hodor. 
+22 Groot hodor GROOT! 
+23 Groot hodor; hodor hodor! 
+24 Groot, hodor. 
+25 Groot. 
+26 Groot, GROOT hodor, hodor hodor. 
+27 Groot hodor hodor. 
+28 Groot, hodor. 
+29 Groot. 
+30 Groot, hodor; hodor hodor; hodor hodor, hodor. 
+31 Groot hodor, hodor, hodor hodor. 
+32 Groot hodor; hodor hodor. 
+33 Groot, hodor. 
+34 Groot hodor hodor. 
+35 Groot hodor hodor. 
+36 Groot. 
+37 Groot hodor, hodor. 
+38 Groot hodor hodor hodor. 
+39 Groot. 
+40 Groot GROOT hodor, hodor hodor. 
+41 Groot hodor GROOT hodor, hodor GROOT hodor, hodor hodor! 
+42 Groot! 
+43 Groot hodor, hodor hodor hodor! 
+44 Groot! 
+45 Groot hodor, hodor. 
+46 Groot hodor hodor! 
+47 Groot hodor GROOT! 
+48 Groot hodor. 
+49 Groot hodor GROOT hodor, hodor hodor. 
+50 Groot! 
+51 Groot hodor, hodor; hodor hodor, hodor. 
+52 Groot hodor, hodor, hodor hodor. 
+53 Groot hodor hodor hodor, hodor. 
+54 Groot hodor? 
+55 Groot. 
+56 Groot hodor hodor. 
+57 Groot. 
+58 Groot GROOT hodor, hodor hodor hodor hodor? 
+59 Groot hodor hodor; hodor GROOT hodor, hodor hodor. 
+60 Groot GROOT hodor, hodor hodor hodor hodor hodor! 
+61 Groot hodor GROOT hodor, hodor hodor, hodor. 
+62 Groot hodor. 
+63 Groot hodor GROOT! 
+64 Groot hodor hodor? 
+65 Groot! 
+66 Groot hodor, hodor hodor hodor! 
+67 Groot. 
+68 Groot hodor; hodor hodor, hodor. 
+69 Groot hodor hodor! 
+
+taula de frequencies ?
+hodor 170
+Groot 69
+GROOT 18
+
+substitueix "hodor" per "groot"
+
+contingut ?
+1 Groot! 
+2 Groot groot, groot; groot GROOT groot, groot groot; groot GROOT groot, groot groot! 
+3 Groot groot GROOT groot, groot groot groot? 
+4 Groot groot GROOT! 
+5 Groot groot; groot groot groot. 
+6 Groot, groot GROOT groot, groot groot. 
+7 Groot groot groot. 
+8 Groot. 
+9 Groot, groot, groot. 
+10 Groot groot groot groot. 
+11 Groot! 
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+14 Groot. 
+15 Groot groot groot, groot. 
+16 Groot groot? 
+17 Groot groot groot groot groot. 
+18 Groot groot groot groot, groot, groot groot. 
+19 Groot groot groot. 
+20 Groot groot groot groot groot? 
+21 Groot, groot groot groot. 
+22 Groot groot GROOT! 
+23 Groot groot; groot groot! 
+24 Groot, groot. 
+25 Groot. 
+26 Groot, GROOT groot, groot groot. 
+27 Groot groot groot. 
+28 Groot, groot. 
+29 Groot. 
+30 Groot, groot; groot groot; groot groot, groot. 
+31 Groot groot, groot, groot groot. 
+32 Groot groot; groot groot. 
+33 Groot, groot. 
+34 Groot groot groot. 
+35 Groot groot groot. 
+36 Groot. 
+37 Groot groot, groot. 
+38 Groot groot groot groot. 
+39 Groot. 
+40 Groot GROOT groot, groot groot. 
+41 Groot groot GROOT groot, groot GROOT groot, groot groot! 
+42 Groot! 
+43 Groot groot, groot groot groot! 
+44 Groot! 
+45 Groot groot, groot. 
+46 Groot groot groot! 
+47 Groot groot GROOT! 
+48 Groot groot. 
+49 Groot groot GROOT groot, groot groot. 
+50 Groot! 
+51 Groot groot, groot; groot groot, groot. 
+52 Groot groot, groot, groot groot. 
+53 Groot groot groot groot, groot. 
+54 Groot groot? 
+55 Groot. 
+56 Groot groot groot. 
+57 Groot. 
+58 Groot GROOT groot, groot groot groot groot? 
+59 Groot groot groot; groot GROOT groot, groot groot. 
+60 Groot GROOT groot, groot groot groot groot groot! 
+61 Groot groot GROOT groot, groot groot, groot. 
+62 Groot groot. 
+63 Groot groot GROOT! 
+64 Groot groot groot? 
+65 Groot! 
+66 Groot groot, groot groot groot! 
+67 Groot. 
+68 Groot groot; groot groot, groot. 
+69 Groot groot groot! 
+
+taula de frequencies ?
+groot 170
+Groot 69
+GROOT 18
+
+triar text {Hodor}
+error
+
