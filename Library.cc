@@ -174,7 +174,9 @@ Book Library::getBook() {
 
 bool Library::quoteExists(string id) {
     map<string, Quote>::const_iterator it = quoteCollection.find(id);
-    return it != quoteCollection.end();
+    return it != quoteCollection.end() and
+            !it->second.getAuthor().empty() and
+            !it->second.getBookTitle().empty();
 }
 
 Quote Library::getQuote(string id) {

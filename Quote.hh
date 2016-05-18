@@ -64,31 +64,31 @@ public:
         \pre An implicit Quote
         \post Returns quoteReference
     */
-    string getReference();
+    string getReference() const;
 
     /** @brief Return Quote's author name
         \pre An implicit Quote
         \post Returns bookAuthor
     */
-    string getAuthor();
+    string getAuthor() const;
 
     /** @brief Return Quote's book title
         \pre An implicit Quote
         \post Returns bookTitle
     */
-    string getBookTitle();
+    string getBookTitle() const;
 
     /** @brief Return Quote start line
         \pre An implicit Quote
         \post Returns quoteStart
     */
-    int getStartLine();
+    int getStartLine() const;
 
     /** @brief Return Quote end line
         \pre An implicit Quote
         \post Returns quoteEnd
     */
-    int getEndLine();
+    int getEndLine() const;
 
     /** @brief Update the start/end line values
         \param start: Start line

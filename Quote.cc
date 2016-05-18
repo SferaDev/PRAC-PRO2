@@ -22,23 +22,23 @@ Quote::~Quote() {
     // no-op
 }
 
-string Quote::getReference() {
+string Quote::getReference() const {
     return quoteReference;
 }
 
-string Quote::getAuthor() {
+string Quote::getAuthor() const {
     return quoteAuthor;
 }
 
-string Quote::getBookTitle() {
+string Quote::getBookTitle() const {
     return quoteBook;
 }
 
-int Quote::getStartLine() {
+int Quote::getStartLine() const {
     return quoteStart;
 }
 
-int Quote::getEndLine() {
+int Quote::getEndLine() const {
     return quoteEnd;
 }
 
