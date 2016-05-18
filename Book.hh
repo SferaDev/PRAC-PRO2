@@ -18,9 +18,7 @@
 #include <sstream>
 #include <queue>
 #include <vector>
-
 #endif
-
 using namespace std;
 
 /**

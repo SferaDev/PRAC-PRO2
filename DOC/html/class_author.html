@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -90,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Data model for Authors (autors) from <a class="el" href="class_library.html" title="Main storage of all the Books, Authors and Quotes. ">Library</a>.  
+<p>Data model for Authors (autors) from <a class="el" href="class_library.html" title="Main storage of each Book, Author and Quote. ">Library</a>.  
  <a href="class_author.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -111,19 +112,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a73814ef0d8d840880415c4020a4d5bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the number of lines of the implicit author.  <a href="#a73814ef0d8d840880415c4020a4d5bf9">More...</a><br /></td></tr>
 <tr class="separator:a73814ef0d8d840880415c4020a4d5bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af12d32bb751a9ac3e1508631e4d8fb8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#af12d32bb751a9ac3e1508631e4d8fb8e">incrementWordCount</a> (int value)</td></tr>
-<tr class="memdesc:af12d32bb751a9ac3e1508631e4d8fb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the number of the words of the implicit author.  <a href="#af12d32bb751a9ac3e1508631e4d8fb8e">More...</a><br /></td></tr>
+<tr class="memdesc:af12d32bb751a9ac3e1508631e4d8fb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the number of words of the implicit author.  <a href="#af12d32bb751a9ac3e1508631e4d8fb8e">More...</a><br /></td></tr>
 <tr class="separator:af12d32bb751a9ac3e1508631e4d8fb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced7597c300bb102982bac734fb8f6f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#aced7597c300bb102982bac734fb8f6f9">getBookCount</a> ()</td></tr>
+<tr class="memdesc:aced7597c300bb102982bac734fb8f6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of books of the implicit author.  <a href="#aced7597c300bb102982bac734fb8f6f9">More...</a><br /></td></tr>
+<tr class="separator:aced7597c300bb102982bac734fb8f6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd7230d9c634ae6af00ab24ec50c75f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#acdd7230d9c634ae6af00ab24ec50c75f">getLineCount</a> ()</td></tr>
+<tr class="memdesc:acdd7230d9c634ae6af00ab24ec50c75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of lines of all books of the implicit author.  <a href="#acdd7230d9c634ae6af00ab24ec50c75f">More...</a><br /></td></tr>
+<tr class="separator:acdd7230d9c634ae6af00ab24ec50c75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9c980db86b65b79624c4df671c1001"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a7f9c980db86b65b79624c4df671c1001">getWordCount</a> ()</td></tr>
+<tr class="memdesc:a7f9c980db86b65b79624c4df671c1001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of words of all books of the implicit author.  <a href="#a7f9c980db86b65b79624c4df671c1001">More...</a><br /></td></tr>
+<tr class="separator:a7f9c980db86b65b79624c4df671c1001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5836c0e00e740d4e9e9049e94f032cc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a5836c0e00e740d4e9e9049e94f032cc3">addBook</a> (string title)</td></tr>
 <tr class="memdesc:a5836c0e00e740d4e9e9049e94f032cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> to <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a5836c0e00e740d4e9e9049e94f032cc3">More...</a><br /></td></tr>
 <tr class="separator:a5836c0e00e740d4e9e9049e94f032cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8605dbbab320ca251f3c64e782cf40b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a8605dbbab320ca251f3c64e782cf40b3">addQuote</a> (string reference)</td></tr>
-<tr class="memdesc:a8605dbbab320ca251f3c64e782cf40b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> to <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a8605dbbab320ca251f3c64e782cf40b3">More...</a><br /></td></tr>
+<tr class="memdesc:a8605dbbab320ca251f3c64e782cf40b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> to <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a8605dbbab320ca251f3c64e782cf40b3">More...</a><br /></td></tr>
 <tr class="separator:a8605dbbab320ca251f3c64e782cf40b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48c2d5ae47d521bf5d4aa638bb86976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#ad48c2d5ae47d521bf5d4aa638bb86976">deleteBook</a> (string title)</td></tr>
 <tr class="memdesc:ad48c2d5ae47d521bf5d4aa638bb86976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> from <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#ad48c2d5ae47d521bf5d4aa638bb86976">More...</a><br /></td></tr>
 <tr class="separator:ad48c2d5ae47d521bf5d4aa638bb86976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41078931f76f02641f92521a3da5b286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a41078931f76f02641f92521a3da5b286">deleteQuote</a> (string reference)</td></tr>
-<tr class="memdesc:a41078931f76f02641f92521a3da5b286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> from <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a41078931f76f02641f92521a3da5b286">More...</a><br /></td></tr>
+<tr class="memdesc:a41078931f76f02641f92521a3da5b286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> from <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a41078931f76f02641f92521a3da5b286">More...</a><br /></td></tr>
 <tr class="separator:a41078931f76f02641f92521a3da5b286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81435140eb694eb7ed54ea567aa38984"><td class="memItemLeft" align="right" valign="top">set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a81435140eb694eb7ed54ea567aa38984">getAuthorQuotes</a> ()</td></tr>
 <tr class="memdesc:a81435140eb694eb7ed54ea567aa38984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the author quotes.  <a href="#a81435140eb694eb7ed54ea567aa38984">More...</a><br /></td></tr>
@@ -160,9 +170,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad505d991f439d28c4831828952e01fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Data model for Authors (autors) from <a class="el" href="class_library.html" title="Main storage of all the Books, Authors and Quotes. ">Library</a>. </p>
+<div class="textblock"><p>Data model for Authors (autors) from <a class="el" href="class_library.html" title="Main storage of each Book, Author and Quote. ">Library</a>. </p>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00021">21</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00020">20</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5f7059590a8e823fe0713faf66126b17"></a>
 <div class="memitem">
@@ -295,7 +305,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Increments the number of the words of the implicit author. </p>
+<p>Increments the number of words of the implicit author. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>Number of words of news books </td></tr>
@@ -304,6 +314,63 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>The totalWords of the implicit author increased </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aced7597c300bb102982bac734fb8f6f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Author::getBookCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of books of the implicit author. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the totalBooks of the implicit author </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acdd7230d9c634ae6af00ab24ec50c75f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Author::getLineCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of lines of all books of the implicit author. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the totalLines of the implicit author </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f9c980db86b65b79624c4df671c1001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Author::getWordCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of words of all books of the implicit author. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns the totalWords of the implicit author </dd></dl>
 
 </div>
 </div>
@@ -347,10 +414,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> to <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>. </p>
+<p>Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> to <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td>ID of the <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> </td></tr>
+    <tr><td class="paramname">reference</td><td>ID of the <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,10 +466,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> from <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>. </p>
+<p>Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> from <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td>ID of the <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> </td></tr>
+    <tr><td class="paramname">reference</td><td>ID of the <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -508,7 +575,7 @@ Private Attributes</h2></td></tr>
 
 <p>Name of the author. </p>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00026">26</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00025">25</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>
@@ -532,7 +599,7 @@ Private Attributes</h2></td></tr>
 
 <p>Number of total books of the author. </p>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00029">29</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00028">28</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>
@@ -556,7 +623,7 @@ Private Attributes</h2></td></tr>
 
 <p>Number of total lines of all of books of the author. </p>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00032">32</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00031">31</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>
@@ -580,7 +647,7 @@ Private Attributes</h2></td></tr>
 
 <p>Number of total words of all of books of the author. </p>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00035">35</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00034">34</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>
@@ -610,7 +677,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00040">40</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00039">39</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>
@@ -640,7 +707,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_author_8hh_source.html#l00045">45</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
+<p>Definition at line <a class="el" href="_author_8hh_source.html#l00044">44</a> of file <a class="el" href="_author_8hh_source.html">Author.hh</a>.</p>
 
 </div>
 </div>

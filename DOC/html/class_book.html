@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -90,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Data model for Books (textos) from <a class="el" href="class_library.html" title="Main storage of all the Books, Authors and Quotes. ">Library</a>.  
+<p>Data model for Books (textos) from <a class="el" href="class_library.html" title="Main storage of each Book, Author and Quote. ">Library</a>.  
  <a href="class_book.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -126,6 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af3ceb5ae5d66adf4d594cac8d29294fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds if a word is on the content of the implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>.  <a href="#af3ceb5ae5d66adf4d594cac8d29294fc">More...</a><br /></td></tr>
 <tr class="separator:af3ceb5ae5d66adf4d594cac8d29294fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec01aa24087b313f36cc0fe3c4664f84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#aec01aa24087b313f36cc0fe3c4664f84">isFrequencyDirty</a> ()</td></tr>
+<tr class="memdesc:aec01aa24087b313f36cc0fe3c4664f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells if a dirtyFrequency is true or false.  <a href="#aec01aa24087b313f36cc0fe3c4664f84">More...</a><br /></td></tr>
 <tr class="separator:aec01aa24087b313f36cc0fe3c4664f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d232eaeb4207707d77bc18e6dd467cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#a8d232eaeb4207707d77bc18e6dd467cd">generateFrequencyTable</a> ()</td></tr>
 <tr class="memdesc:a8d232eaeb4207707d77bc18e6dd467cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the FrequencyTable Vector.  <a href="#a8d232eaeb4207707d77bc18e6dd467cd">More...</a><br /></td></tr>
@@ -137,10 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb5eaff231b512901cac3e3220ee2960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lines from start to end.  <a href="#acb5eaff231b512901cac3e3220ee2960">More...</a><br /></td></tr>
 <tr class="separator:acb5eaff231b512901cac3e3220ee2960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97c2374d514327be5d8f74abd0ff4ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#a97c2374d514327be5d8f74abd0ff4ea3">addQuote</a> (string reference)</td></tr>
-<tr class="memdesc:a97c2374d514327be5d8f74abd0ff4ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> to <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>.  <a href="#a97c2374d514327be5d8f74abd0ff4ea3">More...</a><br /></td></tr>
+<tr class="memdesc:a97c2374d514327be5d8f74abd0ff4ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> to <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>.  <a href="#a97c2374d514327be5d8f74abd0ff4ea3">More...</a><br /></td></tr>
 <tr class="separator:a97c2374d514327be5d8f74abd0ff4ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0829e0eaf0769c2bdbd149d2cf2ce20b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#a0829e0eaf0769c2bdbd149d2cf2ce20b">deleteQuote</a> (string reference)</td></tr>
-<tr class="memdesc:a0829e0eaf0769c2bdbd149d2cf2ce20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> from <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>.  <a href="#a0829e0eaf0769c2bdbd149d2cf2ce20b">More...</a><br /></td></tr>
+<tr class="memdesc:a0829e0eaf0769c2bdbd149d2cf2ce20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> from <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>.  <a href="#a0829e0eaf0769c2bdbd149d2cf2ce20b">More...</a><br /></td></tr>
 <tr class="separator:a0829e0eaf0769c2bdbd149d2cf2ce20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3fa87ab1c8eb2186a4c2e1e541f368"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#acc3fa87ab1c8eb2186a4c2e1e541f368">findExpression</a> (string query, set&lt; int &gt; &amp;pos)</td></tr>
 <tr class="memdesc:acc3fa87ab1c8eb2186a4c2e1e541f368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the lines that keep the logical expression.  <a href="#acc3fa87ab1c8eb2186a4c2e1e541f368">More...</a><br /></td></tr>
@@ -185,6 +187,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:aa9035db1c21cf61eb3af84ad69829069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Content dictionary with frequencies in correct order.  <a href="#aa9035db1c21cf61eb3af84ad69829069">More...</a><br /></td></tr>
 <tr class="separator:aa9035db1c21cf61eb3af84ad69829069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1df1050750f0605efdfab51b86c0765"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#ad1df1050750f0605efdfab51b86c0765">dirtyFrequency</a></td></tr>
+<tr class="memdesc:ad1df1050750f0605efdfab51b86c0765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells if we generate the frequency table.  <a href="#ad1df1050750f0605efdfab51b86c0765">More...</a><br /></td></tr>
 <tr class="separator:ad1df1050750f0605efdfab51b86c0765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f1e0b30a0ad17606976556cab45a23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_book.html#a36f1e0b30a0ad17606976556cab45a23">bookWords</a></td></tr>
 <tr class="memdesc:a36f1e0b30a0ad17606976556cab45a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>'s collection.  <a href="#a36f1e0b30a0ad17606976556cab45a23">More...</a><br /></td></tr>
@@ -194,9 +197,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a370478eab144c20de936e1b68923e1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Data model for Books (textos) from <a class="el" href="class_library.html" title="Main storage of all the Books, Authors and Quotes. ">Library</a>. </p>
+<div class="textblock"><p>Data model for Books (textos) from <a class="el" href="class_library.html" title="Main storage of each Book, Author and Quote. ">Library</a>. </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00024">24</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00028">28</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2eac9e235a08763158f78533f7a83e1f"></a>
 <div class="memitem">
@@ -427,7 +430,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The wordDictionary of the implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> and a word that we want to find </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The wordFrequencyMap of the implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> and a word that we want to find </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Returns true if the word is on the content of the implicit book </dd></dl>
 
 </div>
@@ -444,6 +447,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tells if a dirtyFrequency is true or false. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The dirtyFrequency of the implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns true if the dirtyFrequency of the implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> is true </dd></dl>
 
 </div>
 </div>
@@ -529,7 +536,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> to <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>. </p>
+<p>Adds new <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> to <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>bookQuotes has a new element </dd></dl>
 
@@ -549,7 +556,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Books. ">Quote</a> from <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>. </p>
+<p>Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> from <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>bookQuotes has one less element </dd></dl>
 
@@ -760,7 +767,7 @@ Private Attributes</h2></td></tr>
 <p>Name of the author. </p>
 <p>The ID on parent authorCollection </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00029">29</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00033">33</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -785,7 +792,7 @@ Private Attributes</h2></td></tr>
 <p>Name of the book. </p>
 <p>The ID of current element </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00033">33</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00037">37</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -810,7 +817,7 @@ Private Attributes</h2></td></tr>
 <p>Content of the book. </p>
 <p>The line ID is the position and the value is the content of the book </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00037">37</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00041">41</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -841,7 +848,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00043">43</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00047">47</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -872,7 +879,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00049">49</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00053">53</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -896,7 +903,7 @@ Private Attributes</h2></td></tr>
 
 <p>Content dictionary with frequencies in correct order. </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00052">52</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00056">56</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -918,7 +925,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00054">54</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Tells if we generate the frequency table. </p>
+
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00059">59</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -942,7 +951,7 @@ Private Attributes</h2></td></tr>
 
 <p>Size of <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a>'s collection. </p>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00057">57</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00062">62</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>
@@ -972,7 +981,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_book_8hh_source.html#l00062">62</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
+<p>Definition at line <a class="el" href="_book_8hh_source.html#l00067">67</a> of file <a class="el" href="_book_8hh_source.html">Book.hh</a>.</p>
 
 </div>
 </div>

@@ -16,7 +16,7 @@ using namespace std;
 
 /**
   @class Quote
-  @brief Data model for Quotes (cites) from Books.
+  @brief Data model for Quotes (cites) from Book.
 */
 class Quote {
 

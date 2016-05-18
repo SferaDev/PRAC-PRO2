@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['findexpression',['findExpression',['../class_book.html#acc3fa87ab1c8eb2186a4c2e1e541f368',1,'Book']]],
-  ['findword',['findWord',['../class_book.html#af3ceb5ae5d66adf4d594cac8d29294fc',1,'Book']]]
+  ['endswith',['endsWith',['../namespaceutils.html#a57772e91d08481b38c47cda04479e169',1,'utils']]]
 ];

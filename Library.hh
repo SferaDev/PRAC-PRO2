@@ -22,7 +22,7 @@ using namespace std;
 
 /**
   @class Library
-  @brief Main storage of all the Books, Authors and Quotes.
+  @brief Main storage of each Book, Author and Quote.
 */
 class Library {
 

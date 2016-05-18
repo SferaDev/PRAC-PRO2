@@ -19,7 +19,13 @@ void \hyperlink{class_author_afa8dc68382f3e9828112ed440c3677d3}{increment\+Book\
 void \hyperlink{class_author_a73814ef0d8d840880415c4020a4d5bf9}{increment\+Line\+Count} (int value)
 \begin{DoxyCompactList}\small\item\em Increments the number of lines of the implicit author. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{increment\+Word\+Count} (int value)
-\begin{DoxyCompactList}\small\item\em Increments the number of the words of the implicit author. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Increments the number of words of the implicit author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_aced7597c300bb102982bac734fb8f6f9}{get\+Book\+Count} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of books of the implicit author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_acdd7230d9c634ae6af00ab24ec50c75f}{get\+Line\+Count} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of lines of all books of the implicit author. \end{DoxyCompactList}\item 
+int \hyperlink{class_author_a7f9c980db86b65b79624c4df671c1001}{get\+Word\+Count} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of words of all books of the implicit author. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{add\+Book} (string title)
 \begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_book}{Book} to \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a8605dbbab320ca251f3c64e782cf40b3}{add\+Quote} (string reference)
@@ -56,7 +62,7 @@ set$<$ string $>$ \hyperlink{class_author_ad505d991f439d28c4831828952e01fb6}{aut
 \subsection{Detailed Description}
 Data model for Authors (autors) from \hyperlink{class_library}{Library}. 
 
-Definition at line 21 of file Author.\+hh.
+Definition at line 20 of file Author.\+hh.
 
 
 
@@ -173,7 +179,7 @@ The total\+Lines of the implicit author increased
 )}\hypertarget{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{}\label{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}
 
 
-Increments the number of the words of the implicit author. 
+Increments the number of words of the implicit author. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -185,6 +191,57 @@ An implicit \hyperlink{class_author}{Author}
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 The total\+Words of the implicit author increased 
+\end{DoxyPostcond}
+\index{Author@{Author}!get\+Book\+Count@{get\+Book\+Count}}
+\index{get\+Book\+Count@{get\+Book\+Count}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Book\+Count()}{getBookCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Book\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_author_aced7597c300bb102982bac734fb8f6f9}{}\label{class_author_aced7597c300bb102982bac734fb8f6f9}
+
+
+Returns the number of books of the implicit author. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the total\+Books of the implicit author 
+\end{DoxyPostcond}
+\index{Author@{Author}!get\+Line\+Count@{get\+Line\+Count}}
+\index{get\+Line\+Count@{get\+Line\+Count}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Line\+Count()}{getLineCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Line\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_author_acdd7230d9c634ae6af00ab24ec50c75f}{}\label{class_author_acdd7230d9c634ae6af00ab24ec50c75f}
+
+
+Returns the number of lines of all books of the implicit author. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the total\+Lines of the implicit author 
+\end{DoxyPostcond}
+\index{Author@{Author}!get\+Word\+Count@{get\+Word\+Count}}
+\index{get\+Word\+Count@{get\+Word\+Count}!Author@{Author}}
+\subsubsection[{\texorpdfstring{get\+Word\+Count()}{getWordCount()}}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Word\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_author_a7f9c980db86b65b79624c4df671c1001}{}\label{class_author_a7f9c980db86b65b79624c4df671c1001}
+
+
+Returns the number of words of all books of the implicit author. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_author}{Author} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns the total\+Words of the implicit author 
 \end{DoxyPostcond}
 \index{Author@{Author}!add\+Book@{add\+Book}}
 \index{add\+Book@{add\+Book}!Author@{Author}}
@@ -354,7 +411,7 @@ Name of the author.
 
 
 
-Definition at line 26 of file Author.\+hh.
+Definition at line 25 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Books@{total\+Books}}
 \index{total\+Books@{total\+Books}!Author@{Author}}
@@ -365,7 +422,7 @@ Number of total books of the author.
 
 
 
-Definition at line 29 of file Author.\+hh.
+Definition at line 28 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Lines@{total\+Lines}}
 \index{total\+Lines@{total\+Lines}!Author@{Author}}
@@ -376,7 +433,7 @@ Number of total lines of all of books of the author.
 
 
 
-Definition at line 32 of file Author.\+hh.
+Definition at line 31 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Words@{total\+Words}}
 \index{total\+Words@{total\+Words}!Author@{Author}}
@@ -387,7 +444,7 @@ Number of total words of all of books of the author.
 
 
 
-Definition at line 35 of file Author.\+hh.
+Definition at line 34 of file Author.\+hh.
 
 \index{Author@{Author}!author\+Books@{author\+Books}}
 \index{author\+Books@{author\+Books}!Author@{Author}}
@@ -403,7 +460,7 @@ Ordered collection of books.
 \end{DoxyParams}
 
 
-Definition at line 40 of file Author.\+hh.
+Definition at line 39 of file Author.\+hh.
 
 \index{Author@{Author}!author\+Quotes@{author\+Quotes}}
 \index{author\+Quotes@{author\+Quotes}!Author@{Author}}
@@ -419,7 +476,7 @@ Ordered collection of quotes.
 \end{DoxyParams}
 
 
-Definition at line 45 of file Author.\+hh.
+Definition at line 44 of file Author.\+hh.
 
 
 

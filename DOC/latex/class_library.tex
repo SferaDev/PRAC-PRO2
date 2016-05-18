@@ -2,7 +2,7 @@
 \label{class_library}\index{Library@{Library}}
 
 
-Main storage of all the Books, Authors and Quotes.  
+Main storage of each \hyperlink{class_book}{Book}, \hyperlink{class_author}{Author} and \hyperlink{class_quote}{Quote}.  
 
 
 \subsection*{Public Member Functions}
@@ -20,7 +20,7 @@ void \hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{select\+Book} (
 \begin{DoxyCompactList}\small\item\em Selects a book from the collection. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{delete\+Book} ()
 \begin{DoxyCompactList}\small\item\em Deletes a book from the collection. \end{DoxyCompactList}\item 
-void \hyperlink{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{replace\+Words\+On\+Book} (string input)
+void \hyperlink{class_library_abf34dcdd5eb2a7c4127e8a50db814750}{replace\+Words\+On\+Book} (string old\+Word, string new\+Word)
 \begin{DoxyCompactList}\small\item\em Replaces a word with anopther one in a book from the collection. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aac2d7d4645a2adda29a0064bc66e6143}{insert\+Quote} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Inserts a new quote (current\+Book) to the library. \end{DoxyCompactList}\item 
@@ -62,9 +62,9 @@ map$<$ string, \hyperlink{class_book}{Book} $>$\+::iterator \hyperlink{class_lib
 
 
 \subsection{Detailed Description}
-Main storage of all the Books, Authors and Quotes. 
+Main storage of each \hyperlink{class_book}{Book}, \hyperlink{class_author}{Author} and \hyperlink{class_quote}{Quote}. 
 
-Definition at line 25 of file Library.\+hh.
+Definition at line 27 of file Library.\+hh.
 
 
 
@@ -189,11 +189,12 @@ The implicit library without the previous current\+Book
 \end{DoxyPostcond}
 \index{Library@{Library}!replace\+Words\+On\+Book@{replace\+Words\+On\+Book}}
 \index{replace\+Words\+On\+Book@{replace\+Words\+On\+Book}!Library@{Library}}
-\subsubsection[{\texorpdfstring{replace\+Words\+On\+Book(string input)}{replaceWordsOnBook(string input)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::replace\+Words\+On\+Book (
+\subsubsection[{\texorpdfstring{replace\+Words\+On\+Book(string old\+Word, string new\+Word)}{replaceWordsOnBook(string oldWord, string newWord)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::replace\+Words\+On\+Book (
 \begin{DoxyParamCaption}
-\item[{string}]{input}
+\item[{string}]{old\+Word, }
+\item[{string}]{new\+Word}
 \end{DoxyParamCaption}
-)}\hypertarget{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}{}\label{class_library_a6d34fd014c959f8c13d9db2edf5bb99a}
+)}\hypertarget{class_library_abf34dcdd5eb2a7c4127e8a50db814750}{}\label{class_library_abf34dcdd5eb2a7c4127e8a50db814750}
 
 
 Replaces a word with anopther one in a book from the collection. 
@@ -465,7 +466,7 @@ Collection of Books.
 \end{DoxyParams}
 
 
-Definition at line 33 of file Library.\+hh.
+Definition at line 35 of file Library.\+hh.
 
 \index{Library@{Library}!author\+Collection@{author\+Collection}}
 \index{author\+Collection@{author\+Collection}!Library@{Library}}
@@ -483,7 +484,7 @@ Collection of Authors.
 \end{DoxyParams}
 
 
-Definition at line 39 of file Library.\+hh.
+Definition at line 41 of file Library.\+hh.
 
 \index{Library@{Library}!quote\+Collection@{quote\+Collection}}
 \index{quote\+Collection@{quote\+Collection}!Library@{Library}}
@@ -501,7 +502,7 @@ Collection of Quotes.
 \end{DoxyParams}
 
 
-Definition at line 45 of file Library.\+hh.
+Definition at line 47 of file Library.\+hh.
 
 \index{Library@{Library}!quote\+Identifiers@{quote\+Identifiers}}
 \index{quote\+Identifiers@{quote\+Identifiers}!Library@{Library}}
@@ -519,7 +520,7 @@ Identifier of Quotes.
 \end{DoxyParams}
 
 
-Definition at line 51 of file Library.\+hh.
+Definition at line 53 of file Library.\+hh.
 
 \index{Library@{Library}!current\+Book@{current\+Book}}
 \index{current\+Book@{current\+Book}!Library@{Library}}
@@ -530,7 +531,7 @@ Current book iterator.
 
 
 
-Definition at line 54 of file Library.\+hh.
+Definition at line 56 of file Library.\+hh.
 
 
 

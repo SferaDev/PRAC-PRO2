@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['_7eauthor',['~Author',['../class_author.html#ae1d4db056b321487cf7c07a2045d4a2d',1,'Author']]],
-  ['_7ebook',['~Book',['../class_book.html#a0ba8eceb34ea1301bc08942e37824767',1,'Book']]],
-  ['_7elibrary',['~Library',['../class_library.html#a62120f28a9b50cc5b151d868e42ab936',1,'Library']]],
-  ['_7equote',['~Quote',['../class_quote.html#a9b4324f3ee83827f2445177c8301482b',1,'Quote']]]
+  ['selectbook',['selectBook',['../class_library.html#a6dd541a183a89a4d35a80834ed9d8d71',1,'Library']]],
+  ['setcontent',['setContent',['../class_quote.html#ab3af36f8b5649b115fca7eecbb294a59',1,'Quote']]],
+  ['setquotelines',['setQuoteLines',['../class_quote.html#a211e2593b1ef18dc7fd4a5da87384fa1',1,'Quote']]],
+  ['startswith',['startsWith',['../namespaceutils.html#ae840ea1b4ad4ce23c2b48158ac75d557',1,'utils']]],
+  ['stringuppercase',['stringUppercase',['../namespaceutils.html#a4cc31521e740c9e31b4bfa8ee85eff46',1,'utils']]]
 ];
