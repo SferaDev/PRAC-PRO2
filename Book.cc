@@ -279,7 +279,7 @@ void Book::printLinesConsecutiveWords(string query) {
 
 void Book::printSelectLines(int start, int end) {
     if ((end < start) or (start < 1) or (end > bookContent.size())) {
-        cout << "error" << endl;
+        utils::printError();
         return;
     }
     for (int i = start; i <= end; ++i) {

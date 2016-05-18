@@ -7,6 +7,7 @@
 #define PRO2_PRAC_UTILS_HH
 
 #ifndef NO_DIAGRAM
+#include <iostream>
 #include <string>
 #include <sstream>
 #endif
@@ -77,6 +78,9 @@ namespace utils {
         \post The referenced string has all the punctuation marks correctly placed without extra spaces
     */
     void formatString(string& query);
+
+    /** @brief Prints an error using the correct formatting */
+    void printError();
 }
 
 #endif //PRO2_PRAC_UTILS_HH

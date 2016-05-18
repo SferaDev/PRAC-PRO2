@@ -65,4 +65,8 @@ namespace utils {
             pos = query.find_first_of(".!?,;:", pos + 1);
         }
     }
+
+    void printError() {
+        cout << "error" << endl;
+    }
 }

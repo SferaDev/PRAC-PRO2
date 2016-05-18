@@ -68,31 +68,31 @@ void actionQuery(Library& library, string input) {
     } else if (utils::startsWith(input, QUERY_CURRENT_AUTHOR)) {
         if (library.isBookSelected())
             cout << library.getBook().getAuthor() << endl;
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_CONTENT)) {
         if (library.isBookSelected())
             library.getBook().printAllLines();
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_INFO)) {
         if (library.isBookSelected())
             library.printCurrentInformation();
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_LINES)) {
         if (library.isBookSelected())
             cout << library.getBook().getLineCount() << endl;
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_WORDS)) {
         if (library.isBookSelected())
             cout << library.getBook().getWordCount() << endl;
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_FREQUENCY)) {
         if (library.isBookSelected())
             library.getBook().printFrequencyTable();
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_CURRENT_QUOTES)) {
         if (library.isBookSelected())
             library.printCurrentQuotes();
-        else cout << "error" << endl;
+        else utils::printError();
     } else if (utils::startsWith(input, QUERY_QUOTES_ALL)) {
         library.printQuotes();
     }
@@ -156,11 +156,11 @@ void readActions(Library& library) {
                 Quote quote = library.getQuote(reference);
                 cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
                 quote.printInformation(false, true);
-            } else cout << "error" << endl;
+            } else utils::printError();
         } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
             if (library.isBookSelected()) {
                 actionExpression(library, input);
-            } else cout << "error" << endl;
+            } else utils::printError();
         } else if (utils::endsWith(input, ACTION_QUERY)) {
             actionQuery(library, input);
         }

@@ -26,7 +26,7 @@ void Library::readBook(string title, string authorName) {
     if (bookIt == bookCollection.end()) {
         bookCollection[authorName + ':' + title] = book;
     } else {
-        cout << "error" << endl;
+        utils::printError();
         return;
     }
     // Update Author acc to its ID (if it doesn't exist create new one)
@@ -80,7 +80,7 @@ void Library::selectBook(string query) {
     if (isBookSelected()) {
         if (currentBook->second.isFrequencyDirty())
             currentBook->second.generateFrequencyTable();
-    } else cout << "error" << endl;
+    } else utils::printError();
 }
 
 void Library::deleteBook() {
@@ -98,19 +98,19 @@ void Library::deleteBook() {
         bookCollection.erase(currentBook);
         // Reset the currentBook iterator
         currentBook = bookCollection.end();
-    } else cout << "error" << endl;
+    } else utils::printError();
 }
 
 void Library::replaceWordsOnBook(string oldWord, string newWord) {
     if (isBookSelected()) {
         currentBook->second.replaceWords(oldWord, newWord);
-    } else cout << "error" << endl;
+    } else utils::printError();
 }
 
 void Library::insertQuote(int start, int end) {
     // Error conditions if invalid start/end is given
     if (!isBookSelected() or (end < start) or (start < 1) or (end > currentBook->second.getLineCount())) {
-        cout << "error" << endl;
+        utils::printError();
         return;
     }
     // Assign new Reference (check what was the last one)
@@ -127,7 +127,7 @@ void Library::insertQuote(int start, int end) {
                     and it->second.getAuthor() == currentBook->second.getAuthor()
                     and it->second.getStartLine() == start
                     and it->second.getEndLine() == end) {
-                cout << "error" << endl;
+                utils::printError();
                 return;
             }
         }
@@ -155,7 +155,7 @@ void Library::deleteQuote(string reference) {
     map<string, Quote>::iterator it = quoteCollection.find(reference);
     // If reference doesn't exist: error
     if (it == quoteCollection.end()) {
-        cout << "error" << endl;
+        utils::printError();
     } else {
         // Remove Quote from Book
         map<string, Book>::iterator bookIt = bookCollection.find(it->second.getBookTitle());
