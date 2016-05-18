@@ -110,6 +110,7 @@ int Book::getWordCount() {
 }
 
 void Book::replaceWords(string oldWord, string newWord) {
+    if (oldWord == newWord) return;
     // Edit the contents of the book
     map<string, list<int> >::const_iterator it1 = lineDictionary.find(oldWord);
     if (it1 != lineDictionary.end()) {
