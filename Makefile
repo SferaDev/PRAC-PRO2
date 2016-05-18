@@ -1,17 +1,28 @@
+# Compiler: default to g++
 CC = g++
+
+# Compiler flags: PRO2 standards with an appropriate use of "-D_GLIBCXX_DEBUG"
 CFLAGS = -D_JUDGE_ -ansi -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++0x -D_GLIBCXX_DEBUG
-SOURCES = *.cc
+
+# Source files
+SOURCES = program.cc Author.cc Book.cc Library.cc Quote.cc Utils.cc
+
+# Object files: One per each source file (.cc)
 OBJECTS = $(SOURCES: .cc = .o)
+
+# Executable name: defaults to "program.exe"
 EXECUTABLE = program.exe
 
+# Handle the default make command with the program generation
 all: $(EXECUTABLE)
 
 # Configuration for main program compilation
-$(EXECUTABLE):
+# We have a "clean" dependency to ensure no bad objects are in the current build
+$(EXECUTABLE): clean
 	$(CC) $(FLAGS) -c $(SOURCES)
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
-# Configuration to build final tar
+# Configuration to build final judge tar
 jutge:
 	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile jp/jp_*.txt
 
@@ -24,6 +35,7 @@ docs:
 	cd ../../
 
 # Configuration for make clean
+# We use "rm -rf" to recursively delete the files and not prompting the user if they don't exist
 clean:
-	rm *.o
-	rm *.exe
+	rm -rf *.o
+	rm -rf *.exe
