@@ -33,4 +33,6 @@ taula de frequencies ?
 
 triar text {Hodor}
 
+contingut ?
+
 sortir
