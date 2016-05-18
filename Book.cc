@@ -97,15 +97,15 @@ string Book::getTitle() const {
     return bookTitle;
 }
 
-string Book::getAuthor() {
+string Book::getAuthor() const {
     return authorName;
 }
 
-int Book::getLineCount() {
+int Book::getLineCount() const {
     return bookContent.size();
 }
 
-int Book::getWordCount() {
+int Book::getWordCount() const {
     return bookWords;
 }
 

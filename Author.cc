@@ -35,17 +35,17 @@ void Author::incrementWordCount(int value) {
     totalWords += value;
 }
 
-int Author::getBookCount() {
+int Author::getBookCount() const {
     return totalBooks;
 }
 
 
-int Author::getLineCount(){
+int Author::getLineCount() const {
     return totalLines;
 }
 
 
-int Author::getWordCount(){
+int Author::getWordCount() const {
     return totalWords;
 }
     

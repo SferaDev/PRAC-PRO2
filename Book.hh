@@ -103,19 +103,19 @@ public:
         \pre An implicit Book
         \post The name of the author of the implicit book
     */
-    string getAuthor();
+    string getAuthor() const;
 
     /** @brief Returns the number of lines of the implicit Book
         \pre An implicit Book
         \post The number of the lines of the implicit book
     */
-    int getLineCount();
+    int getLineCount() const;
 
     /** @brief Returns the number of words of the implicit Book
         \pre An implicit Book
         \post The words of lines of the implicit book
     */
-    int getWordCount();
+    int getWordCount() const;
 
     /** @brief Replaces one word for another word in the implicit Book
         \param oldWord: Word (old)

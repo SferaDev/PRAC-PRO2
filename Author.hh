@@ -88,19 +88,19 @@ public:
         \pre An implicit Author
         \post Returns the totalBooks of the implicit author
     */
-    int getBookCount();
+    int getBookCount() const;
 
     /** @brief Returns the number of lines of all books of the implicit author
         \pre An implicit Author
         \post Returns the totalLines of the implicit author
     */
-    int getLineCount();
+    int getLineCount() const;
 
     /** @brief Returns the number of words of all books of the implicit author
         \pre An implicit Author
         \post Returns the totalWords of the implicit author
     */
-    int getWordCount();
+    int getWordCount() const;
 
     /** @brief Adds new Book to Author
         \param title: Book title
