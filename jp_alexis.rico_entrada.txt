@@ -25,6 +25,8 @@ contingut ?
 
 taula de frequencies ?
 
+substitueix "hodor" per "hodor"
+
 substitueix "hodor" per "groot"
 
 contingut ?
@@ -34,5 +36,167 @@ taula de frequencies ?
 triar text {Hodor}
 
 contingut ?
+
+taula de frequencies ?
+
+eliminar text
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+
+cites ?
+
+totes cites ?
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+eliminar cita "HH"
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+frases 1 1 ?
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+
+tots textos ?
+
+autor ?
+
+contingut ?
+
+info ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+taula de frequencies ?
+
+cites ?
+
+totes cites ?
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+
+cites ?
+
+totes cites ?
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+eliminar cita "HH"
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+frases 1 1 ?
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+
+tots textos ?
+
+autor ?
+
+contingut ?
+
+info ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+taula de frequencies ?
+
+cites ?
+
+totes cites ?
+
+triar text {hau}
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+
+cites ?
+
+totes cites ?
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+eliminar cita "HH"
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+
+info cita "HH1" ?
+
+info cita "HH2" ?
+
+frases 1 1 ?
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+
+tots textos ?
+
+autor ?
+
+contingut ?
+
+info ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+taula de frequencies ?
+
+cites ?
+
+totes cites ?
 
 sortir

@@ -14,15 +14,15 @@ Data model for Quotes (cites) from \hyperlink{class_book}{Book}.
 \begin{DoxyCompactList}\small\item\em Creates an empty \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 \hyperlink{class_quote_a9b4324f3ee83827f2445177c8301482b}{$\sim$\+Quote} ()
 \begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
-string \hyperlink{class_quote_ac397baacf75c95f29feb609ece9335f9}{get\+Reference} ()
+string \hyperlink{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}{get\+Reference} () const 
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} reference. \end{DoxyCompactList}\item 
-string \hyperlink{class_quote_a609abf6ab14773bafd6445f50b0cefba}{get\+Author} ()
+string \hyperlink{class_quote_ae29855dc6393689277a9cac61f9f56b8}{get\+Author} () const 
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote}\textquotesingle{}s author name. \end{DoxyCompactList}\item 
-string \hyperlink{class_quote_ad571172e7027459ac118b2af4c5abd9e}{get\+Book\+Title} ()
+string \hyperlink{class_quote_a7089d3cf82409928bcdfca5c259facde}{get\+Book\+Title} () const 
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote}\textquotesingle{}s book title. \end{DoxyCompactList}\item 
-int \hyperlink{class_quote_aa6f56a06332e13b6ee7b4261b8c69372}{get\+Start\+Line} ()
+int \hyperlink{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}{get\+Start\+Line} () const 
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} start line. \end{DoxyCompactList}\item 
-int \hyperlink{class_quote_a145fbd53371ddcca8c63aee0feb7c2c9}{get\+End\+Line} ()
+int \hyperlink{class_quote_aec85eae85f33b6e10458821f54f28fc9}{get\+End\+Line} () const 
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} end line. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}{set\+Quote\+Lines} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Update the start/end line values. \end{DoxyCompactList}\item 
@@ -124,11 +124,11 @@ Deletes the implicit quote
 \subsection{Member Function Documentation}
 \index{Quote@{Quote}!get\+Reference@{get\+Reference}}
 \index{get\+Reference@{get\+Reference}!Quote@{Quote}}
-\subsubsection[{\texorpdfstring{get\+Reference()}{getReference()}}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Reference (
+\subsubsection[{\texorpdfstring{get\+Reference() const }{getReference() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Reference (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_quote_ac397baacf75c95f29feb609ece9335f9}{}\label{class_quote_ac397baacf75c95f29feb609ece9335f9}
+) const}\hypertarget{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}{}\label{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}
 
 
 Return \hyperlink{class_quote}{Quote} reference. 
@@ -141,11 +141,11 @@ Returns quote\+Reference
 \end{DoxyPostcond}
 \index{Quote@{Quote}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Quote@{Quote}}
-\subsubsection[{\texorpdfstring{get\+Author()}{getAuthor()}}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Author (
+\subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Author (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_quote_a609abf6ab14773bafd6445f50b0cefba}{}\label{class_quote_a609abf6ab14773bafd6445f50b0cefba}
+) const}\hypertarget{class_quote_ae29855dc6393689277a9cac61f9f56b8}{}\label{class_quote_ae29855dc6393689277a9cac61f9f56b8}
 
 
 Return \hyperlink{class_quote}{Quote}\textquotesingle{}s author name. 
@@ -158,11 +158,11 @@ Returns book\+Author
 \end{DoxyPostcond}
 \index{Quote@{Quote}!get\+Book\+Title@{get\+Book\+Title}}
 \index{get\+Book\+Title@{get\+Book\+Title}!Quote@{Quote}}
-\subsubsection[{\texorpdfstring{get\+Book\+Title()}{getBookTitle()}}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Book\+Title (
+\subsubsection[{\texorpdfstring{get\+Book\+Title() const }{getBookTitle() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Book\+Title (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_quote_ad571172e7027459ac118b2af4c5abd9e}{}\label{class_quote_ad571172e7027459ac118b2af4c5abd9e}
+) const}\hypertarget{class_quote_a7089d3cf82409928bcdfca5c259facde}{}\label{class_quote_a7089d3cf82409928bcdfca5c259facde}
 
 
 Return \hyperlink{class_quote}{Quote}\textquotesingle{}s book title. 
@@ -175,11 +175,11 @@ Returns book\+Title
 \end{DoxyPostcond}
 \index{Quote@{Quote}!get\+Start\+Line@{get\+Start\+Line}}
 \index{get\+Start\+Line@{get\+Start\+Line}!Quote@{Quote}}
-\subsubsection[{\texorpdfstring{get\+Start\+Line()}{getStartLine()}}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+Start\+Line (
+\subsubsection[{\texorpdfstring{get\+Start\+Line() const }{getStartLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+Start\+Line (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_quote_aa6f56a06332e13b6ee7b4261b8c69372}{}\label{class_quote_aa6f56a06332e13b6ee7b4261b8c69372}
+) const}\hypertarget{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}{}\label{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}
 
 
 Return \hyperlink{class_quote}{Quote} start line. 
@@ -192,11 +192,11 @@ Returns quote\+Start
 \end{DoxyPostcond}
 \index{Quote@{Quote}!get\+End\+Line@{get\+End\+Line}}
 \index{get\+End\+Line@{get\+End\+Line}!Quote@{Quote}}
-\subsubsection[{\texorpdfstring{get\+End\+Line()}{getEndLine()}}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+End\+Line (
+\subsubsection[{\texorpdfstring{get\+End\+Line() const }{getEndLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+End\+Line (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_quote_a145fbd53371ddcca8c63aee0feb7c2c9}{}\label{class_quote_a145fbd53371ddcca8c63aee0feb7c2c9}
+) const}\hypertarget{class_quote_aec85eae85f33b6e10458821f54f28fc9}{}\label{class_quote_aec85eae85f33b6e10458821f54f28fc9}
 
 
 Return \hyperlink{class_quote}{Quote} end line. 

@@ -6,6 +6,7 @@ var searchData=
   ['printbooksbyauthor',['printBooksByAuthor',['../class_library.html#a6e22621933979ff5cb4e95de3f54b72c',1,'Library']]],
   ['printcurrentinformation',['printCurrentInformation',['../class_library.html#a449a2d686922007674fa4a5efff89fe7',1,'Library']]],
   ['printcurrentquotes',['printCurrentQuotes',['../class_library.html#a7be02d15c840e3d1c3ec998e204f7bf9',1,'Library']]],
+  ['printerror',['printError',['../namespaceutils.html#afd76dd21b41c50ce7396e30fb5d8d75b',1,'utils']]],
   ['printfrequencytable',['printFrequencyTable',['../class_book.html#ac8b57c6a725ae9afeb24e6e74d4f8fd0',1,'Book']]],
   ['printinformation',['printInformation',['../class_author.html#a9dff52e2a8bd67ff4509eb00f9235155',1,'Author::printInformation()'],['../class_book.html#a5b67f59017da9d2654c27fa27927a419',1,'Book::printInformation()'],['../class_quote.html#a0854af3d11ff805991e87ef6e9bebf69',1,'Quote::printInformation()']]],
   ['printinformationcomplex',['printInformationComplex',['../class_quote.html#ae6847b50fefd892540617426a832a1cf',1,'Quote']]],

@@ -234,6 +234,8 @@ hodor 170
 Groot 69
 GROOT 18
 
+substitueix "hodor" per "hodor"
+
 substitueix "hodor" per "groot"
 
 contingut ?
@@ -314,4 +316,495 @@ GROOT 18
 
 triar text {Hodor}
 error
+
+contingut ?
+error
+
+taula de frequencies ?
+error
+
+eliminar text
+error
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+
+cites ?
+HH1
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+totes cites ?
+HH1
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+HODOR HODOR "HODOR"
+12-13
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+info cita "HH2" ?
+error
+
+eliminar cita "HH"
+error
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+error
+
+info cita "HH2" ?
+error
+
+frases 1 1 ?
+1 Groot! 
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+HODOR HODOR 1 69 257
+
+tots textos ?
+HODOR HODOR "HODOR"
+
+autor ?
+HODOR HODOR
+
+contingut ?
+1 Groot! 
+2 Groot groot, groot; groot GROOT groot, groot groot; groot GROOT groot, groot groot! 
+3 Groot groot GROOT groot, groot groot groot? 
+4 Groot groot GROOT! 
+5 Groot groot; groot groot groot. 
+6 Groot, groot GROOT groot, groot groot. 
+7 Groot groot groot. 
+8 Groot. 
+9 Groot, groot, groot. 
+10 Groot groot groot groot. 
+11 Groot! 
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+14 Groot. 
+15 Groot groot groot, groot. 
+16 Groot groot? 
+17 Groot groot groot groot groot. 
+18 Groot groot groot groot, groot, groot groot. 
+19 Groot groot groot. 
+20 Groot groot groot groot groot? 
+21 Groot, groot groot groot. 
+22 Groot groot GROOT! 
+23 Groot groot; groot groot! 
+24 Groot, groot. 
+25 Groot. 
+26 Groot, GROOT groot, groot groot. 
+27 Groot groot groot. 
+28 Groot, groot. 
+29 Groot. 
+30 Groot, groot; groot groot; groot groot, groot. 
+31 Groot groot, groot, groot groot. 
+32 Groot groot; groot groot. 
+33 Groot, groot. 
+34 Groot groot groot. 
+35 Groot groot groot. 
+36 Groot. 
+37 Groot groot, groot. 
+38 Groot groot groot groot. 
+39 Groot. 
+40 Groot GROOT groot, groot groot. 
+41 Groot groot GROOT groot, groot GROOT groot, groot groot! 
+42 Groot! 
+43 Groot groot, groot groot groot! 
+44 Groot! 
+45 Groot groot, groot. 
+46 Groot groot groot! 
+47 Groot groot GROOT! 
+48 Groot groot. 
+49 Groot groot GROOT groot, groot groot. 
+50 Groot! 
+51 Groot groot, groot; groot groot, groot. 
+52 Groot groot, groot, groot groot. 
+53 Groot groot groot groot, groot. 
+54 Groot groot? 
+55 Groot. 
+56 Groot groot groot. 
+57 Groot. 
+58 Groot GROOT groot, groot groot groot groot? 
+59 Groot groot groot; groot GROOT groot, groot groot. 
+60 Groot GROOT groot, groot groot groot groot groot! 
+61 Groot groot GROOT groot, groot groot, groot. 
+62 Groot groot. 
+63 Groot groot GROOT! 
+64 Groot groot groot? 
+65 Groot! 
+66 Groot groot, groot groot groot! 
+67 Groot. 
+68 Groot groot; groot groot, groot. 
+69 Groot groot groot! 
+
+info ?
+HODOR HODOR "HODOR" 69 257
+Cites Associades:
+
+nombre de frases ?
+69
+
+nombre de paraules ?
+257
+
+taula de frequencies ?
+groot 170
+Groot 69
+GROOT 18
+
+cites ?
+
+totes cites ?
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+
+cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+totes cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+error
+
+info cita "HH2" ?
+HODOR HODOR "HODOR"
+12-13
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+eliminar cita "HH"
+error
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+error
+
+info cita "HH2" ?
+HODOR HODOR "HODOR"
+12-13
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+frases 1 1 ?
+1 Groot! 
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+HODOR HODOR 1 69 257
+
+tots textos ?
+HODOR HODOR "HODOR"
+
+autor ?
+HODOR HODOR
+
+contingut ?
+1 Groot! 
+2 Groot groot, groot; groot GROOT groot, groot groot; groot GROOT groot, groot groot! 
+3 Groot groot GROOT groot, groot groot groot? 
+4 Groot groot GROOT! 
+5 Groot groot; groot groot groot. 
+6 Groot, groot GROOT groot, groot groot. 
+7 Groot groot groot. 
+8 Groot. 
+9 Groot, groot, groot. 
+10 Groot groot groot groot. 
+11 Groot! 
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+14 Groot. 
+15 Groot groot groot, groot. 
+16 Groot groot? 
+17 Groot groot groot groot groot. 
+18 Groot groot groot groot, groot, groot groot. 
+19 Groot groot groot. 
+20 Groot groot groot groot groot? 
+21 Groot, groot groot groot. 
+22 Groot groot GROOT! 
+23 Groot groot; groot groot! 
+24 Groot, groot. 
+25 Groot. 
+26 Groot, GROOT groot, groot groot. 
+27 Groot groot groot. 
+28 Groot, groot. 
+29 Groot. 
+30 Groot, groot; groot groot; groot groot, groot. 
+31 Groot groot, groot, groot groot. 
+32 Groot groot; groot groot. 
+33 Groot, groot. 
+34 Groot groot groot. 
+35 Groot groot groot. 
+36 Groot. 
+37 Groot groot, groot. 
+38 Groot groot groot groot. 
+39 Groot. 
+40 Groot GROOT groot, groot groot. 
+41 Groot groot GROOT groot, groot GROOT groot, groot groot! 
+42 Groot! 
+43 Groot groot, groot groot groot! 
+44 Groot! 
+45 Groot groot, groot. 
+46 Groot groot groot! 
+47 Groot groot GROOT! 
+48 Groot groot. 
+49 Groot groot GROOT groot, groot groot. 
+50 Groot! 
+51 Groot groot, groot; groot groot, groot. 
+52 Groot groot, groot, groot groot. 
+53 Groot groot groot groot, groot. 
+54 Groot groot? 
+55 Groot. 
+56 Groot groot groot. 
+57 Groot. 
+58 Groot GROOT groot, groot groot groot groot? 
+59 Groot groot groot; groot GROOT groot, groot groot. 
+60 Groot GROOT groot, groot groot groot groot groot! 
+61 Groot groot GROOT groot, groot groot, groot. 
+62 Groot groot. 
+63 Groot groot GROOT! 
+64 Groot groot groot? 
+65 Groot! 
+66 Groot groot, groot groot groot! 
+67 Groot. 
+68 Groot groot; groot groot, groot. 
+69 Groot groot groot! 
+
+info ?
+HODOR HODOR "HODOR" 69 257
+Cites Associades:
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+nombre de frases ?
+69
+
+nombre de paraules ?
+257
+
+taula de frequencies ?
+groot 170
+Groot 69
+GROOT 18
+
+cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+totes cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+triar text {hau}
+error
+
+triar text {HODOR}
+
+substitueix "hodor" per "hodor"
+
+afegir cita 12 13
+error
+
+cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+totes cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+error
+
+info cita "HH2" ?
+HODOR HODOR "HODOR"
+12-13
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+eliminar cita "HH"
+error
+
+eliminar cita "HH1"
+
+info cita "HH" ?
+error
+
+info cita "HH1" ?
+error
+
+info cita "HH2" ?
+HODOR HODOR "HODOR"
+12-13
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+frases 1 1 ?
+1 Groot! 
+
+frases "Hodor" ?
+
+frases {Hodor a} ?
+
+tots autors ?
+HODOR HODOR 1 69 257
+
+tots textos ?
+HODOR HODOR "HODOR"
+
+autor ?
+HODOR HODOR
+
+contingut ?
+1 Groot! 
+2 Groot groot, groot; groot GROOT groot, groot groot; groot GROOT groot, groot groot! 
+3 Groot groot GROOT groot, groot groot groot? 
+4 Groot groot GROOT! 
+5 Groot groot; groot groot groot. 
+6 Groot, groot GROOT groot, groot groot. 
+7 Groot groot groot. 
+8 Groot. 
+9 Groot, groot, groot. 
+10 Groot groot groot groot. 
+11 Groot! 
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+14 Groot. 
+15 Groot groot groot, groot. 
+16 Groot groot? 
+17 Groot groot groot groot groot. 
+18 Groot groot groot groot, groot, groot groot. 
+19 Groot groot groot. 
+20 Groot groot groot groot groot? 
+21 Groot, groot groot groot. 
+22 Groot groot GROOT! 
+23 Groot groot; groot groot! 
+24 Groot, groot. 
+25 Groot. 
+26 Groot, GROOT groot, groot groot. 
+27 Groot groot groot. 
+28 Groot, groot. 
+29 Groot. 
+30 Groot, groot; groot groot; groot groot, groot. 
+31 Groot groot, groot, groot groot. 
+32 Groot groot; groot groot. 
+33 Groot, groot. 
+34 Groot groot groot. 
+35 Groot groot groot. 
+36 Groot. 
+37 Groot groot, groot. 
+38 Groot groot groot groot. 
+39 Groot. 
+40 Groot GROOT groot, groot groot. 
+41 Groot groot GROOT groot, groot GROOT groot, groot groot! 
+42 Groot! 
+43 Groot groot, groot groot groot! 
+44 Groot! 
+45 Groot groot, groot. 
+46 Groot groot groot! 
+47 Groot groot GROOT! 
+48 Groot groot. 
+49 Groot groot GROOT groot, groot groot. 
+50 Groot! 
+51 Groot groot, groot; groot groot, groot. 
+52 Groot groot, groot, groot groot. 
+53 Groot groot groot groot, groot. 
+54 Groot groot? 
+55 Groot. 
+56 Groot groot groot. 
+57 Groot. 
+58 Groot GROOT groot, groot groot groot groot? 
+59 Groot groot groot; groot GROOT groot, groot groot. 
+60 Groot GROOT groot, groot groot groot groot groot! 
+61 Groot groot GROOT groot, groot groot, groot. 
+62 Groot groot. 
+63 Groot groot GROOT! 
+64 Groot groot groot? 
+65 Groot! 
+66 Groot groot, groot groot groot! 
+67 Groot. 
+68 Groot groot; groot groot, groot. 
+69 Groot groot groot! 
+
+info ?
+HODOR HODOR "HODOR" 69 257
+Cites Associades:
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+
+nombre de frases ?
+69
+
+nombre de paraules ?
+257
+
+taula de frequencies ?
+groot 170
+Groot 69
+GROOT 18
+
+cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
+
+totes cites ?
+HH2
+12 Groot groot, GROOT groot, groot groot. 
+13 Groot groot groot groot? 
+HODOR HODOR "HODOR"
 
