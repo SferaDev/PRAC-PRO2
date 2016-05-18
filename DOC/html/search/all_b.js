@@ -1,28 +1,7 @@
 var searchData=
 [
-  ['query_5fauthors',['QUERY_AUTHORS',['../main_8cc.html#a929725ac33851ab44a874af097622fac',1,'main.cc']]],
-  ['query_5fbooks_5fall',['QUERY_BOOKS_ALL',['../main_8cc.html#a799ed9876b238eaeca57d69dfeac5712',1,'main.cc']]],
-  ['query_5fcurrent_5fauthor',['QUERY_CURRENT_AUTHOR',['../main_8cc.html#a0daa5c4d40a4733d0c1ebca8839db256',1,'main.cc']]],
-  ['query_5fcurrent_5fcontent',['QUERY_CURRENT_CONTENT',['../main_8cc.html#a7463e07bfee66a1652cea25521f25d36',1,'main.cc']]],
-  ['query_5fcurrent_5ffrequency',['QUERY_CURRENT_FREQUENCY',['../main_8cc.html#af3ba25cc9f066f3cef24711ef73d6a53',1,'main.cc']]],
-  ['query_5fcurrent_5finfo',['QUERY_CURRENT_INFO',['../main_8cc.html#a6d6573826f2957d81a4ff133305ae03c',1,'main.cc']]],
-  ['query_5fcurrent_5flines',['QUERY_CURRENT_LINES',['../main_8cc.html#a221416125c781868b41105b22fb97623',1,'main.cc']]],
-  ['query_5fcurrent_5fquotes',['QUERY_CURRENT_QUOTES',['../main_8cc.html#a609fa4997165643203e0cb255ca772c6',1,'main.cc']]],
-  ['query_5fcurrent_5fwords',['QUERY_CURRENT_WORDS',['../main_8cc.html#aa0dbdd0e7744fe37a953d689ed902adb',1,'main.cc']]],
-  ['query_5fquotes_5fall',['QUERY_QUOTES_ALL',['../main_8cc.html#ae38061f0fadacde833c2da1403793f06',1,'main.cc']]],
-  ['quit',['QUIT',['../main_8cc.html#a84f0d54b44b855b01f75732c6fa1bc4b',1,'main.cc']]],
-  ['quote',['Quote',['../class_quote.html',1,'Quote'],['../class_quote.html#ae160077e513fe6346eeba294a195038b',1,'Quote::Quote()'],['../class_quote.html#a12fee26be3fcdf003691e394f256b2c8',1,'Quote::Quote(string reference, string author, string book)']]],
-  ['quote_2ehh',['Quote.hh',['../_quote_8hh.html',1,'']]],
-  ['quote_5fdelete',['QUOTE_DELETE',['../main_8cc.html#ab6b50436074ef3d196d57bb2c1a18346',1,'main.cc']]],
-  ['quote_5finfo',['QUOTE_INFO',['../main_8cc.html#a1811f219ecc8c338edfc5e581adecfdf',1,'main.cc']]],
-  ['quote_5finsert',['QUOTE_INSERT',['../main_8cc.html#a25732e97c43c06f1a18cc0e4219e84d6',1,'main.cc']]],
-  ['quoteauthor',['quoteAuthor',['../class_quote.html#a930113c4ee0ae5e5506bbc1ea3e79b49',1,'Quote']]],
-  ['quotebook',['quoteBook',['../class_quote.html#a7e6968e086bdd45b40627a37ecbbf6fc',1,'Quote']]],
-  ['quotecollection',['quoteCollection',['../class_library.html#a84be5207332f4b2456af95907d0a43b5',1,'Library']]],
-  ['quotecontent',['quoteContent',['../class_quote.html#a0ffcb584920e14d7dd5c45820997f989',1,'Quote']]],
-  ['quoteend',['quoteEnd',['../class_quote.html#aa5953a477b96183c8dc2fc8a42001c29',1,'Quote']]],
-  ['quoteexists',['quoteExists',['../class_library.html#a4d87e1bd531b56f79d1faa8781f34630',1,'Library']]],
-  ['quoteidentifiers',['quoteIdentifiers',['../class_library.html#a58c1f12a0278872cd0299e586551bb7a',1,'Library']]],
-  ['quotereference',['quoteReference',['../class_quote.html#a9c7b2deff2ee9a0a216c360fe304202a',1,'Quote']]],
-  ['quotestart',['quoteStart',['../class_quote.html#ac426122ac24638740b2a5c5e8342e8c9',1,'Quote']]]
+  ['readbook',['readBook',['../class_library.html#a2e296d2dc8e0292f0ea6d8d3511f7ec5',1,'Library']]],
+  ['readbookcontent',['readBookContent',['../class_book.html#a3e62d70f19bf6fa8ebef5556882b3ed7',1,'Book']]],
+  ['replacewords',['replaceWords',['../class_book.html#aaf182e24b86624b6ff54fba2581094a4',1,'Book']]],
+  ['replacewordsonbook',['replaceWordsOnBook',['../class_library.html#abf34dcdd5eb2a7c4127e8a50db814750',1,'Library']]]
 ];

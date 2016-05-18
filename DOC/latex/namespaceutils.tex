@@ -1,0 +1,220 @@
+\hypertarget{namespaceutils}{}\section{utils Namespace Reference}
+\label{namespaceutils}\index{utils@{utils}}
+
+
+Utility namespace for generic functions.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceutils_a69c832543a093a8099189e4755695a62}{contains} (string input, string query)
+\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a word. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{string\+Uppercase} (string \&input)
+\begin{DoxyCompactList}\small\item\em Converts a string from lowercase to uppercase. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{starts\+With} (string a, string b)
+\begin{DoxyCompactList}\small\item\em Returns if a sentence starts with another one. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_a57772e91d08481b38c47cda04479e169}{ends\+With} (string a, string b)
+\begin{DoxyCompactList}\small\item\em Returns if a sentence ends with another one. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{between\+Par} (string query, int position)
+\begin{DoxyCompactList}\small\item\em Finds if a string is between parentheses. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trim\+String} (string \&query)
+\begin{DoxyCompactList}\small\item\em Removes spaces (start/end) in the sentence. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutils_a0362c7510f0bb0c4449031f897626696}{trim\+String\+Complex} (string \&query)
+\begin{DoxyCompactList}\small\item\em Removes spaces and quotation marks in the sentence. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{format\+String} (string \&query)
+\begin{DoxyCompactList}\small\item\em Formats a string following a specified criteria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility namespace for generic functions. 
+
+\subsection{Function Documentation}
+\index{utils@{utils}!contains@{contains}}
+\index{contains@{contains}!utils@{utils}}
+\subsubsection[{\texorpdfstring{contains(string input, string query)}{contains(string input, string query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains (
+\begin{DoxyParamCaption}
+\item[{string}]{input, }
+\item[{string}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a69c832543a093a8099189e4755695a62}{}\label{namespaceutils_a69c832543a093a8099189e4755695a62}
+
+
+Returns if a sentence contains a word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The sentence (can contain one delimiter per word) \\
+\hline
+{\em query} & The word to find in the sentence (without any delimiter) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The sentence and the word to find 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the single word is on the sentence 
+\end{DoxyPostcond}
+\index{utils@{utils}!string\+Uppercase@{string\+Uppercase}}
+\index{string\+Uppercase@{string\+Uppercase}!utils@{utils}}
+\subsubsection[{\texorpdfstring{string\+Uppercase(string \&input)}{stringUppercase(string &input)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::string\+Uppercase (
+\begin{DoxyParamCaption}
+\item[{string \&}]{input}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{}\label{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}
+
+
+Converts a string from lowercase to uppercase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & A string with or without lowercase chars \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The forwarded param string has all chars uppercase 
+\end{DoxyPostcond}
+\index{utils@{utils}!starts\+With@{starts\+With}}
+\index{starts\+With@{starts\+With}!utils@{utils}}
+\subsubsection[{\texorpdfstring{starts\+With(string a, string b)}{startsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::starts\+With (
+\begin{DoxyParamCaption}
+\item[{string}]{a, }
+\item[{string}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{}\label{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}
+
+
+Returns if a sentence starts with another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & String to analyze \\
+\hline
+{\em b} & String to find on first positions of param a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the first b.\+size() chars are the same on a 
+\end{DoxyPostcond}
+\index{utils@{utils}!ends\+With@{ends\+With}}
+\index{ends\+With@{ends\+With}!utils@{utils}}
+\subsubsection[{\texorpdfstring{ends\+With(string a, string b)}{endsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::ends\+With (
+\begin{DoxyParamCaption}
+\item[{string}]{a, }
+\item[{string}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a57772e91d08481b38c47cda04479e169}{}\label{namespaceutils_a57772e91d08481b38c47cda04479e169}
+
+
+Returns if a sentence ends with another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & String to analyze \\
+\hline
+{\em b} & String to find on first positions of param a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the last b.\+size() chars are the same on a 
+\end{DoxyPostcond}
+\index{utils@{utils}!between\+Par@{between\+Par}}
+\index{between\+Par@{between\+Par}!utils@{utils}}
+\subsubsection[{\texorpdfstring{between\+Par(string query, int position)}{betweenPar(string query, int position)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::between\+Par (
+\begin{DoxyParamCaption}
+\item[{string}]{query, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{}\label{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}
+
+
+Finds if a string is between parentheses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The string to check \\
+\hline
+{\em position} & End position to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the string is between a parentheses on the specified position 
+\end{DoxyPostcond}
+\index{utils@{utils}!trim\+String@{trim\+String}}
+\index{trim\+String@{trim\+String}!utils@{utils}}
+\subsubsection[{\texorpdfstring{trim\+String(string \&query)}{trimString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::trim\+String (
+\begin{DoxyParamCaption}
+\item[{string \&}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{}\label{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}
+
+
+Removes spaces (start/end) in the sentence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The referenced string doesn\textquotesingle{}t have any spaces at start and/or end 
+\end{DoxyPostcond}
+\index{utils@{utils}!trim\+String\+Complex@{trim\+String\+Complex}}
+\index{trim\+String\+Complex@{trim\+String\+Complex}!utils@{utils}}
+\subsubsection[{\texorpdfstring{trim\+String\+Complex(string \&query)}{trimStringComplex(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::trim\+String\+Complex (
+\begin{DoxyParamCaption}
+\item[{string \&}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a0362c7510f0bb0c4449031f897626696}{}\label{namespaceutils_a0362c7510f0bb0c4449031f897626696}
+
+
+Removes spaces and quotation marks in the sentence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The referenced string doesn\textquotesingle{}t have any spaces or quotation marks at start and/or end 
+\end{DoxyPostcond}
+\index{utils@{utils}!format\+String@{format\+String}}
+\index{format\+String@{format\+String}!utils@{utils}}
+\subsubsection[{\texorpdfstring{format\+String(string \&query)}{formatString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::format\+String (
+\begin{DoxyParamCaption}
+\item[{string \&}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{}\label{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}
+
+
+Formats a string following a specified criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The referenced string has all the punctuation marks correctly placed without extra spaces 
+\end{DoxyPostcond}

@@ -14,6 +14,5 @@ var searchData=
   ['getreference',['getReference',['../class_quote.html#ac397baacf75c95f29feb609ece9335f9',1,'Quote']]],
   ['getstartline',['getStartLine',['../class_quote.html#aa6f56a06332e13b6ee7b4261b8c69372',1,'Quote']]],
   ['gettitle',['getTitle',['../class_book.html#aa3dc09f8db785a89259a0e491292987d',1,'Book']]],
-  ['getwordcount',['getWordCount',['../class_author.html#a7f9c980db86b65b79624c4df671c1001',1,'Author::getWordCount()'],['../class_book.html#a29418f8797be1143747a449445f064a9',1,'Book::getWordCount()']]],
-  ['gestor_20de_20textos_20i_20cites_20_7c_20alexis_20rico_20and_20jordi_20romero',['Gestor de textos i cites | Alexis Rico and Jordi Romero',['../index.html',1,'']]]
+  ['getwordcount',['getWordCount',['../class_author.html#a7f9c980db86b65b79624c4df671c1001',1,'Author::getWordCount()'],['../class_book.html#a29418f8797be1143747a449445f064a9',1,'Book::getWordCount()']]]
 ];
