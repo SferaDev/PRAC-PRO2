@@ -95,6 +95,26 @@ void actionQuery(Library& library, string input) {
         else utils::printError();
     } else if (utils::startsWith(input, QUERY_QUOTES_ALL)) {
         library.printQuotes();
+    } else if (utils::startsWith(input, QUOTE_INFO)) {
+        string reference = input.erase(input.length() - 3, 3);
+        reference = reference.substr(input.find_first_of("\"") + 1);
+        if (library.quoteExists(reference)) {
+            Quote quote = library.getQuote(reference);
+            cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
+            quote.printInformation(false, true);
+        } else utils::printError();
+    } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
+        if (library.isBookSelected()) {
+            actionExpression(library, input);
+        } else utils::printError();
+    } else if (utils::startsWith(input, AUTHOR_QUOTES)) {
+        string authorName = input.erase(input.length() - 3, 3);
+        authorName = authorName.substr(input.find_first_of("\"") + 1);
+        library.printQuotesByAuthor(authorName);
+    } else if (utils::startsWith(input, AUTHOR_BOOKS)) {
+        string authorName = input.erase(input.length() - 3, 3);
+        authorName = authorName.substr(input.find_first_of("\"") + 1);
+        library.printBooksByAuthor(authorName);
     }
 }
 
@@ -141,26 +161,6 @@ void readActions(Library& library) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
-        } else if (utils::startsWith(input, AUTHOR_BOOKS)) {
-            string authorName = input.erase(input.length() - 3, 3);
-            authorName = authorName.substr(input.find_first_of("\"") + 1);
-            library.printBooksByAuthor(authorName);
-        } else if (utils::startsWith(input, AUTHOR_QUOTES)) {
-            string authorName = input.erase(input.length() - 3, 3);
-            authorName = authorName.substr(input.find_first_of("\"") + 1);
-            library.printQuotesByAuthor(authorName);
-        } else if (utils::startsWith(input, QUOTE_INFO)) {
-            string reference = input.erase(input.length() - 3, 3);
-            reference = reference.substr(input.find_first_of("\"") + 1);
-            if (library.quoteExists(reference)) {
-                Quote quote = library.getQuote(reference);
-                cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
-                quote.printInformation(false, true);
-            } else utils::printError();
-        } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
-            if (library.isBookSelected()) {
-                actionExpression(library, input);
-            } else utils::printError();
         } else if (utils::endsWith(input, ACTION_QUERY)) {
             actionQuery(library, input);
         }
