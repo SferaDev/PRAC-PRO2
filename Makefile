@@ -13,6 +13,9 @@ OBJECTS = $(SOURCES: .cc = .o)
 # Executable name: defaults to "program.exe"
 EXECUTABLE = program.exe
 
+# Final TAR name: defaults to "practica"
+FINAL_TAR = practica
+
 # Handle the default make command with the program generation
 all: $(EXECUTABLE)
 
@@ -23,19 +26,19 @@ $(EXECUTABLE): clean
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final judge tar
-jutge:
-	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile jp/jp_*.txt
+$(FINAL_TAR): docs
+	tar -cvf $(FINAL_TAR).tar *.hh *.cc Makefile Doxyfile jp_*.txt html.zip
 
 # Configuration to build Documentation tar
-docs:
+docs: clean
 	rm -rf DOC/
 	doxygen Doxyfile
-	cd DOC/latex/
-	make
-	cd ../../
+	zip -r html.zip DOC/html/
 
 # Configuration for make clean
 # We use "rm -rf" to recursively delete the files and not prompting the user if they don't exist
 clean:
 	rm -rf *.o
 	rm -rf *.exe
+	rm -rf *.tar
+	rm -rf *.zip
