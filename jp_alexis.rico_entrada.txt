@@ -9,6 +9,8 @@ Hodor HODOR hodor, hodor hodor hodor hodor hodor! Hodor hodor HODOR hodor, hodor
 
 triar text {Hodor}
 
+info ?
+
 contingut ?
 
 taula de frequencies ?
@@ -59,7 +61,11 @@ info cita "HH2" ?
 
 eliminar cita "HH"
 
+totes cites ?
+
 eliminar cita "HH1"
+
+totes cites ?
 
 info cita "HH" ?
 
@@ -111,7 +117,11 @@ info cita "HH2" ?
 
 eliminar cita "HH"
 
+totes cites ?
+
 eliminar cita "HH1"
+
+totes cites ?
 
 info cita "HH" ?
 
@@ -165,7 +175,11 @@ info cita "HH2" ?
 
 eliminar cita "HH"
 
+totes cites ?
+
 eliminar cita "HH1"
+
+totes cites ?
 
 info cita "HH" ?
 
@@ -198,5 +212,180 @@ taula de frequencies ?
 cites ?
 
 totes cites ?
+
+afegir cita 23 24
+
+afegir cita -11 -1
+
+afegir cita 0 0
+
+afegir cita 0 1
+
+afegir cita 2 1
+
+afegir cita 1 0
+
+afegir cita 1 2
+
+afegir cita 1 3
+
+afegir cita 2 4
+
+afegir cita 1 2
+
+totes cites ?
+
+eliminar cita "HH4"
+
+totes cites ?
+
+afegir cita 1 2
+
+totes cites ?
+
+nombre de frases ?
+
+afegir cita 69 69
+
+totes cites ?
+
+afegir cita 68 69
+
+totes cites ?
+
+afegir cita 69 70
+
+afegir text "Test 1"
+autor "Pau Random"
+Hola.que,ase.     ....     hola    . hola. wrong line
+****
+
+triar text {Test}
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "hola" per "ase"
+
+taula de frequencies ?
+
+subsitueix "hola" per "adeu"
+
+taula de frequencies ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+tots autors ?
+
+eliminar text
+
+     tots autors ?
+
+eliminar text
+
+tots textos ?
+
+triar text {HODOR}
+
+eliminar text
+
+tots textos ?
+
+eliminar text
+
+tots textos ?
+
+afegir text "Hola"
+autor "PRO2"
+It is me.
+****
+
+afegir text "Hola"
+autor "PRO2"
+IT is me.
+****
+
+afegir text "Hola"
+autor "PRO"
+IT is me.
+****
+
+afegir text "Hola"
+autor "2"
+IT is me.
+****
+
+afegir text "Hola"
+autor "PRO 2"
+IT is me. Hau.
+****
+
+tots textos ?
+
+totes cites ?
+
+triar text {Hola}
+
+triar text {2}
+
+triar text {Hau}
+
+frases "Hau" ?
+
+frases "hau" ?
+
+frases "Hola" ?
+
+frases "IT" ?
+
+frases {IT} & {Hau} ?
+
+frases 7 8 ?
+
+frases 1 2 ?
+
+frases (({IT} | {Hau}) & {me}) ?
+
+frases -1 1 ?
+
+frases 1 128 ?
+
+frases -1 -1 ?
+
+frases {IT} ?
+
+eliminar text
+
+afegir text "Substitueix"
+autor "PRO"
+Una word mas. word. word. word. word. word. word. word. word.
+****
+
+taula de frequencies ?
+
+triar text {PRO}
+
+triar text {word}
+
+taula de frequencies ?
+
+substitueix "PRO" per "Hau"
+
+info ?
+
+substitueix "word" per "mas"
+
+substitueix "word" per "una"
+
+taula de frequencies ?
+
+substitueix "una" per "mas"
+
+taula de frequencies ?
+
+taula de frequencies ?
 
 sortir

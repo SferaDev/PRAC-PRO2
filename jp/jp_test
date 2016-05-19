@@ -1,8 +1,18 @@
 afegir text "The Picture of Dorian Gray"
 autor "oscar wilde."
-a , b , c . hola .
+a , b , c . hola.
 ****
 
 triar text {wilde}
+
+eliminar cita "OW1"
+
+afegir cita 1 2
+
+totes cites ?
+
+eliminar cita "OW1"
+
+eliminar cita "OW1"
 
 sortir
