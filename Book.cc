@@ -49,7 +49,7 @@ void Book::readBookContent() {
             utils::trimString(line);
             utils::formatString(line);
             utils::trimString(content);
-            if (!line.substr(0, line.length() - 1).empty()) bookContent.push_back(line);
+            bookContent.push_back(line);
             string word;
             istringstream iss(line);
             while (iss >> word) {
