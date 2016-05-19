@@ -233,9 +233,23 @@ afegir cita 2 4
 
 afegir cita 1 2
 
+afegir cita 3 5
+
+afegir cita 7 9
+
+afegir cita 1 9
+
+afegir cita 10 15
+
+afegir cita 45 78
+
+afegir cita 98 98
+
+afegir cita 25 26
+
 totes cites ?
 
-eliminar cita "HH4"
+eliminar cita "Miau"
 
 totes cites ?
 

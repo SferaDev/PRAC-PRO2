@@ -81,6 +81,8 @@ namespace utils {
 
     /** @brief Prints an error using the correct formatting */
     void printError();
+
+    struct stringNaturalComparator;
 }
 
 #endif //PRO2_PRAC_UTILS_HH

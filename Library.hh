@@ -28,6 +28,25 @@ class Library {
 
 private:
 
+    struct stringNaturalComparator {
+        bool operator() (const string& a, const string& b) {
+            int posA = a.find_first_of("0123456789");
+            int posB = b.find_first_of("0123456789");
+            if (a.substr(0, posA) != b.substr(0, posB)) {
+                return a.substr(0, posA) < b.substr(0, posB);
+            } else if (posA != string::npos and posB != string::npos) {
+                int valA, valB;
+                istringstream issA(a.substr(posA));
+                istringstream issB(b.substr(posB));
+                issA >> valA;
+                issB >> valB;
+                return valA < valB;
+            } else {
+                return a < b;
+            }
+        }
+    };
+
     /** @brief Collection of Books
         \param string: Key of the identifier
         \param Book: Books of the Library
@@ -44,7 +63,7 @@ private:
         \param string: Key of the identifier
         \param Quote: Quotes of the Library
     */
-    map<string, Quote> quoteCollection;
+    map<string, Quote, stringNaturalComparator> quoteCollection;
 
     /** @brief Identifier of Quotes
         \param string: Quote ID (without number)
