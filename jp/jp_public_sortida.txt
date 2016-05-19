@@ -291,7 +291,7 @@ cites autor "Oscar Wilde" ?
 OW1
 1 Those who find ugly meanings in beautiful things are corrupt without being charming. 
 2 This is a fault. 
-Oscar Wilde "The Picture of Dorian Gray"
+"The Picture of Dorian Gray"
 
 info cita "OW1" ?
 Oscar Wilde "The Picture of Dorian Gray"
