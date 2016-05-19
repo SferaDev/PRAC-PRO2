@@ -154,7 +154,7 @@ void Library::insertQuote(int start, int end) {
 void Library::deleteQuote(string reference) {
     map<string, Quote>::iterator it = quoteCollection.find(reference);
     // If reference doesn't exist: error
-    if (it == quoteCollection.end()) {
+    if (it == quoteCollection.end() or it->second.getReference().empty()) {
         utils::printError();
     } else {
         // Remove Quote from Book
@@ -175,8 +175,7 @@ Book Library::getBook() {
 bool Library::quoteExists(string id) {
     map<string, Quote>::const_iterator it = quoteCollection.find(id);
     return it != quoteCollection.end() and
-            !it->second.getAuthor().empty() and
-            !it->second.getBookTitle().empty();
+            !it->second.getReference().empty();
 }
 
 Quote Library::getQuote(string id) {
