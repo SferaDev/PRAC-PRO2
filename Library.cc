@@ -202,7 +202,7 @@ void Library::printBooks() {
 void Library::printQuotes() {
     map<string, Quote>::iterator it = quoteCollection.begin();
     while (it != quoteCollection.end()) {
-        it->second.printInformationComplex();
+        it->second.printInformationComplex(true);
         it++;
     }
 }
@@ -215,7 +215,7 @@ void Library::printQuotesByAuthor(string author) {
     set<string> quotes = authorCollection[author].getAuthorQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
-        quoteCollection[*it].printInformationComplex();
+        quoteCollection[*it].printInformationComplex(false);
         it++;
     }
 }
@@ -238,7 +238,7 @@ void Library::printCurrentQuotes() {
     set<string> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
-        quoteCollection[*it].printInformationComplex();
+        quoteCollection[*it].printInformationComplex(true);
         it++;
     }
 }
