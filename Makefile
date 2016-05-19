@@ -2,7 +2,7 @@
 CC = g++
 
 # Compiler flags: PRO2 standards with an appropriate use of "-D_GLIBCXX_DEBUG"
-CFLAGS = -D_JUDGE_ -ansi -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++0x -D_GLIBCXX_DEBUG
+CFLAGS = -D_JUDGE_ -D_GLIBCXX_DEBUG -ansi -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++0x
 
 # Source files
 SOURCES = program.cc Author.cc Book.cc Library.cc Quote.cc Utils.cc
