@@ -62,9 +62,11 @@ void Quote::printInformation(bool reference, bool startend) {
     }
 }
 
-void Quote::printInformationComplex() {
+void Quote::printInformationComplex(bool showAuthorName) {
     if (!quoteAuthor.empty() and !quoteBook.empty()) {
         printInformation(true, false);
-        cout << quoteAuthor << " \"" << quoteBook << "\"" << endl;
+        // FIXME: Public has changed (19-05-16)
+        if (showAuthorName) cout << quoteAuthor << " ";
+        cout << "\"" << quoteBook << "\"" << endl;
     }
 }

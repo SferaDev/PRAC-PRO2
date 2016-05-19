@@ -115,7 +115,7 @@ public:
         \pre An implicit Quote
         \post Prints all the quote information
     */
-    void printInformationComplex();
+    void printInformationComplex(bool showAuthorName);
 
 };
 
