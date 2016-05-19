@@ -292,7 +292,8 @@ void Book::printFrequencyTable() {
     if (dirtyFrequency) generateFrequencyTable();
     list<pair<string, int> >::const_iterator it = wordFrequencyList.begin();
     while (it != wordFrequencyList.end()) {
-        if (it->second > 0) cout << it->first << " " << it->second << endl;
+        if (it->second > 0 and !it->first.empty())
+            cout << it->first << " " << it->second << endl;
         it++;
     }
 }
