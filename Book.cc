@@ -110,7 +110,8 @@ int Book::getWordCount() const {
 }
 
 void Book::replaceWords(string oldWord, string newWord) {
-    if (oldWord == newWord) return;
+    // TODO: newWord empty?
+    if (oldWord == newWord or oldWord.empty()) return;
     // Edit the contents of the book
     map<string, list<int> >::const_iterator it1 = lineDictionary.find(oldWord);
     if (it1 != lineDictionary.end()) {
@@ -253,7 +254,9 @@ void Book::printInformation() {
 }
 
 void Book::printAllLines() {
-    printSelectLines(1, bookContent.size());
+    for (int i = 1; i <= bookContent.size(); ++i) {
+        cout <<  i << " " << bookContent[i - 1] << " " <<  endl;
+    }
 }
 
 void Book::printLines(string query) {
