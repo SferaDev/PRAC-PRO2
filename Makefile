@@ -25,6 +25,10 @@ $(EXECUTABLE): clean
 	$(CC) $(FLAGS) -c $(SOURCES)
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
+# Temporal DELETE ME!
+jutge:
+	tar -cvf jutge.tar *.hh *.cc Makefile Doxyfile jp_*.txt
+
 # Configuration to build final judge tar
 $(FINAL_TAR): docs
 	tar -cvf $(FINAL_TAR).tar *.hh *.cc Makefile Doxyfile jp_*.txt html.zip
