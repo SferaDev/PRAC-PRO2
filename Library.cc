@@ -191,9 +191,10 @@ void Library::printAuthors() {
 }
 
 void Library::printBooks() {
-    map<string, Book>::iterator it = bookCollection.begin();
-    while (it != bookCollection.end()) {
-        it->second.printInformation();
+    map<string, Author>::iterator it = authorCollection.begin();
+    while (it != authorCollection.end()) {
+        if (it->second.getBookCount() > 0)
+            it->second.printBooks(true);
         it++;
     }
 }
@@ -207,7 +208,7 @@ void Library::printQuotes() {
 }
 
 void Library::printBooksByAuthor(string author) {
-    authorCollection[author].printBooks();
+    authorCollection[author].printBooks(false);
 }
 
 void Library::printQuotesByAuthor(string author) {

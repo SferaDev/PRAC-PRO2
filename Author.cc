@@ -78,9 +78,10 @@ void Author::printInformation() {
     cout << endl;
 }
 
-void Author::printBooks() {
+void Author::printBooks(bool showAuthor) {
     set<string>::const_iterator it = authorBooks.begin();
     while (it != authorBooks.end()) {
+        if (showAuthor) cout << authorName << " ";
         cout << "\"" << *it << "\"" << endl;
         ++it;
     }

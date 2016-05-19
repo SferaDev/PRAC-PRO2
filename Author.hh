@@ -152,7 +152,7 @@ public:
         \pre An implicit Author
         \post True
     */
-    void printBooks();
+    void printBooks(bool showAuthor);
 
 };
 
