@@ -1,3 +1,47 @@
+tots textos ?
+
+info ?
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "1" per "2"
+
+triar text {wajinetoj}
+
+afegir cita 1 2
+
+afegir cita 4 9
+
+eliminar text
+
+textos autor "" ?
+
+textos autor "H" ?
+
+tots textos ?
+
+tots autors ?
+
+autor ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+taula de frequencies ?
+
+frases "" ?
+
+frases 1 2 ?
+
+frases "Hau" ?
+
+info cita "HH1" ?
+
+eliminar cita "HH1"
+
 afegir text "HODOR"
 autor "HODOR HODOR"
 Hodor! Hodor hodor, hodor; hodor HODOR hodor, hodor hodor; hodor HODOR hodor, hodor hodor! Hodor hodor HODOR hodor, hodor hodor hodor? Hodor hodor HODOR! Hodor hodor; hodor hodor hodor. Hodor, hodor HODOR hodor, hodor hodor. Hodor hodor hodor. Hodor. Hodor, hodor, hodor. Hodor hodor hodor hodor. Hodor! Hodor hodor, HODOR hodor, hodor hodor. Hodor hodor hodor hodor? Hodor. Hodor hodor hodor, hodor. Hodor hodor?
