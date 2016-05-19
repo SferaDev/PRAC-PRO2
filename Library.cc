@@ -55,6 +55,8 @@ void Library::selectBook(string query) {
     currentBook = bookCollection.end();
     map<string, Book>::iterator it = bookCollection.begin();
     bool error = false;
+    // If "triar text {}" then error out
+    if (query.empty()) error = true;
     // Loop through all books while there're no errors
     while (it != bookCollection.end() and !error) {
         istringstream iss(query);
