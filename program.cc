@@ -98,6 +98,7 @@ void actionQuery(Library& library, string input) {
     } else if (utils::startsWith(input, QUOTE_INFO)) {
         string reference = input.erase(input.length() - 3, 3);
         reference = reference.substr(input.find_first_of("\"") + 1);
+        utils::stringUppercase(reference);
         if (library.quoteExists(reference)) {
             Quote quote = library.getQuote(reference);
             cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
