@@ -225,9 +225,9 @@ void Library::printCurrentInformation() {
     cout << currentBook->second.getTitle() << "\" ";
     cout << currentBook->second.getLineCount() << " ";
     cout << currentBook->second.getWordCount() << endl;
-    cout << "Cites Associades:" << endl;
     set<string> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
+    if (it != quotes.end()) cout << "Cites Associades:" << endl;
     while (it != quotes.end()) {
         quoteCollection[*it].printInformation(true, false);
         it++;
