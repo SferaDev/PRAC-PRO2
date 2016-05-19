@@ -121,6 +121,7 @@ void actionQuery(Library& library, string input) {
 void readActions(Library& library) {
     string input;
     while (getline(cin, input)) {
+        utils::trimString(input);
         // Quit command returns void
         if (utils::startsWith(input, QUIT)) {
             return;
