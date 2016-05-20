@@ -121,19 +121,22 @@ void actionQuery(Library& library, string input) {
 
 void readActions(Library& library) {
     string input;
+    bool lastOutputSpace = true;
     while (getline(cin, input)) {
+        if (!lastOutputSpace) cout << endl;
+        // Remove spaces from input
         utils::trimString(input);
+        lastOutputSpace = input.empty();
         // Quit command returns void
         if (utils::startsWith(input, QUIT)) {
             return;
-        } else cout << input << endl;
+        } else if (!input.empty()) cout << input << endl;
         // Handle the rest of commands
         if (utils::startsWith(input, BOOK_INSERT)) {
             string title, author;
             title = input.erase(input.length() - 1, 1).substr(BOOK_INSERT.length());
             getline(cin, input);
             if (utils::startsWith(input, BOOK_INSERT_AUTHOR)) {
-                string author;
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
                 library.readBook(title, author);
             }
@@ -165,7 +168,7 @@ void readActions(Library& library) {
             library.deleteQuote(reference);
         } else if (utils::endsWith(input, ACTION_QUERY)) {
             actionQuery(library, input);
-        }
+        } else if (!input.empty()) utils::printError();
     }
 }
 
