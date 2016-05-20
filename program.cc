@@ -55,9 +55,9 @@ void actionExpression(Library& library, string input)  {
     else if (input[0] == '\"' and input[input.length() - 1]) {
         utils::trimStringComplex(input);
         library.getBook().printLinesConsecutiveWords(input);
-    } else {
+    } else if (input.find_first_of("({})&|") != string::npos){
         library.getBook().printLines(input);
-    }
+    } else utils::printError();
 }
 
 void actionQuery(Library& library, string input) {
@@ -162,13 +162,14 @@ void readActions(Library& library) {
             istringstream iss(input);
             iss >> start >> end;
             if (!iss.fail()) library.insertQuote(start, end);
+            else utils::printError();
         } else if (utils::startsWith(input, QUOTE_DELETE)) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
         } else if (utils::endsWith(input, ACTION_QUERY)) {
             actionQuery(library, input);
-        } else if (!input.empty()) utils::printError();
+        } // TODO: else if (!input.empty()) utils::printError();
     }
 }
 
