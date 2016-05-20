@@ -57,7 +57,7 @@ void Quote::printInformation(bool reference, bool startend) {
         if (reference) cout << quoteReference << endl;
         if (startend) cout << quoteStart << "-" << quoteEnd << endl;
         for (int i = 0; i < quoteContent.size(); ++i) {
-            cout << i + quoteStart << " " << quoteContent[i] << " " << endl;
+            cout << i + quoteStart << " " << quoteContent[i] << endl;
         }
     }
 }

@@ -1,0 +1,97 @@
+afegir text "Bifel belipiji zi nuzecu joj"
+autor "Bekat Mer"
+Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake fa hun xap nir gacipa ro fu yev haqet hi fa nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+So da bo fa.
+****
+
+triar text { So pu da}
+
+substitueix "da" per "fa"
+
+substitueix "fa" per "bo"
+
+nombre de frases ?
+
+afegir cita 1 1
+
+afegir cita 2 2
+
+afegir cita 3 3
+
+afegir cita 4 4
+
+afegir cita 5 5
+
+cites ?
+
+eliminar cita "BM5"
+
+afegir cita 5 5
+
+afegir cita 6 6
+
+afegir cita 7 7
+
+afegir cita 8 8
+
+afegir cita 9 9
+
+afegir cita 10 10
+
+afegir cita 11 11
+
+afegir cita 12 12
+
+afegir cita 13 13
+
+afegir cita 14 14
+
+afegir cita 15 15
+
+afegir cita 16 16
+
+afegir cita 17 17
+
+cites ?
+
+totes cites ?
+
+eliminar cita ""
+
+taula de frequencies ?
+
+afegir text "hola"
+autor "123 43 r"
+123, jjj, JJJ, maamamama, 214143m, etogejrog 1234113253. 123.
+****
+
+triar text {hola}
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "123" per "hola"
+
+taula de frequencies ?
+
+afegir cita 1 1
+
+info ?
+
+sortir ?
