@@ -255,7 +255,7 @@ void Book::printInformation() {
 
 void Book::printAllLines() {
     for (int i = 1; i <= bookContent.size(); ++i) {
-        cout <<  i << " " << bookContent[i - 1] << endl;
+        cout << i << " " << bookContent[i - 1] << endl;
     }
 }
 
@@ -287,7 +287,7 @@ void Book::printSelectLines(int start, int end) {
         return;
     }
     for (int i = start; i <= end; ++i) {
-        cout <<  i << " " << bookContent[i - 1] << endl;
+        cout << i << " " << bookContent[i - 1] << endl;
     }
 }
 

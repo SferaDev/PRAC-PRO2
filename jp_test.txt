@@ -1,24 +1,12 @@
-tots textos ?
-
-contingut ?
-
-triar text {}
-
-tots textos ?
-
-contingut ?
-
-eliminar text
-
 afegir text "Test"
 autor "T M K"
-Hau. blur. m.
-*.
 ****
 
 tots textos ?
 
-triar text {Jod}
+triar text {Test}
+
+contingut ?
 
 eliminar text
 
