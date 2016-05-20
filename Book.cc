@@ -73,24 +73,6 @@ void Book::readBookContent() {
             posDelimiter = content.find_first_of(".?!");
         }
     }
-    if (input == "****" and !content.empty()) {
-        // TODO: Ask what's the correct procedure
-        // OPTION 0: Do nothing: Ignore them
-        /* OPTION 1: Do not add the book
-        bookContent.clear(); */
-        /* OPTION 2: Add newline with pendingWords
-        bookContent.push_back(content);
-        string word;
-        istringstream iss(content);
-        while (iss >> word) {
-            while (word.find_last_of(",;:.?!") == word.length() - 1) {
-                word.erase(word.length() - 1, 1);
-            }
-            lineDictionary[word].push_back(bookContent.size());
-            wordFrequencyMap[word] += 1;
-            bookWords += 1;
-        }*/
-    }
 }
 
 string Book::getTitle() const {
