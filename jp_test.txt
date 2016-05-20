@@ -2,9 +2,239 @@ afegir text "Test"
 autor "T M K"
 ****
 
+tots textos ?
 
+triar text {Test}
 
+contingut ?
 
+eliminar text
 
+triar text {Test  Test}
+
+tots textos ?
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "1" per "2"
+
+afegir cita 1 2
+
+afegir cita 4 9
+
+eliminar text
+
+tots textos ?
+
+triar text {Test Test Test}
+
+info ?
+
+info cita "TMK1" ?
+
+totes cites ?
+
+eliminar text
+
+totes cites ?
+
+tots textos ?
+
+info ?
+
+afegir text "Hola"
+autor "Test"
+kk.
+****
+
+triar text {kk}
+
+afegir cita 1 1
+
+textos autor "" ?
+
+textos autor "H" ?
+
+tots textos ?
+
+autor ?
+
+nombre de frases ?
+
+nombre de paraules ?
+
+taula de frequencies ?
+
+frases "Me" ?
+
+frases 1 1 ?
+
+frases "Hau" ?
+
+afegir text "MM"
+autor "T"
+1. 2. 3.
+****
+
+triar text {MM}
+
+afegir cita 0 0
+
+afegir cita 1 1
+
+info cita "T1" ?
+
+info cita "T1" ?
+
+totes cites ?
+
+tots textos ?
+
+totes cites ?
+
+tots textos ?
+
+taula de frequencies ?
+
+tots autors ?
+
+info ?
+
+autor ?
+
+cites autor "T" ?
+
+cites autor "Test" ?
+
+cites ?
+
+afegir text "Bifel belipiji zi nuzecu joj"
+autor "Qekat Mer"
+Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake fa hun xap nir gacipa ro fu yev haqet hi fa nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+So da bo fa.
+Duji ciy daqo xaxogejife ril mu, lapim wu xo mu tum nokuqu duf gu wa jezidiqazu, bajotiyi vox jep himu vayaloq vezumagol nu xa, luqe lu hiv re rexuqo noq wepim ya le, buqafuz xosiviq kon duqo qa ju lig fa qugumo hiro qis xigufurijiyo sebiqejo cozaza bo gu qoto zab kowejibo ramuf xetehano qifufe xo qinok zaledi bas qa cububoga tow gog.
+Busepo gu lamuc qago fawo qove ciqec jiripu paz cefof kik hoseye qom ye.
+Di gis wabilazibefaveg, wu rahoxecetol, rawe bodasijexaw kacip gole fayel nik pi bi zajuregi fo, jaw heje zuj wuk toqo weq re pude heke za ti foro wi zasi raru ge, wimekezeji yu lupebica tip keli qugikaye be.
+Re ha wajinetoj hahenaviy qinume runec tukoh viw nitew gowul nis didage cerahog seko vaxap: xi qi qowaju lihopirah hi va, nu vozoqu sa lapiz furi cixefag wa fol paquca xuval.
+****
+
+triar text {wajinetoj}
+
+afegir cita 1 2
+
+afegir cita 4 9
+
+afegir cita 17 22
+
+totes cites ?
+
+taula de frequencies ?
+
+substitueix "xaxogejife" per "hahenaviy"
+
+frases {hahenaviy} ?
+
+taula de frequencies ?
+
+totes cites ?
+
+afegir text "Test"
+autor "Hai"
+This is a test.
+****
+
+triar text {Hai}
+
+afegir cita 1 1
+
+taula de frequencies ?
+
+triar text {wajinetoj}
+
+taula de frequencies ?
+
+totes cites ?
+
+substitueix "no" per "yeah"
+
+taula de frequencies ?
+
+susbtitueix "hahenaviy," per ""
+
+taula de frequencies ?
+
+substitueix "hahenaviy" per "hahenaviya"
+
+taula de frequencies ?
+
+afegir text "Test"
+autor "Me"
+Hola,   hai lollll, me. bye. okay. deu!
+****
+
+triar text {hai}
+
+contingut ?
+
+taula de frequencies ?
+
+substitueix "hai" per "bye"
+
+taula de frequencies ?
+
+substitueix "me." per "me"
+
+taula de frequencies ?
+
+contingut ?
+
+afegir cita 1 1
+
+afegir cita 2 1
+
+afegir cita 2 2
+
+totes cites ?
+
+eliminar text
+
+substitueix "me" per "you"
+
+taula de frequencies ?
+
+afegir text "Test"
+autor "Me"
+Hola,   hai lollll, me. bye. okay. deu! amba.
+1 2 03 4 12 10 11 21 32. 4 4 44.
+****
+
+triar text {Hola}
+
+substitueix "1" per "2"
+
+substitueix "hai" per "hai"
+
+substitueix "" per "hau"
+
+substitueix "bye" per ""
+
+taula de frequencies ?
 
 sortir
