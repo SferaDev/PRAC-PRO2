@@ -174,7 +174,8 @@ void Book::findExpression(string query, set<int>& pos) {
     utils::trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
         // Base case: Malformed expression (not found any word to find)
-    } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1) {
+    } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1
+            and query.find_first_of('&') == string::npos and query.find_first_of('|') == string::npos) {
         query = query.substr(1, query.length() - 2);
         if (query.find_first_of(" ") == string::npos) {
             // Base case: One word, return lines where found
@@ -208,7 +209,7 @@ void Book::findExpression(string query, set<int>& pos) {
         if (posAnd != string::npos) {
             // Recursive case: Call recursion of both expressions and intersect them
             set<int> set1, set2;
-            findExpression(query.substr(0, posAnd - 1), set1);
+            findExpression(query.substr(0, posAnd), set1);
             findExpression(query.substr(posAnd + 1), set2);
             set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
         } else {
@@ -220,7 +221,7 @@ void Book::findExpression(string query, set<int>& pos) {
             if (posOr != string::npos) {
                 // Recursive case: Call recursion of both expressions and union them
                 set<int> set1, set2;
-                findExpression(query.substr(0, posOr - 1), set1);
+                findExpression(query.substr(0, posOr), set1);
                 findExpression(query.substr(posOr + 1), set2);
                 set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
             } else if (!utils::betweenPar(query, query.length())) {
