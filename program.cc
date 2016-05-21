@@ -41,12 +41,18 @@ const string QUERY_QUOTES_ALL = "totes cites ?";
 const string QUIT = "sortir";
 
 void actionExpression(Library& library, string input)  {
+    // Erase 'frases ' from input channel
+    input = input.substr(ACTION_EXPRESSION.length() + 1);
+    // Handle multiple lines
+    while (input.find_first_of("?") == string::npos) {
+        string aux;
+        getline(cin, aux);
+        input += ' ' + aux;
+    }
     // Delete '?' from query
     utils::trimStringComplex(input);
     if (input[input.size() - 1] != '?') return;
     input = input.erase(input.length() - 1 , 1);
-    // Erase 'frases ' from input channel
-    input = input.substr(ACTION_EXPRESSION.length() + 1);
     // If it's a digit call {frases x y ?} otherwise call the recursive
     int x, y;
     istringstream iss(input);
@@ -103,10 +109,6 @@ void actionQuery(Library& library, string input) {
             Quote quote = library.getQuote(reference);
             cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
             quote.printInformation(false, true);
-        } else utils::printError();
-    } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
-        if (library.isBookSelected()) {
-            actionExpression(library, input);
         } else utils::printError();
     } else if (utils::startsWith(input, AUTHOR_QUOTES)) {
         string authorName = input.erase(input.length() - 3, 3);
@@ -167,6 +169,10 @@ void readActions(Library& library) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
+        } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
+            if (library.isBookSelected()) {
+                actionExpression(library, input);
+            } else utils::printError();
         } else if (utils::endsWith(input, ACTION_QUERY)) {
             actionQuery(library, input);
         } // TODO: else if (!input.empty()) utils::printError();
