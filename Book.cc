@@ -9,6 +9,7 @@ using namespace std;
 Book::Book() {
     bookWords = 0;
     dirtyFrequency = true;
+    deleted = false;
 }
 
 Book::Book(string title, string author) {
@@ -16,6 +17,7 @@ Book::Book(string title, string author) {
     authorName = author;
     bookWords = 0;
     dirtyFrequency = true;
+    deleted = false;
 }
 
 Book::~Book() {
@@ -120,6 +122,10 @@ bool Book::isFrequencyDirty() {
     return dirtyFrequency;
 }
 
+bool Book::isDeleted() {
+    return deleted;
+}
+
 void Book::generateFrequencyTable() {
     // Reset dirty boolean
     dirtyFrequency = false;
@@ -152,6 +158,10 @@ void Book::addQuote(string reference) {
 
 void Book::deleteQuote(string reference) {
     bookQuotes.erase(reference);
+}
+
+void Book::deleteBook() {
+    deleted = true;
 }
 
 void Book::findExpression(string query, set<int>& pos) {

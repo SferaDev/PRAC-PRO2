@@ -315,7 +315,7 @@ afegir cita 69 70
 
 afegir text "Test 1"
 autor "Pau Random"
-Hola.que,ase.     ....     hola    . hola. wrong line
+Hola.que,ase.        hola    . hola. wrong line
 ****
 
 triar text {Test}

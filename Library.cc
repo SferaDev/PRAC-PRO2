@@ -25,6 +25,15 @@ void Library::readBook(string title, string authorName) {
     map<string, Book>::iterator bookIt = bookCollection.find(authorName + ':' + title);
     if (bookIt == bookCollection.end()) {
         bookCollection[authorName + ':' + title] = book;
+    } else if (bookIt->second.isDeleted()) {
+        set<string, utils::stringNaturalComparator> quotes =
+                bookIt->second.getBookQuotes();
+        set<string, utils::stringNaturalComparator>::const_iterator quoteIt = quotes.begin();
+        while (quoteIt != quotes.end()) {
+            book.addQuote(*quoteIt);
+            quoteIt++;
+        }
+        bookCollection[authorName + ':' + title] = book;
     } else {
         utils::printError();
         return;

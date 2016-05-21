@@ -58,6 +58,9 @@ private:
     /** @brief Tells if we generate the frequency table (not generated previously or modified) */
     bool dirtyFrequency;
 
+    /** @brief Tells if the book has been deleted */
+    bool deleted;
+
     /** @brief Size of Book's collection */
     int bookWords;
 
@@ -133,10 +136,16 @@ public:
     bool findWord(string word);
 
     /** @brief Tells if a dirtyFrequency is true or false
-        \pre The dirtyFrequency of the implicit Book
-        \post Returns true if the dirtyFrequency of the implicit Book is true
+        \pre True
+        \post Returns true if the frequency table needs to be updated is true
     */
     bool isFrequencyDirty();
+
+    /** @brief Tells if a deleted is true or false
+        \pre True
+        \post Returns true if the book has been deleted
+    */
+    bool isDeleted();
 
     /** @brief Generates the FrequencyTable Vector
         \pre An implicit Book
@@ -167,6 +176,12 @@ public:
         \post bookQuotes has one less element
     */
     void deleteQuote(string reference);
+
+    /** @brief Marks the book as deleted
+        \pre An implicit Book
+        \post The book has been deleted
+    */
+    void deleteBook();
 
     /** @brief Finds the lines that keep the logical expression
         \param query: Query to find the lines to print
