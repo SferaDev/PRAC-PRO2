@@ -125,6 +125,7 @@ void readActions(Library& library) {
     string input;
     bool lastOutputSpace = true;
     while (getline(cin, input)) {
+        string original = input;
         if (!lastOutputSpace) cout << endl;
         // Remove spaces from input
         utils::trimString(input);
@@ -132,7 +133,7 @@ void readActions(Library& library) {
         // Quit command returns void
         if (utils::startsWith(input, QUIT)) {
             return;
-        } else if (!input.empty()) cout << input << endl;
+        } else if (!input.empty()) cout << original << endl;
         // Handle the rest of commands
         if (utils::startsWith(input, BOOK_INSERT)) {
             string title, author;
