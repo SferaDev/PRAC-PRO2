@@ -50,7 +50,7 @@ void actionExpression(Library& library, string input)  {
         input += ' ' + aux;
     }
     // Delete '?' from query
-    utils::trimStringComplex(input);
+    utils::trimString(input);
     if (input[input.size() - 1] != '?') return;
     input = input.erase(input.length() - 1 , 1);
     // If it's a digit call {frases x y ?} otherwise call the recursive
