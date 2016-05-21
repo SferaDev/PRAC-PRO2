@@ -68,21 +68,23 @@ void Library::selectBook(string query) {
     if (query.empty()) error = true;
     // Loop through all books while there're no errors
     while (it != bookCollection.end() and !error) {
-        istringstream iss(query);
-        string word;
-        bool bContinue = true;
-        // Loop through all words (each word must be on the text)
-        while (iss >> word and bContinue) {
-            // Check if author/title contains or content contains
-            string bookId = it->first;
-            bookId = bookId.replace(bookId.find_first_of(':'), 1, " ");
-            bContinue = (utils::contains(bookId, word) or it->second.findWord(word));
-        }
-        if (bContinue) {
-            if (!isBookSelected()) currentBook = it;
-            else {
-                error = true;
-                currentBook = bookCollection.end();
+        if (!it->second.isDeleted()) {
+            istringstream iss(query);
+            string word;
+            bool bContinue = true;
+            // Loop through all words (each word must be on the text)
+            while (iss >> word and bContinue) {
+                // Check if author/title contains or content contains
+                string bookId = it->first;
+                bookId = bookId.replace(bookId.find_first_of(':'), 1, " ");
+                bContinue = (utils::contains(bookId, word) or it->second.findWord(word));
+            }
+            if (bContinue) {
+                if (!isBookSelected()) currentBook = it;
+                else {
+                    error = true;
+                    currentBook = bookCollection.end();
+                }
             }
         }
         it++;
@@ -106,7 +108,7 @@ void Library::deleteBook() {
             authorIt->second.incrementWordCount(-(currentBook->second.getWordCount()));
         }
         // Delete the book
-        bookCollection.erase(currentBook);
+        currentBook->second.deleteBook();
         // Reset the currentBook iterator
         currentBook = bookCollection.end();
     } else utils::printError();
