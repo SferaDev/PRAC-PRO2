@@ -111,7 +111,7 @@ void Book::replaceWords(string oldWord, string newWord) {
                 else auxWord = word + auxWord;
                 line += auxWord + ' ';
             }
-            utils::formatString(line);
+            utils::trimString(line);
             bookContent[*it2 - 1] = line;
             it2++;
         }
