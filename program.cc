@@ -139,6 +139,7 @@ void readActions(Library& library) {
             string title, author;
             title = input.erase(input.length() - 1, 1).substr(BOOK_INSERT.length());
             getline(cin, input);
+            utils::formatString(input);
             if (utils::startsWith(input, BOOK_INSERT_AUTHOR)) {
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
                 library.readBook(title, author);
