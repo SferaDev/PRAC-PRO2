@@ -237,7 +237,7 @@ void Library::printCurrentInformation() {
     cout << currentBook->second.getLineCount() << " ";
     cout << currentBook->second.getWordCount() << endl;
     cout << "Cites Associades:" << endl;
-    set<string> quotes = currentBook->second.getBookQuotes();
+    set<string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformation(true, false);
@@ -246,7 +246,7 @@ void Library::printCurrentInformation() {
 }
 
 void Library::printCurrentQuotes() {
-    set<string> quotes = currentBook->second.getBookQuotes();
+    set<string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformationComplex(true);

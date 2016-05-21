@@ -140,7 +140,7 @@ void Book::generateFrequencyTable() {
     wordFrequencyList.sort(utils::frequencyComparator());
 }
 
-set<string> Book::getBookQuotes() {
+set<string, utils::stringNaturalComparator> Book::getBookQuotes() {
     return bookQuotes;
 }
 

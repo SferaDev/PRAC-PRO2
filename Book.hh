@@ -67,7 +67,7 @@ private:
     /** @brief Ordered collection of quotes
         \param string: The ID of the parent quoteCollection
     */
-    set<string> bookQuotes;
+    set<string, utils::stringNaturalComparator> bookQuotes;
 
 public:
     /** @brief Creates an empty Book
@@ -157,7 +157,7 @@ public:
         \pre An implicit Book
         \post Returns the bookQuotes set
     */
-    set<string> getBookQuotes();
+    set<string, utils::stringNaturalComparator> getBookQuotes();
 
     /** @brief Returns the lines from start to end
         \pre An implicit Book
