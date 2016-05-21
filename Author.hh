@@ -7,6 +7,7 @@
 #define PRO2_PRAC_AUTHOR_HH
 
 #ifndef NO_DIAGRAM
+#include "Utils.hh"
 #include <iostream>
 #include <set>
 #include <string>
@@ -41,7 +42,7 @@ private:
     /** @brief Ordered collection of quotes
         \param string: the ID of the parent quoteCollection
     */
-    set<string> authorQuotes;
+    set<string, utils::stringNaturalComparator> authorQuotes;
 
 public:
     /** @brief Creates an empty Author
@@ -134,7 +135,7 @@ public:
         \pre An implicit Author
         \post Returns the authorQuotes set
     */
-    set<string> getAuthorQuotes();
+    set<string, utils::stringNaturalComparator> getAuthorQuotes();
 
     /** @brief Returns if Author has any book
         \pre An implicit Author

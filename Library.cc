@@ -214,7 +214,7 @@ void Library::printBooksByAuthor(string author) {
 }
 
 void Library::printQuotesByAuthor(string author) {
-    set<string> quotes = authorCollection[author].getAuthorQuotes();
+    set<string, utils::stringNaturalComparator> quotes = authorCollection[author].getAuthorQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformationComplex(false);

@@ -65,7 +65,7 @@ void Author::deleteQuote(string reference) {
     authorQuotes.erase(reference);
 }
 
-set<string> Author::getAuthorQuotes() {
+set<string, utils::stringNaturalComparator> Author::getAuthorQuotes() {
     return authorQuotes;
 }
 

@@ -17,6 +17,40 @@ using namespace std;
     @brief Utility namespace for generic functions.
 */
 namespace utils {
+    struct stringNaturalComparator {
+        bool operator() (const string& a, const string& b) {
+            int posA = a.find_first_of("0123456789");
+            int posB = b.find_first_of("0123456789");
+            if (a.substr(0, posA) != b.substr(0, posB)) {
+                return a.substr(0, posA) < b.substr(0, posB);
+            } else if (posA != string::npos and posB != string::npos) {
+                int valA, valB;
+                istringstream issA(a.substr(posA));
+                istringstream issB(b.substr(posB));
+                issA >> valA;
+                issB >> valB;
+                return valA < valB;
+            } else {
+                return a < b;
+            }
+        }
+    };
+
+    struct frequencyComparator {
+        bool operator() (const pair<string, int>& a, const pair<string, int>& b) {
+            // Special case: Same frequency
+            if (a.second == b.second) {
+                // Special case: Same length
+                if (a.first.length() == b.first.length()) {
+                    return a.first < b.first;
+                }
+                // Base case: Order by length in asc order
+                return a.first.length() < b.first.length();
+            }
+            // Base case: Order by frequency in desc order
+            return a.second > b.second;
+        }
+    };
 
     /** @brief Returns if a sentence contains a word
         \param input: The sentence (can contain one delimiter per word)
@@ -81,8 +115,6 @@ namespace utils {
 
     /** @brief Prints an error using the correct formatting */
     void printError();
-
-    struct stringNaturalComparator;
 }
 
 #endif //PRO2_PRAC_UTILS_HH
