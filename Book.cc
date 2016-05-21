@@ -111,7 +111,7 @@ void Book::replaceWords(string oldWord, string newWord) {
                 else auxWord = word + auxWord;
                 line += auxWord + ' ';
             }
-            utils::trimString(line);
+            utils::formatString(line);
             bookContent[*it2 - 1] = line;
             it2++;
         }
@@ -122,7 +122,8 @@ void Book::replaceWords(string oldWord, string newWord) {
                                    lineDictionary[oldWord].end());
     lineDictionary.erase(oldWord);
     // Edit the frequency Map
-    wordFrequencyMap[newWord] += wordFrequencyMap[oldWord];
+    if (newWord.empty()) bookWords -= wordFrequencyMap[oldWord];
+    else wordFrequencyMap[newWord] += wordFrequencyMap[oldWord];
     wordFrequencyMap.erase(oldWord);
     dirtyFrequency = true;
 }
