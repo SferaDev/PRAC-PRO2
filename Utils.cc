@@ -40,8 +40,14 @@ namespace utils {
     }
 
     void trimString(string& query) {
+        int pos = query.find("  ");
+        while (pos != string::npos) {
+            query.erase(pos, 1);
+            pos = query.find("  ");
+        }
         while (query[0] == ' ') query.erase(0, 1);
-        while (query[query.length() - 1] == ' ') query.erase(query.length() - 1, 1);
+        while (query.length() > 0 and query[query.length() - 1] == ' ')
+            query.erase(query.length() - 1, 1);
     }
 
     void trimStringComplex(string& query) {
@@ -51,12 +57,8 @@ namespace utils {
     }
 
     void formatString(string& query) {
-        int pos = query.find("  ");
-        while (pos != string::npos) {
-            query.erase(pos, 1);
-            pos = query.find("  ");
-        }
-        pos = query.find_first_of(".!?,;:");
+        trimString(query);
+        int pos = query.find_first_of(".!?,;:", 1);
         while (pos != string::npos) {
             if (pos + 1 < query.length() and query[pos + 1] != ' ')
                 query.insert(pos + 1, " ");
