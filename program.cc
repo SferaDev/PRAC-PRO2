@@ -69,39 +69,39 @@ void actionExpression(Library& library, string input)  {
 void actionQuery(Library& library, string input) {
     if (utils::startsWith(input, QUERY_AUTHORS)) {
         library.printAuthors();
-    } else if (utils::startsWith(input, QUERY_BOOKS_ALL)) {
+    } else if (utils::startsWithEquals(input, QUERY_BOOKS_ALL)) {
         library.printBooks();
-    } else if (utils::startsWith(input, QUERY_CURRENT_AUTHOR)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_AUTHOR)) {
         if (library.isBookSelected())
             cout << library.getBook().getAuthor() << endl;
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_CONTENT)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_CONTENT)) {
         if (library.isBookSelected())
             library.getBook().printAllLines();
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_INFO)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_INFO)) {
         if (library.isBookSelected())
             library.printCurrentInformation();
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_LINES)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_LINES)) {
         if (library.isBookSelected())
             cout << library.getBook().getLineCount() << endl;
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_WORDS)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_WORDS)) {
         if (library.isBookSelected())
             cout << library.getBook().getWordCount() << endl;
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_FREQUENCY)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_FREQUENCY)) {
         if (library.isBookSelected())
             library.getBook().printFrequencyTable();
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_CURRENT_QUOTES)) {
+    } else if (utils::startsWithEquals(input, QUERY_CURRENT_QUOTES)) {
         if (library.isBookSelected())
             library.printCurrentQuotes();
         else utils::printError();
-    } else if (utils::startsWith(input, QUERY_QUOTES_ALL)) {
+    } else if (utils::startsWithEquals(input, QUERY_QUOTES_ALL)) {
         library.printQuotes();
-    } else if (utils::startsWith(input, QUOTE_INFO)) {
+    } else if (utils::startsWithEquals(input, QUOTE_INFO)) {
         string reference = input.erase(input.length() - 3, 3);
         reference = reference.substr(input.find_first_of("\"") + 1);
         utils::stringUppercase(reference);
@@ -110,11 +110,11 @@ void actionQuery(Library& library, string input) {
             cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
             quote.printInformation(false, true);
         } else utils::printError();
-    } else if (utils::startsWith(input, AUTHOR_QUOTES)) {
+    } else if (utils::startsWithEquals(input, AUTHOR_QUOTES)) {
         string authorName = input.erase(input.length() - 3, 3);
         authorName = authorName.substr(input.find_first_of("\"") + 1);
         library.printQuotesByAuthor(authorName);
-    } else if (utils::startsWith(input, AUTHOR_BOOKS)) {
+    } else if (utils::startsWithEquals(input, AUTHOR_BOOKS)) {
         string authorName = input.erase(input.length() - 3, 3);
         authorName = authorName.substr(input.find_first_of("\"") + 1);
         library.printBooksByAuthor(authorName);
@@ -131,7 +131,7 @@ void readActions(Library& library) {
         utils::trimString(input);
         lastOutputSpace = input.empty();
         // Quit command returns void
-        if (utils::startsWith(input, QUIT)) {
+        if (utils::startsWithEquals(input, QUIT)) {
             return;
         } else if (!input.empty()) cout << original << endl;
         // Handle the rest of commands
@@ -144,13 +144,13 @@ void readActions(Library& library) {
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
                 library.readBook(title, author);
             }
-        } else if (utils::startsWith(input, BOOK_DELETE)) {
+        } else if (utils::startsWithEquals(input, BOOK_DELETE)) {
             library.deleteBook();
-        } else if (utils::startsWith(input, BOOK_SELECT)) {
+        } else if (utils::startsWithEquals(input, BOOK_SELECT)) {
             string query = input.erase(input.length() - 1, 1);
             query = input.substr(input.find_first_of("{") + 1);
             library.selectBook(query);
-        } else if (utils::startsWith(input, BOOK_REPLACE_WORD)) {
+        } else if (utils::startsWithEquals(input, BOOK_REPLACE_WORD)) {
             istringstream iss(input);
             string oldWord, newWord;
             iss >> oldWord >> oldWord >> newWord >> newWord;
@@ -171,7 +171,7 @@ void readActions(Library& library) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
-        } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
+        } else if (utils::startsWithEquals(input, ACTION_EXPRESSION)) {
             if (library.isBookSelected()) {
                 actionExpression(library, input);
             } else utils::printError();

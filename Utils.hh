@@ -75,6 +75,14 @@ namespace utils {
     */
     bool startsWith(string a, string b);
 
+    /** @brief Returns if a sentence starts and equals the start of another one
+        \param a: String to analyze
+        \param b: String to find on first positions of param a
+        \pre True
+        \post Returns true if the first b.size() chars are the same on a
+    */
+    bool startsWithEquals(string a, string b);
+
     /** @brief Returns if a sentence ends with another one
         \param a: String to analyze
         \param b: String to find on first positions of param a
