@@ -53,7 +53,7 @@ void Quote::setContent(vector<string> content) {
 }
 
 void Quote::printInformation(bool reference, bool startend) {
-    if (!quoteAuthor.empty() and !quoteBook.empty()) {
+    if (!quoteBook.empty()) {
         if (reference) cout << quoteReference << endl;
         if (startend) cout << quoteStart << "-" << quoteEnd << endl;
         for (int i = 0; i < quoteContent.size(); ++i) {
@@ -63,9 +63,8 @@ void Quote::printInformation(bool reference, bool startend) {
 }
 
 void Quote::printInformationComplex(bool showAuthorName) {
-    if (!quoteAuthor.empty() and !quoteBook.empty()) {
+    if (!quoteBook.empty()) {
         printInformation(true, false);
-        // FIXME: Public has changed (19-05-16)
         if (showAuthorName) cout << quoteAuthor << " ";
         cout << "\"" << quoteBook << "\"" << endl;
     }
