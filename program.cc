@@ -63,7 +63,7 @@ void actionExpression(Library& library, string input)  {
         library.getBook().printLinesConsecutiveWords(input);
     } else if (input.find_first_of("({})&|") != string::npos){
         library.getBook().printLines(input);
-    } else utils::printError();
+    } //else utils::printError();
 }
 
 void actionQuery(Library& library, string input) {
@@ -142,6 +142,8 @@ void readActions(Library& library) {
             if (utils::startsWith(input, BOOK_INSERT_AUTHOR)) {
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
                 library.readBook(title, author);
+            } else {
+                while (input != "****") getline(cin, input);
             }
         } else if (utils::startsWithEquals(input, BOOK_DELETE)) {
             library.deleteBook();
