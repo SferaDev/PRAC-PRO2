@@ -3,7 +3,6 @@
 
 namespace utils {
     bool contains(string input, string query) {
-        formatString(input);
         istringstream iss(input);
         string word;
         while (iss >> word) {
