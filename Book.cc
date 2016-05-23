@@ -25,40 +25,26 @@ Book::~Book() {
 }
 
 void Book::readBookContent() {
-    string input, content;
+    string input, line;
     while (getline(cin, input) and input != "****") {
-        content += ' ' + input;
-        int posDelimiter = content.find_first_of(".?!");
-        while (posDelimiter != string::npos) {
-            string line = content.substr(0, posDelimiter + 1);
-            content = content.substr(posDelimiter + 1);
-            utils::trimString(line);
-            utils::formatString(line);
-            utils::trimString(content);
-            bookContent.push_back(line);
-            string word;
-            istringstream iss(line);
-            while (iss >> word) {
-                int posSeparator = word.find_first_of(",;:");
-                while (posSeparator != string::npos) {
-                    string subWord = word.substr(0, posSeparator);
-                    if (!subWord.empty()) {
-                        lineDictionary[subWord].push_back(bookContent.size());
-                        wordFrequencyMap[subWord] += 1;
-                        bookWords += 1;
-                    }
-                    word = word.substr(posSeparator + 1);
-                    posSeparator = word.find_first_of(",;:");
-                }
-                while (word.size() > 0 and word.find_last_of(".?!") == word.length() - 1)
-                    word.erase(word.length() - 1, 1);
-                if (word.size() > 0) {
-                    lineDictionary[word].push_back(bookContent.size());
-                    wordFrequencyMap[word] += 1;
-                    bookWords += 1;
-                }
+        istringstream iss(input);
+        string word;
+        while (iss >> word) {
+            line += ' ' + word;
+            if (word.find_last_of(".?!") == word.length() - 1) {
+                utils::trimString(line);
+                bookContent.push_back(line);
+                line.clear();
+                word.erase(word.length() - 1, 1);
+            } else if (word.find_last_of(",;:.?!") == word.length() - 1) {
+                word.erase(word.length() - 1, 1);
             }
-            posDelimiter = content.find_first_of(".?!");
+            if (!word.empty()) {
+                if (line.empty()) lineDictionary[word].push_back(bookContent.size());
+                else lineDictionary[word].push_back(bookContent.size() + 1);
+                wordFrequencyMap[word] += 1;
+                bookWords += 1;
+            }
         }
     }
 }
