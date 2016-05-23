@@ -19,6 +19,19 @@ namespace utils {
         return true;
     }
 
+    bool containsConsecutive(string a, string b) {
+        string wordA, wordB;
+        istringstream issA(a);
+        istringstream issB(b);
+        issB >> wordB;
+        while (!issA.eof() and wordA != wordB) issA >> wordA;
+        while (issB >> wordB) {
+            if (!issA.eof()) issA >> wordA;
+            if (wordA != wordB) return false;
+        }
+        return true;
+    }
+
     void stringUppercase(string& input) {
         for (int i = 0; i < input.length(); ++i) {
             if (!isupper(input[i])) input[i] = toupper(input[i]);

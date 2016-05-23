@@ -60,11 +60,19 @@ namespace utils {
     */
     bool contains(string input, string query);
 
-    /** @brief Converts a string from lowercase to uppercase
-        \param input: A string with or without lowercase chars
-        \pre True
-        \post The forwarded param string has all chars uppercase
+    /** @brief Returns if a sentence contains a consecutive sequence of words
+        \param input: The sentence (can contain one delimiter per word)
+        \param query: The word to find in the sentence (without any delimiter)
+        \pre The sentence and the word to find
+        \post Returns true if the single word is on the sentence
     */
+    bool containsConsecutive(string a, string b);
+
+        /** @brief Converts a string from lowercase to uppercase
+            \param input: A string with or without lowercase chars
+            \pre True
+            \post The forwarded param string has all chars uppercase
+        */
     void stringUppercase(string& input);
 
     /** @brief Returns if a sentence starts with another one
