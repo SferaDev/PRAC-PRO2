@@ -137,7 +137,7 @@ void readActions(Library& library) {
         // Handle the rest of commands
         if (utils::startsWith(input, BOOK_INSERT)) {
             string title, author;
-            title = input.erase(input.length() - 1, 1).substr(BOOK_INSERT.length());
+            title = original.erase(original.length() - 1, 1).substr(BOOK_INSERT.length());
             getline(cin, input);
             if (utils::startsWith(input, BOOK_INSERT_AUTHOR)) {
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
