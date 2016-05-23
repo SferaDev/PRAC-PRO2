@@ -19,7 +19,7 @@ void Library::readBook(string title, string authorName) {
     Book book(title, authorName);
     book.readBookContent();
     // Don't add book if title or author is null
-    if (title.empty() or authorName.empty()) return;
+    if (title.empty()) return;
     // If authorName:bookTitle pair doesn't exist create a new one
     // Else return error as there's an existing book with same author and title
     map<string, Book>::iterator bookIt = bookCollection.find(authorName + ':' + title);
