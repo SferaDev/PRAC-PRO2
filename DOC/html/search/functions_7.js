@@ -5,6 +5,7 @@ var searchData=
   ['incrementwordcount',['incrementWordCount',['../class_author.html#af12d32bb751a9ac3e1508631e4d8fb8e',1,'Author']]],
   ['insertquote',['insertQuote',['../class_library.html#aac2d7d4645a2adda29a0064bc66e6143',1,'Library']]],
   ['isbookselected',['isBookSelected',['../class_library.html#a04ff0757054c2813e89036cdd3f7f91f',1,'Library']]],
+  ['isdeleted',['isDeleted',['../class_book.html#ae39b44d3e5b6f65947776735d49d1d0f',1,'Book']]],
   ['isempty',['isEmpty',['../class_author.html#ab0752a3f061a07c6460e52e4386ea5c3',1,'Author']]],
   ['isfrequencydirty',['isFrequencyDirty',['../class_book.html#aec01aa24087b313f36cc0fe3c4664f84',1,'Book']]]
 ];

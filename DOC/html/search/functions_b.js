@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['readbook',['readBook',['../class_library.html#a2e296d2dc8e0292f0ea6d8d3511f7ec5',1,'Library']]],
-  ['readbookcontent',['readBookContent',['../class_book.html#a3e62d70f19bf6fa8ebef5556882b3ed7',1,'Book']]],
-  ['replacewords',['replaceWords',['../class_book.html#aaf182e24b86624b6ff54fba2581094a4',1,'Book']]],
-  ['replacewordsonbook',['replaceWordsOnBook',['../class_library.html#abf34dcdd5eb2a7c4127e8a50db814750',1,'Library']]]
+  ['quote',['Quote',['../class_quote.html#ae160077e513fe6346eeba294a195038b',1,'Quote::Quote()'],['../class_quote.html#a12fee26be3fcdf003691e394f256b2c8',1,'Quote::Quote(string reference, string author, string book)']]],
+  ['quoteexists',['quoteExists',['../class_library.html#a4d87e1bd531b56f79d1faa8781f34630',1,'Library']]]
 ];

@@ -2,10 +2,10 @@ var searchData=
 [
   ['generatefrequencytable',['generateFrequencyTable',['../class_book.html#a8d232eaeb4207707d77bc18e6dd467cd',1,'Book']]],
   ['getauthor',['getAuthor',['../class_book.html#a3bd4acccf78a82061fc6c78107757620',1,'Book::getAuthor()'],['../class_quote.html#ae29855dc6393689277a9cac61f9f56b8',1,'Quote::getAuthor()']]],
-  ['getauthorquotes',['getAuthorQuotes',['../class_author.html#a81435140eb694eb7ed54ea567aa38984',1,'Author']]],
+  ['getauthorquotes',['getAuthorQuotes',['../class_author.html#ab6de48a5cae0c2f2b9a2b09d9106504b',1,'Author']]],
   ['getbook',['getBook',['../class_library.html#a67ccad51c76c3abfb0d46fa533f46e03',1,'Library']]],
   ['getbookcount',['getBookCount',['../class_author.html#a78febe94924896f8d0ce218d5cd41786',1,'Author']]],
-  ['getbookquotes',['getBookQuotes',['../class_book.html#a7e0d6cb0827bc58637da5ba49b4e1944',1,'Book']]],
+  ['getbookquotes',['getBookQuotes',['../class_book.html#a85273ee0886a725c370d8efe1909f595',1,'Book']]],
   ['getbooktitle',['getBookTitle',['../class_quote.html#a7089d3cf82409928bcdfca5c259facde',1,'Quote']]],
   ['getendline',['getEndLine',['../class_quote.html#aec85eae85f33b6e10458821f54f28fc9',1,'Quote']]],
   ['getlinecount',['getLineCount',['../class_author.html#af24acf9a0c70fc700edccfb956c2bace',1,'Author::getLineCount()'],['../class_book.html#abd9ca114f4909a735c7cb017920b30e4',1,'Book::getLineCount()']]],

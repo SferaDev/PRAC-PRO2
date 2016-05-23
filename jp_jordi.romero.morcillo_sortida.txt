@@ -1,0 +1,755 @@
+afegir text "Bifel belipiji zi nuzecu joj"
+
+triar text { So pu da}
+
+substitueix "da" per "fa"
+
+substitueix "fa" per "bo"
+
+nombre de frases ?
+17
+
+afegir cita 1 1
+
+afegir cita 2 2
+
+afegir cita 3 3
+
+afegir cita 4 4
+
+afegir cita 5 5
+
+cites ?
+BM1
+1 Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM2
+2 Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM3
+3 Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM4
+4 Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM5
+5 Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+
+eliminar cita "BM5"
+
+afegir cita 5 5
+
+afegir cita 6 6
+
+afegir cita 7 7
+
+afegir cita 8 8
+
+afegir cita 9 9
+
+afegir cita 10 10
+
+afegir cita 11 11
+
+afegir cita 12 12
+
+afegir cita 13 13
+
+afegir cita 14 14
+
+afegir cita 15 15
+
+afegir cita 16 16
+
+afegir cita 17 17
+
+cites ?
+BM1
+1 Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM2
+2 Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM3
+3 Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM4
+4 Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM6
+5 Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM7
+6 Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM8
+7 Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM9
+8 Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM10
+9 Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM11
+10 Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake bo hun xap nir gacipa ro fu yev haqet hi bo nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM12
+11 Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM13
+12 Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM14
+13 Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM15
+14 Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM16
+15 Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM17
+16 Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM18
+17 So bo bo bo.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+
+totes cites ?
+BM1
+1 Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM2
+2 Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM3
+3 Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM4
+4 Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM6
+5 Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM7
+6 Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM8
+7 Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM9
+8 Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM10
+9 Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM11
+10 Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake bo hun xap nir gacipa ro fu yev haqet hi bo nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM12
+11 Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM13
+12 Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM14
+13 Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM15
+14 Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM16
+15 Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM17
+16 Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM18
+17 So bo bo bo.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+
+eliminar cita ""
+error
+
+taula de frequencies ?
+hi 6
+qi 6
+tu 6
+bo 5
+la 5
+qo 5
+ha 4
+hu 4
+nu 4
+qe 4
+to 4
+ye 4
+ba 3
+be 3
+bu 3
+co 3
+fe 3
+ge 3
+ho 3
+ji 3
+ke 3
+pi 3
+va 3
+vi 3
+wa 3
+wi 3
+yi 3
+de 2
+di 2
+fu 2
+ja 2
+je 2
+jo 2
+ka 2
+ki 2
+mi 2
+ne 2
+pa 2
+pu 2
+qa 2
+re 2
+ro 2
+ru 2
+si 2
+su 2
+ve 2
+vo 2
+vu 2
+we 2
+wo 2
+wu 2
+xe 2
+xi 2
+xu 2
+ya 2
+za 2
+zu 2
+ger 2
+mab 2
+moy 2
+niq 2
+pow 2
+yev 2
+ziv 2
+Ca 1
+Pa 1
+Si 1
+So 1
+Wo 1
+Ya 1
+ca 1
+ci 1
+cu 1
+do 1
+du 1
+fo 1
+gi 1
+go 1
+gu 1
+ju 1
+ko 1
+le 1
+li 1
+lo 1
+lu 1
+mo 1
+na 1
+ni 1
+no 1
+pe 1
+qu 1
+ra 1
+sa 1
+so 1
+ta 1
+te 1
+xo 1
+yu 1
+ze 1
+Jat 1
+Kiq 1
+Vef 1
+bak 1
+boh 1
+bom 1
+but 1
+buz 1
+caz 1
+cin 1
+coc 1
+coh 1
+cos 1
+cox 1
+cub 1
+cuy 1
+dez 1
+doy 1
+duz 1
+fap 1
+fuw 1
+gak 1
+gis 1
+gob 1
+god 1
+goq 1
+gos 1
+goz 1
+hax 1
+hef 1
+heg 1
+him 1
+hit 1
+hom 1
+hot 1
+hun 1
+hup 1
+jid 1
+jil 1
+jiz 1
+jol 1
+kab 1
+kan 1
+kep 1
+kiz 1
+koq 1
+kun 1
+lel 1
+leq 1
+lev 1
+log 1
+luj 1
+lun 1
+map 1
+mob 1
+mug 1
+nag 1
+nep 1
+nev 1
+nir 1
+niz 1
+nud 1
+paf 1
+pal 1
+pob 1
+pok 1
+pol 1
+puy 1
+qan 1
+qap 1
+qeg 1
+qis 1
+qom 1
+qut 1
+rak 1
+red 1
+ref 1
+ril 1
+riz 1
+ruh 1
+ruw 1
+saj 1
+sil 1
+siy 1
+sog 1
+suf 1
+taz 1
+tec 1
+tih 1
+tov 1
+tuj 1
+tuy 1
+vaw 1
+vif 1
+vij 1
+voj 1
+von 1
+vos 1
+vus 1
+wef 1
+wij 1
+wiq 1
+woc 1
+woq 1
+xag 1
+xap 1
+xel 1
+xem 1
+xep 1
+xif 1
+xip 1
+xog 1
+xoq 1
+xor 1
+xub 1
+xuc 1
+xuj 1
+yid 1
+yig 1
+yol 1
+yuw 1
+ziw 1
+zoc 1
+zot 1
+zul 1
+Kiwo 1
+Moso 1
+Tesu 1
+bage 1
+befi 1
+bofi 1
+buja 1
+buze 1
+canu 1
+caze 1
+copi 1
+cuje 1
+cuti 1
+dope 1
+duqu 1
+fiyo 1
+geke 1
+gigu 1
+gopu 1
+gove 1
+gule 1
+guti 1
+hega 1
+hifo 1
+hiqa 1
+hire 1
+hoti 1
+hupi 1
+jaka 1
+jaso 1
+jaxo 1
+jeke 1
+jule 1
+juzu 1
+kesi 1
+kize 1
+kowo 1
+kuja 1
+kuma 1
+lani 1
+liho 1
+lume 1
+mazo 1
+miku 1
+muwo 1
+naqi 1
+niyi 1
+noho 1
+nura 1
+paqa 1
+peri 1
+pipu 1
+qama 1
+qeqe 1
+qida 1
+qobo 1
+qoce 1
+qopu 1
+qoqe 1
+qoze 1
+sawu 1
+siko 1
+soxa 1
+suwa 1
+tata 1
+taye 1
+tiqo 1
+vaxi 1
+vigi 1
+webi 1
+wiju 1
+wiqo 1
+wosa 1
+wuka 1
+xada 1
+xayo 1
+xici 1
+xida 1
+xoka 1
+xoza 1
+xuqo 1
+yake 1
+yavu 1
+yeto 1
+yite 1
+yivu 1
+yulu 1
+zecu 1
+zemi 1
+zeta 1
+ziwa 1
+zulu 1
+badul 1
+banuc 1
+biqoy 1
+ceqan 1
+dodit 1
+duyom 1
+famiy 1
+favid 1
+fejaq 1
+fowav 1
+funal 1
+giyoz 1
+gobiw 1
+gotal 1
+haqet 1
+hedin 1
+hoquw 1
+jewix 1
+juvag 1
+kaqiv 1
+lelav 1
+ligev 1
+logag 1
+lupud 1
+matip 1
+meyew 1
+mifik 1
+mufah 1
+mujog 1
+mupuh 1
+muvas 1
+nadac 1
+nenar 1
+nomaf 1
+novem 1
+novok 1
+papow 1
+paveq 1
+pebif 1
+pipiv 1
+pokum 1
+porig 1
+pupeh 1
+qesej 1
+qetum 1
+qezot 1
+quwij 1
+rokol 1
+rucic 1
+ruqoh 1
+sajax 1
+soqoz 1
+sufuz 1
+tepuc 1
+tezij 1
+visac 1
+vozis 1
+vumon 1
+vuwaq 1
+wepey 1
+wiyen 1
+wuzay 1
+xapik 1
+xokez 1
+xolof 1
+xotek 1
+xozos 1
+yosaj 1
+zelun 1
+zeqiv 1
+zeqov 1
+Sekoho 1
+Yiqacu 1
+bodoho 1
+bunowo 1
+cupeya 1
+facopa 1
+favibu 1
+fewuja 1
+fuyolo 1
+gacipa 1
+gomega 1
+hudoci 1
+jovoqi 1
+kakula 1
+kobeli 1
+lavaze 1
+lesice 1
+liloxo 1
+liwune 1
+megoxo 1
+muroxi 1
+niwiqu 1
+noliho 1
+nuwihu 1
+powure 1
+qamalu 1
+qazoxa 1
+qiheve 1
+qojayu 1
+rayalo 1
+rigesi 1
+saqosi 1
+sejadu 1
+sijixe 1
+sucevi 1
+suruve 1
+tulusa 1
+tuxeba 1
+vayiki 1
+vemohe 1
+wesoxe 1
+wudowo 1
+xibuqo 1
+ximewe 1
+xogeco 1
+yopawo 1
+zeciwu 1
+zukile 1
+Sadozuw 1
+bojibeg 1
+bovogod 1
+cubikej 1
+delecub 1
+divizin 1
+fanuyot 1
+fowijiq 1
+funaqit 1
+gidepaz 1
+goqegep 1
+hutabez 1
+jeqoqeb 1
+kohucon 1
+kugopok 1
+kuyutuq 1
+leyapix 1
+milapod 1
+nasunit 1
+noqamul 1
+pavetap 1
+puqomod 1
+puquruc 1
+qazaqey 1
+qerezon 1
+rusopol 1
+virajow 1
+welitoq 1
+wisofat 1
+zerolej 1
+zosedin 1
+zutadiy 1
+cewibika 1
+fapexore 1
+gadegoxa 1
+goveqewo 1
+hipiwawe 1
+jewewaja 1
+jinajipi 1
+kimonofe 1
+lafatoca 1
+lazipaye 1
+lilukize 1
+lohetiki 1
+pigeduda 1
+tadesire 1
+totecetu 1
+vicaguto 1
+vifigubu 1
+vuqesozo 1
+wiloyeqe 1
+yedokofi 1
+ceqinimov 1
+doxuxuqop 1
+falesorud 1
+faqazihoc 1
+fecufehaq 1
+fobiqecur 1
+govuqosuq 1
+hiwipisey 1
+holitequz 1
+jiponagap 1
+kosezasoh 1
+kurolowis 1
+liqapemop 1
+nuleyekix 1
+nuyamazel 1
+paxesaqom 1
+qefexayuz 1
+sazenolip 1
+sucutidir 1
+suhojixuh 1
+tezawewav 1
+vakowayak 1
+zigeyizeq 1
+Luwusesudi 1
+Zibitaziho 1
+cobicapiyo 1
+fimetopofo 1
+holanuriko 1
+mibeletowo 1
+sixuvucimi 1
+wepaqabiqe 1
+cagaxoyarak 1
+cuvazewopuj 1
+fabelegakof 1
+fuqusucenaf 1
+jusemevasej 1
+leyahazozux 1
+nokewawefex 1
+yekudoxunes 1
+zuliqihowit 1
+huvorukuyuta 1
+pasanezinocu 1
+wupebiwelejo 1
+yuyowezowato 1
+bafovutoquxij 1
+dokifucudoros 1
+luqobupibuzak 1
+taboxiniwaqeya 1
+mejiseqevipiqup 1
+xipeqagisijogoq 1
+meqiqejoxevajored 1
+lohabajucufekuyojar 1
+limaxedahifalibagiva 1
+hivamahokuyuhecugadar 1
+nihasonejosabukicivigo 1
+
+afegir text "hola"
+
+triar text {hola}
+
+contingut ?
+1 123, jjj, JJJ, maamamama, 214143m, etogejrog 1234113253.
+2 123.
+
+taula de frequencies ?
+123 2
+JJJ 1
+jjj 1
+214143m 1
+etogejrog 1
+maamamama 1
+1234113253 1
+
+substitueix "123" per "hola"
+
+taula de frequencies ?
+hola 2
+JJJ 1
+jjj 1
+214143m 1
+etogejrog 1
+maamamama 1
+1234113253 1
+
+afegir cita 1 1
+
+info ?
+123 43 r "hola" 2 8
+Cites Associades:
+14R1
+1 hola, jjj, JJJ, maamamama, 214143m, etogejrog 1234113253.
+

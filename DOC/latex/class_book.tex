@@ -30,9 +30,11 @@ bool \hyperlink{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{find\+Word} (strin
 \begin{DoxyCompactList}\small\item\em Finds if a word is on the content of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 bool \hyperlink{class_book_aec01aa24087b313f36cc0fe3c4664f84}{is\+Frequency\+Dirty} ()
 \begin{DoxyCompactList}\small\item\em Tells if a dirty\+Frequency is true or false. \end{DoxyCompactList}\item 
+bool \hyperlink{class_book_ae39b44d3e5b6f65947776735d49d1d0f}{is\+Deleted} ()
+\begin{DoxyCompactList}\small\item\em Tells if a deleted is true or false. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\+Frequency\+Table} ()
 \begin{DoxyCompactList}\small\item\em Generates the Frequency\+Table Vector. \end{DoxyCompactList}\item 
-set$<$ string $>$ \hyperlink{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}{get\+Book\+Quotes} ()
+set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_book_a85273ee0886a725c370d8efe1909f595}{get\+Book\+Quotes} ()
 \begin{DoxyCompactList}\small\item\em Returns the book quotes. \end{DoxyCompactList}\item 
 vector$<$ string $>$ \hyperlink{class_book_acb5eaff231b512901cac3e3220ee2960}{get\+Lines} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Returns the lines from start to end. \end{DoxyCompactList}\item 
@@ -40,6 +42,8 @@ void \hyperlink{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{add\+Quote} (strin
 \begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}{delete\+Quote} (string reference)
 \begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+void \hyperlink{class_book_a34626be6b35f4ac97ffd3571210a1393}{delete\+Book} ()
+\begin{DoxyCompactList}\small\item\em Marks the book as deleted. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{find\+Expression} (string query, set$<$ int $>$ \&pos)
 \begin{DoxyCompactList}\small\item\em Finds the lines that keep the logical expression. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a5b67f59017da9d2654c27fa27927a419}{print\+Information} ()
@@ -71,9 +75,11 @@ list$<$ pair$<$ string, int $>$ $>$ \hyperlink{class_book_aa9035db1c21cf61eb3af8
 \begin{DoxyCompactList}\small\item\em Content dictionary with frequencies in correct order. \end{DoxyCompactList}\item 
 bool \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirty\+Frequency}
 \begin{DoxyCompactList}\small\item\em Tells if we generate the frequency table (not generated previously or modified) \end{DoxyCompactList}\item 
+bool \hyperlink{class_book_a1fba52d984d1651760cd79dc393415ab}{deleted}
+\begin{DoxyCompactList}\small\item\em Tells if the book has been deleted. \end{DoxyCompactList}\item 
 int \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{book\+Words}
 \begin{DoxyCompactList}\small\item\em Size of \hyperlink{class_book}{Book}\textquotesingle{}s collection. \end{DoxyCompactList}\item 
-set$<$ string $>$ \hyperlink{class_book_a370478eab144c20de936e1b68923e1c0}{book\+Quotes}
+set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}{book\+Quotes}
 \begin{DoxyCompactList}\small\item\em Ordered collection of quotes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -291,10 +297,27 @@ Returns true if the word is on the content of the implicit book
 Tells if a dirty\+Frequency is true or false. 
 
 \begin{DoxyPrecond}{Precondition}
-The dirty\+Frequency of the implicit \hyperlink{class_book}{Book} 
+True 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the dirty\+Frequency of the implicit \hyperlink{class_book}{Book} is true 
+Returns true if the frequency table needs to be updated is true 
+\end{DoxyPostcond}
+\index{Book@{Book}!is\+Deleted@{is\+Deleted}}
+\index{is\+Deleted@{is\+Deleted}!Book@{Book}}
+\subsubsection[{\texorpdfstring{is\+Deleted()}{isDeleted()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::is\+Deleted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_book_ae39b44d3e5b6f65947776735d49d1d0f}{}\label{class_book_ae39b44d3e5b6f65947776735d49d1d0f}
+
+
+Tells if a deleted is true or false. 
+
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the book has been deleted 
 \end{DoxyPostcond}
 \index{Book@{Book}!generate\+Frequency\+Table@{generate\+Frequency\+Table}}
 \index{generate\+Frequency\+Table@{generate\+Frequency\+Table}!Book@{Book}}
@@ -315,11 +338,11 @@ Generates the frequency table ordered
 \end{DoxyPostcond}
 \index{Book@{Book}!get\+Book\+Quotes@{get\+Book\+Quotes}}
 \index{get\+Book\+Quotes@{get\+Book\+Quotes}!Book@{Book}}
-\subsubsection[{\texorpdfstring{get\+Book\+Quotes()}{getBookQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\+::get\+Book\+Quotes (
+\subsubsection[{\texorpdfstring{get\+Book\+Quotes()}{getBookQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string, {\bf utils\+::string\+Natural\+Comparator}$>$ Book\+::get\+Book\+Quotes (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}{}\label{class_book_a7e0d6cb0827bc58637da5ba49b4e1944}
+)}\hypertarget{class_book_a85273ee0886a725c370d8efe1909f595}{}\label{class_book_a85273ee0886a725c370d8efe1909f595}
 
 
 Returns the book quotes. 
@@ -381,6 +404,23 @@ An implicit \hyperlink{class_book}{Book}
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
 book\+Quotes has one less element 
+\end{DoxyPostcond}
+\index{Book@{Book}!delete\+Book@{delete\+Book}}
+\index{delete\+Book@{delete\+Book}!Book@{Book}}
+\subsubsection[{\texorpdfstring{delete\+Book()}{deleteBook()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::delete\+Book (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_book_a34626be6b35f4ac97ffd3571210a1393}{}\label{class_book_a34626be6b35f4ac97ffd3571210a1393}
+
+
+Marks the book as deleted. 
+
+\begin{DoxyPrecond}{Precondition}
+An implicit \hyperlink{class_book}{Book} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The book has been deleted 
 \end{DoxyPostcond}
 \index{Book@{Book}!find\+Expression@{find\+Expression}}
 \index{find\+Expression@{find\+Expression}!Book@{Book}}
@@ -621,6 +661,17 @@ Tells if we generate the frequency table (not generated previously or modified)
 
 Definition at line 59 of file Book.\+hh.
 
+\index{Book@{Book}!deleted@{deleted}}
+\index{deleted@{deleted}!Book@{Book}}
+\subsubsection[{\texorpdfstring{deleted}{deleted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::deleted\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_book_a1fba52d984d1651760cd79dc393415ab}{}\label{class_book_a1fba52d984d1651760cd79dc393415ab}
+
+
+Tells if the book has been deleted. 
+
+
+
+Definition at line 62 of file Book.\+hh.
+
 \index{Book@{Book}!book\+Words@{book\+Words}}
 \index{book\+Words@{book\+Words}!Book@{Book}}
 \subsubsection[{\texorpdfstring{book\+Words}{bookWords}}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::book\+Words\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_book_a36f1e0b30a0ad17606976556cab45a23}{}\label{class_book_a36f1e0b30a0ad17606976556cab45a23}
@@ -630,11 +681,11 @@ Size of \hyperlink{class_book}{Book}\textquotesingle{}s collection.
 
 
 
-Definition at line 62 of file Book.\+hh.
+Definition at line 65 of file Book.\+hh.
 
 \index{Book@{Book}!book\+Quotes@{book\+Quotes}}
 \index{book\+Quotes@{book\+Quotes}!Book@{Book}}
-\subsubsection[{\texorpdfstring{book\+Quotes}{bookQuotes}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string$>$ Book\+::book\+Quotes\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_book_a370478eab144c20de936e1b68923e1c0}{}\label{class_book_a370478eab144c20de936e1b68923e1c0}
+\subsubsection[{\texorpdfstring{book\+Quotes}{bookQuotes}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string, {\bf utils\+::string\+Natural\+Comparator}$>$ Book\+::book\+Quotes\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}{}\label{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}
 
 
 Ordered collection of quotes. 
@@ -646,7 +697,7 @@ Ordered collection of quotes.
 \end{DoxyParams}
 
 
-Definition at line 67 of file Book.\+hh.
+Definition at line 70 of file Book.\+hh.
 
 
 
