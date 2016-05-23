@@ -2,15 +2,21 @@
 #include <iostream>
 
 namespace utils {
-    bool contains(string input, string query) {
-        istringstream iss(input);
-        string word;
-        while (iss >> word) {
-            if (word.find_first_of(".!?,;:") == word.length() - 1)
-                word.erase(word.length() - 1, 1);
-            if (word == query) return true;
+    bool contains(string a, string b) {
+        istringstream issB(b);
+        string wordB;
+        while (issB >> wordB) {
+            istringstream issA(a);
+            string wordA;
+            bool found = false;
+            while (issA >> wordA) {
+                if (wordA.find_first_of(".!?,;:") == wordA.length() - 1)
+                    wordA.erase(wordA.length() - 1, 1);
+                if (wordA == wordB) found = true;
+            }
+            if (!found) return false;
         }
-        return false;
+        return true;
     }
 
     void stringUppercase(string& input) {
