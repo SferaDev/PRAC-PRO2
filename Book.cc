@@ -42,9 +42,11 @@ void Book::readBookContent() {
                 int posSeparator = word.find_first_of(",;:");
                 while (posSeparator != string::npos) {
                     string subWord = word.substr(0, posSeparator);
-                    lineDictionary[subWord].push_back(bookContent.size());
-                    wordFrequencyMap[subWord] += 1;
-                    bookWords += 1;
+                    if (!subWord.empty()) {
+                        lineDictionary[subWord].push_back(bookContent.size());
+                        wordFrequencyMap[subWord] += 1;
+                        bookWords += 1;
+                    }
                     word = word.substr(posSeparator + 1);
                     posSeparator = word.find_first_of(",;:");
                 }
