@@ -45,7 +45,8 @@ void actionExpression(Library& library, string input)  {
     input = input.substr(ACTION_EXPRESSION.length() + 1);
     // Delete '?' from query
     utils::trimString(input);
-    if (input[input.size() - 1] == '?') input = input.erase(input.length() - 1 , 1);
+    int posQuery = input.find_last_of("?");
+    if (posQuery != string::npos) input.erase(posQuery, 1);
     // If it's a digit call {frases x y ?} otherwise call the recursive
     int x, y;
     istringstream iss(input);
