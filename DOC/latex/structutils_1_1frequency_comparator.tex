@@ -1,0 +1,50 @@
+\hypertarget{structutils_1_1frequency_comparator}{}\section{utils\+:\+:frequency\+Comparator Struct Reference}
+\label{structutils_1_1frequency_comparator}\index{utils\+::frequency\+Comparator@{utils\+::frequency\+Comparator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713604cb}{operator()} (const pair$<$ string, int $>$ \&a, const pair$<$ string, int $>$ \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file Utils.\+hh.
+
+
+
+\subsection{Member Function Documentation}
+\index{utils\+::frequency\+Comparator@{utils\+::frequency\+Comparator}!operator()@{operator()}}
+\index{operator()@{operator()}!utils\+::frequency\+Comparator@{utils\+::frequency\+Comparator}}
+\subsubsection[{\texorpdfstring{operator()(const pair$<$ string, int $>$ \&a, const pair$<$ string, int $>$ \&b)}{operator()(const pair< string, int > &a, const pair< string, int > &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::frequency\+Comparator\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const pair$<$ string, int $>$ \&}]{a, }
+\item[{const pair$<$ string, int $>$ \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713604cb}{}\label{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713604cb}
+
+
+Definition at line 40 of file Utils.\+hh.
+
+
+\begin{DoxyCode}
+40                                                                                  \{
+41             \textcolor{comment}{// Special case: Same frequency}
+42             \textcolor{keywordflow}{if} (a.second == b.second) \{
+43                 \textcolor{comment}{// Special case: Same length}
+44                 \textcolor{keywordflow}{if} (a.first.length() == b.first.length()) \{
+45                     \textcolor{keywordflow}{return} a.first < b.first;
+46                 \}
+47                 \textcolor{comment}{// Base case: Order by length in asc order}
+48                 \textcolor{keywordflow}{return} a.first.length() < b.first.length();
+49             \}
+50             \textcolor{comment}{// Base case: Order by frequency in desc order}
+51             \textcolor{keywordflow}{return} a.second > b.second;
+52         \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_utils_8hh}{Utils.\+hh}\end{DoxyCompactItemize}

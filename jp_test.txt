@@ -1,42 +1,25 @@
 afegir text "C"
-autor "C"
-C.
+autor ""
+This. us.
 ****
 
-triar text {C}
-
-contingut ?
-
-afegir cita 1 1
-
-taula de frequencies ?
-
-eliminar text
-
-cites autor "C" ?
+tots autors ?
 
 tots textos ?
 
-afegir text "C"
-autor "C"
-C. B. C.
-****
-
-cites ?
-
 triar text {C}
 
-cites ?
+autor ?
+
+afegir cita 1 1
 
 totes cites ?
 
-cites autor "C" ?
+nombre de paraules ?
 
-afegir cita 1 3
+substitueix "This" per "us"
 
-cites autor "C" ?
-
-cites ?
+nombre de paraules ?
 
 taula de frequencies ?
 

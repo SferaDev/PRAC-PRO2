@@ -43,12 +43,6 @@ const string QUIT = "sortir";
 void actionExpression(Library& library, string input)  {
     // Erase 'frases ' from input channel
     input = input.substr(ACTION_EXPRESSION.length() + 1);
-    // Handle multiple lines
-    while (input.find_first_of("?") == string::npos) {
-        string aux;
-        getline(cin, aux);
-        input += ' ' + aux;
-    }
     // Delete '?' from query
     utils::trimString(input);
     if (input[input.size() - 1] != '?') return;

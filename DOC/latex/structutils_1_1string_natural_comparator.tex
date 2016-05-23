@@ -1,0 +1,53 @@
+\hypertarget{structutils_1_1string_natural_comparator}{}\section{utils\+:\+:string\+Natural\+Comparator Struct Reference}
+\label{structutils_1_1string_natural_comparator}\index{utils\+::string\+Natural\+Comparator@{utils\+::string\+Natural\+Comparator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4e8b159ad53}{operator()} (const string \&a, const string \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file Utils.\+hh.
+
+
+
+\subsection{Member Function Documentation}
+\index{utils\+::string\+Natural\+Comparator@{utils\+::string\+Natural\+Comparator}!operator()@{operator()}}
+\index{operator()@{operator()}!utils\+::string\+Natural\+Comparator@{utils\+::string\+Natural\+Comparator}}
+\subsubsection[{\texorpdfstring{operator()(const string \&a, const string \&b)}{operator()(const string &a, const string &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::string\+Natural\+Comparator\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{a, }
+\item[{const string \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4e8b159ad53}{}\label{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4e8b159ad53}
+
+
+Definition at line 21 of file Utils.\+hh.
+
+
+\begin{DoxyCode}
+21                                                            \{
+22             \textcolor{keywordtype}{int} posA = a.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
+23             \textcolor{keywordtype}{int} posB = b.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
+24             \textcolor{keywordflow}{if} (a.substr(0, posA) != b.substr(0, posB)) \{
+25                 \textcolor{keywordflow}{return} a.substr(0, posA) < b.substr(0, posB);
+26             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (posA != string::npos and posB != string::npos) \{
+27                 \textcolor{keywordtype}{int} valA, valB;
+28                 istringstream issA(a.substr(posA));
+29                 istringstream issB(b.substr(posB));
+30                 issA >> valA;
+31                 issB >> valB;
+32                 \textcolor{keywordflow}{return} valA < valB;
+33             \} \textcolor{keywordflow}{else} \{
+34                 \textcolor{keywordflow}{return} a < b;
+35             \}
+36         \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_utils_8hh}{Utils.\+hh}\end{DoxyCompactItemize}
