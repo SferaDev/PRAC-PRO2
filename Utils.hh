@@ -114,13 +114,6 @@ namespace utils {
     */
     void trimStringComplex(string& query);
 
-    /** @brief Formats a string following a specified criteria
-        \param query: A param string
-        \pre True
-        \post The referenced string has all the punctuation marks correctly placed without extra spaces
-    */
-    void formatString(string& query);
-
     /** @brief Prints an error using the correct formatting */
     void printError();
 }

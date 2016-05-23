@@ -62,17 +62,6 @@ namespace utils {
             query.erase(query.length() - 1, 1);
     }
 
-    void formatString(string& query) {
-        trimString(query);
-        int pos = query.find_first_of(".!?,;:", 1);
-        while (pos != string::npos) {
-            if (pos + 1 < query.length() and query[pos + 1] != ' ')
-                query.insert(pos + 1, " ");
-            while (query[pos - 1] == ' ') query.erase(pos - 1, 1);
-            pos = query.find_first_of(".!?,;:", pos + 1);
-        }
-    }
-
     void printError() {
         cout << "error" << endl;
     }
