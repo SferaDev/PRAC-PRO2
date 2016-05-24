@@ -90,11 +90,19 @@ namespace utils {
         int statePar, stateWords;
         statePar = stateWords = 0;
         for (int i = 0; i < query.length(); ++i) {
-            if (stateWords < 0) return true;
-            else if (query[i] == '{') stateWords++;
-            else if (query[i] == '}') stateWords--;
-            else if (query[i] == '(') statePar++;
-            else if (query[i] == ')') {
+            if (stateWords < 0) {
+                return true;
+            } else if (query[i] == '{') {
+                if (stateWords > 0) {
+                    query[i] = ' ';
+                    stateWords--;
+                }
+                stateWords++;
+            } else if (query[i] == '}') {
+                stateWords--;
+            } else if (query[i] == '(') {
+                statePar++;
+            } else if (query[i] == ')') {
                 statePar--;
                 if (statePar < 0) {
                     query[i] = ' ';
@@ -102,7 +110,7 @@ namespace utils {
                 }
             }
         }
-        return stateWords != 0 or statePar != 0;
+        return stateWords < 0 or statePar > 0;
     }
 
     void printError() {
