@@ -62,7 +62,7 @@ void actionExpression(Library& library, string input)  {
         } else utils::printError();
     } else if (input.find_first_of("({})&|") != string::npos){
         library.getBook().printLines(input);
-    }
+    } else utils::printError();
 }
 
 void readActions(Library& library) {

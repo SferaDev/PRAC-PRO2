@@ -110,7 +110,7 @@ namespace utils {
 
     void removeDelimiter(string& line);
 
-    bool malformedExpression(string query);
+    bool malformedExpression(string& query);
 
     /** @brief Prints an error using the correct formatting */
     void printError();
