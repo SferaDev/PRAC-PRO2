@@ -211,7 +211,7 @@ void Book::findExpression(string query, set<int>& pos) {
             } else if (!utils::betweenPar(query, query.length())) {
                 // Recursive case: Call recursion of inner parentheses expression
                 findExpression(query.substr(1, query.length() - 2), pos);
-            } // Base case: else: Malformed parentheses/operators
+            }
         }
     }
 }
@@ -227,6 +227,10 @@ void Book::printAllLines() {
 }
 
 void Book::printLines(string query) {
+    if (utils::malformedExpression(query)) {
+        utils::printError();
+        return;
+    }
     set<int> lines;
     findExpression(query, lines);
     set<int>::const_iterator it = lines.begin();

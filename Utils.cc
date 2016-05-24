@@ -86,6 +86,19 @@ namespace utils {
         trimString(line);
     }
 
+    bool malformedExpression(string query) {
+        int statePar, stateWords;
+        statePar = stateWords = 0;
+        for (int i = 0; i < query.length(); ++i) {
+            if (statePar < 0 or stateWords < 0) return true;
+            else if (query[i] == '(') statePar++;
+            else if (query[i] == ')') statePar--;
+            else if (query[i] == '{') stateWords++;
+            else if (query[i] == '}') stateWords--;
+        }
+        return stateWords != 0 or  statePar != 0;
+    }
+
     void printError() {
         cout << "error" << endl;
     }

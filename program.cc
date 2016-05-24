@@ -55,13 +55,14 @@ void actionExpression(Library& library, string input)  {
         if (!iss.fail()) library.getBook().printSelectLines(x,y);
         else utils::printError();
     }
-    else if (input.find_first_of("\"") != string::npos
-             and input.find_first_of("\"") != input.find_last_of("\"")) {
-        utils::trimStringComplex(input);
-        library.getBook().printLinesConsecutiveWords(input);
+    else if (input.find_first_of("\"") != string::npos) {
+        if (input.find_first_of("\"") != input.find_last_of("\"")) {
+            utils::trimStringComplex(input);
+            library.getBook().printLinesConsecutiveWords(input);
+        } else utils::printError();
     } else if (input.find_first_of("({})&|") != string::npos){
         library.getBook().printLines(input);
-    } //else utils::printError();
+    }
 }
 
 void readActions(Library& library) {
