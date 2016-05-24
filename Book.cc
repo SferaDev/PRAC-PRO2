@@ -242,12 +242,7 @@ void Book::printLinesConsecutiveWords(string query) {
     set<int>::const_iterator it = lines.begin();
     while (it != lines.end()) {
         string line = bookContent[*it - 1];
-        int posDelimiter = line.find_first_of(",;:.!?");
-        while (posDelimiter != string::npos) {
-            line[posDelimiter] = ' ';
-            posDelimiter = line.find_first_of(",;:.!?");
-        }
-        utils::trimString(line);
+        utils::removeDelimiters(line);
         if (utils::containsConsecutive(line, query)) {
             printSelectLines(*it, *it);
         }

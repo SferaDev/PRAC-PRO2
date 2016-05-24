@@ -124,7 +124,9 @@ namespace utils {
 
     void formatString(string& query);
 
-        /** @brief Prints an error using the correct formatting */
+    void removeDelimiters(string& line);
+
+    /** @brief Prints an error using the correct formatting */
     void printError();
 }
 

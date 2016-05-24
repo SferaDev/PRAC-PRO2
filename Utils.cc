@@ -87,6 +87,15 @@ namespace utils {
         }
     }
 
+    void removeDelimiters(string& line) {
+        int posDelimiter = line.find_first_of(",;:.!?");
+        while (posDelimiter != string::npos) {
+            line[posDelimiter] = ' ';
+            posDelimiter = line.find_first_of(",;:.!?");
+        }
+        trimString(line);
+    }
+
     void printError() {
         cout << "error" << endl;
     }
