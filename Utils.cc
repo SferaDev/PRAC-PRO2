@@ -20,16 +20,11 @@ namespace utils {
     }
 
     bool containsConsecutive(string a, string b) {
-        string wordA, wordB;
-        istringstream issA(a);
-        istringstream issB(b);
-        issB >> wordB;
-        while (!issA.eof() and wordA != wordB) issA >> wordA;
-        while (issB >> wordB) {
-            if (!issA.eof()) issA >> wordA;
-            if (wordA != wordB) return false;
-        }
-        return true;
+        int pos = a.find(b);
+        if (pos == string::npos) return false;
+        else if (pos > 0 and a[pos - 1] != ' ') return false;
+        else if (pos + b.length() < a.size() and a[pos + b.length()] != ' ') return false;
+        else return true;
     }
 
     void stringUppercase(string& input) {

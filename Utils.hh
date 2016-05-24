@@ -68,11 +68,11 @@ namespace utils {
     */
     bool containsConsecutive(string a, string b);
 
-        /** @brief Converts a string from lowercase to uppercase
-            \param input: A string with or without lowercase chars
-            \pre True
-            \post The forwarded param string has all chars uppercase
-        */
+    /** @brief Converts a string from lowercase to uppercase
+        \param input: A string with or without lowercase chars
+        \pre True
+        \post The forwarded param string has all chars uppercase
+    */
     void stringUppercase(string& input);
 
     /** @brief Returns if a sentence starts with another one
