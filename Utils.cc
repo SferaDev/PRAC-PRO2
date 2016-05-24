@@ -80,10 +80,10 @@ namespace utils {
     }
 
     void formatString(string& query) {
-        int pos = query.find_first_of(",;:");
+        int pos = query.find_first_of(",;:.!?");
         while (pos != string::npos) {
             if (query[pos - 1] == ' ') query.erase(pos - 1, 1);
-            pos = query.find_first_of(",;:", pos + 1);
+            pos = query.find_first_of(",;:.!?", pos + 1);
         }
     }
 
