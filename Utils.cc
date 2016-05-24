@@ -42,17 +42,6 @@ namespace utils {
         return std::equal(a.begin(), a.begin() + b.size(), b.begin());
     }
 
-    bool startsWithEquals(string a, string b) {
-        if (b.size() > a.size()) return false;
-        return std::equal(a.begin(), a.begin() + b.size(), b.begin())
-               and (a.size() == b.size() or a[b.size()] == ' ');
-    }
-
-    bool endsWith(string a, string b) {
-        if (b.size() > a.size()) return false;
-        return std::equal(a.begin() + a.size() - b.size(), a.end(), b.begin());
-    }
-
     bool betweenPar(string query, int position) {
         int state = 0;
         for (int i = 0; i < position; ++i) {
