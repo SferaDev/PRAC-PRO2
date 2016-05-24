@@ -33,6 +33,7 @@ void Book::readBookContent() {
             line += ' ' + word;
             if (word.find_last_of(".?!") == word.length() - 1) {
                 utils::trimString(line);
+                utils::formatString(line);
                 bookContent.push_back(line);
                 line.clear();
                 word.erase(word.length() - 1, 1);

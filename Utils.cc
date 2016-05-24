@@ -79,6 +79,14 @@ namespace utils {
             query.erase(query.length() - 1, 1);
     }
 
+    void formatString(string& query) {
+        int pos = query.find_first_of(",;:");
+        while (pos != string::npos) {
+            if (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+            pos = query.find_first_of(",;:", pos + 1);
+        }
+    }
+
     void printError() {
         cout << "error" << endl;
     }

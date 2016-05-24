@@ -1,26 +1,14 @@
 afegir text "C"
-autor ""
-This. us.
+autor "Jordi"
+nec nec. nec.. nec, , nec. anec nec. nec anec. nec. .
 ****
-
-tots autors ?
-
-tots textos ?
 
 triar text {C}
 
-autor ?
+frases " nec nec"                                                        ?
 
-afegir cita 1 1
+frases "                                    nec                                              "                            ?
 
-totes cites ?
-
-nombre de paraules ?
-
-substitueix "This" per "us"
-
-nombre de paraules ?
-
-taula de frequencies ?
+contingut ?
 
 sortir

@@ -122,7 +122,9 @@ namespace utils {
     */
     void trimStringComplex(string& query);
 
-    /** @brief Prints an error using the correct formatting */
+    void formatString(string& query);
+
+        /** @brief Prints an error using the correct formatting */
     void printError();
 }
 
