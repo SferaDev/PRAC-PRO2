@@ -21,10 +21,14 @@ namespace utils {
 
     bool containsConsecutive(string a, string b) {
         int pos = a.find(b);
-        if (pos == string::npos) return false;
-        else if (pos > 0 and a[pos - 1] != ' ') return false;
-        else if (pos + b.length() < a.size() and a[pos + b.length()] != ' ') return false;
-        else return true;
+        bool found = false;
+        while (pos != string::npos) {
+            if (pos > 0 and a[pos - 1] != ' ') found = false;
+            else if (pos + b.length() < a.size() and a[pos + b.length()] != ' ') found = false;
+            else return true;
+            pos = a.find(b, pos + 1);
+        }
+        return false;
     }
 
     void stringUppercase(string& input) {
