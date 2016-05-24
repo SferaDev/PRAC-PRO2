@@ -49,8 +49,12 @@ void actionExpression(Library& library, string input)  {
     // If it's a digit call {frases x y ?} otherwise call the recursive
     int x, y;
     istringstream iss(input);
-    iss >> x >> y;
-    if (!iss.fail()) library.getBook().printSelectLines(x,y);
+    iss >> x;
+    if (!iss.fail())  {
+        iss >> y;
+        if (!iss.fail()) library.getBook().printSelectLines(x,y);
+        else utils::printError();
+    }
     else if (input.find_first_of("\"") != string::npos
              and input.find_first_of("\"") != input.find_last_of("\"")) {
         utils::trimStringComplex(input);
