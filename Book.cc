@@ -237,16 +237,13 @@ void Book::printLines(string query) {
 }
 
 void Book::printLinesConsecutiveWords(string query) {
-    set<int> lines;
-    findExpression('{' + query + '}', lines);
-    set<int>::const_iterator it = lines.begin();
-    while (it != lines.end()) {
-        string line = bookContent[*it - 1];
-        utils::removeDelimiters(line);
+    utils::trimString(query);
+    for (int i = 1; i <= bookContent.size(); ++i) {
+        string line = bookContent[i - 1];
+        utils::removeDelimiter(line);
         if (utils::containsConsecutive(line, query)) {
-            printSelectLines(*it, *it);
+            printSelectLines(i, i);
         }
-        it++;
     }
 }
 

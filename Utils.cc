@@ -75,7 +75,7 @@ namespace utils {
 
     void trimStringComplex(string& query) {
         while (query[0] == ' ' or query[0] == '\"') query.erase(0, 1);
-        while (query[query.length() - 1] == ' '  or query[query.length() - 1] == '\"')
+        while (query.length() > 0 and query[query.length() - 1] == ' '  or query[query.length() - 1] == '\"')
             query.erase(query.length() - 1, 1);
     }
 
@@ -87,11 +87,12 @@ namespace utils {
         }
     }
 
-    void removeDelimiters(string& line) {
-        int posDelimiter = line.find_first_of(",;:.!?");
-        while (posDelimiter != string::npos) {
-            line[posDelimiter] = ' ';
-            posDelimiter = line.find_first_of(",;:.!?");
+    void removeDelimiter(string& line) {
+        int pos = line.find_first_of(",;:.!?");
+        while (pos != string::npos) {
+            if (pos + 1 == line.length() or line[pos + 1] == ' ')
+                line[pos] = ' ';
+            pos = line.find_first_of(",;:.!?", pos + 1);
         }
         trimString(line);
     }
