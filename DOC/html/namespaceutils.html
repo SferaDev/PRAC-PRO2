@@ -105,6 +105,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a69c832543a093a8099189e4755695a62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a69c832543a093a8099189e4755695a62">contains</a> (string input, string query)</td></tr>
 <tr class="memdesc:a69c832543a093a8099189e4755695a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a sentence contains a word.  <a href="#a69c832543a093a8099189e4755695a62">More...</a><br /></td></tr>
 <tr class="separator:a69c832543a093a8099189e4755695a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9af9e01b679f955003203f29ddf130b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#af9af9e01b679f955003203f29ddf130b">containsConsecutive</a> (string a, string b)</td></tr>
+<tr class="memdesc:af9af9e01b679f955003203f29ddf130b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a sentence contains a consecutive sequence of words.  <a href="#af9af9e01b679f955003203f29ddf130b">More...</a><br /></td></tr>
+<tr class="separator:af9af9e01b679f955003203f29ddf130b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cc31521e740c9e31b4bfa8ee85eff46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a4cc31521e740c9e31b4bfa8ee85eff46">stringUppercase</a> (string &amp;input)</td></tr>
 <tr class="memdesc:a4cc31521e740c9e31b4bfa8ee85eff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string from lowercase to uppercase.  <a href="#a4cc31521e740c9e31b4bfa8ee85eff46">More...</a><br /></td></tr>
 <tr class="separator:a4cc31521e740c9e31b4bfa8ee85eff46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +129,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a0362c7510f0bb0c4449031f897626696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a0362c7510f0bb0c4449031f897626696">trimStringComplex</a> (string &amp;query)</td></tr>
 <tr class="memdesc:a0362c7510f0bb0c4449031f897626696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes spaces and quotation marks in the sentence.  <a href="#a0362c7510f0bb0c4449031f897626696">More...</a><br /></td></tr>
 <tr class="separator:a0362c7510f0bb0c4449031f897626696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0beed284a3321a1f9a08e23bdb3611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a8b0beed284a3321a1f9a08e23bdb3611">formatString</a> (string &amp;query)</td></tr>
+<tr class="separator:a8b0beed284a3321a1f9a08e23bdb3611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf961974462ef6e8d7ccc32311397d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#adf961974462ef6e8d7ccc32311397d75">removeDelimiter</a> (string &amp;line)</td></tr>
+<tr class="separator:adf961974462ef6e8d7ccc32311397d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#afd76dd21b41c50ce7396e30fb5d8d75b">printError</a> ()</td></tr>
 <tr class="memdesc:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an error using the correct formatting.  <a href="#afd76dd21b41c50ce7396e30fb5d8d75b">More...</a><br /></td></tr>
 <tr class="separator:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +165,43 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns if a sentence contains a word. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>The sentence (can contain one delimiter per word) </td></tr>
+    <tr><td class="paramname">query</td><td>The word to find in the sentence (without any delimiter) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The sentence and the word to find </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Returns true if the single word is on the sentence </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9af9e01b679f955003203f29ddf130b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool utils::containsConsecutive </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns if a sentence contains a consecutive sequence of words. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">input</td><td>The sentence (can contain one delimiter per word) </td></tr>
@@ -393,6 +437,38 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>The referenced string doesn't have any spaces or quotation marks at start and/or end </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8b0beed284a3321a1f9a08e23bdb3611"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utils::formatString </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf961974462ef6e8d7ccc32311397d75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utils::removeDelimiter </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

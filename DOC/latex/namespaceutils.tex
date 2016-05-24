@@ -17,6 +17,8 @@ struct \hyperlink{structutils_1_1string_natural_comparator}{string\+Natural\+Com
 \item 
 bool \hyperlink{namespaceutils_a69c832543a093a8099189e4755695a62}{contains} (string input, string query)
 \begin{DoxyCompactList}\small\item\em Returns if a sentence contains a word. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{contains\+Consecutive} (string a, string b)
+\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a consecutive sequence of words. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{string\+Uppercase} (string \&input)
 \begin{DoxyCompactList}\small\item\em Converts a string from lowercase to uppercase. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{starts\+With} (string a, string b)
@@ -31,6 +33,10 @@ void \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trim\+String} 
 \begin{DoxyCompactList}\small\item\em Removes spaces (start/end) in the sentence. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a0362c7510f0bb0c4449031f897626696}{trim\+String\+Complex} (string \&query)
 \begin{DoxyCompactList}\small\item\em Removes spaces and quotation marks in the sentence. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{format\+String} (string \&query)
+\item 
+void \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{remove\+Delimiter} (string \&line)
+\item 
 void \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{print\+Error} ()
 \begin{DoxyCompactList}\small\item\em Prints an error using the correct formatting. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -50,6 +56,31 @@ Utility namespace for generic functions.
 
 
 Returns if a sentence contains a word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The sentence (can contain one delimiter per word) \\
+\hline
+{\em query} & The word to find in the sentence (without any delimiter) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The sentence and the word to find 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Returns true if the single word is on the sentence 
+\end{DoxyPostcond}
+\index{utils@{utils}!contains\+Consecutive@{contains\+Consecutive}}
+\index{contains\+Consecutive@{contains\+Consecutive}!utils@{utils}}
+\subsubsection[{\texorpdfstring{contains\+Consecutive(string a, string b)}{containsConsecutive(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains\+Consecutive (
+\begin{DoxyParamCaption}
+\item[{string}]{a, }
+\item[{string}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_af9af9e01b679f955003203f29ddf130b}{}\label{namespaceutils_af9af9e01b679f955003203f29ddf130b}
+
+
+Returns if a sentence contains a consecutive sequence of words. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -230,6 +261,20 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The referenced string doesn\textquotesingle{}t have any spaces or quotation marks at start and/or end 
 \end{DoxyPostcond}
+\index{utils@{utils}!format\+String@{format\+String}}
+\index{format\+String@{format\+String}!utils@{utils}}
+\subsubsection[{\texorpdfstring{format\+String(string \&query)}{formatString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::format\+String (
+\begin{DoxyParamCaption}
+\item[{string \&}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{}\label{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}
+\index{utils@{utils}!remove\+Delimiter@{remove\+Delimiter}}
+\index{remove\+Delimiter@{remove\+Delimiter}!utils@{utils}}
+\subsubsection[{\texorpdfstring{remove\+Delimiter(string \&line)}{removeDelimiter(string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::remove\+Delimiter (
+\begin{DoxyParamCaption}
+\item[{string \&}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{}\label{namespaceutils_adf961974462ef6e8d7ccc32311397d75}
 \index{utils@{utils}!print\+Error@{print\+Error}}
 \index{print\+Error@{print\+Error}!utils@{utils}}
 \subsubsection[{\texorpdfstring{print\+Error()}{printError()}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::print\+Error (
