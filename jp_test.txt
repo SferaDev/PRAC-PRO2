@@ -1,14 +1,24 @@
 afegir text "C"
-autor "Jordi"
-nec nec. nec, nec. anec nec.
+autor ""
+nec nec. nec, nec. anec nec. nec.
 ****
+
+tots textos ?
 
 triar text {C}
 
-frases " nec nec"                                                        ?
+autor ?
 
-frases "                                    nec                                              "                            ?
+frases 1 2
 
-contingut ?
+frases                  ((((((((((                     ?
+
+frases              {}}}{{}{{}}{}{{{{{}
+
+frases ({nec} | {nec}) & {{nec}) ?
+
+frases (           (           {nec} | {nec             }         ) &                 {nec              }) ?
+
+frases {nec nec} ?
 
 sortir
