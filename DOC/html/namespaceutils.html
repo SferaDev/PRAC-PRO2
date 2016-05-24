@@ -114,12 +114,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ae840ea1b4ad4ce23c2b48158ac75d557"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ae840ea1b4ad4ce23c2b48158ac75d557">startsWith</a> (string a, string b)</td></tr>
 <tr class="memdesc:ae840ea1b4ad4ce23c2b48158ac75d557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a sentence starts with another one.  <a href="#ae840ea1b4ad4ce23c2b48158ac75d557">More...</a><br /></td></tr>
 <tr class="separator:ae840ea1b4ad4ce23c2b48158ac75d557"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8cc8683906877c69cfea7cb2812ed07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ac8cc8683906877c69cfea7cb2812ed07">startsWithEquals</a> (string a, string b)</td></tr>
-<tr class="memdesc:ac8cc8683906877c69cfea7cb2812ed07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a sentence starts and equals the start of another one.  <a href="#ac8cc8683906877c69cfea7cb2812ed07">More...</a><br /></td></tr>
-<tr class="separator:ac8cc8683906877c69cfea7cb2812ed07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57772e91d08481b38c47cda04479e169"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a57772e91d08481b38c47cda04479e169">endsWith</a> (string a, string b)</td></tr>
-<tr class="memdesc:a57772e91d08481b38c47cda04479e169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if a sentence ends with another one.  <a href="#a57772e91d08481b38c47cda04479e169">More...</a><br /></td></tr>
-<tr class="separator:a57772e91d08481b38c47cda04479e169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e1de2e5772bffdfe2c8d3309a61ddab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a1e1de2e5772bffdfe2c8d3309a61ddab">betweenPar</a> (string query, int position)</td></tr>
 <tr class="memdesc:a1e1de2e5772bffdfe2c8d3309a61ddab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds if a string is between parentheses.  <a href="#a1e1de2e5772bffdfe2c8d3309a61ddab">More...</a><br /></td></tr>
 <tr class="separator:a1e1de2e5772bffdfe2c8d3309a61ddab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +127,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8b0beed284a3321a1f9a08e23bdb3611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf961974462ef6e8d7ccc32311397d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#adf961974462ef6e8d7ccc32311397d75">removeDelimiter</a> (string &amp;line)</td></tr>
 <tr class="separator:adf961974462ef6e8d7ccc32311397d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c64225b3c1659211611f32e0776793b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a6c64225b3c1659211611f32e0776793b">malformedExpression</a> (string &amp;query)</td></tr>
+<tr class="separator:a6c64225b3c1659211611f32e0776793b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#afd76dd21b41c50ce7396e30fb5d8d75b">printError</a> ()</td></tr>
 <tr class="memdesc:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an error using the correct formatting.  <a href="#afd76dd21b41c50ce7396e30fb5d8d75b">More...</a><br /></td></tr>
 <tr class="separator:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,80 +273,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8cc8683906877c69cfea7cb2812ed07"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool utils::startsWithEquals </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns if a sentence starts and equals the start of another one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>String to analyze </td></tr>
-    <tr><td class="paramname">b</td><td>String to find on first positions of param a </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>Returns true if the first b.size() chars are the same on a </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a57772e91d08481b38c47cda04479e169"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool utils::endsWith </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns if a sentence ends with another one. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>String to analyze </td></tr>
-    <tr><td class="paramname">b</td><td>String to find on first positions of param a </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>Returns true if the last b.size() chars are the same on a </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a1e1de2e5772bffdfe2c8d3309a61ddab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -465,6 +387,22 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">string &amp;&#160;</td>
           <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c64225b3c1659211611f32e0776793b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool utils::malformedExpression </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

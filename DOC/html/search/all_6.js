@@ -1,18 +1,11 @@
 var searchData=
 [
-  ['generatefrequencytable',['generateFrequencyTable',['../class_book.html#a8d232eaeb4207707d77bc18e6dd467cd',1,'Book']]],
-  ['getauthor',['getAuthor',['../class_book.html#a3bd4acccf78a82061fc6c78107757620',1,'Book::getAuthor()'],['../class_quote.html#ae29855dc6393689277a9cac61f9f56b8',1,'Quote::getAuthor()']]],
-  ['getauthorquotes',['getAuthorQuotes',['../class_author.html#ab6de48a5cae0c2f2b9a2b09d9106504b',1,'Author']]],
-  ['getbook',['getBook',['../class_library.html#a67ccad51c76c3abfb0d46fa533f46e03',1,'Library']]],
-  ['getbookcount',['getBookCount',['../class_author.html#a78febe94924896f8d0ce218d5cd41786',1,'Author']]],
-  ['getbookquotes',['getBookQuotes',['../class_book.html#a85273ee0886a725c370d8efe1909f595',1,'Book']]],
-  ['getbooktitle',['getBookTitle',['../class_quote.html#a7089d3cf82409928bcdfca5c259facde',1,'Quote']]],
-  ['getendline',['getEndLine',['../class_quote.html#aec85eae85f33b6e10458821f54f28fc9',1,'Quote']]],
-  ['getlinecount',['getLineCount',['../class_author.html#af24acf9a0c70fc700edccfb956c2bace',1,'Author::getLineCount()'],['../class_book.html#abd9ca114f4909a735c7cb017920b30e4',1,'Book::getLineCount()']]],
-  ['getlines',['getLines',['../class_book.html#acb5eaff231b512901cac3e3220ee2960',1,'Book']]],
-  ['getquote',['getQuote',['../class_library.html#aba57d7dcf92c9da4c3d8a359ceba7e2b',1,'Library']]],
-  ['getreference',['getReference',['../class_quote.html#a4f45d290d8b4d8ebfdf6981b754ec7b7',1,'Quote']]],
-  ['getstartline',['getStartLine',['../class_quote.html#abec5ea5330c351afab5a5a0be5c5b7fa',1,'Quote']]],
-  ['gettitle',['getTitle',['../class_book.html#aa3dc09f8db785a89259a0e491292987d',1,'Book']]],
-  ['getwordcount',['getWordCount',['../class_author.html#a4899e9145b70a9e6fcad9a55b3b5285d',1,'Author::getWordCount()'],['../class_book.html#a32d34e718a05a927ab0aa17bfa9baead',1,'Book::getWordCount()']]]
+  ['incrementbookcount',['incrementBookCount',['../class_author.html#afa8dc68382f3e9828112ed440c3677d3',1,'Author']]],
+  ['incrementlinecount',['incrementLineCount',['../class_author.html#a73814ef0d8d840880415c4020a4d5bf9',1,'Author']]],
+  ['incrementwordcount',['incrementWordCount',['../class_author.html#af12d32bb751a9ac3e1508631e4d8fb8e',1,'Author']]],
+  ['insertquote',['insertQuote',['../class_library.html#aac2d7d4645a2adda29a0064bc66e6143',1,'Library']]],
+  ['isbookselected',['isBookSelected',['../class_library.html#a04ff0757054c2813e89036cdd3f7f91f',1,'Library']]],
+  ['isdeleted',['isDeleted',['../class_book.html#ae39b44d3e5b6f65947776735d49d1d0f',1,'Book']]],
+  ['isempty',['isEmpty',['../class_author.html#ab0752a3f061a07c6460e52e4386ea5c3',1,'Author']]],
+  ['isfrequencydirty',['isFrequencyDirty',['../class_book.html#aec01aa24087b313f36cc0fe3c4664f84',1,'Book']]]
 ];

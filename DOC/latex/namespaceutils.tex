@@ -23,10 +23,6 @@ void \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{string\+Upperc
 \begin{DoxyCompactList}\small\item\em Converts a string from lowercase to uppercase. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{starts\+With} (string a, string b)
 \begin{DoxyCompactList}\small\item\em Returns if a sentence starts with another one. \end{DoxyCompactList}\item 
-bool \hyperlink{namespaceutils_ac8cc8683906877c69cfea7cb2812ed07}{starts\+With\+Equals} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence starts and equals the start of another one. \end{DoxyCompactList}\item 
-bool \hyperlink{namespaceutils_a57772e91d08481b38c47cda04479e169}{ends\+With} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence ends with another one. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{between\+Par} (string query, int position)
 \begin{DoxyCompactList}\small\item\em Finds if a string is between parentheses. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trim\+String} (string \&query)
@@ -36,6 +32,8 @@ void \hyperlink{namespaceutils_a0362c7510f0bb0c4449031f897626696}{trim\+String\+
 void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{format\+String} (string \&query)
 \item 
 void \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{remove\+Delimiter} (string \&line)
+\item 
+bool \hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{malformed\+Expression} (string \&query)
 \item 
 void \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{print\+Error} ()
 \begin{DoxyCompactList}\small\item\em Prints an error using the correct formatting. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -142,56 +140,6 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns true if the first b.\+size() chars are the same on a 
 \end{DoxyPostcond}
-\index{utils@{utils}!starts\+With\+Equals@{starts\+With\+Equals}}
-\index{starts\+With\+Equals@{starts\+With\+Equals}!utils@{utils}}
-\subsubsection[{\texorpdfstring{starts\+With\+Equals(string a, string b)}{startsWithEquals(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::starts\+With\+Equals (
-\begin{DoxyParamCaption}
-\item[{string}]{a, }
-\item[{string}]{b}
-\end{DoxyParamCaption}
-)}\hypertarget{namespaceutils_ac8cc8683906877c69cfea7cb2812ed07}{}\label{namespaceutils_ac8cc8683906877c69cfea7cb2812ed07}
-
-
-Returns if a sentence starts and equals the start of another one. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em a} & String to analyze \\
-\hline
-{\em b} & String to find on first positions of param a \\
-\hline
-\end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
-True 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Returns true if the first b.\+size() chars are the same on a 
-\end{DoxyPostcond}
-\index{utils@{utils}!ends\+With@{ends\+With}}
-\index{ends\+With@{ends\+With}!utils@{utils}}
-\subsubsection[{\texorpdfstring{ends\+With(string a, string b)}{endsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::ends\+With (
-\begin{DoxyParamCaption}
-\item[{string}]{a, }
-\item[{string}]{b}
-\end{DoxyParamCaption}
-)}\hypertarget{namespaceutils_a57772e91d08481b38c47cda04479e169}{}\label{namespaceutils_a57772e91d08481b38c47cda04479e169}
-
-
-Returns if a sentence ends with another one. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em a} & String to analyze \\
-\hline
-{\em b} & String to find on first positions of param a \\
-\hline
-\end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
-True 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-Returns true if the last b.\+size() chars are the same on a 
-\end{DoxyPostcond}
 \index{utils@{utils}!between\+Par@{between\+Par}}
 \index{between\+Par@{between\+Par}!utils@{utils}}
 \subsubsection[{\texorpdfstring{between\+Par(string query, int position)}{betweenPar(string query, int position)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::between\+Par (
@@ -275,6 +223,13 @@ The referenced string doesn\textquotesingle{}t have any spaces or quotation mark
 \item[{string \&}]{line}
 \end{DoxyParamCaption}
 )}\hypertarget{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{}\label{namespaceutils_adf961974462ef6e8d7ccc32311397d75}
+\index{utils@{utils}!malformed\+Expression@{malformed\+Expression}}
+\index{malformed\+Expression@{malformed\+Expression}!utils@{utils}}
+\subsubsection[{\texorpdfstring{malformed\+Expression(string \&query)}{malformedExpression(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::malformed\+Expression (
+\begin{DoxyParamCaption}
+\item[{string \&}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceutils_a6c64225b3c1659211611f32e0776793b}{}\label{namespaceutils_a6c64225b3c1659211611f32e0776793b}
 \index{utils@{utils}!print\+Error@{print\+Error}}
 \index{print\+Error@{print\+Error}!utils@{utils}}
 \subsubsection[{\texorpdfstring{print\+Error()}{printError()}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::print\+Error (
