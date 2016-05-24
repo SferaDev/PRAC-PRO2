@@ -1,6 +1,6 @@
 afegir text "C"
 autor "Jordi"
-nec nec. nec.. nec, , nec. anec nec. nec anec. nec. .
+nec nec. nec, nec. anec nec.
 ****
 
 triar text {C}

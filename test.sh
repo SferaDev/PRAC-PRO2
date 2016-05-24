@@ -1,7 +1,5 @@
 make
-./program.exe < "jp_test.txt" > out0.o
-./privat1.sh < "jp_test.txt" > out1.o
-./privat2.sh < "jp_test.txt" > out2.o
+./program.exe < "jp_test.txt" > out.mine.o
+./pau.sh < "jp_test.txt" > out.pau.o
 
-diff out0.o out1.o > diff1.o
-diff out0.o out2.o > diff2.o
+diff out.mine.o out.pau.o > diff2.o
