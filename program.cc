@@ -51,7 +51,8 @@ void actionExpression(Library& library, string input)  {
     istringstream iss(input);
     iss >> x >> y;
     if (!iss.fail()) library.getBook().printSelectLines(x,y);
-    else if (input[0] == '\"' and input[input.length() - 1]) {
+    else if (input.find_first_of("\"") != string::npos
+             and input.find_first_of("\"") != input.find_last_of("\"")) {
         utils::trimStringComplex(input);
         library.getBook().printLinesConsecutiveWords(input);
     } else if (input.find_first_of("({})&|") != string::npos){
@@ -69,7 +70,7 @@ void readActions(Library& library) {
         utils::trimString(input);
         lastOutputSpace = input.empty();
         // Quit command returns void
-        if (utils::startsWithEquals(input, QUIT)) {
+        if (utils::startsWith(input, QUIT)) {
             return;
         } else if (!input.empty()) cout << original << endl;
         // Handle the rest of commands
@@ -83,13 +84,13 @@ void readActions(Library& library) {
             } else {
                 while (input != "****") getline(cin, input);
             }
-        } else if (utils::startsWithEquals(input, BOOK_DELETE)) {
+        } else if (utils::startsWith(input, BOOK_DELETE)) {
             library.deleteBook();
-        } else if (utils::startsWithEquals(input, BOOK_SELECT)) {
+        } else if (utils::startsWith(input, BOOK_SELECT)) {
             string query = input.erase(input.length() - 1, 1);
             query = input.substr(input.find_first_of("{") + 1);
             library.selectBook(query);
-        } else if (utils::startsWithEquals(input, BOOK_REPLACE_WORD)) {
+        } else if (utils::startsWith(input, BOOK_REPLACE_WORD)) {
             istringstream iss(input);
             string oldWord, newWord;
             iss >> oldWord >> oldWord >> newWord >> newWord;
@@ -110,11 +111,11 @@ void readActions(Library& library) {
             string reference = input.erase(input.length() - 1, 1);
             reference = reference.substr(input.find_first_of("\"") + 1);
             library.deleteQuote(reference);
-        } else if (utils::startsWithEquals(input, ACTION_EXPRESSION)) {
+        } else if (utils::startsWith(input, ACTION_EXPRESSION)) {
             if (library.isBookSelected()) {
                 actionExpression(library, input);
             } else utils::printError();
-        } else if (utils::startsWithEquals(input, QUOTE_INFO)) {
+        } else if (utils::startsWith(input, QUOTE_INFO)) {
             string reference = input.substr(QUOTE_INFO.length());
             reference.erase(reference.length() - 1, 1);
             utils::trimStringComplex(reference);
@@ -123,49 +124,49 @@ void readActions(Library& library) {
                 cout << quote.getAuthor() << " \"" << quote.getBookTitle() << "\"" << endl;
                 quote.printInformation(false, true);
             } else utils::printError();
-        } else if (utils::startsWithEquals(input, AUTHOR_QUOTES)) {
+        } else if (utils::startsWith(input, AUTHOR_QUOTES)) {
             string reference = input.substr(AUTHOR_QUOTES.length());
             reference.erase(reference.length() - 1, 1);
             utils::trimStringComplex(reference);
             if (!reference.empty()) library.printQuotesByAuthor(reference);
-        } else if (utils::startsWithEquals(input, AUTHOR_BOOKS)) {
+        } else if (utils::startsWith(input, AUTHOR_BOOKS)) {
             string reference = input.substr(AUTHOR_BOOKS.length());
             reference.erase(reference.length() - 1, 1);
             utils::trimStringComplex(reference);
             if (!reference.empty()) library.printBooksByAuthor(reference);
         } else if (utils::startsWith(input, QUERY_AUTHORS)) {
             library.printAuthors();
-        } else if (utils::startsWithEquals(input, QUERY_BOOKS_ALL)) {
+        } else if (utils::startsWith(input, QUERY_BOOKS_ALL)) {
             library.printBooks();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_AUTHOR)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_AUTHOR)) {
             if (library.isBookSelected())
                 cout << library.getBook().getAuthor() << endl;
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_CONTENT)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_CONTENT)) {
             if (library.isBookSelected())
                 library.getBook().printAllLines();
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_INFO)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_INFO)) {
             if (library.isBookSelected())
                 library.printCurrentInformation();
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_LINES)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_LINES)) {
             if (library.isBookSelected())
                 cout << library.getBook().getLineCount() << endl;
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_WORDS)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_WORDS)) {
             if (library.isBookSelected())
                 cout << library.getBook().getWordCount() << endl;
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_FREQUENCY)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_FREQUENCY)) {
             if (library.isBookSelected())
                 library.getBook().printFrequencyTable();
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_CURRENT_QUOTES)) {
+        } else if (utils::startsWith(input, QUERY_CURRENT_QUOTES)) {
             if (library.isBookSelected())
                 library.printCurrentQuotes();
             else utils::printError();
-        } else if (utils::startsWithEquals(input, QUERY_QUOTES_ALL)) {
+        } else if (utils::startsWith(input, QUERY_QUOTES_ALL)) {
             library.printQuotes();
         }
     }
