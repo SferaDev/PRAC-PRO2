@@ -123,11 +123,19 @@ string recursiva(int nodes) {
     return res;
 }
 
-void frases() {
-    int op = numero_aleatori(0, 2);
+void actions() {
+    int op = numero_aleatori(0, 10);
     if (op == 0) arxiu << "frases " << recursiva(numero_aleatori(1, 10));
     else if (op == 1) arxiu << "frases " << sequencia();
     else if (op == 2) arxiu << "frases " << conjunt();
+    else if (op == 3) arxiu << "contingut";
+    else if (op == 4) arxiu << "autor";
+    else if (op == 5) arxiu << "taula de frequencies";
+    else if (op == 6) arxiu << "nombre de frases";
+    else if (op == 7) arxiu << "nombre de paraules";
+    else if (op == 8) arxiu << "info";
+    else if (op == 9) arxiu << "tots autors";
+    else if (op == 10) arxiu << "tots textos";
     int espais = numero_aleatori(2, 100);
     for (int i = 0; i < espais; ++i) arxiu << ' ';
     if (numero_aleatori(0, 1) == 1) arxiu << '?';
@@ -152,7 +160,7 @@ int main() {
     int cont;
     cin >> cont;
     while (cont > 0) {
-        frases();
+        actions();
         --cont;
     }
     arxiu << "sortir" << endl;
