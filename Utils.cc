@@ -3,6 +3,7 @@
 
 namespace utils {
     bool contains(string a, string b) {
+        if (a.empty() or b.empty()) return false;
         istringstream issB(b);
         string wordB;
         while (issB >> wordB) {
@@ -20,6 +21,7 @@ namespace utils {
     }
 
     bool containsConsecutive(string a, string b) {
+        if (a.empty() or b.empty()) return false;
         int pos = a.find(b);
         bool found = false;
         while (pos != string::npos) {
