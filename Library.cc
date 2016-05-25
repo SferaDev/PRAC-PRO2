@@ -4,6 +4,7 @@
 */
 
 #include "Library.hh"
+
 using namespace std;
 
 Library::Library() {
@@ -26,7 +27,7 @@ void Library::readBook(string title, string authorName) {
     if (bookIt == bookCollection.end()) {
         bookCollection[authorName + ':' + title] = book;
     } else if (bookIt->second.isDeleted()) {
-        set<string, utils::stringNaturalComparator> quotes =
+        set <string, utils::stringNaturalComparator> quotes =
                 bookIt->second.getBookQuotes();
         set<string, utils::stringNaturalComparator>::const_iterator quoteIt = quotes.begin();
         while (quoteIt != quotes.end()) {
@@ -135,9 +136,9 @@ void Library::insertQuote(int start, int end) {
     while (it != quoteCollection.end()) {
         if (it->second.getReference().substr(0, reference.length()) == reference) {
             if (it->second.getBookTitle() == currentBook->second.getTitle()
-                    and it->second.getAuthor() == currentBook->second.getAuthor()
-                    and it->second.getStartLine() == start
-                    and it->second.getEndLine() == end) {
+                and it->second.getAuthor() == currentBook->second.getAuthor()
+                and it->second.getStartLine() == start
+                and it->second.getEndLine() == end) {
                 utils::printError();
                 return;
             }
@@ -186,7 +187,7 @@ Book Library::getBook() {
 bool Library::quoteExists(string id) {
     map<string, Quote>::const_iterator it = quoteCollection.find(id);
     return it != quoteCollection.end() and
-            !it->second.getReference().empty();
+           !it->second.getReference().empty();
 }
 
 Quote Library::getQuote(string id) {
@@ -223,7 +224,7 @@ void Library::printBooksByAuthor(string author) {
 }
 
 void Library::printQuotesByAuthor(string author) {
-    set<string, utils::stringNaturalComparator> quotes = authorCollection[author].getAuthorQuotes();
+    set <string, utils::stringNaturalComparator> quotes = authorCollection[author].getAuthorQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformationComplex(false);
@@ -237,7 +238,7 @@ void Library::printCurrentInformation() {
     cout << currentBook->second.getLineCount() << " ";
     cout << currentBook->second.getWordCount() << endl;
     cout << "Cites Associades:" << endl;
-    set<string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
+    set <string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformation(true, false);
@@ -246,7 +247,7 @@ void Library::printCurrentInformation() {
 }
 
 void Library::printCurrentQuotes() {
-    set<string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
+    set <string, utils::stringNaturalComparator> quotes = currentBook->second.getBookQuotes();
     set<string>::iterator it = quotes.begin();
     while (it != quotes.end()) {
         quoteCollection[*it].printInformationComplex(true);

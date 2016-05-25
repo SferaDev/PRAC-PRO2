@@ -7,9 +7,11 @@
 #define PRO2_PRAC_UTILS_HH
 
 #ifndef NO_DIAGRAM
+
 #include <iostream>
 #include <string>
 #include <sstream>
+
 #endif
 using namespace std;
 
@@ -18,7 +20,7 @@ using namespace std;
 */
 namespace utils {
     struct stringNaturalComparator {
-        bool operator() (const string& a, const string& b) {
+        bool operator()(const string &a, const string &b) {
             int posA = a.find_first_of("0123456789");
             int posB = b.find_first_of("0123456789");
             if (a.substr(0, posA) != b.substr(0, posB)) {
@@ -37,7 +39,7 @@ namespace utils {
     };
 
     struct frequencyComparator {
-        bool operator() (const pair<string, int>& a, const pair<string, int>& b) {
+        bool operator()(const pair<string, int> &a, const pair<string, int> &b) {
             // Special case: Same frequency
             if (a.second == b.second) {
                 // Special case: Same length
@@ -73,7 +75,7 @@ namespace utils {
         \pre True
         \post The forwarded param string has all chars uppercase
     */
-    void stringUppercase(string& input);
+    void stringUppercase(string &input);
 
     /** @brief Returns if a sentence starts with another one
         \param a: String to analyze
@@ -97,20 +99,20 @@ namespace utils {
        \pre True
        \post The referenced string doesn't have any spaces at start and/or end
    */
-    void trimString(string& query);
+    void trimString(string &query);
 
     /** @brief Removes spaces and quotation marks in the sentence
         \param query: A param string
         \pre True
         \post The referenced string doesn't have any spaces or quotation marks at start and/or end
     */
-    void trimStringComplex(string& query);
+    void trimStringComplex(string &query);
 
-    void formatString(string& query);
+    void formatString(string &query);
 
-    void removeDelimiter(string& line);
+    void removeDelimiter(string &line);
 
-    bool malformedExpression(string& query);
+    bool malformedExpression(string &query);
 
     /** @brief Prints an error using the correct formatting */
     void printError();

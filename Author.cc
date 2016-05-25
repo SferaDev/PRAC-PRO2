@@ -4,6 +4,7 @@
 */
 
 #include "Author.hh"
+
 using namespace std;
 
 Author::Author() {
@@ -30,7 +31,7 @@ void Author::incrementBookCount(int value) {
 void Author::incrementLineCount(int value) {
     totalLines += value;
 }
-    
+
 void Author::incrementWordCount(int value) {
     totalWords += value;
 }
@@ -48,24 +49,24 @@ int Author::getLineCount() const {
 int Author::getWordCount() const {
     return totalWords;
 }
-    
+
 void Author::addBook(string title) {
     authorBooks.insert(title);
 }
-    
+
 void Author::addQuote(string reference) {
     authorQuotes.insert(reference);
 }
-    
+
 void Author::deleteBook(string title) {
     authorBooks.erase(title);
 }
-    
+
 void Author::deleteQuote(string reference) {
     authorQuotes.erase(reference);
 }
 
-set<string, utils::stringNaturalComparator> Author::getAuthorQuotes() {
+set <string, utils::stringNaturalComparator> Author::getAuthorQuotes() {
     return authorQuotes;
 }
 

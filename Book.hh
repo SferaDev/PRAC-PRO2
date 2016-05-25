@@ -9,6 +9,7 @@
 #include "Utils.hh"
 
 #ifndef NO_DIAGRAM
+
 #include <algorithm>
 #include <iostream>
 #include <list>
@@ -16,8 +17,8 @@
 #include <set>
 #include <string>
 #include <sstream>
-#include <queue>
 #include <vector>
+
 #endif
 using namespace std;
 
@@ -38,13 +39,13 @@ private:
 
     /** @brief Content of the book */
     /** @brief The line ID is the position and the value is the content of the book */
-    vector<string> bookContent;
+    vector <string> bookContent;
 
     /** @brief Content dictionary by words with lines
         \param int: Key of the main map and a word
         \param vector<int>: All the lines with that contents a determinate word (without marks)
     */
-    map<string, list<int> > lineDictionary;
+    map <string, list<int>> lineDictionary;
 
     /** @brief Content dictionary with frequencies
         \param string: Key of the identifier
@@ -53,7 +54,7 @@ private:
     map<string, int> wordFrequencyMap;
 
     /** @brief Content dictionary with frequencies in correct order */
-    list<pair<string, int> > wordFrequencyList;
+    list <pair<string, int>> wordFrequencyList;
 
     /** @brief Tells if we generate the frequency table (not generated previously or modified) */
     bool dirtyFrequency;
@@ -67,7 +68,7 @@ private:
     /** @brief Ordered collection of quotes
         \param string: The ID of the parent quoteCollection
     */
-    set<string, utils::stringNaturalComparator> bookQuotes;
+    set <string, utils::stringNaturalComparator> bookQuotes;
 
 public:
     /** @brief Creates an empty Book
@@ -128,11 +129,11 @@ public:
     */
     void replaceWords(string oldWord, string newWord);
 
-   /** @brief Finds if a word is on the content of the implicit Book
-        \param word = Word to find on the book
-        \pre The wordFrequencyMap of the implicit Book and a word that we want to find
-        \post Returns true if the word is on the content of the implicit book
-    */
+    /** @brief Finds if a word is on the content of the implicit Book
+         \param word = Word to find on the book
+         \pre The wordFrequencyMap of the implicit Book and a word that we want to find
+         \post Returns true if the word is on the content of the implicit book
+     */
     bool findWord(string word);
 
     /** @brief Tells if a dirtyFrequency is true or false
@@ -157,13 +158,13 @@ public:
         \pre An implicit Book
         \post Returns the bookQuotes set
     */
-    set<string, utils::stringNaturalComparator> getBookQuotes();
+    set <string, utils::stringNaturalComparator> getBookQuotes();
 
     /** @brief Returns the lines from start to end
         \pre An implicit Book
         \post Returns the lines from the vector (pos - 1)
     */
-    vector<string> getLines(int start, int end);
+    vector <string> getLines(int start, int end);
 
     /** @brief Adds new Quote to Book
         \pre An implicit Book
@@ -189,7 +190,7 @@ public:
         \pre An implicit Book and logical expression match and empty set
         \post The number of lines that keep the logical expression
     */
-    void findExpression(string query, set<int>& pos);
+    void findExpression(string query, set<int> &pos);
 
     /** @brief Prints the information of the implicit book
         \pre An implicit Book

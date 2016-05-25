@@ -8,6 +8,7 @@
 */
 
 #include "Library.hh"
+
 using namespace std;
 
 /* Constants */
@@ -39,7 +40,7 @@ const string QUERY_QUOTES_ALL = "totes cites";
 
 const string QUIT = "sortir";
 
-void actionExpression(Library& library, string input)  {
+void actionExpression(Library &library, string input) {
     // Erase 'frases ' from input channel
     input = input.substr(ACTION_EXPRESSION.length() + 1);
     // Delete '?' from query
@@ -50,9 +51,9 @@ void actionExpression(Library& library, string input)  {
     int x, y;
     istringstream iss(input);
     iss >> x;
-    if (!iss.fail())  {
+    if (!iss.fail()) {
         iss >> y;
-        if (!iss.fail()) library.getBook().printSelectLines(x,y);
+        if (!iss.fail()) library.getBook().printSelectLines(x, y);
         else utils::printError();
     }
     else if (input.find_first_of("\"") != string::npos) {
@@ -60,12 +61,12 @@ void actionExpression(Library& library, string input)  {
             utils::trimStringComplex(input);
             library.getBook().printLinesConsecutiveWords(input);
         } else utils::printError();
-    } else if (input.find_first_of("({})&|") != string::npos){
+    } else if (input.find_first_of("({})&|") != string::npos) {
         library.getBook().printLines(input);
     } else utils::printError();
 }
 
-void readActions(Library& library) {
+void readActions(Library &library) {
     string input;
     bool lastOutputSpace = true;
     while (getline(cin, input)) {
@@ -100,7 +101,7 @@ void readActions(Library& library) {
             string oldWord, newWord;
             iss >> oldWord >> oldWord >> newWord >> newWord;
             if (oldWord[0] == '\"' and newWord[0] == '\"' and
-                    oldWord[oldWord.length() - 1] == '\"' and newWord[newWord.length() - 1] == '\"') {
+                oldWord[oldWord.length() - 1] == '\"' and newWord[newWord.length() - 1] == '\"') {
                 utils::trimStringComplex(oldWord);
                 utils::trimStringComplex(newWord);
                 library.replaceWordsOnBook(oldWord, newWord);

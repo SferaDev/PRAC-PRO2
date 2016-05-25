@@ -7,9 +7,11 @@
 #define PRO2_PRAC_QUOTE_HH
 
 #ifndef NO_DIAGRAM
+
 #include <iostream>
 #include <string>
 #include <vector>
+
 #endif
 
 using namespace std;
@@ -36,7 +38,7 @@ private:
 
     /** @brief Content of the Quote */
     /** @brief: The ID is the position and the value is the content of the Quote */
-    vector<string> quoteContent;
+    vector <string> quoteContent;
 
 public:
     /** @brief Creates an empty Quote
@@ -103,14 +105,14 @@ public:
         \pre An implicit Quote
         \post Updates the Quote content
     */
-    void setContent(vector<string> content);
-    
+    void setContent(vector <string> content);
+
     /** @brief Print content of the implicit Quote
         \pre An implicit Quote
         \post Prints quote content
     */
     void printInformation(bool reference, bool startend);
-    
+
     /** @brief Print all the information of the implicit Quote
         \pre An implicit Quote
         \post Prints all the quote information

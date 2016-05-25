@@ -7,10 +7,12 @@
 #define PRO2_PRAC_AUTHOR_HH
 
 #ifndef NO_DIAGRAM
+
 #include "Utils.hh"
 #include <iostream>
 #include <set>
 #include <string>
+
 #endif
 using namespace std;
 
@@ -37,12 +39,12 @@ private:
     /** @brief Ordered collection of books
         \param string: the ID of the parent bookCollection
      */
-    set<string> authorBooks;
+    set <string> authorBooks;
 
     /** @brief Ordered collection of quotes
         \param string: the ID of the parent quoteCollection
     */
-    set<string, utils::stringNaturalComparator> authorQuotes;
+    set <string, utils::stringNaturalComparator> authorQuotes;
 
 public:
     /** @brief Creates an empty Author
@@ -50,7 +52,7 @@ public:
         \post Returns an implicit empty author
     */
     Author();
-    
+
     /** @brief Creates an empty Author
         \param name: Name of the Author
         \pre True
@@ -135,14 +137,14 @@ public:
         \pre An implicit Author
         \post Returns the authorQuotes set
     */
-    set<string, utils::stringNaturalComparator> getAuthorQuotes();
+    set <string, utils::stringNaturalComparator> getAuthorQuotes();
 
     /** @brief Returns if Author has any book
         \pre An implicit Author
         \post Returns true if books is not empty
     */
     bool isEmpty();
-    
+
     /** @brief Prints information about the Author
         \pre An implicit Author
         \post True

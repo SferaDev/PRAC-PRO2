@@ -4,6 +4,7 @@
 */
 
 #include "Book.hh"
+
 using namespace std;
 
 Book::Book() {
@@ -70,7 +71,8 @@ void Book::replaceWords(string oldWord, string newWord) {
     // TODO: newWord empty?
     if (oldWord == newWord or oldWord.empty()) return;
     // Edit the contents of the book
-    map<string, list<int> >::const_iterator it1 = lineDictionary.find(oldWord);
+    map < string, list < int > > ::const_iterator
+    it1 = lineDictionary.find(oldWord);
     if (it1 != lineDictionary.end()) {
         list<int>::const_iterator it2 = it1->second.begin();
         while (it2 != it1->second.end()) {
@@ -129,12 +131,12 @@ void Book::generateFrequencyTable() {
     wordFrequencyList.sort(utils::frequencyComparator());
 }
 
-set<string, utils::stringNaturalComparator> Book::getBookQuotes() {
+set <string, utils::stringNaturalComparator> Book::getBookQuotes() {
     return bookQuotes;
 }
 
-vector<string> Book::getLines(int start, int end) {
-    vector<string> vector(end - start + 1);
+vector <string> Book::getLines(int start, int end) {
+    vector <string> vector(end - start + 1);
     for (int i = start; i <= end; ++i) {
         vector[i - start] = bookContent[i - 1];
     }
@@ -153,17 +155,18 @@ void Book::deleteBook() {
     deleted = true;
 }
 
-void Book::findExpression(string query, set<int>& pos) {
+void Book::findExpression(string query, set<int> &pos) {
     // Trim spaces of the query
     utils::trimString(query);
     if (query.find_first_of('{') == string::npos and query.find_first_of('}') == string::npos) {
         // Base case: Malformed expression (not found any word to find)
     } else if (query.find_last_of('{') == 0 and query.find_first_of('}') == query.length() - 1
-            and query.find_first_of('&') == string::npos and query.find_first_of('|') == string::npos) {
+               and query.find_first_of('&') == string::npos and query.find_first_of('|') == string::npos) {
         query = query.substr(1, query.length() - 2);
         if (query.find_first_of(" ") == string::npos) {
             // Base case: One word, return lines where found
-            map<string, list<int> >::const_iterator it1 = lineDictionary.find(query);
+            map < string, list < int > > ::const_iterator
+            it1 = lineDictionary.find(query);
             if (it1 != lineDictionary.end()) {
                 list<int>::const_iterator it2 = it1->second.begin();
                 while (it2 != it1->second.end()) {
@@ -217,7 +220,7 @@ void Book::findExpression(string query, set<int>& pos) {
 }
 
 void Book::printInformation() {
-    cout << authorName << " \"" <<  bookTitle << "\"" << endl;
+    cout << authorName << " \"" << bookTitle << "\"" << endl;
 }
 
 void Book::printAllLines() {
@@ -263,7 +266,8 @@ void Book::printSelectLines(int start, int end) {
 
 void Book::printFrequencyTable() {
     if (dirtyFrequency) generateFrequencyTable();
-    list<pair<string, int> >::const_iterator it = wordFrequencyList.begin();
+    list < pair < string, int > > ::const_iterator
+    it = wordFrequencyList.begin();
     while (it != wordFrequencyList.end()) {
         if (it->second > 0 and !it->first.empty())
             cout << it->first << " " << it->second << endl;

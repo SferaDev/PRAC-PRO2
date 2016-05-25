@@ -12,10 +12,12 @@
 #include "Utils.hh"
 
 #ifndef NO_DIAGRAM
+
 #include <iostream>
 #include <map>
 #include <string>
 #include <sstream>
+
 #endif
 
 using namespace std;
@@ -32,19 +34,19 @@ private:
         \param string: Key of the identifier
         \param Book: Books of the Library
     */
-    map<string, Book> bookCollection;
+    map <string, Book> bookCollection;
 
     /** @brief Collection of Authors
         \param string: Key of the identifier
         \param Author: Authors of the Library
     */
-    map<string, Author> authorCollection;
+    map <string, Author> authorCollection;
 
     /** @brief Collection of Quotes
         \param string: Key of the identifier
         \param Quote: Quotes of the Library
     */
-    map<string, Quote, utils::stringNaturalComparator> quoteCollection;
+    map <string, Quote, utils::stringNaturalComparator> quoteCollection;
 
     /** @brief Identifier of Quotes
         \param string: Quote ID (without number)

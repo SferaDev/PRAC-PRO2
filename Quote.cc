@@ -47,7 +47,7 @@ void Quote::setQuoteLines(int start, int end) {
     quoteEnd = end;
 }
 
-void Quote::setContent(vector<string> content) {
+void Quote::setContent(vector <string> content) {
     // FIXME: Copy of a vector (slow?)
     quoteContent = content;
 }

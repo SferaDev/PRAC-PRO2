@@ -31,7 +31,7 @@ namespace utils {
         return false;
     }
 
-    void stringUppercase(string& input) {
+    void stringUppercase(string &input) {
         for (int i = 0; i < input.length(); ++i) {
             if (!isupper(input[i])) input[i] = toupper(input[i]);
         }
@@ -51,7 +51,7 @@ namespace utils {
         return state != 0;
     }
 
-    void trimString(string& query) {
+    void trimString(string &query) {
         int pos = query.find("  ");
         while (pos != string::npos) {
             query.erase(pos, 1);
@@ -62,13 +62,13 @@ namespace utils {
             query.erase(query.length() - 1, 1);
     }
 
-    void trimStringComplex(string& query) {
+    void trimStringComplex(string &query) {
         while (query[0] == ' ' or query[0] == '\"') query.erase(0, 1);
-        while (query.length() > 0 and query[query.length() - 1] == ' '  or query[query.length() - 1] == '\"')
+        while (query.length() > 0 and query[query.length() - 1] == ' ' or query[query.length() - 1] == '\"')
             query.erase(query.length() - 1, 1);
     }
 
-    void formatString(string& query) {
+    void formatString(string &query) {
         int pos = query.find_first_of(",;:.!?");
         while (pos != string::npos) {
             if (query[pos - 1] == ' ') query.erase(pos - 1, 1);
@@ -76,7 +76,7 @@ namespace utils {
         }
     }
 
-    void removeDelimiter(string& line) {
+    void removeDelimiter(string &line) {
         int pos = line.find_first_of(",;:.!?");
         while (pos != string::npos) {
             if (pos + 1 == line.length() or line[pos + 1] == ' ')
@@ -86,7 +86,7 @@ namespace utils {
         trimString(line);
     }
 
-    bool malformedExpression(string& query) {
+    bool malformedExpression(string &query) {
         int statePar, stateWords;
         statePar = stateWords = 0;
         for (int i = 0; i < query.length(); ++i) {
