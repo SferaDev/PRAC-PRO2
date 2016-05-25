@@ -45,7 +45,7 @@ private:
         \param int: Key of the main map and a word
         \param vector<int>: All the lines with that contents a determinate word (without marks)
     */
-    map <string, list<int>> lineDictionary;
+    map <string, list<int> > lineDictionary;
 
     /** @brief Content dictionary with frequencies
         \param string: Key of the identifier
@@ -54,7 +54,7 @@ private:
     map<string, int> wordFrequencyMap;
 
     /** @brief Content dictionary with frequencies in correct order */
-    list <pair<string, int>> wordFrequencyList;
+    list <pair<string, int> > wordFrequencyList;
 
     /** @brief Tells if we generate the frequency table (not generated previously or modified) */
     bool dirtyFrequency;
