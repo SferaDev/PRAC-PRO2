@@ -58,11 +58,13 @@ void actionExpression(Library &library, string input) {
     }
     else if (input.find_first_of("\"") != string::npos) {
         if (input.find_first_of("\"") != input.find_last_of("\"")) {
-            utils::trimStringComplex(input);
-            library.getBook().printLinesConsecutiveWords(input);
+            string query = input.substr(0, input.find_last_of("\"") + 1);
+            utils::trimStringComplex(query);
+            library.getBook().printLinesConsecutiveWords(query);
         } else utils::printError();
     } else if (input.find_first_of("({})&|") != string::npos) {
-        library.getBook().printLines(input);
+        string query = input.substr(0, input.find_last_of("({})&|") + 1);
+        library.getBook().printLines(query);
     } else utils::printError();
 }
 
