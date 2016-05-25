@@ -64,14 +64,15 @@ namespace utils {
 
     void trimStringComplex(string &query) {
         while (query[0] == ' ' or query[0] == '\"') query.erase(0, 1);
-        while (query.length() > 0 and query[query.length() - 1] == ' ' or query[query.length() - 1] == '\"')
+        while (query.length() > 0 and (query[query.length() - 1] == ' ' or query[query.length() - 1] == '\"'))
             query.erase(query.length() - 1, 1);
     }
 
     void formatString(string &query) {
         int pos = query.find_first_of(",;:.!?");
         while (pos != string::npos) {
-            if (query[pos - 1] == ' ') query.erase(pos - 1, 1);
+            if (query[pos - 1] == ' ' and (pos + 1 == query.length() or query[pos + 1] == ' '))
+                query.erase(pos - 1, 1);
             pos = query.find_first_of(",;:.!?", pos + 1);
         }
     }
