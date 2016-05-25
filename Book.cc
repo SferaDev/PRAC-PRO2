@@ -68,11 +68,9 @@ int Book::getWordCount() const {
 }
 
 void Book::replaceWords(string oldWord, string newWord) {
-    // TODO: newWord empty?
     if (oldWord == newWord or oldWord.empty()) return;
     // Edit the contents of the book
-    map < string, list < int > > ::const_iterator
-    it1 = lineDictionary.find(oldWord);
+    map < string, list < int > >::const_iterator it1 = lineDictionary.find(oldWord);
     if (it1 != lineDictionary.end()) {
         list<int>::const_iterator it2 = it1->second.begin();
         while (it2 != it1->second.end()) {
@@ -80,7 +78,7 @@ void Book::replaceWords(string oldWord, string newWord) {
             string word, line;
             while (iss >> word) {
                 string auxWord;
-                if (word.find_first_of(",;:.?!") == word.length() - 1) {
+                if (word.find_last_of(",;:.?!") == word.length() - 1) {
                     auxWord = word[word.length() - 1];
                     word.erase(word.length() - 1, 1);
                 }
