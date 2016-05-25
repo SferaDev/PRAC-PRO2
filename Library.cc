@@ -43,17 +43,12 @@ void Library::readBook(string title, string authorName) {
     map<string, Author>::iterator authorIt = authorCollection.find(authorName);
     if (authorIt == authorCollection.end()) {
         Author author(authorName);
-        author.incrementBookCount(1);
-        author.incrementLineCount(book.getLineCount());
-        author.incrementWordCount(book.getWordCount());
-        author.addBook(title);
-        authorCollection[authorName] = author;
-    } else {
-        authorIt->second.incrementBookCount(1);
-        authorIt->second.incrementLineCount(book.getLineCount());
-        authorIt->second.incrementWordCount(book.getWordCount());
-        authorIt->second.addBook(title);
+        authorIt = authorCollection.insert(authorIt, pair<string, Author>(authorName, author));
     }
+    authorIt->second.incrementBookCount(1);
+    authorIt->second.incrementLineCount(book.getLineCount());
+    authorIt->second.incrementWordCount(book.getWordCount());
+    authorIt->second.addBook(title);
 }
 
 bool Library::isBookSelected() {
