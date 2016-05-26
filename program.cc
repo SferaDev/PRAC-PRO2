@@ -69,12 +69,14 @@ void actionExpression(Library &library, string input) {
 
 void readActions(Library &library) {
     string input;
+    // Let's track if we need to print endlines before the new command
     bool lastOutputSpace = true;
     while (getline(cin, input)) {
         string original = input;
         if (!lastOutputSpace) cout << endl;
         // Remove spaces from input
         utils::trimString(input);
+        // Reset last output space
         lastOutputSpace = input.empty();
         // Quit command returns void
         if (utils::startsWith(input, QUIT)) {
@@ -87,10 +89,8 @@ void readActions(Library &library) {
             getline(cin, input);
             if (utils::startsWith(input, BOOK_INSERT_AUTHOR)) {
                 author = input.erase(input.length() - 1, 1).substr(BOOK_INSERT_AUTHOR.length());
-                library.readBook(title, author);
-            } else {
-                while (input != "****") getline(cin, input);
             }
+            library.readBook(title, author);
         } else if (utils::startsWith(input, BOOK_DELETE)) {
             library.deleteBook();
         } else if (utils::startsWith(input, BOOK_SELECT)) {
