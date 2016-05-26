@@ -229,7 +229,7 @@ void Book::printAllLines() {
 
 void Book::printLines(string query) {
     if (utils::malformedExpression(query)) {
-        utils::printError();
+        //TODO: utils::printError();
         return;
     }
     set<int> lines;
