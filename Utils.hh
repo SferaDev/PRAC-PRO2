@@ -16,9 +16,11 @@
 using namespace std;
 
 /**
+    @namespace utils
     @brief Utility namespace for generic functions.
 */
 namespace utils {
+    /** @brief Natural comparator struct (H1 H2 H10) instead of (H1 H10 H2) */
     struct stringNaturalComparator {
         bool operator()(const string &a, const string &b) {
             int posA = a.find_first_of("0123456789");
@@ -38,6 +40,7 @@ namespace utils {
         }
     };
 
+    /** @brief Frequency comparator struct (acc to the its params) */
     struct frequencyComparator {
         bool operator()(const pair<string, int> &a, const pair<string, int> &b) {
             // Special case: Same frequency
@@ -54,19 +57,21 @@ namespace utils {
         }
     };
 
-    /** @brief Returns if a sentence contains a word
-        \param input: The sentence (can contain one delimiter per word)
-        \param query: The word to find in the sentence (without any delimiter)
-        \pre The sentence and the word to find
-        \post Returns true if the single word is on the sentence
+    /** @brief Determines if a sentence contains each word of another sentence
+        \param a: First sentence to compare
+        \param b: Second sentence to find
+        \pre Both strings (can be empty but it'll return false)
+        \post True
+        \return Returns true if the single word is on the sentence
     */
-    bool contains(string input, string query);
+    bool contains(string a, string b);
 
-    /** @brief Returns if a sentence contains a consecutive sequence of words
-        \param input: The sentence (can contain one delimiter per word)
-        \param query: The word to find in the sentence (without any delimiter)
-        \pre The sentence and the word to find
-        \post Returns true if the single word is on the sentence
+    /** @brief Determines if a sentence contains a consecutive sequence of words
+        \param a: First sentence to compare
+        \param b: Second sentence to find
+        \pre Both strings (can be empty but it'll return false)
+        \post True
+        \returns Returns true if the sequence of words of "b" is found consecutively on "a"
     */
     bool containsConsecutive(string a, string b);
 
@@ -77,19 +82,21 @@ namespace utils {
     */
     void stringUppercase(string &input);
 
-    /** @brief Returns if a sentence starts with another one
+    /** @brief Determines if a sentence starts with another one
         \param a: String to analyze
         \param b: String to find on first positions of param a
-        \pre True
-        \post Returns true if the first b.size() chars are the same on a
+        \pre String "a" length is >= than "b" length
+        \post True
+        \returns Returns true if the first b.size() chars are the same on "a"
     */
     bool startsWith(string a, string b);
 
-    /** @brief Finds if a string is between parentheses
-       \param a: The string to check
+    /** @brief Determines if a string is between parentheses
+       \param query: The string to check
        \param position: End position to check
-       \pre True
-       \post Returns true if the string is between a parentheses on the specified position
+       \pre Non null query and position >= 0
+       \post True
+       \returns Returns true if the string is between a parentheses on the specified position
    */
     bool betweenPar(string query, int position);
 
@@ -108,13 +115,32 @@ namespace utils {
     */
     void trimStringComplex(string &query);
 
+    /** @brief Gives proper format with delimiters (.!?,;:)
+        \param query: A param string
+        \pre True
+        \post The referenced string will have the proper format
+    */
     void formatString(string &query);
 
+    /** @brief Removes the delimiter of a given string
+        \param query: A param string
+        \pre True
+        \post The referenced string doesn't have the end delimiter
+    */
     void removeDelimiter(string &line);
 
+    /** @brief Determines if an expression is well formed
+        \param query: A param string
+        \pre Non-null query
+        \post True
+        \returns If the postion and number of "(){}" is correct
+    */
     bool malformedExpression(string &query);
 
-    /** @brief Prints an error using the correct formatting */
+    /** @brief Prints an error to the output channel
+        \pre True
+        \post True
+    */
     void printError();
 }
 

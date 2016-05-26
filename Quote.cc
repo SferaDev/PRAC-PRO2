@@ -9,7 +9,7 @@
 using namespace std;
 
 Quote::Quote() {
-    // TODO
+    // no-op
 }
 
 Quote::Quote(string reference, string author, string book) {

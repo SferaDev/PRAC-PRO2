@@ -37,12 +37,12 @@ private:
     int totalWords;
 
     /** @brief Ordered collection of books
-        \param string: the ID of the parent bookCollection
+        \param string: the ID of the parent (Library) bookCollection's
      */
     set <string> authorBooks;
 
     /** @brief Ordered collection of quotes
-        \param string: the ID of the parent quoteCollection
+        \param string: the ID of the parent (Library) quoteCollection's
     */
     set <string, utils::stringNaturalComparator> authorQuotes;
 
@@ -67,35 +67,37 @@ public:
     ~Author();
 
     /** @brief Increments the number of books of the implicit author
-        \param value: Number of news books
+        \param value: Number books to add/substract from the implicit author
         \pre An implicit Author
-        \post The totalBooks of the implicit author increased
+        \post Updates totalBooks on the implicit author by increasing by "value"
     */
     void incrementBookCount(int value);
 
     /** @brief Increments the number of lines of the implicit author
-        \param value: Number of lines of news books
+        \param value: Number of lines to add/substract from the implicit author
         \pre An implicit Author
-        \post The totalLines of the implicit author increased
+        \post Updates totalLines on the implicit author by increasing by "value"
     */
     void incrementLineCount(int value);
 
     /** @brief Increments the number of words of the implicit author
-        \param value: Number of words of news books
+        \param value: Number of words to add/substract from the implicit author
         \pre An implicit Author
-        \post The totalWords of the implicit author increased
+        \post Updates totalWords on the implicit author by increasing by "value"
     */
     void incrementWordCount(int value);
 
     /** @brief Returns the number of books of the implicit author
         \pre An implicit Author
-        \post Returns the totalBooks of the implicit author
+        \post True
+        \returns Returns totalBooks of the implicit author
     */
     int getBookCount() const;
 
     /** @brief Returns the number of lines of all books of the implicit author
         \pre An implicit Author
-        \post Returns the totalLines of the implicit author
+        \post True
+        \returns Returns totalLines of the implicit author
     */
     int getLineCount() const;
 
@@ -108,50 +110,52 @@ public:
     /** @brief Adds new Book to Author
         \param title: Book title
         \pre An implicit Author
-        \post authorBook has a new element
+        \post Updates authorBook with a new element (ref: title)
     */
     void addBook(string title);
 
     /** @brief Adds new Quote to Author
         \param reference: ID of the Quote
         \pre An implicit Book
-        \post authorQuotes has a new element
+        \post Updates authorQuotes with a new element (ref: reference)
     */
     void addQuote(string reference);
 
     /** @brief Removes a Book from Author
         \param title: Book title
         \pre An implicit Author
-        \post authorBook has one less element
+        \post Updates authorBook without a book (ref: title)
     */
     void deleteBook(string title);
 
     /** @brief Removes a Quote from Author
         \param reference: ID of the Quote
         \pre An implicit Book
-        \post authorQuotes has one less element
+        \post Updates authorQuotes without a quote (ref: reference)
     */
     void deleteQuote(string reference);
 
-    /** @brief Returns the author quotes
+    /** @brief Delivers the quotes of the implicit author
         \pre An implicit Author
-        \post Returns the authorQuotes set
+        \post True
+        \returns Returns the authorQuotes set
     */
     set <string, utils::stringNaturalComparator> getAuthorQuotes();
 
-    /** @brief Returns if Author has any book
+    /** @brief Checks if the implicit Author has any book
         \pre An implicit Author
-        \post Returns true if books is not empty
+        \post True
+        \returns Returns true if Author is not empty
     */
     bool isEmpty();
 
-    /** @brief Prints information about the Author
+    /** @brief Output operation: Prints information about the implicit Author
         \pre An implicit Author
         \post True
     */
     void printInformation();
 
-    /** @brief Prints information about the Books
+    /** @brief Output operation: Prints information about the Books of the implicit author
         \pre An implicit Author
         \post True
     */
