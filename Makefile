@@ -32,7 +32,7 @@ $(EXECUTABLE): clean
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final judge tar
-$(FINAL_TAR): docs
+$(FINAL_TAR): tests docs
 	tar -cvf $(FINAL_TAR).tar $(HEADERS) $(MAIN) $(SOURCES) Makefile Doxyfile jp_*.txt html.zip equip.pdf
 
 # Configuration to build Documentation tar
@@ -40,6 +40,11 @@ docs: clean
 	rm -rf DOC/
 	doxygen Doxyfile
 	zip -r html.zip DOC/html/
+
+# Configuration to execute our personal test cases
+tests: $(EXECUTABLE)
+	./program.exe < jp_alexis.rico_entrada.txt > jp_alexis.rico_sortida.txt
+	./program.exe < jp_jordi.romero.morcillo_entrada.txt > jp_jordi.romero.morcillo_sortida.txt
 
 # Configuration for make clean
 # We use "rm -rf" to recursively delete the files and not prompting the user if they don't exist
