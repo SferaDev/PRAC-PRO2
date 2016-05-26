@@ -31,14 +31,6 @@ $(EXECUTABLE): clean
 	$(CC) $(FLAGS) -c $(MAIN) $(SOURCES)
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
-# [DELETE] Configuration to build a quick judge tar
-jutge:
-	tar -cvf jutge.tar $(HEADERS) $(MAIN) $(SOURCES) Makefile Doxyfile jp_*.txt equip.pdf
-
-# [DELETE] Configuration to build the generator
-gen:
-	$(CC) $(FLAGS) -o gen.exe Generator.cc --std=c++11
-
 # Configuration to build final judge tar
 $(FINAL_TAR): docs
 	tar -cvf $(FINAL_TAR).tar $(HEADERS) $(MAIN) $(SOURCES) Makefile Doxyfile jp_*.txt html.zip equip.pdf
