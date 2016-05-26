@@ -30,7 +30,7 @@ class Book {
 
 private:
     /** @brief Name of the author */
-    /** @brief The ID on parent authorCollection */
+    /** @brief The ID of the parent authorCollection */
     string authorName;
 
     /** @brief Name of the book */
@@ -38,12 +38,12 @@ private:
     string bookTitle;
 
     /** @brief Content of the book */
-    /** @brief The line ID is the position and the value is the content of the book */
+    /** @brief ID: position and value: content of the book */
     vector <string> bookContent;
 
     /** @brief Content dictionary by words with lines
-        \param int: Key of the main map and a word
-        \param vector<int>: All the lines with that contents a determinate word (without marks)
+        \param string: Key of the main map that it is a word
+        \param list<int>: All the lines with that contents a determinate word (without marks)
     */
     map <string, list<int> > lineDictionary;
 
@@ -53,7 +53,10 @@ private:
     */
     map<string, int> wordFrequencyMap;
 
-    /** @brief Content dictionary with frequencies in correct order */
+    /** @brief Content dictionary with frequencies in correct order
+        \param string: A word
+        \param int: Frequencies of the words
+    */
     list <pair<string, int> > wordFrequencyList;
 
     /** @brief Tells if we generate the frequency table (not generated previously or modified) */
@@ -97,27 +100,31 @@ public:
     */
     void readBookContent();
 
-    /** @brief Returns the title of the implicit Book
+    /** @brief Provides the title of the implicit Book
         \pre An implicit Book
-        \post The title of the implicit book
+        \post True
+        \returns Returns the title of the implicit Book
     */
     string getTitle() const;
 
-    /** @brief Returns the name of the author of the implicit Book
+    /** @brief Provides the name of the author of the implicit Book
         \pre An implicit Book
-        \post The name of the author of the implicit book
+        \post True
+        \returns Returns the name of the author of the implicit book
     */
     string getAuthor() const;
 
-    /** @brief Returns the number of lines of the implicit Book
+    /** @brief Gives back the number of lines of the implicit Book
         \pre An implicit Book
-        \post The number of the lines of the implicit book
+        \post True
+        \returns Returns the number of the lines of the implicit book
     */
     int getLineCount() const;
 
-    /** @brief Returns the number of words of the implicit Book
+    /** @brief Gives back the number of words of the implicit Book
         \pre An implicit Book
-        \post The words of lines of the implicit book
+        \post True
+        \returns The words of lines of the implicit book
     */
     int getWordCount() const;
 
@@ -130,49 +137,54 @@ public:
     void replaceWords(string oldWord, string newWord);
 
     /** @brief Finds if a word is on the content of the implicit Book
-         \param word = Word to find on the book
+         \param word: Word to find on the implicit Book
          \pre The wordFrequencyMap of the implicit Book and a word that we want to find
-         \post Returns true if the word is on the content of the implicit book
+         \post True
+         \returns Returns true if the word is on the content of the implicit book
      */
     bool findWord(string word);
 
     /** @brief Tells if a dirtyFrequency is true or false
-        \pre True
-        \post Returns true if the frequency table needs to be updated is true
+        \pre An implicit Book
+        \post True
+        \returns Returns true if the frequency table needs to be updated is true
     */
     bool isFrequencyDirty();
 
     /** @brief Tells if a deleted is true or false
-        \pre True
-        \post Returns true if the book has been deleted
+        \pre An implicit Book
+        \post True
+        \returns Returns true if the book has been deleted
     */
     bool isDeleted();
 
-    /** @brief Generates the FrequencyTable Vector
+    /** @brief Generates the wordFrequencyList
         \pre An implicit Book
         \post Generates the frequency table ordered
     */
     void generateFrequencyTable();
 
-    /** @brief Returns the book quotes
+    /** @brief Provides the bookQuotes of the implicit Book
         \pre An implicit Book
-        \post Returns the bookQuotes set
+        \post True
+        \returns Returns the bookQuotes set
     */
     set <string, utils::stringNaturalComparator> getBookQuotes();
 
-    /** @brief Returns the lines from start to end
+    /** @brief Provides the lines from start to end
         \pre An implicit Book
-        \post Returns the lines from the vector (pos - 1)
+        \post True
+        \returns Returns the content of the lines from the vector (pos - 1)
     */
     vector <string> getLines(int start, int end);
 
-    /** @brief Adds new Quote to Book
+    /** @brief Adds new Quote to the implicit Book
         \pre An implicit Book
         \post bookQuotes has a new element
     */
     void addQuote(string reference);
 
-    /** @brief Removes a  Quote from Book
+    /** @brief Removes a Quote from the implicit Book
         \pre An implicit Book
         \post bookQuotes has one less element
     */
@@ -184,7 +196,7 @@ public:
     */
     void deleteBook();
 
-    /** @brief Finds the lines that keep the logical expression
+    /** @brief Finds the lines of the implicit Book that keep the logical expression
         \param query: Query to find the lines to print
         \param pos: Set with all the positions that keep the logical expression
         \pre An implicit Book and logical expression match and empty set
@@ -192,43 +204,43 @@ public:
     */
     void findExpression(string query, set<int> &pos);
 
-    /** @brief Prints the information of the implicit book
+    /** @brief Provides the information of the implicit Book
         \pre An implicit Book
-        \post Prints the title and author of the book
+        \post Prints the title and author of the Book
     */
     void printInformation();
 
-    /** @brief Prints all lines of the implicit Book, from 1 to bookContent.size()
+    /** @brief Provides all lines of the implicit Book, from 1 to bookContent.size()
         \pre An implicit Book
         \post Prints all lines of the content of the implicit book with its number in increasingly ordered for the number
     */
     void printAllLines();
 
-    /** @brief Prints the lines by logical expression match of the implicit Book
-        \param query: Query to find the lines to print
+    /** @brief Provides the lines by logical expression match of the implicit Book
+        \param query: Query to find the lines to print of the implicit Book
         \pre An implicit Book and logical expression match
-        \post Prints the lines that keep the logical expression
+        \post Prints the lines of the implicit Book that keep the logical expression
     */
     void printLines(string query);
 
-    /** @brief Prints the lines that contains the consecutive words of the implicit Book
-        \param query: sequence of words to find the lines to print
+    /** @brief Provides the lines of the implicit Book that contains the consecutive words
+        \param query: Sequence of words to match on each line of the content
         \pre An implicit Book and sequence of words
         \post Prints the number of the line and the line of the implicit book that contain all the words of the sequence
     */
     void printLinesConsecutiveWords(string query);
 
-    /** @brief Prints lines from [start - 1] to [end - 1]
-        \param start: Start line
-        \param end: end line
+    /** @brief Provides lines of the implicit Book from [start - 1] to [end - 1]
+        \param start: Start line of the implicit Book
+        \param end: end line of the implicit Book
         \pre An implicit Book, and the range
         \post Prints the lines of the range and its number of the implicit book
     */
     void printSelectLines(int start, int end);
 
-    /** @brief Prints all words of the content of the implicit book
+    /** @brief Provides all words of the content of the implicit book
         \pre An implicit Book
-        \post Prints all words of the content and its frequencies in decreasingly ordered by frequencies
+        \post Prints all words of the content of the implicit Book and its frequencies in decreasingly ordered by frequencies
     */
     void printFrequencyTable();
 
