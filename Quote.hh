@@ -58,37 +58,42 @@ public:
 
     /** @brief Destructs the implicit Quote
         \pre An implicit Quote
-        \post Deletes the implicit quote
+        \post Deletes the implicit Quote
     */
     ~Quote();
 
-    /** @brief Return Quote reference
+    /** @brief Provides the reference of the implicit Quote
         \pre An implicit Quote
-        \post Returns quoteReference
+        \post True
+        \returns Returns quoteReference
     */
     string getReference() const;
 
-    /** @brief Return Quote's author name
+    /** @brief Provides the author name of the implicit Quote
         \pre An implicit Quote
-        \post Returns bookAuthor
+        \post True
+        \returns Returns bookAuthor
     */
     string getAuthor() const;
 
-    /** @brief Return Quote's book title
+    /** @brief Provides the book title of the implicit Quote
         \pre An implicit Quote
-        \post Returns bookTitle
+        \post True
+        \returns Returns bookTitle
     */
     string getBookTitle() const;
 
-    /** @brief Return Quote start line
+    /** @brief Provides the start line of the implicit Quote
         \pre An implicit Quote
-        \post Returns quoteStart
+        \post True
+        \returns Returns quoteStart
     */
     int getStartLine() const;
 
-    /** @brief Return Quote end line
+    /** @brief Provides the end line of the implicit Quote
         \pre An implicit Quote
-        \post Returns quoteEnd
+        \post True
+        \returns Returns quoteEnd
     */
     int getEndLine() const;
 
@@ -96,24 +101,26 @@ public:
         \param start: Start line
         \param end: End line
         \pre An implicit Quote
-        \post Updates the Quote start/end lines
+        \post Updates the quoteStart and quoteEnd
     */
     void setQuoteLines(int start, int end);
 
-    /** @brief Update the quote content
-        \param content: Content of the Quote
+    /** @brief Update the content of the implicit Quote
+        \param content: New content of the implicit Quote
         \pre An implicit Quote
-        \post Updates the Quote content
+        \post Updates the quoteContent
     */
     void setContent(vector <string> content);
 
-    /** @brief Print content of the implicit Quote
+    /** @brief Provides the content of the implicit Quote
+        \param reference: Tells if we print the reference
+        \param startend: Tells if we print tue qouteStart and the quoteEnd
         \pre An implicit Quote
-        \post Prints quote content
+        \post Prints quoteContent
     */
     void printInformation(bool reference, bool startend);
 
-    /** @brief Print all the information of the implicit Quote
+    /** @brief Provides all the information of the implicit Quote
         \pre An implicit Quote
         \post Prints all the quote information
     */
