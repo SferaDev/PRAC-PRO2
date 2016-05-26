@@ -49,14 +49,14 @@ private:
 public:
     /** @brief Creates an empty Author
         \pre True
-        \post Returns an implicit empty author
+        \post Returns an implicit empty Author
     */
     Author();
 
     /** @brief Creates an empty Author
         \param name: Name of the Author
         \pre True
-        \post Returns an implicit author with name
+        \post Returns an implicit Author with name
     */
     Author(string name);
 
@@ -66,76 +66,76 @@ public:
     */
     ~Author();
 
-    /** @brief Increments the number of books of the implicit author
-        \param value: Number books to add/substract from the implicit author
+    /** @brief Increments the number of books of the implicit Author
+        \param value: Number books to add/substract from the implicit Author
         \pre An implicit Author
-        \post Updates totalBooks on the implicit author by increasing by "value"
+        \post Updates totalBooks on the implicit Author by increasing by "value"
     */
     void incrementBookCount(int value);
 
-    /** @brief Increments the number of lines of the implicit author
+    /** @brief Increments the number of lines of the implicit Author
         \param value: Number of lines to add/substract from the implicit author
         \pre An implicit Author
-        \post Updates totalLines on the implicit author by increasing by "value"
+        \post Updates totalLines on the implicit Author by increasing by "value"
     */
     void incrementLineCount(int value);
 
-    /** @brief Increments the number of words of the implicit author
+    /** @brief Increments the number of words of the implicit Author
         \param value: Number of words to add/substract from the implicit author
         \pre An implicit Author
-        \post Updates totalWords on the implicit author by increasing by "value"
+        \post Updates totalWords on the implicit Author by increasing by "value"
     */
     void incrementWordCount(int value);
 
-    /** @brief Returns the number of books of the implicit author
+    /** @brief Returns the number of books of the implicit Author
         \pre An implicit Author
         \post True
-        \returns Returns totalBooks of the implicit author
+        \returns Returns totalBooks of the implicit Author
     */
     int getBookCount() const;
 
-    /** @brief Returns the number of lines of all books of the implicit author
+    /** @brief Returns the number of lines of all books of the implicit Author
         \pre An implicit Author
         \post True
-        \returns Returns totalLines of the implicit author
+        \returns Returns totalLines of the implicit Author
     */
     int getLineCount() const;
 
-    /** @brief Returns the number of words of all books of the implicit author
+    /** @brief Returns the number of words of all books of the implicit Author
         \pre An implicit Author
-        \post Returns the totalWords of the implicit author
+        \post Returns the totalWords of the implicit Author
     */
     int getWordCount() const;
 
-    /** @brief Adds new Book to Author
+    /** @brief Adds new Book to implicit Author
         \param title: Book title
         \pre An implicit Author
         \post Updates authorBook with a new element (ref: title)
     */
     void addBook(string title);
 
-    /** @brief Adds new Quote to Author
+    /** @brief Adds new Quote to the implicit Author
         \param reference: ID of the Quote
         \pre An implicit Book
         \post Updates authorQuotes with a new element (ref: reference)
     */
     void addQuote(string reference);
 
-    /** @brief Removes a Book from Author
+    /** @brief Removes a Book from the implicit Author
         \param title: Book title
         \pre An implicit Author
         \post Updates authorBook without a book (ref: title)
     */
     void deleteBook(string title);
 
-    /** @brief Removes a Quote from Author
+    /** @brief Removes a Quote from the implicit Author
         \param reference: ID of the Quote
         \pre An implicit Book
         \post Updates authorQuotes without a quote (ref: reference)
     */
     void deleteQuote(string reference);
 
-    /** @brief Delivers the quotes of the implicit author
+    /** @brief Delivers the quotes of the implicit Author
         \pre An implicit Author
         \post True
         \returns Returns the authorQuotes set

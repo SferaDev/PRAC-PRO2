@@ -30,11 +30,11 @@ class Book {
 
 private:
     /** @brief Name of the author */
-    /** @brief The ID of the parent authorCollection */
+    /** @brief ID: parent authorCollection */
     string authorName;
 
     /** @brief Name of the book */
-    /** @brief The ID of current element */
+    /** @brief ID: current element */
     string bookTitle;
 
     /** @brief Content of the book */
