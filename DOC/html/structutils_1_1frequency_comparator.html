@@ -93,6 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">utils::frequencyComparator Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Frequency comparator struct (acc to the its params)  
+ <a href="structutils_1_1frequency_comparator.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -100,8 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9ee416a4c8d161c84c1aaee0713604cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_utils_8hh_source.html#l00041">41</a> of file <a class="el" href="_utils_8hh_source.html">Utils.hh</a>.</p>
+<div class="textblock"><p>Frequency comparator struct (acc to the its params) </p>
+
+<p>Definition at line <a class="el" href="_utils_8hh_source.html#l00044">44</a> of file <a class="el" href="_utils_8hh_source.html">Utils.hh</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9ee416a4c8d161c84c1aaee0713604cb"></a>
 <div class="memitem">
@@ -127,8 +131,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_utils_8hh_source.html#l00042">42</a> of file <a class="el" href="_utils_8hh_source.html">Utils.hh</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                                                                {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// Special case: Same frequency</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (a.second == b.second) {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">// Special case: Same length</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">if</span> (a.first.length() == b.first.length()) {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="keywordflow">return</span> a.first &lt; b.first;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="comment">// Base case: Order by length in asc order</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span> a.first.length() &lt; b.first.length();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// Base case: Order by frequency in desc order</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> a.second &gt; b.second;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_utils_8hh_source.html#l00045">45</a> of file <a class="el" href="_utils_8hh_source.html">Utils.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                                                {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">// Special case: Same frequency</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (a.second == b.second) {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="comment">// Special case: Same length</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (a.first.length() == b.first.length()) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordflow">return</span> a.first &lt; b.first;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">// Base case: Order by length in asc order</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> a.first.length() &lt; b.first.length();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// Base case: Order by frequency in desc order</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> a.second &gt; b.second;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

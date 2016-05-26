@@ -9,34 +9,34 @@ Utility namespace for generic functions.
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structutils_1_1frequency_comparator}{frequency\+Comparator}
-\item 
+\begin{DoxyCompactList}\small\item\em Frequency comparator struct (acc to the its params) \end{DoxyCompactList}\item 
 struct \hyperlink{structutils_1_1string_natural_comparator}{string\+Natural\+Comparator}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Natural comparator struct (H1 H2 H10) instead of (H1 H10 H2) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{namespaceutils_a69c832543a093a8099189e4755695a62}{contains} (string input, string query)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a word. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_aaaff51c00798a6c05a15f4ecd0f02e9e}{contains} (string a, string b)
+\begin{DoxyCompactList}\small\item\em Determines if a sentence contains each word of another sentence. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{contains\+Consecutive} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a consecutive sequence of words. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a sentence contains a consecutive sequence of words. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{string\+Uppercase} (string \&input)
 \begin{DoxyCompactList}\small\item\em Converts a string from lowercase to uppercase. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{starts\+With} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence starts with another one. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a sentence starts with another one. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{between\+Par} (string query, int position)
-\begin{DoxyCompactList}\small\item\em Finds if a string is between parentheses. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a string is between parentheses. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trim\+String} (string \&query)
 \begin{DoxyCompactList}\small\item\em Removes spaces (start/end) in the sentence. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a0362c7510f0bb0c4449031f897626696}{trim\+String\+Complex} (string \&query)
 \begin{DoxyCompactList}\small\item\em Removes spaces and quotation marks in the sentence. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{format\+String} (string \&query)
-\item 
+\begin{DoxyCompactList}\small\item\em Gives proper format with delimiters (.!?,;\+:) \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{remove\+Delimiter} (string \&line)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the delimiter of a given string. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{malformed\+Expression} (string \&query)
-\item 
+\begin{DoxyCompactList}\small\item\em Determines if an expression is well formed. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{print\+Error} ()
-\begin{DoxyCompactList}\small\item\em Prints an error using the correct formatting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints an error to the output channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -45,29 +45,32 @@ Utility namespace for generic functions.
 \subsection{Function Documentation}
 \index{utils@{utils}!contains@{contains}}
 \index{contains@{contains}!utils@{utils}}
-\subsubsection[{\texorpdfstring{contains(string input, string query)}{contains(string input, string query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains (
+\subsubsection[{\texorpdfstring{contains(string a, string b)}{contains(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains (
 \begin{DoxyParamCaption}
-\item[{string}]{input, }
-\item[{string}]{query}
+\item[{string}]{a, }
+\item[{string}]{b}
 \end{DoxyParamCaption}
-)}\hypertarget{namespaceutils_a69c832543a093a8099189e4755695a62}{}\label{namespaceutils_a69c832543a093a8099189e4755695a62}
+)}\hypertarget{namespaceutils_aaaff51c00798a6c05a15f4ecd0f02e9e}{}\label{namespaceutils_aaaff51c00798a6c05a15f4ecd0f02e9e}
 
 
-Returns if a sentence contains a word. 
+Determines if a sentence contains each word of another sentence. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em input} & The sentence (can contain one delimiter per word) \\
+{\em a} & First sentence to compare \\
 \hline
-{\em query} & The word to find in the sentence (without any delimiter) \\
+{\em b} & Second sentence to find \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-The sentence and the word to find 
+Both strings (can be empty but it\textquotesingle{}ll return false) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the single word is on the sentence 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the single word is on the sentence 
+\end{DoxyReturn}
 \index{utils@{utils}!contains\+Consecutive@{contains\+Consecutive}}
 \index{contains\+Consecutive@{contains\+Consecutive}!utils@{utils}}
 \subsubsection[{\texorpdfstring{contains\+Consecutive(string a, string b)}{containsConsecutive(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains\+Consecutive (
@@ -78,21 +81,24 @@ Returns true if the single word is on the sentence
 )}\hypertarget{namespaceutils_af9af9e01b679f955003203f29ddf130b}{}\label{namespaceutils_af9af9e01b679f955003203f29ddf130b}
 
 
-Returns if a sentence contains a consecutive sequence of words. 
+Determines if a sentence contains a consecutive sequence of words. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em input} & The sentence (can contain one delimiter per word) \\
+{\em a} & First sentence to compare \\
 \hline
-{\em query} & The word to find in the sentence (without any delimiter) \\
+{\em b} & Second sentence to find \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-The sentence and the word to find 
+Both strings (can be empty but it\textquotesingle{}ll return false) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the single word is on the sentence 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the sequence of words of \char`\"{}b\char`\"{} is found consecutively on \char`\"{}a\char`\"{} 
+\end{DoxyReturn}
 \index{utils@{utils}!string\+Uppercase@{string\+Uppercase}}
 \index{string\+Uppercase@{string\+Uppercase}!utils@{utils}}
 \subsubsection[{\texorpdfstring{string\+Uppercase(string \&input)}{stringUppercase(string &input)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::string\+Uppercase (
@@ -125,7 +131,7 @@ The forwarded param string has all chars uppercase
 )}\hypertarget{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{}\label{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}
 
 
-Returns if a sentence starts with another one. 
+Determines if a sentence starts with another one. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -135,11 +141,14 @@ Returns if a sentence starts with another one.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-True 
+String \char`\"{}a\char`\"{} length is $>$= than \char`\"{}b\char`\"{} length 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the first b.\+size() chars are the same on a 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the first b.\+size() chars are the same on \char`\"{}a\char`\"{} 
+\end{DoxyReturn}
 \index{utils@{utils}!between\+Par@{between\+Par}}
 \index{between\+Par@{between\+Par}!utils@{utils}}
 \subsubsection[{\texorpdfstring{between\+Par(string query, int position)}{betweenPar(string query, int position)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::between\+Par (
@@ -150,21 +159,24 @@ Returns true if the first b.\+size() chars are the same on a
 )}\hypertarget{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{}\label{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}
 
 
-Finds if a string is between parentheses. 
+Determines if a string is between parentheses. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & The string to check \\
+{\em query} & The string to check \\
 \hline
 {\em position} & End position to check \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-True 
+Non null query and position $>$= 0 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the string is between a parentheses on the specified position 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the string is between a parentheses on the specified position 
+\end{DoxyReturn}
 \index{utils@{utils}!trim\+String@{trim\+String}}
 \index{trim\+String@{trim\+String}!utils@{utils}}
 \subsubsection[{\texorpdfstring{trim\+String(string \&query)}{trimString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::trim\+String (
@@ -216,6 +228,21 @@ The referenced string doesn\textquotesingle{}t have any spaces or quotation mark
 \item[{string \&}]{query}
 \end{DoxyParamCaption}
 )}\hypertarget{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{}\label{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}
+
+
+Gives proper format with delimiters (.!?,;\+:) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The referenced string will have the proper format 
+\end{DoxyPostcond}
 \index{utils@{utils}!remove\+Delimiter@{remove\+Delimiter}}
 \index{remove\+Delimiter@{remove\+Delimiter}!utils@{utils}}
 \subsubsection[{\texorpdfstring{remove\+Delimiter(string \&line)}{removeDelimiter(string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::remove\+Delimiter (
@@ -223,6 +250,21 @@ The referenced string doesn\textquotesingle{}t have any spaces or quotation mark
 \item[{string \&}]{line}
 \end{DoxyParamCaption}
 )}\hypertarget{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{}\label{namespaceutils_adf961974462ef6e8d7ccc32311397d75}
+
+
+Removes the delimiter of a given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The referenced string doesn\textquotesingle{}t have the end delimiter 
+\end{DoxyPostcond}
 \index{utils@{utils}!malformed\+Expression@{malformed\+Expression}}
 \index{malformed\+Expression@{malformed\+Expression}!utils@{utils}}
 \subsubsection[{\texorpdfstring{malformed\+Expression(string \&query)}{malformedExpression(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::malformed\+Expression (
@@ -230,6 +272,24 @@ The referenced string doesn\textquotesingle{}t have any spaces or quotation mark
 \item[{string \&}]{query}
 \end{DoxyParamCaption}
 )}\hypertarget{namespaceutils_a6c64225b3c1659211611f32e0776793b}{}\label{namespaceutils_a6c64225b3c1659211611f32e0776793b}
+
+
+Determines if an expression is well formed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & A param string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+Non-\/null query 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+If the postion and number of \char`\"{}()\{\}\char`\"{} is correct 
+\end{DoxyReturn}
 \index{utils@{utils}!print\+Error@{print\+Error}}
 \index{print\+Error@{print\+Error}!utils@{utils}}
 \subsubsection[{\texorpdfstring{print\+Error()}{printError()}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::print\+Error (
@@ -239,5 +299,11 @@ The referenced string doesn\textquotesingle{}t have any spaces or quotation mark
 )}\hypertarget{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{}\label{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}
 
 
-Prints an error using the correct formatting. 
+Prints an error to the output channel. 
 
+\begin{DoxyPrecond}{Precondition}
+True 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+True 
+\end{DoxyPostcond}

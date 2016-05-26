@@ -9,9 +9,9 @@ Host for the utils namespace declaration.
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator}
-\item 
+\begin{DoxyCompactList}\small\item\em Natural comparator struct (H1 H2 H10) instead of (H1 H10 H2) \end{DoxyCompactList}\item 
 struct \hyperlink{structutils_1_1frequency_comparator}{utils\+::frequency\+Comparator}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Frequency comparator struct (acc to the its params) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,28 +20,28 @@ struct \hyperlink{structutils_1_1frequency_comparator}{utils\+::frequency\+Compa
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{namespaceutils_a69c832543a093a8099189e4755695a62}{utils\+::contains} (string input, string query)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a word. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutils_aaaff51c00798a6c05a15f4ecd0f02e9e}{utils\+::contains} (string a, string b)
+\begin{DoxyCompactList}\small\item\em Determines if a sentence contains each word of another sentence. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{utils\+::contains\+Consecutive} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence contains a consecutive sequence of words. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a sentence contains a consecutive sequence of words. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{utils\+::string\+Uppercase} (string \&input)
 \begin{DoxyCompactList}\small\item\em Converts a string from lowercase to uppercase. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_ae840ea1b4ad4ce23c2b48158ac75d557}{utils\+::starts\+With} (string a, string b)
-\begin{DoxyCompactList}\small\item\em Returns if a sentence starts with another one. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a sentence starts with another one. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{utils\+::between\+Par} (string query, int position)
-\begin{DoxyCompactList}\small\item\em Finds if a string is between parentheses. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Determines if a string is between parentheses. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils\+::trim\+String} (string \&query)
 \begin{DoxyCompactList}\small\item\em Removes spaces (start/end) in the sentence. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a0362c7510f0bb0c4449031f897626696}{utils\+::trim\+String\+Complex} (string \&query)
 \begin{DoxyCompactList}\small\item\em Removes spaces and quotation marks in the sentence. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{utils\+::format\+String} (string \&query)
-\item 
+\begin{DoxyCompactList}\small\item\em Gives proper format with delimiters (.!?,;\+:) \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{utils\+::remove\+Delimiter} (string \&line)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the delimiter of a given string. \end{DoxyCompactList}\item 
 bool \hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{utils\+::malformed\+Expression} (string \&query)
-\item 
+\begin{DoxyCompactList}\small\item\em Determines if an expression is well formed. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils\+::print\+Error} ()
-\begin{DoxyCompactList}\small\item\em Prints an error using the correct formatting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints an error to the output channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

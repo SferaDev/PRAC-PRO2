@@ -1,5 +1,10 @@
 \hypertarget{structutils_1_1frequency_comparator}{}\section{utils\+:\+:frequency\+Comparator Struct Reference}
 \label{structutils_1_1frequency_comparator}\index{utils\+::frequency\+Comparator@{utils\+::frequency\+Comparator}}
+
+
+Frequency comparator struct (acc to the its params)  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,9 +13,9 @@ bool \hyperlink{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713
 
 
 \subsection{Detailed Description}
+Frequency comparator struct (acc to the its params) 
 
-
-Definition at line 41 of file Utils.\+hh.
+Definition at line 44 of file Utils.\+hh.
 
 
 
@@ -25,23 +30,23 @@ Definition at line 41 of file Utils.\+hh.
 )}\hypertarget{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713604cb}{}\label{structutils_1_1frequency_comparator_a9ee416a4c8d161c84c1aaee0713604cb}
 
 
-Definition at line 42 of file Utils.\+hh.
+Definition at line 45 of file Utils.\+hh.
 
 
 \begin{DoxyCode}
-42                                                                                 \{
-43             \textcolor{comment}{// Special case: Same frequency}
-44             \textcolor{keywordflow}{if} (a.second == b.second) \{
-45                 \textcolor{comment}{// Special case: Same length}
-46                 \textcolor{keywordflow}{if} (a.first.length() == b.first.length()) \{
-47                     \textcolor{keywordflow}{return} a.first < b.first;
-48                 \}
-49                 \textcolor{comment}{// Base case: Order by length in asc order}
-50                 \textcolor{keywordflow}{return} a.first.length() < b.first.length();
-51             \}
-52             \textcolor{comment}{// Base case: Order by frequency in desc order}
-53             \textcolor{keywordflow}{return} a.second > b.second;
-54         \}
+45                                                                                 \{
+46             \textcolor{comment}{// Special case: Same frequency}
+47             \textcolor{keywordflow}{if} (a.second == b.second) \{
+48                 \textcolor{comment}{// Special case: Same length}
+49                 \textcolor{keywordflow}{if} (a.first.length() == b.first.length()) \{
+50                     \textcolor{keywordflow}{return} a.first < b.first;
+51                 \}
+52                 \textcolor{comment}{// Base case: Order by length in asc order}
+53                 \textcolor{keywordflow}{return} a.first.length() < b.first.length();
+54             \}
+55             \textcolor{comment}{// Base case: Order by frequency in desc order}
+56             \textcolor{keywordflow}{return} a.second > b.second;
+57         \}
 \end{DoxyCode}
 
 

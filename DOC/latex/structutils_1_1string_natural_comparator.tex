@@ -1,5 +1,10 @@
 \hypertarget{structutils_1_1string_natural_comparator}{}\section{utils\+:\+:string\+Natural\+Comparator Struct Reference}
 \label{structutils_1_1string_natural_comparator}\index{utils\+::string\+Natural\+Comparator@{utils\+::string\+Natural\+Comparator}}
+
+
+Natural comparator struct (H1 H2 H10) instead of (H1 H10 H2)  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,9 +13,9 @@ bool \hyperlink{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4
 
 
 \subsection{Detailed Description}
+Natural comparator struct (H1 H2 H10) instead of (H1 H10 H2) 
 
-
-Definition at line 22 of file Utils.\+hh.
+Definition at line 24 of file Utils.\+hh.
 
 
 
@@ -25,26 +30,26 @@ Definition at line 22 of file Utils.\+hh.
 )}\hypertarget{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4e8b159ad53}{}\label{structutils_1_1string_natural_comparator_a97df61bfbca5730d801af4e8b159ad53}
 
 
-Definition at line 23 of file Utils.\+hh.
+Definition at line 25 of file Utils.\+hh.
 
 
 \begin{DoxyCode}
-23                                                           \{
-24             \textcolor{keywordtype}{int} posA = a.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
-25             \textcolor{keywordtype}{int} posB = b.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
-26             \textcolor{keywordflow}{if} (a.substr(0, posA) != b.substr(0, posB)) \{
-27                 \textcolor{keywordflow}{return} a.substr(0, posA) < b.substr(0, posB);
-28             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (posA != string::npos and posB != string::npos) \{
-29                 \textcolor{keywordtype}{int} valA, valB;
-30                 istringstream issA(a.substr(posA));
-31                 istringstream issB(b.substr(posB));
-32                 issA >> valA;
-33                 issB >> valB;
-34                 \textcolor{keywordflow}{return} valA < valB;
-35             \} \textcolor{keywordflow}{else} \{
-36                 \textcolor{keywordflow}{return} a < b;
-37             \}
-38         \}
+25                                                           \{
+26             \textcolor{keywordtype}{int} posA = a.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
+27             \textcolor{keywordtype}{int} posB = b.find\_first\_of(\textcolor{stringliteral}{"0123456789"});
+28             \textcolor{keywordflow}{if} (a.substr(0, posA) != b.substr(0, posB)) \{
+29                 \textcolor{keywordflow}{return} a.substr(0, posA) < b.substr(0, posB);
+30             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (posA != string::npos and posB != string::npos) \{
+31                 \textcolor{keywordtype}{int} valA, valB;
+32                 istringstream issA(a.substr(posA));
+33                 istringstream issB(b.substr(posB));
+34                 issA >> valA;
+35                 issB >> valB;
+36                 \textcolor{keywordflow}{return} valA < valB;
+37             \} \textcolor{keywordflow}{else} \{
+38                 \textcolor{keywordflow}{return} a < b;
+39             \}
+40         \}
 \end{DoxyCode}
 
 

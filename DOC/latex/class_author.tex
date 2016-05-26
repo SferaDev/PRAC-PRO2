@@ -35,13 +35,13 @@ void \hyperlink{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{delete\+Book} (s
 void \hyperlink{class_author_a41078931f76f02641f92521a3da5b286}{delete\+Quote} (string reference)
 \begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}{get\+Author\+Quotes} ()
-\begin{DoxyCompactList}\small\item\em Returns the author quotes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Delivers the quotes of the implicit author. \end{DoxyCompactList}\item 
 bool \hyperlink{class_author_ab0752a3f061a07c6460e52e4386ea5c3}{is\+Empty} ()
-\begin{DoxyCompactList}\small\item\em Returns if \hyperlink{class_author}{Author} has any book. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Checks if the implicit \hyperlink{class_author}{Author} has any book. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{print\+Information} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Output operation\+: Prints information about the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a01c49b9a75e0651c9ebbe4e841d18ae9}{print\+Books} (bool show\+Author)
-\begin{DoxyCompactList}\small\item\em Prints information about the Books. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Output operation\+: Prints information about the Books of the implicit author. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -139,14 +139,14 @@ Increments the number of books of the implicit author.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & Number of news books \\
+{\em value} & Number books to add/substract from the implicit author \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The total\+Books of the implicit author increased 
+Updates total\+Books on the implicit author by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
 \index{Author@{Author}!increment\+Line\+Count@{increment\+Line\+Count}}
 \index{increment\+Line\+Count@{increment\+Line\+Count}!Author@{Author}}
@@ -161,14 +161,14 @@ Increments the number of lines of the implicit author.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & Number of lines of news books \\
+{\em value} & Number of lines to add/substract from the implicit author \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The total\+Lines of the implicit author increased 
+Updates total\+Lines on the implicit author by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
 \index{Author@{Author}!increment\+Word\+Count@{increment\+Word\+Count}}
 \index{increment\+Word\+Count@{increment\+Word\+Count}!Author@{Author}}
@@ -183,14 +183,14 @@ Increments the number of words of the implicit author.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & Number of words of news books \\
+{\em value} & Number of words to add/substract from the implicit author \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The total\+Words of the implicit author increased 
+Updates total\+Words on the implicit author by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
 \index{Author@{Author}!get\+Book\+Count@{get\+Book\+Count}}
 \index{get\+Book\+Count@{get\+Book\+Count}!Author@{Author}}
@@ -207,8 +207,11 @@ Returns the number of books of the implicit author.
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the total\+Books of the implicit author 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns total\+Books of the implicit author 
+\end{DoxyReturn}
 \index{Author@{Author}!get\+Line\+Count@{get\+Line\+Count}}
 \index{get\+Line\+Count@{get\+Line\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{get\+Line\+Count() const }{getLineCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Line\+Count (
@@ -224,8 +227,11 @@ Returns the number of lines of all books of the implicit author.
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the total\+Lines of the implicit author 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns total\+Lines of the implicit author 
+\end{DoxyReturn}
 \index{Author@{Author}!get\+Word\+Count@{get\+Word\+Count}}
 \index{get\+Word\+Count@{get\+Word\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{get\+Word\+Count() const }{getWordCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Word\+Count (
@@ -263,7 +269,7 @@ Adds new \hyperlink{class_book}{Book} to \hyperlink{class_author}{Author}.
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-author\+Book has a new element 
+Updates author\+Book with a new element (ref\+: title) 
 \end{DoxyPostcond}
 \index{Author@{Author}!add\+Quote@{add\+Quote}}
 \index{add\+Quote@{add\+Quote}!Author@{Author}}
@@ -285,7 +291,7 @@ Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_author}{Author}.
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-author\+Quotes has a new element 
+Updates author\+Quotes with a new element (ref\+: reference) 
 \end{DoxyPostcond}
 \index{Author@{Author}!delete\+Book@{delete\+Book}}
 \index{delete\+Book@{delete\+Book}!Author@{Author}}
@@ -307,7 +313,7 @@ Removes a \hyperlink{class_book}{Book} from \hyperlink{class_author}{Author}.
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-author\+Book has one less element 
+Updates author\+Book without a book (ref\+: title) 
 \end{DoxyPostcond}
 \index{Author@{Author}!delete\+Quote@{delete\+Quote}}
 \index{delete\+Quote@{delete\+Quote}!Author@{Author}}
@@ -329,7 +335,7 @@ Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_author}{Author}.
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-author\+Quotes has one less element 
+Updates author\+Quotes without a quote (ref\+: reference) 
 \end{DoxyPostcond}
 \index{Author@{Author}!get\+Author\+Quotes@{get\+Author\+Quotes}}
 \index{get\+Author\+Quotes@{get\+Author\+Quotes}!Author@{Author}}
@@ -340,14 +346,17 @@ author\+Quotes has one less element
 )}\hypertarget{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}{}\label{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}
 
 
-Returns the author quotes. 
+Delivers the quotes of the implicit author. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the author\+Quotes set 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the author\+Quotes set 
+\end{DoxyReturn}
 \index{Author@{Author}!is\+Empty@{is\+Empty}}
 \index{is\+Empty@{is\+Empty}!Author@{Author}}
 \subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Author\+::is\+Empty (
@@ -357,14 +366,17 @@ Returns the author\+Quotes set
 )}\hypertarget{class_author_ab0752a3f061a07c6460e52e4386ea5c3}{}\label{class_author_ab0752a3f061a07c6460e52e4386ea5c3}
 
 
-Returns if \hyperlink{class_author}{Author} has any book. 
+Checks if the implicit \hyperlink{class_author}{Author} has any book. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if books is not empty 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if \hyperlink{class_author}{Author} is not empty 
+\end{DoxyReturn}
 \index{Author@{Author}!print\+Information@{print\+Information}}
 \index{print\+Information@{print\+Information}!Author@{Author}}
 \subsubsection[{\texorpdfstring{print\+Information()}{printInformation()}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Information (
@@ -374,7 +386,7 @@ Returns true if books is not empty
 )}\hypertarget{class_author_a9dff52e2a8bd67ff4509eb00f9235155}{}\label{class_author_a9dff52e2a8bd67ff4509eb00f9235155}
 
 
-Prints information about the \hyperlink{class_author}{Author}. 
+Output operation\+: Prints information about the implicit \hyperlink{class_author}{Author}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
@@ -391,7 +403,7 @@ True
 )}\hypertarget{class_author_a01c49b9a75e0651c9ebbe4e841d18ae9}{}\label{class_author_a01c49b9a75e0651c9ebbe4e841d18ae9}
 
 
-Prints information about the Books. 
+Output operation\+: Prints information about the Books of the implicit author. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
@@ -455,7 +467,7 @@ Ordered collection of books.
 
 
 \begin{DoxyParams}{Parameters}
-{\em string} & the ID of the parent book\+Collection \\
+{\em string} & the ID of the parent (\hyperlink{class_library}{Library}) book\+Collection\textquotesingle{}s \\
 \hline
 \end{DoxyParams}
 
@@ -471,7 +483,7 @@ Ordered collection of quotes.
 
 
 \begin{DoxyParams}{Parameters}
-{\em string} & the ID of the parent quote\+Collection \\
+{\em string} & the ID of the parent (\hyperlink{class_library}{Library}) quote\+Collection\textquotesingle{}s \\
 \hline
 \end{DoxyParams}
 
