@@ -340,7 +340,7 @@ tots autors ?
 
 eliminar text
 
-     tots autors ?
+tots autors ?
 
 eliminar text
 
@@ -441,8 +441,6 @@ substitueix "word" per "una"
 taula de frequencies ?
 
 substitueix "una" per "mas"
-
-taula de frequencies ?
 
 taula de frequencies ?
 

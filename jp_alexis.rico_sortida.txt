@@ -1266,7 +1266,7 @@ triar text {Test}
 
 contingut ?
 1 Hola.que,ase.
-2 hola .
+2 hola.
 3 hola.
 
 taula de frequencies ?
@@ -1303,7 +1303,7 @@ Pau Random 1 3 5
 
 eliminar text
 
-     tots autors ?
+tots autors ?
 HODOR HODOR 1 69 257
 
 eliminar text
@@ -1478,10 +1478,6 @@ mas 10
 Una 1
 
 substitueix "una" per "mas"
-
-taula de frequencies ?
-mas 10
-Una 1
 
 taula de frequencies ?
 mas 10
