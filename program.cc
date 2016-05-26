@@ -41,8 +41,8 @@ const string QUERY_QUOTES_ALL = "totes cites";
 const string QUIT = "sortir";
 
 void actionExpression(Library &library, string input) {
-    // Erase 'frases ' from input channel
-    input = input.substr(ACTION_EXPRESSION.length() + 1);
+    // Erase 'frases' from input channel
+    input = input.substr(ACTION_EXPRESSION.length());
     // Delete '?' from query
     utils::trimString(input);
     int posQuery = input.find_last_of("?");
@@ -55,8 +55,7 @@ void actionExpression(Library &library, string input) {
         iss >> y;
         if (!iss.fail()) library.getBook().printSelectLines(x, y);
         else utils::printError();
-    }
-    else if (input.find_first_of("\"") != string::npos) {
+    } else if (input.find_first_of("\"") != string::npos) {
         if (input.find_first_of("\"") != input.find_last_of("\"")) {
             string query = input.substr(0, input.find_last_of("\"") + 1);
             utils::trimStringComplex(query);
