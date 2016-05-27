@@ -19,11 +19,13 @@ Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip 
 So da bo fa.
 ****
 
-triar text { So pu da}
+triar text { So                 pu                      da}
 
 substitueix "da" per "fa"
 
 substitueix "fa" per "bo"
+
+contingut ?
 
 nombre de frases ?
 
@@ -37,9 +39,9 @@ afegir cita 4 4
 
 afegir cita 5 5
 
-cites ?
-
 eliminar cita "BM5"
+
+info cita "BM5"
 
 afegir cita 5 5
 
@@ -69,29 +71,96 @@ afegir cita 17 17
 
 cites ?
 
-totes cites ?
+frases -1 0
 
-eliminar cita ""
+frases 0 0
+
+frases 1 17
+
+eliminar cita "BM5"
 
 taula de frequencies ?
 
-afegir text "hola"
-autor "123 43 r"
-123, jjj, JJJ, maamamama, 214143m, etogejrog 1234113253. 123.
+nombre de paraules ?
+
+nombre de frases ?
+
+eliminar text
+
+nombre de paraules ?
+
+nombre de frases ?
+
+totes cites ?
+
+cites autor "Bekat Mer"
+
+tots textos ?
+
+textos autor "Bekat Mer"
+
+eliminar text ?
+
+afegir text "La ciencia"
+autor "Juan Martinez"
+La ciencia                      un conjunto ordenado de conocimientos                        estructurados sistematicamente.
+Los conocimientos cientificos se obtienen mediante                              observaciones y experimentaciones en ambitos especificos. A partir de estos se generan preguntas y razonamientos,
+se construyen hipotesis                         , se deducen principios y se elaboran leyes                      generales y sistemas organizados por medio de un metodo cientifico.
 ****
 
-triar text {hola}
+triar text {Juan ciencia}
 
 contingut ?
 
 taula de frequencies ?
 
-substitueix "123" per "hola"
+frases 1 2 ?
 
-taula de frequencies ?
+frases "hipotesis se" ?
 
-afegir cita 1 1
+frases "en hipotesis" ?
 
-info ?
+frases ( {conocimientos} | {conjunto} ) & ({ordenado}) ?
+
+frases ( {conocimientos} | {conjunto} ) ?
+
+afegir text "La ciencia"
+autor "Juan Martinez"
+La ciencia                      un conjunto ordenado de conocimientos                        estructurados sistematicamente.
+Los conocimientos cientificos se obtienen mediante                              observaciones y experimentaciones en ambitos especificos. A partir de estos se generan preguntas y razonamientos,
+se construyen hipotesis                         , se deducen principios y se elaboran leyes                      generales y sistemas organizados por medio de un metodo cientifico.
+****
+
+eliminar text
+
+tots textos ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+afegir text "La ciencia"
+autor "Juan Martinez"
+La ciencia                      un conjunto ordenado de conocimientos                        estructurados sistematicamente.
+Los conocimientos cientificos se obtienen mediante                              observaciones y experimentaciones en ambitos especificos. A partir de estos se generan preguntas y razonamientos,
+se construyen hipotesis                         , se deducen principios y se elaboran leyes                      generales y sistemas organizados por medio de un metodo cientifico.
+****
+
+
+
+
 
 sortir ?

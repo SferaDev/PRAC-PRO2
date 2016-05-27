@@ -11,12 +11,9 @@
 #include "Utils.hh"
 
 #include <algorithm>
-#include <iostream>
 #include <list>
 #include <map>
 #include <set>
-#include <string>
-#include <sstream>
 #include <vector>
 
 #endif
@@ -62,7 +59,7 @@ private:
     /** @brief Tells if we generate the frequency table (not generated previously or modified) */
     bool dirtyFrequency;
 
-    /** @brief Tells if the book has been deleted */
+    /** @brief Tells if the Book has been deleted */
     bool deleted;
 
     /** @brief Size of Book's collection */
@@ -76,7 +73,7 @@ private:
 public:
     /** @brief Creates an empty Book
         \pre True
-        \post Returns an implicit empty book
+        \post Returns an implicit empty Book
     */
     Book();
 
@@ -84,13 +81,13 @@ public:
         \param title: Book title
         \param author: Book author
         \pre True
-        \post Returns an implicit book with title and the author
+        \post Returns an implicit Book with title and the author
     */
     Book(string title, string author);
 
     /** @brief Destructs the implicit Book
         \pre An implicit Book
-        \post Deletes the implicit book
+        \post Deletes the implicit Book
     */
     ~Book();
 
@@ -110,21 +107,21 @@ public:
     /** @brief Provides the name of the author of the implicit Book
         \pre An implicit Book
         \post True
-        \returns Returns the name of the author of the implicit book
+        \returns Returns the name of the author of the implicit Book
     */
     string getAuthor() const;
 
     /** @brief Gives back the number of lines of the implicit Book
         \pre An implicit Book
         \post True
-        \returns Returns the number of the lines of the implicit book
+        \returns Returns the number of the lines of the implicit Book
     */
     int getLineCount() const;
 
     /** @brief Gives back the number of words of the implicit Book
         \pre An implicit Book
         \post True
-        \returns The words of lines of the implicit book
+        \returns The words of lines of the implicit Book
     */
     int getWordCount() const;
 
@@ -132,7 +129,7 @@ public:
         \param oldWord: Word (old)
         \param newWord: Word (new)
         \pre An implicit Book, the old word that we replaces and the new word
-        \post The implicit book with the old word replaced for the new word
+        \post The implicit Book with the old word replaced for the new word
     */
     void replaceWords(string oldWord, string newWord);
 
@@ -140,7 +137,7 @@ public:
          \param word: Word to find on the implicit Book
          \pre The wordFrequencyMap of the implicit Book and a word that we want to find
          \post True
-         \returns Returns true if the word is on the content of the implicit book
+         \returns Returns true if the word is on the content of the implicit Book
      */
     bool findWord(string word);
 
@@ -154,7 +151,7 @@ public:
     /** @brief Tells if a deleted is true or false
         \pre An implicit Book
         \post True
-        \returns Returns true if the book has been deleted
+        \returns Returns true if the Book has been deleted
     */
     bool isDeleted();
 
@@ -212,7 +209,7 @@ public:
 
     /** @brief Provides all lines of the implicit Book, from 1 to bookContent.size()
         \pre An implicit Book
-        \post Prints all lines of the content of the implicit book with its number in increasingly ordered for the number
+        \post Prints all lines of the content of the implicit Book with its number in increasingly ordered for the number
     */
     void printAllLines();
 
@@ -226,7 +223,7 @@ public:
     /** @brief Provides the lines of the implicit Book that contains the consecutive words
         \param query: Sequence of words to match on each line of the content
         \pre An implicit Book and sequence of words
-        \post Prints the number of the line and the line of the implicit book that contain all the words of the sequence
+        \post Prints the number of the line and the line of the implicit Book that contain all the words of the sequence
     */
     void printLinesConsecutiveWords(string query);
 
@@ -234,11 +231,11 @@ public:
         \param start: Start line of the implicit Book
         \param end: end line of the implicit Book
         \pre An implicit Book, and the range
-        \post Prints the lines of the range and its number of the implicit book
+        \post Prints the lines of the range and its number of the implicit Book
     */
     void printSelectLines(int start, int end);
 
-    /** @brief Provides all words of the content of the implicit book
+    /** @brief Provides all words of the content of the implicit Book
         \pre An implicit Book
         \post Prints all words of the content of the implicit Book and its frequencies in decreasingly ordered by frequencies
     */

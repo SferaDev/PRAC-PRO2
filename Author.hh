@@ -9,9 +9,7 @@
 #ifndef NO_DIAGRAM
 
 #include "Utils.hh"
-#include <iostream>
 #include <set>
-#include <string>
 
 #endif
 using namespace std;
@@ -87,23 +85,24 @@ public:
     */
     void incrementWordCount(int value);
 
-    /** @brief Returns the number of books of the implicit Author
+    /** @brief Provides the number of books of the implicit Author
         \pre An implicit Author
         \post True
         \returns Returns totalBooks of the implicit Author
     */
     int getBookCount() const;
 
-    /** @brief Returns the number of lines of all books of the implicit Author
+    /** @brief Provides the number of lines of all books of the implicit Author
         \pre An implicit Author
         \post True
         \returns Returns totalLines of the implicit Author
     */
     int getLineCount() const;
 
-    /** @brief Returns the number of words of all books of the implicit Author
+    /** @brief Provides the number of words of all books of the implicit Author
         \pre An implicit Author
-        \post Returns the totalWords of the implicit Author
+        \post True
+        \returns Returns the totalWords of the implicit Author
     */
     int getWordCount() const;
 

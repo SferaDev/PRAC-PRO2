@@ -10,17 +10,6 @@
 #include "Book.hh"
 #include "Quote.hh"
 
-#ifndef NO_DIAGRAM
-
-#include "Utils.hh"
-
-#include <iostream>
-#include <map>
-#include <string>
-#include <sstream>
-
-#endif
-
 using namespace std;
 
 /**
@@ -67,7 +56,7 @@ public:
 
     /** @brief Destructs the implicit Library
         \pre An implicit Library
-        \post Deletes the implicit library
+        \post Deletes the implicit Library
     */
     ~Library();
 
@@ -75,13 +64,14 @@ public:
         \param title: The book title
         \param author: The book author
         \pre An implicit Library
-        \post The implicit library with a new book (identified by title and author)
+        \post The implicit Library with a new book (identified by title and author)
     */
     void readBook(string title, string authorName);
 
-    /** @brief Returns whether we have a chosen book or not
+    /** @brief Provides whether we have a chosen book or not
         \pre An implicit Library
         \post True
+        \returns Returns true if there is a book chosen
     */
     bool isBookSelected();
 
@@ -92,93 +82,96 @@ public:
     */
     void selectBook(string query);
 
-    /** @brief Deletes a book from the collection
+    /** @brief Deletes a book from the collection of the implicit Library
         \pre An implicit Library and a selected book
         \post The implicit library without the previous currentBook
     */
     void deleteBook();
 
-    /** @brief Replaces a word with anopther one in a book from the collection
+    /** @brief Replaces a word with another one in a book from the collection of the implicit Library
         \param input: Pattern from the IO channel to replace words
         \pre An implicit Library and a selected book
-        \post The implicit library with the replaced words on currentBook
+        \post The implicit Library with the replaced words on currentBook
     */
     void replaceWordsOnBook(string oldWord, string newWord);
 
-    /** @brief Inserts a new quote (currentBook) to the library
+    /** @brief Inserts a new quote (currentBook) to the implicit Library
         \param start: Start line
         \param end: End line
-        \pre An implicit Library and implicit book
-        \post The implicit library with a new quote
+        \pre An implicit Library and implicit Book
+        \post The implicit Library with a new quote
     */
     void insertQuote(int start, int end);
 
-    /** @brief Deletes a quote from the library
+    /** @brief Deletes a Quote from the implicit Library
         \param id: Quote ID
-        \pre An implicit Library and a quote with that id
-        \post The implicit library without the referenced quote
+        \pre An implicit Library and a quote with that ID
+        \post The implicit Library without the referenced quote
     */
     void deleteQuote(string reference);
 
-    /** @brief Returns the selected book
-        \pre An implicit Library and a selected book
-        \post Returns currentBook
+    /** @brief Provides the selected Book
+        \pre An implicit Library and a selected Book
+        \post True
+        \returns Returns currentBook
     */
     Book getBook();
 
-    /** @brief Returns if a quote exists with that reference
+    /** @brief Tells if a quote exists with that reference
         \param id: Quote ID
-        \pre An implicit Library and a quote with that id
-        \post Returns if it exists
+        \pre An implicit Library and a Quote with that ID
+        \post True
+        \returns Returns if it exists
     */
     bool quoteExists(string id);
 
-    /** @brief Returns a quote from its ID
+    /** @brief Provides a Quote from its ID
         \param id: Quote ID
-        \pre An implicit Library and a quote with that id
-        \post Returns the quote referenced by id
+        \pre An implicit Library and a Quote with that ID
+        \post True
+        \returns Returns the Quote referenced by ID
     */
     Quote getQuote(string id);
 
-    /** @brief Prints information about the Authors
+    /** @brief Provides information about the Authors
         \pre An implicit Library
         \post True
     */
     void printAuthors();
 
-    /** @brief Prints information about the Books
+    /** @brief Provides information about the Books
         \pre An implicit Library
         \post True
     */
     void printBooks();
 
-    /** @brief Prints information about the Quotes
+    /** @brief Provides information about the Quotes
         \pre An implicit Library
         \post True
     */
     void printQuotes();
 
-    /** @brief Prints information about the Books (by Author)
+    /** @brief Provides information about the Books (by Author)
         \param author: Author name
         \pre An implicit Library
         \post True
     */
     void printBooksByAuthor(string author);
 
-    /** @brief Prints information about the Quotes (by Author)
+    /** @brief Provides information about the Quotes (by Author)
         \param author: Author name
         \pre An implicit Library
         \post True
     */
     void printQuotesByAuthor(string author);
 
-    /** @brief Prints information about current book
+    /** @brief Provides information about current book
         \pre An implicit Library and currentBook
         \post True
     */
     void printCurrentInformation();
 
-    /** @brief Prints quotes of current book
+    /** @brief Provides quotes of current book
         \pre An implicit Library and currentBook
         \post True
     */
