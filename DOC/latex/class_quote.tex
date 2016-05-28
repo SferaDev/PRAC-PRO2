@@ -15,23 +15,23 @@ Data model for Quotes (cites) from \hyperlink{class_book}{Book}.
 \hyperlink{class_quote_a9b4324f3ee83827f2445177c8301482b}{$\sim$\+Quote} ()
 \begin{DoxyCompactList}\small\item\em Destructs the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 string \hyperlink{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}{get\+Reference} () const 
-\begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} reference. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the reference of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 string \hyperlink{class_quote_ae29855dc6393689277a9cac61f9f56b8}{get\+Author} () const 
-\begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote}\textquotesingle{}s author name. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the author name of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 string \hyperlink{class_quote_a7089d3cf82409928bcdfca5c259facde}{get\+Book\+Title} () const 
-\begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote}\textquotesingle{}s book title. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the book title of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 int \hyperlink{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}{get\+Start\+Line} () const 
-\begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} start line. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the start line of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 int \hyperlink{class_quote_aec85eae85f33b6e10458821f54f28fc9}{get\+End\+Line} () const 
-\begin{DoxyCompactList}\small\item\em Return \hyperlink{class_quote}{Quote} end line. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the end line of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_a211e2593b1ef18dc7fd4a5da87384fa1}{set\+Quote\+Lines} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Update the start/end line values. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{set\+Content} (vector$<$ string $>$ content)
-\begin{DoxyCompactList}\small\item\em Update the quote content. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Update the content of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_a0854af3d11ff805991e87ef6e9bebf69}{print\+Information} (bool reference, bool startend)
-\begin{DoxyCompactList}\small\item\em Print content of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the content of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\item 
 void \hyperlink{class_quote_a60148444a9f56241ce8526a44f5baf1c}{print\+Information\+Complex} (bool show\+Author\+Name)
-\begin{DoxyCompactList}\small\item\em Print all the information of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Provides all the information of the implicit \hyperlink{class_quote}{Quote}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,7 +117,7 @@ Destructs the implicit \hyperlink{class_quote}{Quote}.
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Deletes the implicit quote 
+Deletes the implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPostcond}
 
 
@@ -131,14 +131,17 @@ Deletes the implicit quote
 ) const}\hypertarget{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}{}\label{class_quote_a4f45d290d8b4d8ebfdf6981b754ec7b7}
 
 
-Return \hyperlink{class_quote}{Quote} reference. 
+Provides the reference of the implicit \hyperlink{class_quote}{Quote}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns quote\+Reference 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns quote\+Reference 
+\end{DoxyReturn}
 \index{Quote@{Quote}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Author (
@@ -148,14 +151,17 @@ Returns quote\+Reference
 ) const}\hypertarget{class_quote_ae29855dc6393689277a9cac61f9f56b8}{}\label{class_quote_ae29855dc6393689277a9cac61f9f56b8}
 
 
-Return \hyperlink{class_quote}{Quote}\textquotesingle{}s author name. 
+Provides the author name of the implicit \hyperlink{class_quote}{Quote}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns book\+Author 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns book\+Author 
+\end{DoxyReturn}
 \index{Quote@{Quote}!get\+Book\+Title@{get\+Book\+Title}}
 \index{get\+Book\+Title@{get\+Book\+Title}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Book\+Title() const }{getBookTitle() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Book\+Title (
@@ -165,14 +171,17 @@ Returns book\+Author
 ) const}\hypertarget{class_quote_a7089d3cf82409928bcdfca5c259facde}{}\label{class_quote_a7089d3cf82409928bcdfca5c259facde}
 
 
-Return \hyperlink{class_quote}{Quote}\textquotesingle{}s book title. 
+Provides the book title of the implicit \hyperlink{class_quote}{Quote}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns book\+Title 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns book\+Title 
+\end{DoxyReturn}
 \index{Quote@{Quote}!get\+Start\+Line@{get\+Start\+Line}}
 \index{get\+Start\+Line@{get\+Start\+Line}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Start\+Line() const }{getStartLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+Start\+Line (
@@ -182,14 +191,17 @@ Returns book\+Title
 ) const}\hypertarget{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}{}\label{class_quote_abec5ea5330c351afab5a5a0be5c5b7fa}
 
 
-Return \hyperlink{class_quote}{Quote} start line. 
+Provides the start line of the implicit \hyperlink{class_quote}{Quote}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns quote\+Start 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns quote\+Start 
+\end{DoxyReturn}
 \index{Quote@{Quote}!get\+End\+Line@{get\+End\+Line}}
 \index{get\+End\+Line@{get\+End\+Line}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+End\+Line() const }{getEndLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+End\+Line (
@@ -199,14 +211,17 @@ Returns quote\+Start
 ) const}\hypertarget{class_quote_aec85eae85f33b6e10458821f54f28fc9}{}\label{class_quote_aec85eae85f33b6e10458821f54f28fc9}
 
 
-Return \hyperlink{class_quote}{Quote} end line. 
+Provides the end line of the implicit \hyperlink{class_quote}{Quote}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns quote\+End 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns quote\+End 
+\end{DoxyReturn}
 \index{Quote@{Quote}!set\+Quote\+Lines@{set\+Quote\+Lines}}
 \index{set\+Quote\+Lines@{set\+Quote\+Lines}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{set\+Quote\+Lines(int start, int end)}{setQuoteLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::set\+Quote\+Lines (
@@ -230,7 +245,7 @@ Update the start/end line values.
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Updates the \hyperlink{class_quote}{Quote} start/end lines 
+Updates the quote\+Start and quote\+End 
 \end{DoxyPostcond}
 \index{Quote@{Quote}!set\+Content@{set\+Content}}
 \index{set\+Content@{set\+Content}!Quote@{Quote}}
@@ -241,18 +256,18 @@ Updates the \hyperlink{class_quote}{Quote} start/end lines
 )}\hypertarget{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{}\label{class_quote_ab3af36f8b5649b115fca7eecbb294a59}
 
 
-Update the quote content. 
+Update the content of the implicit \hyperlink{class_quote}{Quote}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em content} & Content of the \hyperlink{class_quote}{Quote} \\
+{\em content} & New content of the implicit \hyperlink{class_quote}{Quote} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Updates the \hyperlink{class_quote}{Quote} content 
+Updates the quote\+Content 
 \end{DoxyPostcond}
 \index{Quote@{Quote}!print\+Information@{print\+Information}}
 \index{print\+Information@{print\+Information}!Quote@{Quote}}
@@ -264,13 +279,20 @@ Updates the \hyperlink{class_quote}{Quote} content
 )}\hypertarget{class_quote_a0854af3d11ff805991e87ef6e9bebf69}{}\label{class_quote_a0854af3d11ff805991e87ef6e9bebf69}
 
 
-Print content of the implicit \hyperlink{class_quote}{Quote}. 
+Provides the content of the implicit \hyperlink{class_quote}{Quote}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & Option to show the reference ID on the print operation \\
+\hline
+{\em startend} & Option to show the start/end line on the print operation \\
+\hline
+\end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Prints quote content 
+Prints quote\+Content 
 \end{DoxyPostcond}
 \index{Quote@{Quote}!print\+Information\+Complex@{print\+Information\+Complex}}
 \index{print\+Information\+Complex@{print\+Information\+Complex}!Quote@{Quote}}
@@ -281,8 +303,13 @@ Prints quote content
 )}\hypertarget{class_quote_a60148444a9f56241ce8526a44f5baf1c}{}\label{class_quote_a60148444a9f56241ce8526a44f5baf1c}
 
 
-Print all the information of the implicit \hyperlink{class_quote}{Quote}. 
+Provides all the information of the implicit \hyperlink{class_quote}{Quote}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Author\+Name} & Option to show the \hyperlink{class_author}{Author} Name on the print operation \\
+\hline
+\end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPrecond}

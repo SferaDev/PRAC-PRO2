@@ -17,13 +17,13 @@ Data model for Books (textos) from \hyperlink{class_library}{Library}.
 void \hyperlink{class_book_a3e62d70f19bf6fa8ebef5556882b3ed7}{read\+Book\+Content} ()
 \begin{DoxyCompactList}\small\item\em Reads the content of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 string \hyperlink{class_book_aa3dc09f8db785a89259a0e491292987d}{get\+Title} () const 
-\begin{DoxyCompactList}\small\item\em Returns the title of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the title of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 string \hyperlink{class_book_a3bd4acccf78a82061fc6c78107757620}{get\+Author} () const 
-\begin{DoxyCompactList}\small\item\em Returns the name of the author of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the name of the author of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 int \hyperlink{class_book_abd9ca114f4909a735c7cb017920b30e4}{get\+Line\+Count} () const 
-\begin{DoxyCompactList}\small\item\em Returns the number of lines of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gives back the number of lines of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 int \hyperlink{class_book_a32d34e718a05a927ab0aa17bfa9baead}{get\+Word\+Count} () const 
-\begin{DoxyCompactList}\small\item\em Returns the number of words of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gives back the number of words of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_aaf182e24b86624b6ff54fba2581094a4}{replace\+Words} (string old\+Word, string new\+Word)
 \begin{DoxyCompactList}\small\item\em Replaces one word for another word in the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 bool \hyperlink{class_book_af3ceb5ae5d66adf4d594cac8d29294fc}{find\+Word} (string word)
@@ -33,31 +33,31 @@ bool \hyperlink{class_book_aec01aa24087b313f36cc0fe3c4664f84}{is\+Frequency\+Dir
 bool \hyperlink{class_book_ae39b44d3e5b6f65947776735d49d1d0f}{is\+Deleted} ()
 \begin{DoxyCompactList}\small\item\em Tells if a deleted is true or false. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\+Frequency\+Table} ()
-\begin{DoxyCompactList}\small\item\em Generates the Frequency\+Table Vector. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Generates the word\+Frequency\+List. \end{DoxyCompactList}\item 
 set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_book_a85273ee0886a725c370d8efe1909f595}{get\+Book\+Quotes} ()
-\begin{DoxyCompactList}\small\item\em Returns the book quotes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the book\+Quotes of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 vector$<$ string $>$ \hyperlink{class_book_acb5eaff231b512901cac3e3220ee2960}{get\+Lines} (int start, int end)
-\begin{DoxyCompactList}\small\item\em Returns the lines from start to end. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the lines from start to end. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{add\+Quote} (string reference)
-\begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}{delete\+Quote} (string reference)
-\begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a34626be6b35f4ac97ffd3571210a1393}{delete\+Book} ()
 \begin{DoxyCompactList}\small\item\em Marks the book as deleted. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{find\+Expression} (string query, set$<$ int $>$ \&pos)
-\begin{DoxyCompactList}\small\item\em Finds the lines that keep the logical expression. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Finds the lines of the implicit \hyperlink{class_book}{Book} that keep the logical expression. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a5b67f59017da9d2654c27fa27927a419}{print\+Information} ()
-\begin{DoxyCompactList}\small\item\em Prints the information of the implicit book. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the information of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{print\+All\+Lines} ()
-\begin{DoxyCompactList}\small\item\em Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a0c019a8318999229bf506f7f64e67a85}{print\+Lines} (string query)
-\begin{DoxyCompactList}\small\item\em Prints the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_ad72be3b32007023b6bb41f12276e81a3}{print\+Lines\+Consecutive\+Words} (string query)
-\begin{DoxyCompactList}\small\item\em Prints the lines that contains the consecutive words of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the lines of the implicit \hyperlink{class_book}{Book} that contains the consecutive words. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{print\+Select\+Lines} (int start, int end)
-\begin{DoxyCompactList}\small\item\em Prints lines from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides lines of the implicit \hyperlink{class_book}{Book} from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{print\+Frequency\+Table} ()
-\begin{DoxyCompactList}\small\item\em Prints all words of the content of the implicit book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Provides all words of the content of the implicit book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -179,14 +179,17 @@ The content of the implicit \hyperlink{class_book}{Book} in the input channel
 ) const}\hypertarget{class_book_aa3dc09f8db785a89259a0e491292987d}{}\label{class_book_aa3dc09f8db785a89259a0e491292987d}
 
 
-Returns the title of the implicit \hyperlink{class_book}{Book}. 
+Provides the title of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The title of the implicit book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the title of the implicit \hyperlink{class_book}{Book} 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Author (
@@ -196,14 +199,17 @@ The title of the implicit book
 ) const}\hypertarget{class_book_a3bd4acccf78a82061fc6c78107757620}{}\label{class_book_a3bd4acccf78a82061fc6c78107757620}
 
 
-Returns the name of the author of the implicit \hyperlink{class_book}{Book}. 
+Provides the name of the author of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The name of the author of the implicit book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the name of the author of the implicit book 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Line\+Count@{get\+Line\+Count}}
 \index{get\+Line\+Count@{get\+Line\+Count}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Line\+Count() const }{getLineCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Line\+Count (
@@ -213,14 +219,17 @@ The name of the author of the implicit book
 ) const}\hypertarget{class_book_abd9ca114f4909a735c7cb017920b30e4}{}\label{class_book_abd9ca114f4909a735c7cb017920b30e4}
 
 
-Returns the number of lines of the implicit \hyperlink{class_book}{Book}. 
+Gives back the number of lines of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The number of the lines of the implicit book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the number of the lines of the implicit book 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Word\+Count@{get\+Word\+Count}}
 \index{get\+Word\+Count@{get\+Word\+Count}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Word\+Count() const }{getWordCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Word\+Count (
@@ -230,14 +239,17 @@ The number of the lines of the implicit book
 ) const}\hypertarget{class_book_a32d34e718a05a927ab0aa17bfa9baead}{}\label{class_book_a32d34e718a05a927ab0aa17bfa9baead}
 
 
-Returns the number of words of the implicit \hyperlink{class_book}{Book}. 
+Gives back the number of words of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The words of lines of the implicit book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+The words of lines of the implicit book 
+\end{DoxyReturn}
 \index{Book@{Book}!replace\+Words@{replace\+Words}}
 \index{replace\+Words@{replace\+Words}!Book@{Book}}
 \subsubsection[{\texorpdfstring{replace\+Words(string old\+Word, string new\+Word)}{replaceWords(string oldWord, string newWord)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::replace\+Words (
@@ -276,15 +288,18 @@ Finds if a word is on the content of the implicit \hyperlink{class_book}{Book}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em word} & = Word to find on the book \\
+{\em word} & Word to find on the implicit \hyperlink{class_book}{Book} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 The word\+Frequency\+Map of the implicit \hyperlink{class_book}{Book} and a word that we want to find 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the word is on the content of the implicit book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the word is on the content of the implicit book 
+\end{DoxyReturn}
 \index{Book@{Book}!is\+Frequency\+Dirty@{is\+Frequency\+Dirty}}
 \index{is\+Frequency\+Dirty@{is\+Frequency\+Dirty}!Book@{Book}}
 \subsubsection[{\texorpdfstring{is\+Frequency\+Dirty()}{isFrequencyDirty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::is\+Frequency\+Dirty (
@@ -297,11 +312,14 @@ Returns true if the word is on the content of the implicit book
 Tells if a dirty\+Frequency is true or false. 
 
 \begin{DoxyPrecond}{Precondition}
-True 
+An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the frequency table needs to be updated is true 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the frequency table needs to be updated is true 
+\end{DoxyReturn}
 \index{Book@{Book}!is\+Deleted@{is\+Deleted}}
 \index{is\+Deleted@{is\+Deleted}!Book@{Book}}
 \subsubsection[{\texorpdfstring{is\+Deleted()}{isDeleted()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::is\+Deleted (
@@ -314,11 +332,14 @@ Returns true if the frequency table needs to be updated is true
 Tells if a deleted is true or false. 
 
 \begin{DoxyPrecond}{Precondition}
-True 
+An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns true if the book has been deleted 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if the book has been deleted 
+\end{DoxyReturn}
 \index{Book@{Book}!generate\+Frequency\+Table@{generate\+Frequency\+Table}}
 \index{generate\+Frequency\+Table@{generate\+Frequency\+Table}!Book@{Book}}
 \subsubsection[{\texorpdfstring{generate\+Frequency\+Table()}{generateFrequencyTable()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::generate\+Frequency\+Table (
@@ -328,7 +349,7 @@ Returns true if the book has been deleted
 )}\hypertarget{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{}\label{class_book_a8d232eaeb4207707d77bc18e6dd467cd}
 
 
-Generates the Frequency\+Table Vector. 
+Generates the word\+Frequency\+List. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -345,14 +366,17 @@ Generates the frequency table ordered
 )}\hypertarget{class_book_a85273ee0886a725c370d8efe1909f595}{}\label{class_book_a85273ee0886a725c370d8efe1909f595}
 
 
-Returns the book quotes. 
+Provides the book\+Quotes of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the book\+Quotes set 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the book\+Quotes set 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Lines@{get\+Lines}}
 \index{get\+Lines@{get\+Lines}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Lines(int start, int end)}{getLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Book\+::get\+Lines (
@@ -363,14 +387,17 @@ Returns the book\+Quotes set
 )}\hypertarget{class_book_acb5eaff231b512901cac3e3220ee2960}{}\label{class_book_acb5eaff231b512901cac3e3220ee2960}
 
 
-Returns the lines from start to end. 
+Provides the lines from start to end. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the lines from the vector (pos -\/ 1) 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the content of the lines from the vector (pos -\/ 1) 
+\end{DoxyReturn}
 \index{Book@{Book}!add\+Quote@{add\+Quote}}
 \index{add\+Quote@{add\+Quote}!Book@{Book}}
 \subsubsection[{\texorpdfstring{add\+Quote(string reference)}{addQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::add\+Quote (
@@ -380,7 +407,7 @@ Returns the lines from the vector (pos -\/ 1)
 )}\hypertarget{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{}\label{class_book_a97c2374d514327be5d8f74abd0ff4ea3}
 
 
-Adds new \hyperlink{class_quote}{Quote} to \hyperlink{class_book}{Book}. 
+Adds new \hyperlink{class_quote}{Quote} to the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -397,7 +424,7 @@ book\+Quotes has a new element
 )}\hypertarget{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}{}\label{class_book_a0829e0eaf0769c2bdbd149d2cf2ce20b}
 
 
-Removes a \hyperlink{class_quote}{Quote} from \hyperlink{class_book}{Book}. 
+Removes a \hyperlink{class_quote}{Quote} from the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -432,7 +459,7 @@ The book has been deleted
 )}\hypertarget{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{}\label{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}
 
 
-Finds the lines that keep the logical expression. 
+Finds the lines of the implicit \hyperlink{class_book}{Book} that keep the logical expression. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -456,13 +483,13 @@ The number of lines that keep the logical expression
 )}\hypertarget{class_book_a5b67f59017da9d2654c27fa27927a419}{}\label{class_book_a5b67f59017da9d2654c27fa27927a419}
 
 
-Prints the information of the implicit book. 
+Provides the information of the implicit \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Prints the title and author of the book 
+Prints the title and author of the \hyperlink{class_book}{Book} 
 \end{DoxyPostcond}
 \index{Book@{Book}!print\+All\+Lines@{print\+All\+Lines}}
 \index{print\+All\+Lines@{print\+All\+Lines}!Book@{Book}}
@@ -473,7 +500,7 @@ Prints the title and author of the book
 )}\hypertarget{class_book_a07076ae8fe5e924f18bf7527e0ba5092}{}\label{class_book_a07076ae8fe5e924f18bf7527e0ba5092}
 
 
-Prints all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() 
+Provides all lines of the implicit \hyperlink{class_book}{Book}, from 1 to book\+Content.\+size() 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
@@ -490,18 +517,18 @@ Prints all lines of the content of the implicit book with its number in increasi
 )}\hypertarget{class_book_a0c019a8318999229bf506f7f64e67a85}{}\label{class_book_a0c019a8318999229bf506f7f64e67a85}
 
 
-Prints the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. 
+Provides the lines by logical expression match of the implicit \hyperlink{class_book}{Book}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em query} & Query to find the lines to print \\
+{\em query} & Query to find the lines to print of the implicit \hyperlink{class_book}{Book} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} and logical expression match 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Prints the lines that keep the logical expression 
+Prints the lines of the implicit \hyperlink{class_book}{Book} that keep the logical expression 
 \end{DoxyPostcond}
 \index{Book@{Book}!print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}}
 \index{print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}!Book@{Book}}
@@ -512,11 +539,11 @@ Prints the lines that keep the logical expression
 )}\hypertarget{class_book_ad72be3b32007023b6bb41f12276e81a3}{}\label{class_book_ad72be3b32007023b6bb41f12276e81a3}
 
 
-Prints the lines that contains the consecutive words of the implicit \hyperlink{class_book}{Book}. 
+Provides the lines of the implicit \hyperlink{class_book}{Book} that contains the consecutive words. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em query} & sequence of words to find the lines to print \\
+{\em query} & Sequence of words to match on each line of the content \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
@@ -535,13 +562,13 @@ Prints the number of the line and the line of the implicit book that contain all
 )}\hypertarget{class_book_a7193030998d6251851be26196762f8e6}{}\label{class_book_a7193030998d6251851be26196762f8e6}
 
 
-Prints lines from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. 
+Provides lines of the implicit \hyperlink{class_book}{Book} from \mbox{[}start -\/ 1\mbox{]} to \mbox{[}end -\/ 1\mbox{]}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em start} & Start line \\
+{\em start} & Start line of the implicit \hyperlink{class_book}{Book} \\
 \hline
-{\em end} & end line \\
+{\em end} & end line of the implicit \hyperlink{class_book}{Book} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
@@ -559,13 +586,13 @@ Prints the lines of the range and its number of the implicit book
 )}\hypertarget{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}{}\label{class_book_ac8b57c6a725ae9afeb24e6e74d4f8fd0}
 
 
-Prints all words of the content of the implicit book. 
+Provides all words of the content of the implicit book. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Prints all words of the content and its frequencies in decreasingly ordered by frequencies 
+Prints all words of the content of the implicit \hyperlink{class_book}{Book} and its frequencies in decreasingly ordered by frequencies 
 \end{DoxyPostcond}
 
 
@@ -577,7 +604,7 @@ Prints all words of the content and its frequencies in decreasingly ordered by f
 
 Name of the author. 
 
-The ID on parent author\+Collection 
+ID\+: parent author\+Collection 
 
 Definition at line 34 of file Book.\+hh.
 
@@ -588,7 +615,7 @@ Definition at line 34 of file Book.\+hh.
 
 Name of the book. 
 
-The ID of current element 
+ID\+: current element 
 
 Definition at line 38 of file Book.\+hh.
 
@@ -599,7 +626,7 @@ Definition at line 38 of file Book.\+hh.
 
 Content of the book. 
 
-The line ID is the position and the value is the content of the book 
+ID\+: position and value\+: content of the book 
 
 Definition at line 42 of file Book.\+hh.
 
@@ -612,9 +639,9 @@ Content dictionary by words with lines.
 
 
 \begin{DoxyParams}{Parameters}
-{\em int} & Key of the main map and a word \\
+{\em string} & Key of the main map that it is a word \\
 \hline
-{\em vector$<$int$>$} & All the lines with that contents a determinate word (without marks) \\
+{\em list$<$int$>$} & All the lines with that contents a determinate word (without marks) \\
 \hline
 \end{DoxyParams}
 
@@ -647,8 +674,15 @@ Definition at line 54 of file Book.\+hh.
 Content dictionary with frequencies in correct order. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em string} & A word \\
+\hline
+{\em int} & Frequencies of the words \\
+\hline
+\end{DoxyParams}
 
-Definition at line 57 of file Book.\+hh.
+
+Definition at line 60 of file Book.\+hh.
 
 \index{Book@{Book}!dirty\+Frequency@{dirty\+Frequency}}
 \index{dirty\+Frequency@{dirty\+Frequency}!Book@{Book}}
@@ -659,7 +693,7 @@ Tells if we generate the frequency table (not generated previously or modified)
 
 
 
-Definition at line 60 of file Book.\+hh.
+Definition at line 63 of file Book.\+hh.
 
 \index{Book@{Book}!deleted@{deleted}}
 \index{deleted@{deleted}!Book@{Book}}
@@ -670,7 +704,7 @@ Tells if the book has been deleted.
 
 
 
-Definition at line 63 of file Book.\+hh.
+Definition at line 66 of file Book.\+hh.
 
 \index{Book@{Book}!book\+Words@{book\+Words}}
 \index{book\+Words@{book\+Words}!Book@{Book}}
@@ -681,7 +715,7 @@ Size of \hyperlink{class_book}{Book}\textquotesingle{}s collection.
 
 
 
-Definition at line 66 of file Book.\+hh.
+Definition at line 69 of file Book.\+hh.
 
 \index{Book@{Book}!book\+Quotes@{book\+Quotes}}
 \index{book\+Quotes@{book\+Quotes}!Book@{Book}}
@@ -697,7 +731,7 @@ Ordered collection of quotes.
 \end{DoxyParams}
 
 
-Definition at line 71 of file Book.\+hh.
+Definition at line 74 of file Book.\+hh.
 
 
 
