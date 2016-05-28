@@ -113,14 +113,15 @@ public:
     void setContent(vector <string> content);
 
     /** @brief Provides the content of the implicit Quote
-        \param reference: Tells if we print the reference
-        \param startend: Tells if we print tue qouteStart and the quoteEnd
+        \param reference: Option to show the reference ID on the print operation
+        \param startend: Option to show the start/end line on the print operation
         \pre An implicit Quote
         \post Prints quoteContent
     */
     void printInformation(bool reference, bool startend);
 
     /** @brief Provides all the information of the implicit Quote
+        \param showAuthorName: Option to show the Author Name on the print operation
         \pre An implicit Quote
         \post Prints all the quote information
     */
