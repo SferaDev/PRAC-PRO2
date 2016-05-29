@@ -21,11 +21,11 @@ void \hyperlink{class_author_a73814ef0d8d840880415c4020a4d5bf9}{increment\+Line\
 void \hyperlink{class_author_af12d32bb751a9ac3e1508631e4d8fb8e}{increment\+Word\+Count} (int value)
 \begin{DoxyCompactList}\small\item\em Increments the number of words of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 int \hyperlink{class_author_a78febe94924896f8d0ce218d5cd41786}{get\+Book\+Count} () const 
-\begin{DoxyCompactList}\small\item\em Returns the number of books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the number of books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 int \hyperlink{class_author_af24acf9a0c70fc700edccfb956c2bace}{get\+Line\+Count} () const 
-\begin{DoxyCompactList}\small\item\em Returns the number of lines of all books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the number of lines of all books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 int \hyperlink{class_author_a4899e9145b70a9e6fcad9a55b3b5285d}{get\+Word\+Count} () const 
-\begin{DoxyCompactList}\small\item\em Returns the number of words of all books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the number of words of all books of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a5836c0e00e740d4e9e9049e94f032cc3}{add\+Book} (string title)
 \begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_book}{Book} to implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a8605dbbab320ca251f3c64e782cf40b3}{add\+Quote} (string reference)
@@ -62,7 +62,7 @@ set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::str
 \subsection{Detailed Description}
 Data model for Authors (autors) from \hyperlink{class_library}{Library}. 
 
-Definition at line 23 of file Author.\+hh.
+Definition at line 21 of file Author.\+hh.
 
 
 
@@ -266,7 +266,7 @@ Definition at line 35 of file Author.\+cc.
 ) const}\hypertarget{class_author_a78febe94924896f8d0ce218d5cd41786}{}\label{class_author_a78febe94924896f8d0ce218d5cd41786}
 
 
-Returns the number of books of the implicit \hyperlink{class_author}{Author}. 
+Provides the number of books of the implicit \hyperlink{class_author}{Author}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
@@ -296,7 +296,7 @@ Definition at line 39 of file Author.\+cc.
 ) const}\hypertarget{class_author_af24acf9a0c70fc700edccfb956c2bace}{}\label{class_author_af24acf9a0c70fc700edccfb956c2bace}
 
 
-Returns the number of lines of all books of the implicit \hyperlink{class_author}{Author}. 
+Provides the number of lines of all books of the implicit \hyperlink{class_author}{Author}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
@@ -326,14 +326,17 @@ Definition at line 44 of file Author.\+cc.
 ) const}\hypertarget{class_author_a4899e9145b70a9e6fcad9a55b3b5285d}{}\label{class_author_a4899e9145b70a9e6fcad9a55b3b5285d}
 
 
-Returns the number of words of all books of the implicit \hyperlink{class_author}{Author}. 
+Provides the number of words of all books of the implicit \hyperlink{class_author}{Author}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_author}{Author} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the total\+Words of the implicit \hyperlink{class_author}{Author} 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the total\+Words of the implicit \hyperlink{class_author}{Author} 
+\end{DoxyReturn}
 
 
 Definition at line 49 of file Author.\+cc.
@@ -604,7 +607,7 @@ Name of the author.
 
 
 
-Definition at line 28 of file Author.\+hh.
+Definition at line 26 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Books@{total\+Books}}
 \index{total\+Books@{total\+Books}!Author@{Author}}
@@ -615,7 +618,7 @@ Number of total books of the author.
 
 
 
-Definition at line 31 of file Author.\+hh.
+Definition at line 29 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Lines@{total\+Lines}}
 \index{total\+Lines@{total\+Lines}!Author@{Author}}
@@ -626,7 +629,7 @@ Number of total lines of all of books of the author.
 
 
 
-Definition at line 34 of file Author.\+hh.
+Definition at line 32 of file Author.\+hh.
 
 \index{Author@{Author}!total\+Words@{total\+Words}}
 \index{total\+Words@{total\+Words}!Author@{Author}}
@@ -637,7 +640,7 @@ Number of total words of all of books of the author.
 
 
 
-Definition at line 37 of file Author.\+hh.
+Definition at line 35 of file Author.\+hh.
 
 \index{Author@{Author}!author\+Books@{author\+Books}}
 \index{author\+Books@{author\+Books}!Author@{Author}}
@@ -653,7 +656,7 @@ Ordered collection of books.
 \end{DoxyParams}
 
 
-Definition at line 42 of file Author.\+hh.
+Definition at line 40 of file Author.\+hh.
 
 \index{Author@{Author}!author\+Quotes@{author\+Quotes}}
 \index{author\+Quotes@{author\+Quotes}!Author@{Author}}
@@ -669,7 +672,7 @@ Ordered collection of quotes.
 \end{DoxyParams}
 
 
-Definition at line 47 of file Author.\+hh.
+Definition at line 45 of file Author.\+hh.
 
 
 

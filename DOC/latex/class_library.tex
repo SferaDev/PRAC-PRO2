@@ -15,37 +15,37 @@ Main storage of each \hyperlink{class_book}{Book}, \hyperlink{class_author}{Auth
 void \hyperlink{class_library_a2e296d2dc8e0292f0ea6d8d3511f7ec5}{read\+Book} (string title, string author\+Name)
 \begin{DoxyCompactList}\small\item\em Inserts a new book to the book\+Collection. \end{DoxyCompactList}\item 
 bool \hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{is\+Book\+Selected} ()
-\begin{DoxyCompactList}\small\item\em Returns whether we have a chosen book or not. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides whether we have a chosen book or not. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a6dd541a183a89a4d35a80834ed9d8d71}{select\+Book} (string query)
 \begin{DoxyCompactList}\small\item\em Selects a book from the collection. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{delete\+Book} ()
-\begin{DoxyCompactList}\small\item\em Deletes a book from the collection. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes a book from the collection of the implicit \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_abf34dcdd5eb2a7c4127e8a50db814750}{replace\+Words\+On\+Book} (string old\+Word, string new\+Word)
-\begin{DoxyCompactList}\small\item\em Replaces a word with anopther one in a book from the collection. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Replaces a word with another one in a book from the collection of the implicit \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aac2d7d4645a2adda29a0064bc66e6143}{insert\+Quote} (int start, int end)
-\begin{DoxyCompactList}\small\item\em Inserts a new quote (current\+Book) to the library. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Inserts a new quote (current\+Book) to the implicit \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a8f11e390553184c2a3a549697df3f3a9}{delete\+Quote} (string reference)
-\begin{DoxyCompactList}\small\item\em Deletes a quote from the library. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes a \hyperlink{class_quote}{Quote} from the implicit \hyperlink{class_library}{Library}. \end{DoxyCompactList}\item 
 \hyperlink{class_book}{Book} \hyperlink{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{get\+Book} ()
-\begin{DoxyCompactList}\small\item\em Returns the selected book. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides the selected \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
 bool \hyperlink{class_library_a4d87e1bd531b56f79d1faa8781f34630}{quote\+Exists} (string id)
-\begin{DoxyCompactList}\small\item\em Returns if a quote exists with that reference. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Tells if a quote exists with that reference. \end{DoxyCompactList}\item 
 \hyperlink{class_quote}{Quote} \hyperlink{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{get\+Quote} (string id)
-\begin{DoxyCompactList}\small\item\em Returns a quote from its ID. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides a \hyperlink{class_quote}{Quote} from its ID. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{print\+Authors} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the Authors. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about the Authors. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{print\+Books} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the Books. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about the Books. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a819acb04f4b8aea0547db50918b1c5fa}{print\+Quotes} ()
-\begin{DoxyCompactList}\small\item\em Prints information about the Quotes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about the Quotes. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a6e22621933979ff5cb4e95de3f54b72c}{print\+Books\+By\+Author} (string author)
-\begin{DoxyCompactList}\small\item\em Prints information about the Books (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about the Books (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\item 
 void \hyperlink{class_library_aa13544bfe57c61164d9953518e88dcb0}{print\+Quotes\+By\+Author} (string author)
-\begin{DoxyCompactList}\small\item\em Prints information about the Quotes (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about the Quotes (by \hyperlink{class_author}{Author}) \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a449a2d686922007674fa4a5efff89fe7}{print\+Current\+Information} ()
-\begin{DoxyCompactList}\small\item\em Prints information about current book. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Provides information about current book. \end{DoxyCompactList}\item 
 void \hyperlink{class_library_a7be02d15c840e3d1c3ec998e204f7bf9}{print\+Current\+Quotes} ()
-\begin{DoxyCompactList}\small\item\em Prints quotes of current book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Provides quotes of current book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,7 +64,7 @@ map$<$ string, \hyperlink{class_book}{Book} $>$\+::iterator \hyperlink{class_lib
 \subsection{Detailed Description}
 Main storage of each \hyperlink{class_book}{Book}, \hyperlink{class_author}{Author} and \hyperlink{class_quote}{Quote}. 
 
-Definition at line 30 of file Library.\+hh.
+Definition at line 19 of file Library.\+hh.
 
 
 
@@ -111,7 +111,7 @@ Destructs the implicit \hyperlink{class_library}{Library}.
 An implicit \hyperlink{class_library}{Library} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Deletes the implicit library 
+Deletes the implicit \hyperlink{class_library}{Library} 
 \end{DoxyPostcond}
 
 
@@ -149,7 +149,7 @@ Inserts a new book to the book\+Collection.
 An implicit \hyperlink{class_library}{Library} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The implicit library with a new book (identified by title and author) 
+The implicit \hyperlink{class_library}{Library} with a new book (identified by title and author) 
 \end{DoxyPostcond}
 
 
@@ -203,7 +203,7 @@ Definition at line 18 of file Library.\+cc.
 )}\hypertarget{class_library_a04ff0757054c2813e89036cdd3f7f91f}{}\label{class_library_a04ff0757054c2813e89036cdd3f7f91f}
 
 
-Returns whether we have a chosen book or not. 
+Provides whether we have a chosen book or not. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} 
@@ -211,6 +211,9 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if there is a book chosen 
+\end{DoxyReturn}
 
 
 Definition at line 54 of file Library.\+cc.
@@ -293,7 +296,7 @@ Definition at line 58 of file Library.\+cc.
 )}\hypertarget{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}{}\label{class_library_a0248e22f1ba1611d3b3c8b7843a6d8b9}
 
 
-Deletes a book from the collection. 
+Deletes a book from the collection of the implicit \hyperlink{class_library}{Library}. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} and a selected book 
@@ -336,7 +339,7 @@ Definition at line 93 of file Library.\+cc.
 )}\hypertarget{class_library_abf34dcdd5eb2a7c4127e8a50db814750}{}\label{class_library_abf34dcdd5eb2a7c4127e8a50db814750}
 
 
-Replaces a word with anopther one in a book from the collection. 
+Replaces a word with another one in a book from the collection of the implicit \hyperlink{class_library}{Library}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -347,7 +350,7 @@ Replaces a word with anopther one in a book from the collection.
 An implicit \hyperlink{class_library}{Library} and a selected book 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The implicit library with the replaced words on current\+Book 
+The implicit \hyperlink{class_library}{Library} with the replaced words on current\+Book 
 \end{DoxyPostcond}
 
 
@@ -371,7 +374,7 @@ Definition at line 111 of file Library.\+cc.
 )}\hypertarget{class_library_aac2d7d4645a2adda29a0064bc66e6143}{}\label{class_library_aac2d7d4645a2adda29a0064bc66e6143}
 
 
-Inserts a new quote (current\+Book) to the library. 
+Inserts a new quote (current\+Book) to the implicit \hyperlink{class_library}{Library}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -381,10 +384,10 @@ Inserts a new quote (current\+Book) to the library.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_library}{Library} and implicit book 
+An implicit \hyperlink{class_library}{Library} and implicit \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The implicit library with a new quote 
+The implicit \hyperlink{class_library}{Library} with a new quote 
 \end{DoxyPostcond}
 
 
@@ -446,7 +449,7 @@ Definition at line 117 of file Library.\+cc.
 )}\hypertarget{class_library_a8f11e390553184c2a3a549697df3f3a9}{}\label{class_library_a8f11e390553184c2a3a549697df3f3a9}
 
 
-Deletes a quote from the library. 
+Deletes a \hyperlink{class_quote}{Quote} from the implicit \hyperlink{class_library}{Library}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -454,10 +457,10 @@ Deletes a quote from the library.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_library}{Library} and a quote with that id 
+An implicit \hyperlink{class_library}{Library} and a quote with that ID 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-The implicit library without the referenced quote 
+The implicit \hyperlink{class_library}{Library} without the referenced quote 
 \end{DoxyPostcond}
 
 
@@ -492,14 +495,17 @@ Definition at line 161 of file Library.\+cc.
 )}\hypertarget{class_library_a67ccad51c76c3abfb0d46fa533f46e03}{}\label{class_library_a67ccad51c76c3abfb0d46fa533f46e03}
 
 
-Returns the selected book. 
+Provides the selected \hyperlink{class_book}{Book}. 
 
 \begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_library}{Library} and a selected book 
+An implicit \hyperlink{class_library}{Library} and a selected \hyperlink{class_book}{Book} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns current\+Book 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns current\+Book 
+\end{DoxyReturn}
 
 
 Definition at line 178 of file Library.\+cc.
@@ -519,7 +525,7 @@ Definition at line 178 of file Library.\+cc.
 )}\hypertarget{class_library_a4d87e1bd531b56f79d1faa8781f34630}{}\label{class_library_a4d87e1bd531b56f79d1faa8781f34630}
 
 
-Returns if a quote exists with that reference. 
+Tells if a quote exists with that reference. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -527,11 +533,14 @@ Returns if a quote exists with that reference.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_library}{Library} and a quote with that id 
+An implicit \hyperlink{class_library}{Library} and a \hyperlink{class_quote}{Quote} with that ID 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns if it exists 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns if it exists 
+\end{DoxyReturn}
 
 
 Definition at line 182 of file Library.\+cc.
@@ -553,7 +562,7 @@ Definition at line 182 of file Library.\+cc.
 )}\hypertarget{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}{}\label{class_library_aba57d7dcf92c9da4c3d8a359ceba7e2b}
 
 
-Returns a quote from its ID. 
+Provides a \hyperlink{class_quote}{Quote} from its ID. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -561,11 +570,14 @@ Returns a quote from its ID.
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondition}
-An implicit \hyperlink{class_library}{Library} and a quote with that id 
+An implicit \hyperlink{class_library}{Library} and a \hyperlink{class_quote}{Quote} with that ID 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondition}
-Returns the quote referenced by id 
+True 
 \end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns the \hyperlink{class_quote}{Quote} referenced by ID 
+\end{DoxyReturn}
 
 
 Definition at line 188 of file Library.\+cc.
@@ -585,7 +597,7 @@ Definition at line 188 of file Library.\+cc.
 )}\hypertarget{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}{}\label{class_library_aba2ed0b3b1ee81565ca5b62f2ac5c924}
 
 
-Prints information about the Authors. 
+Provides information about the Authors. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} 
@@ -616,7 +628,7 @@ Definition at line 192 of file Library.\+cc.
 )}\hypertarget{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}{}\label{class_library_a35220a3b5a4a6d9059cc4fc18ae4c0c3}
 
 
-Prints information about the Books. 
+Provides information about the Books. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} 
@@ -648,7 +660,7 @@ Definition at line 200 of file Library.\+cc.
 )}\hypertarget{class_library_a819acb04f4b8aea0547db50918b1c5fa}{}\label{class_library_a819acb04f4b8aea0547db50918b1c5fa}
 
 
-Prints information about the Quotes. 
+Provides information about the Quotes. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} 
@@ -679,7 +691,7 @@ Definition at line 209 of file Library.\+cc.
 )}\hypertarget{class_library_a6e22621933979ff5cb4e95de3f54b72c}{}\label{class_library_a6e22621933979ff5cb4e95de3f54b72c}
 
 
-Prints information about the Books (by \hyperlink{class_author}{Author}) 
+Provides information about the Books (by \hyperlink{class_author}{Author}) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -711,7 +723,7 @@ Definition at line 217 of file Library.\+cc.
 )}\hypertarget{class_library_aa13544bfe57c61164d9953518e88dcb0}{}\label{class_library_aa13544bfe57c61164d9953518e88dcb0}
 
 
-Prints information about the Quotes (by \hyperlink{class_author}{Author}) 
+Provides information about the Quotes (by \hyperlink{class_author}{Author}) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -749,7 +761,7 @@ Definition at line 221 of file Library.\+cc.
 )}\hypertarget{class_library_a449a2d686922007674fa4a5efff89fe7}{}\label{class_library_a449a2d686922007674fa4a5efff89fe7}
 
 
-Prints information about current book. 
+Provides information about current book. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} and current\+Book 
@@ -786,7 +798,7 @@ Definition at line 230 of file Library.\+cc.
 )}\hypertarget{class_library_a7be02d15c840e3d1c3ec998e204f7bf9}{}\label{class_library_a7be02d15c840e3d1c3ec998e204f7bf9}
 
 
-Prints quotes of current book. 
+Provides quotes of current book. 
 
 \begin{DoxyPrecond}{Precondition}
 An implicit \hyperlink{class_library}{Library} and current\+Book 
@@ -828,7 +840,7 @@ Collection of Books.
 \end{DoxyParams}
 
 
-Definition at line 38 of file Library.\+hh.
+Definition at line 27 of file Library.\+hh.
 
 \index{Library@{Library}!author\+Collection@{author\+Collection}}
 \index{author\+Collection@{author\+Collection}!Library@{Library}}
@@ -846,7 +858,7 @@ Collection of Authors.
 \end{DoxyParams}
 
 
-Definition at line 44 of file Library.\+hh.
+Definition at line 33 of file Library.\+hh.
 
 \index{Library@{Library}!quote\+Collection@{quote\+Collection}}
 \index{quote\+Collection@{quote\+Collection}!Library@{Library}}
@@ -864,7 +876,7 @@ Collection of Quotes.
 \end{DoxyParams}
 
 
-Definition at line 50 of file Library.\+hh.
+Definition at line 39 of file Library.\+hh.
 
 \index{Library@{Library}!quote\+Identifiers@{quote\+Identifiers}}
 \index{quote\+Identifiers@{quote\+Identifiers}!Library@{Library}}
@@ -882,7 +894,7 @@ Identifier of Quotes.
 \end{DoxyParams}
 
 
-Definition at line 56 of file Library.\+hh.
+Definition at line 45 of file Library.\+hh.
 
 \index{Library@{Library}!current\+Book@{current\+Book}}
 \index{current\+Book@{current\+Book}!Library@{Library}}
@@ -893,7 +905,7 @@ Current book iterator.
 
 
 
-Definition at line 59 of file Library.\+hh.
+Definition at line 48 of file Library.\+hh.
 
 
 

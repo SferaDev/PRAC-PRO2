@@ -818,7 +818,7 @@ tots textos ?
 
 textos autor "Bekat Mer"
 
-eliminar text
+eliminar text ?
 error
 
 afegir text "La ciencia"
