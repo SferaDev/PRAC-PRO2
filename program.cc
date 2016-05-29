@@ -3,7 +3,7 @@
 */
 
 /**
-  @file main.cc
+  @file program.cc
   @brief Main program that handles the I/O operations with the end user.
 */
 
