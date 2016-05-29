@@ -86,6 +86,16 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit empty library 
 \end{DoxyPostcond}
+
+
+Definition at line 10 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+10                  \{
+11     \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end();
+12 \}
+\end{DoxyCode}
 \index{Library@{Library}!````~Library@{$\sim$\+Library}}
 \index{````~Library@{$\sim$\+Library}!Library@{Library}}
 \subsubsection[{\texorpdfstring{$\sim$\+Library()}{~Library()}}]{\setlength{\rightskip}{0pt plus 5cm}Library\+::$\sim$\+Library (
@@ -103,6 +113,16 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 Deletes the implicit library 
 \end{DoxyPostcond}
+
+
+Definition at line 14 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+14                   \{
+15     \textcolor{comment}{// no-op}
+16 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -131,6 +151,49 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 The implicit library with a new book (identified by title and author) 
 \end{DoxyPostcond}
+
+
+Definition at line 18 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+18                                                       \{
+19     \textcolor{comment}{// Add new Book with ID: authorName:title}
+20     \hyperlink{class_book}{Book} book(title, authorName);
+21     book.readBookContent();
+22     \textcolor{comment}{// Don't add book if title or author is null}
+23     \textcolor{keywordflow}{if} (title.empty()) \textcolor{keywordflow}{return};
+24     \textcolor{comment}{// If authorName:bookTitle pair doesn't exist create a new one}
+25     \textcolor{comment}{// Else return error as there's an existing book with same author and title}
+26     map<string, Book>::iterator bookIt = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.find(authorName + \textcolor{charliteral}{':'} + title);
+27     \textcolor{keywordflow}{if} (bookIt == \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end()) \{
+28         \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}[authorName + \textcolor{charliteral}{':'} + title] = book;
+29     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (bookIt->second.isDeleted()) \{
+30         set <string, utils::stringNaturalComparator> quotes =
+31                 bookIt->second.getBookQuotes();
+32         set<string, utils::stringNaturalComparator>::const\_iterator quoteIt = quotes.begin();
+33         \textcolor{keywordflow}{while} (quoteIt != quotes.end()) \{
+34             book.addQuote(*quoteIt);
+35             quoteIt++;
+36         \}
+37         \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}[authorName + \textcolor{charliteral}{':'} + title] = book;
+38     \} \textcolor{keywordflow}{else} \{
+39         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+40         \textcolor{keywordflow}{return};
+41     \}
+42     \textcolor{comment}{// Update Author acc to its ID (if it doesn't exist create new one)}
+43     map<string, Author>::iterator authorIt = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.find(authorName);
+44     \textcolor{keywordflow}{if} (authorIt == \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.end()) \{
+45         \hyperlink{class_author}{Author} author(authorName);
+46         authorIt = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.insert(authorIt, pair<string, Author>(authorName, 
+      author));
+47     \}
+48     authorIt->second.incrementBookCount(1);
+49     authorIt->second.incrementLineCount(book.getLineCount());
+50     authorIt->second.incrementWordCount(book.getWordCount());
+51     authorIt->second.addBook(title);
+52 \}
+\end{DoxyCode}
 \index{Library@{Library}!is\+Book\+Selected@{is\+Book\+Selected}}
 \index{is\+Book\+Selected@{is\+Book\+Selected}!Library@{Library}}
 \subsubsection[{\texorpdfstring{is\+Book\+Selected()}{isBookSelected()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Library\+::is\+Book\+Selected (
@@ -148,6 +211,16 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 54 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+54                              \{
+55     \textcolor{keywordflow}{return} \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} != \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end();
+56 \}
+\end{DoxyCode}
 \index{Library@{Library}!select\+Book@{select\+Book}}
 \index{select\+Book@{select\+Book}!Library@{Library}}
 \subsubsection[{\texorpdfstring{select\+Book(string query)}{selectBook(string query)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::select\+Book (
@@ -170,6 +243,47 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 current\+Book iterator has the desired book 
 \end{DoxyPostcond}
+
+
+Definition at line 58 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+58                                      \{
+59     \textcolor{comment}{// Erase currentBook iterator (end position is erased)}
+60     \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end();
+61     map<string, Book>::iterator it = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.begin();
+62     \textcolor{keywordtype}{bool} error = \textcolor{keyword}{false};
+63     \textcolor{comment}{// Loop through all books while there're no errors}
+64     \textcolor{keywordflow}{while} (it != \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end() and !error) \{
+65         \textcolor{keywordflow}{if} (!it->second.isDeleted()) \{
+66             istringstream iss(query);
+67             \textcolor{keywordtype}{string} word;
+68             \textcolor{keywordtype}{bool} bContinue = \textcolor{keyword}{true};
+69             \textcolor{comment}{// Loop through all words (each word must be on the text)}
+70             \textcolor{keywordflow}{while} (iss >> word and bContinue) \{
+71                 \textcolor{comment}{// Check if author/title contains or content contains}
+72                 \textcolor{keywordtype}{string} bookId = it->first;
+73                 bookId = bookId.replace(bookId.find\_first\_of(\textcolor{charliteral}{':'}), 1, \textcolor{stringliteral}{" "});
+74                 bContinue = (\hyperlink{namespaceutils_aaaff51c00798a6c05a15f4ecd0f02e9e}{utils::contains}(bookId, word) or it->second.findWord(word));
+75             \}
+76             if (bContinue) \{
+77                 \textcolor{keywordflow}{if} (!\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} = it;
+78                 \textcolor{keywordflow}{else} \{
+79                     error = \textcolor{keyword}{true};
+80                     \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end();
+81                 \}
+82             \}
+83         \}
+84         it++;
+85     \}
+86     \textcolor{comment}{// Build FrequencyTable Vector upon select if it was not generated previously and/or modified}
+87     \textcolor{keywordflow}{if} (\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \{
+88         \textcolor{keywordflow}{if} (\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.isFrequencyDirty())
+89             \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.generateFrequencyTable();
+90     \} \textcolor{keywordflow}{else} \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+91 \}
+\end{DoxyCode}
 \index{Library@{Library}!delete\+Book@{delete\+Book}}
 \index{delete\+Book@{delete\+Book}!Library@{Library}}
 \subsubsection[{\texorpdfstring{delete\+Book()}{deleteBook()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::delete\+Book (
@@ -187,6 +301,31 @@ An implicit \hyperlink{class_library}{Library} and a selected book
 \begin{DoxyPostcond}{Postcondition}
 The implicit library without the previous current\+Book 
 \end{DoxyPostcond}
+
+
+Definition at line 93 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+93                          \{
+94     \textcolor{keywordflow}{if} (\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \{
+95         map<string, Author>::iterator authorIt = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.find(
+      \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor());
+96         \textcolor{keywordflow}{if} (authorIt != \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.end()) \{
+97             \textcolor{comment}{// Delete book on Author}
+98             authorIt->second.deleteBook(\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getTitle());
+99             \textcolor{comment}{// Decrement author stats (lines/words/...)}
+100             authorIt->second.incrementBookCount(-1);
+101             authorIt->second.incrementLineCount(-(\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getLineCount()));
+102             authorIt->second.incrementWordCount(-(\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getWordCount()));
+103         \}
+104         \textcolor{comment}{// Delete the book}
+105         \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.deleteBook();
+106         \textcolor{comment}{// Reset the currentBook iterator}
+107         \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook} = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end();
+108     \} \textcolor{keywordflow}{else} \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+109 \}
+\end{DoxyCode}
 \index{Library@{Library}!replace\+Words\+On\+Book@{replace\+Words\+On\+Book}}
 \index{replace\+Words\+On\+Book@{replace\+Words\+On\+Book}!Library@{Library}}
 \subsubsection[{\texorpdfstring{replace\+Words\+On\+Book(string old\+Word, string new\+Word)}{replaceWordsOnBook(string oldWord, string newWord)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::replace\+Words\+On\+Book (
@@ -210,6 +349,18 @@ An implicit \hyperlink{class_library}{Library} and a selected book
 \begin{DoxyPostcond}{Postcondition}
 The implicit library with the replaced words on current\+Book 
 \end{DoxyPostcond}
+
+
+Definition at line 111 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+111                                                                \{
+112     \textcolor{keywordflow}{if} (\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}()) \{
+113         \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.replaceWords(oldWord, newWord);
+114     \} \textcolor{keywordflow}{else} \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+115 \}
+\end{DoxyCode}
 \index{Library@{Library}!insert\+Quote@{insert\+Quote}}
 \index{insert\+Quote@{insert\+Quote}!Library@{Library}}
 \subsubsection[{\texorpdfstring{insert\+Quote(int start, int end)}{insertQuote(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::insert\+Quote (
@@ -235,6 +386,57 @@ An implicit \hyperlink{class_library}{Library} and implicit book
 \begin{DoxyPostcond}{Postcondition}
 The implicit library with a new quote 
 \end{DoxyPostcond}
+
+
+Definition at line 117 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+117                                             \{
+118     \textcolor{comment}{// Error conditions if invalid start/end is given}
+119     \textcolor{keywordflow}{if} (!\hyperlink{class_library_a04ff0757054c2813e89036cdd3f7f91f}{isBookSelected}() or (end < start) or (start < 1) or (end > 
+      \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getLineCount())) \{
+120         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+121         \textcolor{keywordflow}{return};
+122     \}
+123     \textcolor{comment}{// Assign new Reference (check what was the last one)}
+124     \textcolor{keywordtype}{string} reference, aux;
+125     istringstream iss(\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor());
+126     \textcolor{keywordflow}{while} (iss >> aux) reference += aux[0];
+127     \textcolor{comment}{// Pass reference to uppercase}
+128     \hyperlink{namespaceutils_a4cc31521e740c9e31b4bfa8ee85eff46}{utils::stringUppercase}(reference);
+129     \textcolor{comment}{// Check if there's an existing Quote with these lines of the same book}
+130     map<string, Quote>::iterator it = \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.begin();
+131     \textcolor{keywordflow}{while} (it != \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.end()) \{
+132         \textcolor{keywordflow}{if} (it->second.getReference().substr(0, reference.length()) == reference) \{
+133             \textcolor{keywordflow}{if} (it->second.getBookTitle() == \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getTitle()
+134                 and it->second.getAuthor() == \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor()
+135                 and it->second.getStartLine() == start
+136                 and it->second.getEndLine() == end) \{
+137                 \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+138                 \textcolor{keywordflow}{return};
+139             \}
+140         \}
+141         it++;
+142     \}
+143     \hyperlink{class_library_a58c1f12a0278872cd0299e586551bb7a}{quoteIdentifiers}[reference]++;
+144     \textcolor{comment}{// Append a string with an int (using oss): If there's time find another alternative}
+145     ostringstream oss;
+146     oss << \hyperlink{class_library_a58c1f12a0278872cd0299e586551bb7a}{quoteIdentifiers}[reference];
+147     reference += oss.str();
+148     \textcolor{comment}{// Store them into new Quote}
+149     \hyperlink{class_quote}{Quote} quote(reference, \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor(),
+150                 \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getTitle());
+151     quote.\hyperlink{class_quote_ab3af36f8b5649b115fca7eecbb294a59}{setContent}(\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getLines(start, end));
+152     quote.setQuoteLines(start, end);
+153     \textcolor{comment}{// Store the Quote in quoteCollection}
+154     \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}[reference] = quote;
+155     \textcolor{comment}{// Add ID to Book}
+156     \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.addQuote(reference);
+157     \textcolor{comment}{// Add ID to Author}
+158     \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}[\hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor()].addQuote(reference);
+159 \}
+\end{DoxyCode}
 \index{Library@{Library}!delete\+Quote@{delete\+Quote}}
 \index{delete\+Quote@{delete\+Quote}!Library@{Library}}
 \subsubsection[{\texorpdfstring{delete\+Quote(string reference)}{deleteQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::delete\+Quote (
@@ -257,6 +459,30 @@ An implicit \hyperlink{class_library}{Library} and a quote with that id
 \begin{DoxyPostcond}{Postcondition}
 The implicit library without the referenced quote 
 \end{DoxyPostcond}
+
+
+Definition at line 161 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+161                                           \{
+162     map<string, Quote>::iterator it = \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.find(reference);
+163     \textcolor{comment}{// If reference doesn't exist: error}
+164     \textcolor{keywordflow}{if} (it == \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.end() or it->second.getReference().empty()) \{
+165         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+166     \} \textcolor{keywordflow}{else} \{
+167         \textcolor{comment}{// Remove Quote from Book}
+168         map<string, Book>::iterator bookIt = \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.find(it->second.getBookTitle());
+169         \textcolor{keywordflow}{if} (bookIt != \hyperlink{class_library_a5807d6d006ac0aa0a184831f0f2e5415}{bookCollection}.end()) bookIt->second.deleteQuote(reference);
+170         \textcolor{comment}{// Remove Quote from Author}
+171         map<string, Author>::iterator authorIt = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.find(it->second.getAuthor
+      ());
+172         \textcolor{keywordflow}{if} (authorIt != \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.end()) authorIt->second.deleteQuote(reference);
+173         \textcolor{comment}{// Delete the Quote from the collection}
+174         \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.erase(it);
+175     \}
+176 \}
+\end{DoxyCode}
 \index{Library@{Library}!get\+Book@{get\+Book}}
 \index{get\+Book@{get\+Book}!Library@{Library}}
 \subsubsection[{\texorpdfstring{get\+Book()}{getBook()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Book} Library\+::get\+Book (
@@ -274,6 +500,16 @@ An implicit \hyperlink{class_library}{Library} and a selected book
 \begin{DoxyPostcond}{Postcondition}
 Returns current\+Book 
 \end{DoxyPostcond}
+
+
+Definition at line 178 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+178                       \{
+179     \textcolor{keywordflow}{return} \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second;
+180 \}
+\end{DoxyCode}
 \index{Library@{Library}!quote\+Exists@{quote\+Exists}}
 \index{quote\+Exists@{quote\+Exists}!Library@{Library}}
 \subsubsection[{\texorpdfstring{quote\+Exists(string id)}{quoteExists(string id)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Library\+::quote\+Exists (
@@ -296,6 +532,18 @@ An implicit \hyperlink{class_library}{Library} and a quote with that id
 \begin{DoxyPostcond}{Postcondition}
 Returns if it exists 
 \end{DoxyPostcond}
+
+
+Definition at line 182 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+182                                    \{
+183     map<string, Quote>::const\_iterator it = \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.find(\textcolor{keywordtype}{id});
+184     \textcolor{keywordflow}{return} it != \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.end() and
+185            !it->second.getReference().empty();
+186 \}
+\end{DoxyCode}
 \index{Library@{Library}!get\+Quote@{get\+Quote}}
 \index{get\+Quote@{get\+Quote}!Library@{Library}}
 \subsubsection[{\texorpdfstring{get\+Quote(string id)}{getQuote(string id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quote} Library\+::get\+Quote (
@@ -318,6 +566,16 @@ An implicit \hyperlink{class_library}{Library} and a quote with that id
 \begin{DoxyPostcond}{Postcondition}
 Returns the quote referenced by id 
 \end{DoxyPostcond}
+
+
+Definition at line 188 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+188                                  \{
+189     \textcolor{keywordflow}{return} \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}[id];
+190 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Authors@{print\+Authors}}
 \index{print\+Authors@{print\+Authors}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Authors()}{printAuthors()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Authors (
@@ -335,6 +593,20 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 192 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+192                            \{
+193     map<string, Author>::iterator it = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.begin();
+194     \textcolor{keywordflow}{while} (it != \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.end()) \{
+195         \textcolor{keywordflow}{if} (it->second.getBookCount() > 0) it->second.printInformation();
+196         it++;
+197     \}
+198 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Books@{print\+Books}}
 \index{print\+Books@{print\+Books}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Books()}{printBooks()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Books (
@@ -352,6 +624,21 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 200 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+200                          \{
+201     map<string, Author>::iterator it = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.begin();
+202     \textcolor{keywordflow}{while} (it != \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}.end()) \{
+203         \textcolor{keywordflow}{if} (it->second.getBookCount() > 0)
+204             it->second.printBooks(\textcolor{keyword}{true});
+205         it++;
+206     \}
+207 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Quotes@{print\+Quotes}}
 \index{print\+Quotes@{print\+Quotes}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Quotes()}{printQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Quotes (
@@ -369,6 +656,20 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 209 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+209                           \{
+210     map<string, Quote>::iterator it = \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.begin();
+211     \textcolor{keywordflow}{while} (it != \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}.end()) \{
+212         it->second.printInformationComplex(\textcolor{keyword}{true});
+213         it++;
+214     \}
+215 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Books\+By\+Author@{print\+Books\+By\+Author}}
 \index{print\+Books\+By\+Author@{print\+Books\+By\+Author}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Books\+By\+Author(string author)}{printBooksByAuthor(string author)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Books\+By\+Author (
@@ -391,6 +692,16 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 217 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+217                                               \{
+218     \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}[author].printBooks(\textcolor{keyword}{false});
+219 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Quotes\+By\+Author@{print\+Quotes\+By\+Author}}
 \index{print\+Quotes\+By\+Author@{print\+Quotes\+By\+Author}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Quotes\+By\+Author(string author)}{printQuotesByAuthor(string author)}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Quotes\+By\+Author (
@@ -413,6 +724,22 @@ An implicit \hyperlink{class_library}{Library}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 221 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+221                                                \{
+222     set <string, utils::stringNaturalComparator> quotes = \hyperlink{class_library_a7a6958a0dc85a1c816ca35727306cd62}{authorCollection}[author].
+      getAuthorQuotes();
+223     set<string>::iterator it = quotes.begin();
+224     \textcolor{keywordflow}{while} (it != quotes.end()) \{
+225         \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}[*it].printInformationComplex(\textcolor{keyword}{false});
+226         it++;
+227     \}
+228 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Current\+Information@{print\+Current\+Information}}
 \index{print\+Current\+Information@{print\+Current\+Information}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Current\+Information()}{printCurrentInformation()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Current\+Information (
@@ -430,6 +757,26 @@ An implicit \hyperlink{class_library}{Library} and current\+Book
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 230 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+230                                       \{
+231     cout << \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getAuthor() << \textcolor{stringliteral}{" \(\backslash\)""};
+232     cout << \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getTitle() << \textcolor{stringliteral}{"\(\backslash\)" "};
+233     cout << \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getLineCount() << \textcolor{stringliteral}{" "};
+234     cout << \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getWordCount() << endl;
+235     cout << \textcolor{stringliteral}{"Cites Associades:"} << endl;
+236     set <string, utils::stringNaturalComparator> quotes = \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getBookQuotes();
+237     set<string>::iterator it = quotes.begin();
+238     \textcolor{keywordflow}{while} (it != quotes.end()) \{
+239         \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}[*it].printInformation(\textcolor{keyword}{true}, \textcolor{keyword}{false});
+240         it++;
+241     \}
+242 \}
+\end{DoxyCode}
 \index{Library@{Library}!print\+Current\+Quotes@{print\+Current\+Quotes}}
 \index{print\+Current\+Quotes@{print\+Current\+Quotes}!Library@{Library}}
 \subsubsection[{\texorpdfstring{print\+Current\+Quotes()}{printCurrentQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::print\+Current\+Quotes (
@@ -447,6 +794,21 @@ An implicit \hyperlink{class_library}{Library} and current\+Book
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 244 of file Library.\+cc.
+
+
+\begin{DoxyCode}
+244                                  \{
+245     set <string, utils::stringNaturalComparator> quotes = \hyperlink{class_library_a78a4071e8d610da671b3886c71900dae}{currentBook}->second.getBookQuotes();
+246     set<string>::iterator it = quotes.begin();
+247     \textcolor{keywordflow}{while} (it != quotes.end()) \{
+248         \hyperlink{class_library_a0f9136df5fc6e8901cb8524e026cb147}{quoteCollection}[*it].printInformationComplex(\textcolor{keyword}{true});
+249         it++;
+250     \}
+251 \}
+\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -535,6 +897,7 @@ Definition at line 59 of file Library.\+hh.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_library_8hh}{Library.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_library_8hh}{Library.\+hh}\item 
+\hyperlink{_library_8cc}{Library.\+cc}\end{DoxyCompactItemize}

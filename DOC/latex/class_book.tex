@@ -34,9 +34,9 @@ bool \hyperlink{class_book_ae39b44d3e5b6f65947776735d49d1d0f}{is\+Deleted} ()
 \begin{DoxyCompactList}\small\item\em Tells if a deleted is true or false. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generate\+Frequency\+Table} ()
 \begin{DoxyCompactList}\small\item\em Generates the word\+Frequency\+List. \end{DoxyCompactList}\item 
-set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_book_a85273ee0886a725c370d8efe1909f595}{get\+Book\+Quotes} ()
+set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_book_af817baa430adcda62ba5744c910f8e48}{get\+Book\+Quotes} ()
 \begin{DoxyCompactList}\small\item\em Provides the book\+Quotes of the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
-vector$<$ string $>$ \hyperlink{class_book_acb5eaff231b512901cac3e3220ee2960}{get\+Lines} (int start, int end)
+vector$<$ string $>$ \hyperlink{class_book_a955c01f083e78f81c358f5d485f0169e}{get\+Lines} (int start, int end)
 \begin{DoxyCompactList}\small\item\em Provides the lines from start to end. \end{DoxyCompactList}\item 
 void \hyperlink{class_book_a97c2374d514327be5d8f74abd0ff4ea3}{add\+Quote} (string reference)
 \begin{DoxyCompactList}\small\item\em Adds new \hyperlink{class_quote}{Quote} to the implicit \hyperlink{class_book}{Book}. \end{DoxyCompactList}\item 
@@ -108,6 +108,18 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit empty book 
 \end{DoxyPostcond}
+
+
+Definition at line 10 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+10            \{
+11     \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{bookWords} = 0;
+12     \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency} = \textcolor{keyword}{true};
+13     \hyperlink{class_book_a1fba52d984d1651760cd79dc393415ab}{deleted} = \textcolor{keyword}{false};
+14 \}
+\end{DoxyCode}
 \index{Book@{Book}!Book@{Book}}
 \index{Book@{Book}!Book@{Book}}
 \subsubsection[{\texorpdfstring{Book(string title, string author)}{Book(string title, string author)}}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::\+Book (
@@ -133,6 +145,20 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit book with title and the author 
 \end{DoxyPostcond}
+
+
+Definition at line 16 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+16                                       \{
+17     \hyperlink{class_book_a111d7b30bddd6166bd09764f050cfee3}{bookTitle} = title;
+18     \hyperlink{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{authorName} = author;
+19     \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{bookWords} = 0;
+20     \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency} = \textcolor{keyword}{true};
+21     \hyperlink{class_book_a1fba52d984d1651760cd79dc393415ab}{deleted} = \textcolor{keyword}{false};
+22 \}
+\end{DoxyCode}
 \index{Book@{Book}!````~Book@{$\sim$\+Book}}
 \index{````~Book@{$\sim$\+Book}!Book@{Book}}
 \subsubsection[{\texorpdfstring{$\sim$\+Book()}{~Book()}}]{\setlength{\rightskip}{0pt plus 5cm}Book\+::$\sim$\+Book (
@@ -150,6 +176,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Deletes the implicit book 
 \end{DoxyPostcond}
+
+
+Definition at line 24 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+24             \{
+25     \textcolor{comment}{// no-op}
+26 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -170,6 +206,39 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The content of the implicit \hyperlink{class_book}{Book} in the input channel 
 \end{DoxyPostcond}
+
+
+Definition at line 28 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+28                            \{
+29     \textcolor{keywordtype}{string} input, line;
+30     \textcolor{keywordflow}{while} (getline(cin, input) and input != \textcolor{stringliteral}{"****"}) \{
+31         istringstream iss(input);
+32         \textcolor{keywordtype}{string} word;
+33         \textcolor{keywordflow}{while} (iss >> word) \{
+34             line += \textcolor{charliteral}{' '} + word;
+35             \textcolor{keywordflow}{if} (word.find\_last\_of(\textcolor{stringliteral}{".?!"}) == word.length() - 1) \{
+36                 \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(line);
+37                 \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{utils::formatString}(line);
+38                 \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.push\_back(line);
+39                 line.clear();
+40                 word.erase(word.length() - 1, 1);
+41             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (word.find\_last\_of(\textcolor{stringliteral}{",;:.?!"}) == word.length() - 1) \{
+42                 word.erase(word.length() - 1, 1);
+43             \}
+44             \textcolor{keywordflow}{if} (!word.empty()) \{
+45                 \textcolor{keywordflow}{if} (line.empty()) \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[word].push\_back(
+      \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size());
+46                 \textcolor{keywordflow}{else} \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[word].push\_back(\hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size() + 1);
+47                 \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}[word] += 1;
+48                 \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{bookWords} += 1;
+49             \}
+50         \}
+51     \}
+52 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Title@{get\+Title}}
 \index{get\+Title@{get\+Title}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Title() const }{getTitle() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Title (
@@ -190,6 +259,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the title of the implicit \hyperlink{class_book}{Book} 
 \end{DoxyReturn}
+
+
+Definition at line 54 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+54                             \{
+55     \textcolor{keywordflow}{return} \hyperlink{class_book_a111d7b30bddd6166bd09764f050cfee3}{bookTitle};
+56 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Book\+::get\+Author (
@@ -210,6 +289,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the name of the author of the implicit book 
 \end{DoxyReturn}
+
+
+Definition at line 58 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+58                              \{
+59     \textcolor{keywordflow}{return} \hyperlink{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{authorName};
+60 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Line\+Count@{get\+Line\+Count}}
 \index{get\+Line\+Count@{get\+Line\+Count}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Line\+Count() const }{getLineCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Line\+Count (
@@ -230,6 +319,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the number of the lines of the implicit book 
 \end{DoxyReturn}
+
+
+Definition at line 62 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+62                              \{
+63     \textcolor{keywordflow}{return} \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size();
+64 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Word\+Count@{get\+Word\+Count}}
 \index{get\+Word\+Count@{get\+Word\+Count}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Word\+Count() const }{getWordCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Word\+Count (
@@ -250,6 +349,16 @@ True
 \begin{DoxyReturn}{Returns}
 The words of lines of the implicit book 
 \end{DoxyReturn}
+
+
+Definition at line 66 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+66                              \{
+67     \textcolor{keywordflow}{return} \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{bookWords};
+68 \}
+\end{DoxyCode}
 \index{Book@{Book}!replace\+Words@{replace\+Words}}
 \index{replace\+Words@{replace\+Words}!Book@{Book}}
 \subsubsection[{\texorpdfstring{replace\+Words(string old\+Word, string new\+Word)}{replaceWords(string oldWord, string newWord)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::replace\+Words (
@@ -275,6 +384,48 @@ An implicit \hyperlink{class_book}{Book}, the old word that we replaces and the 
 \begin{DoxyPostcond}{Postcondition}
 The implicit book with the old word replaced for the new word 
 \end{DoxyPostcond}
+
+
+Definition at line 70 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+70                                                       \{
+71     \textcolor{keywordflow}{if} (oldWord == newWord or oldWord.empty()) \textcolor{keywordflow}{return};
+72     \textcolor{comment}{// Edit the contents of the book}
+73     map < string, list < int > >::const\_iterator it1 = \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}.find(oldWord);
+74     \textcolor{keywordflow}{if} (it1 != \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}.end()) \{
+75         list<int>::const\_iterator it2 = it1->second.begin();
+76         \textcolor{keywordflow}{while} (it2 != it1->second.end()) \{
+77             istringstream iss(\hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[*it2 - 1]);
+78             \textcolor{keywordtype}{string} word, line;
+79             \textcolor{keywordflow}{while} (iss >> word) \{
+80                 \textcolor{keywordtype}{string} auxWord;
+81                 \textcolor{keywordflow}{if} (word.find\_last\_of(\textcolor{stringliteral}{",;:.?!"}) == word.length() - 1) \{
+82                     auxWord = word[word.length() - 1];
+83                     word.erase(word.length() - 1, 1);
+84                 \}
+85                 \textcolor{keywordflow}{if} (word == oldWord) auxWord = newWord + auxWord;
+86                 \textcolor{keywordflow}{else} auxWord = word + auxWord;
+87                 line += auxWord + \textcolor{charliteral}{' '};
+88             \}
+89             \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(line);
+90             \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[*it2 - 1] = line;
+91             it2++;
+92         \}
+93     \}
+94     \textcolor{comment}{// Edit the line dictionary}
+95     \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[newWord].insert(\hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[newWord].end(),
+96                                    \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[oldWord].begin(),
+97                                    \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}[oldWord].end());
+98     \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}.erase(oldWord);
+99     \textcolor{comment}{// Edit the frequency Map}
+100     \textcolor{keywordflow}{if} (newWord.empty()) \hyperlink{class_book_a36f1e0b30a0ad17606976556cab45a23}{bookWords} -= \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}[oldWord];
+101     \textcolor{keywordflow}{else} \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}[newWord] += \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}[oldWord];
+102     \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}.erase(oldWord);
+103     \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency} = \textcolor{keyword}{true};
+104 \}
+\end{DoxyCode}
 \index{Book@{Book}!find\+Word@{find\+Word}}
 \index{find\+Word@{find\+Word}!Book@{Book}}
 \subsubsection[{\texorpdfstring{find\+Word(string word)}{findWord(string word)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::find\+Word (
@@ -300,6 +451,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the word is on the content of the implicit book 
 \end{DoxyReturn}
+
+
+Definition at line 106 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+106                                \{
+107     \textcolor{keywordflow}{return} \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}.find(word) != \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}.end();
+108 \}
+\end{DoxyCode}
 \index{Book@{Book}!is\+Frequency\+Dirty@{is\+Frequency\+Dirty}}
 \index{is\+Frequency\+Dirty@{is\+Frequency\+Dirty}!Book@{Book}}
 \subsubsection[{\texorpdfstring{is\+Frequency\+Dirty()}{isFrequencyDirty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::is\+Frequency\+Dirty (
@@ -320,6 +481,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the frequency table needs to be updated is true 
 \end{DoxyReturn}
+
+
+Definition at line 110 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+110                             \{
+111     \textcolor{keywordflow}{return} \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency};
+112 \}
+\end{DoxyCode}
 \index{Book@{Book}!is\+Deleted@{is\+Deleted}}
 \index{is\+Deleted@{is\+Deleted}!Book@{Book}}
 \subsubsection[{\texorpdfstring{is\+Deleted()}{isDeleted()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::is\+Deleted (
@@ -340,6 +511,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the book has been deleted 
 \end{DoxyReturn}
+
+
+Definition at line 114 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+114                      \{
+115     \textcolor{keywordflow}{return} \hyperlink{class_book_a1fba52d984d1651760cd79dc393415ab}{deleted};
+116 \}
+\end{DoxyCode}
 \index{Book@{Book}!generate\+Frequency\+Table@{generate\+Frequency\+Table}}
 \index{generate\+Frequency\+Table@{generate\+Frequency\+Table}!Book@{Book}}
 \subsubsection[{\texorpdfstring{generate\+Frequency\+Table()}{generateFrequencyTable()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::generate\+Frequency\+Table (
@@ -357,13 +538,33 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Generates the frequency table ordered 
 \end{DoxyPostcond}
+
+
+Definition at line 118 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+118                                   \{
+119     \textcolor{comment}{// Reset dirty boolean}
+120     \hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency} = \textcolor{keyword}{false};
+121     \textcolor{comment}{// Clear the list}
+122     \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.clear();
+123     \textcolor{comment}{// Copy from the Map to the List}
+124     \textcolor{keywordflow}{for} (map<string, int>::iterator it = \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}.begin();
+125          it != \hyperlink{class_book_a18b73c8d2b492cad5b7b0c187b08dfc0}{wordFrequencyMap}.end(); ++it) \{
+126         \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.push\_back(make\_pair(it->first, it->second));
+127     \}
+128     \textcolor{comment}{// Sort the list with our custom comparator struct}
+129     \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.sort(\hyperlink{structutils_1_1frequency_comparator}{utils::frequencyComparator}());
+130 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Book\+Quotes@{get\+Book\+Quotes}}
 \index{get\+Book\+Quotes@{get\+Book\+Quotes}!Book@{Book}}
-\subsubsection[{\texorpdfstring{get\+Book\+Quotes()}{getBookQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string, {\bf utils\+::string\+Natural\+Comparator}$>$ Book\+::get\+Book\+Quotes (
+\subsubsection[{\texorpdfstring{get\+Book\+Quotes()}{getBookQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ string, {\bf utils\+::string\+Natural\+Comparator} $>$ Book\+::get\+Book\+Quotes (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_book_a85273ee0886a725c370d8efe1909f595}{}\label{class_book_a85273ee0886a725c370d8efe1909f595}
+)}\hypertarget{class_book_af817baa430adcda62ba5744c910f8e48}{}\label{class_book_af817baa430adcda62ba5744c910f8e48}
 
 
 Provides the book\+Quotes of the implicit \hyperlink{class_book}{Book}. 
@@ -377,14 +578,24 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the book\+Quotes set 
 \end{DoxyReturn}
+
+
+Definition at line 132 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+132                                                                \{
+133     \textcolor{keywordflow}{return} \hyperlink{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}{bookQuotes};
+134 \}
+\end{DoxyCode}
 \index{Book@{Book}!get\+Lines@{get\+Lines}}
 \index{get\+Lines@{get\+Lines}!Book@{Book}}
-\subsubsection[{\texorpdfstring{get\+Lines(int start, int end)}{getLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Book\+::get\+Lines (
+\subsubsection[{\texorpdfstring{get\+Lines(int start, int end)}{getLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Book\+::get\+Lines (
 \begin{DoxyParamCaption}
 \item[{int}]{start, }
 \item[{int}]{end}
 \end{DoxyParamCaption}
-)}\hypertarget{class_book_acb5eaff231b512901cac3e3220ee2960}{}\label{class_book_acb5eaff231b512901cac3e3220ee2960}
+)}\hypertarget{class_book_a955c01f083e78f81c358f5d485f0169e}{}\label{class_book_a955c01f083e78f81c358f5d485f0169e}
 
 
 Provides the lines from start to end. 
@@ -398,6 +609,20 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the content of the lines from the vector (pos -\/ 1) 
 \end{DoxyReturn}
+
+
+Definition at line 136 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+136                                                  \{
+137     vector <string> vector(end - start + 1);
+138     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = start; i <= end; ++i) \{
+139         vector[i - start] = \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1];
+140     \}
+141     \textcolor{keywordflow}{return} vector;
+142 \}
+\end{DoxyCode}
 \index{Book@{Book}!add\+Quote@{add\+Quote}}
 \index{add\+Quote@{add\+Quote}!Book@{Book}}
 \subsubsection[{\texorpdfstring{add\+Quote(string reference)}{addQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::add\+Quote (
@@ -415,6 +640,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 book\+Quotes has a new element 
 \end{DoxyPostcond}
+
+
+Definition at line 144 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+144                                     \{
+145     \hyperlink{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}{bookQuotes}.insert(reference);
+146 \}
+\end{DoxyCode}
 \index{Book@{Book}!delete\+Quote@{delete\+Quote}}
 \index{delete\+Quote@{delete\+Quote}!Book@{Book}}
 \subsubsection[{\texorpdfstring{delete\+Quote(string reference)}{deleteQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::delete\+Quote (
@@ -432,6 +667,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 book\+Quotes has one less element 
 \end{DoxyPostcond}
+
+
+Definition at line 148 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+148                                        \{
+149     \hyperlink{class_book_ae68f8cb5ab781aa3dad4f5ed90b3057e}{bookQuotes}.erase(reference);
+150 \}
+\end{DoxyCode}
 \index{Book@{Book}!delete\+Book@{delete\+Book}}
 \index{delete\+Book@{delete\+Book}!Book@{Book}}
 \subsubsection[{\texorpdfstring{delete\+Book()}{deleteBook()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::delete\+Book (
@@ -449,6 +694,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 The book has been deleted 
 \end{DoxyPostcond}
+
+
+Definition at line 152 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+152                       \{
+153     \hyperlink{class_book_a1fba52d984d1651760cd79dc393415ab}{deleted} = \textcolor{keyword}{true};
+154 \}
+\end{DoxyCode}
 \index{Book@{Book}!find\+Expression@{find\+Expression}}
 \index{find\+Expression@{find\+Expression}!Book@{Book}}
 \subsubsection[{\texorpdfstring{find\+Expression(string query, set$<$ int $>$ \&pos)}{findExpression(string query, set< int > &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::find\+Expression (
@@ -474,6 +729,77 @@ An implicit \hyperlink{class_book}{Book} and logical expression match and empty 
 \begin{DoxyPostcond}{Postcondition}
 The number of lines that keep the logical expression 
 \end{DoxyPostcond}
+
+
+Definition at line 156 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+156                                                      \{
+157     \textcolor{comment}{// Trim spaces of the query}
+158     \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(query);
+159     \textcolor{keywordflow}{if} (query.find\_first\_of(\textcolor{charliteral}{'\{'}) == string::npos and query.find\_first\_of(\textcolor{charliteral}{'\}'}) == string::npos) \{
+160         \textcolor{comment}{// Base case: Malformed expression (not found any word to find)}
+161     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query.find\_last\_of(\textcolor{charliteral}{'\{'}) == 0 and query.find\_first\_of(\textcolor{charliteral}{'\}'}) == query.length() - 1
+162                and query.find\_first\_of(\textcolor{charliteral}{'&'}) == string::npos and query.find\_first\_of(\textcolor{charliteral}{'|'}) == string::npos) \{
+163         query = query.substr(1, query.length() - 2);
+164         \textcolor{keywordflow}{if} (query.find\_first\_of(\textcolor{stringliteral}{" "}) == string::npos) \{
+165             \textcolor{comment}{// Base case: One word, return lines where found}
+166             map < string, list < int > > ::const\_iterator
+167             it1 = \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}.find(query);
+168             \textcolor{keywordflow}{if} (it1 != \hyperlink{class_book_a7da5c2f5239458c2ab88576cac8d0a10}{lineDictionary}.end()) \{
+169                 list<int>::const\_iterator it2 = it1->second.begin();
+170                 \textcolor{keywordflow}{while} (it2 != it1->second.end()) \{
+171                     pos.insert(*it2);
+172                     it2++;
+173                 \}
+174             \}
+175         \} \textcolor{keywordflow}{else} \{
+176             \textcolor{comment}{// Recursive case: More than one word, replace spaces with &}
+177             istringstream iss(query);
+178             query.clear();
+179             \textcolor{keywordtype}{string} word;
+180             iss >> word;
+181             query += \textcolor{stringliteral}{"\{"} + word + \textcolor{stringliteral}{"\}"};
+182             \textcolor{keywordflow}{while} (iss >> word) \{
+183                 query += \textcolor{stringliteral}{" & \{"} + word + \textcolor{stringliteral}{"\}"};
+184             \}
+185             \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query, pos);
+186         \}
+187     \} \textcolor{keywordflow}{else} \{
+188         \textcolor{comment}{// Find the first & operator outside parentheses}
+189         \textcolor{keywordtype}{int} posAnd = query.find\_first\_of(\textcolor{charliteral}{'&'});
+190         \textcolor{keywordflow}{while} (posAnd != string::npos and \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{utils::betweenPar}(query, posAnd)) \{
+191             posAnd = query.find\_first\_of(\textcolor{charliteral}{'&'}, posAnd + 1);
+192         \}
+193         \textcolor{comment}{// If found call the recursivity on both sides of the expression}
+194         \textcolor{keywordflow}{if} (posAnd != string::npos) \{
+195             \textcolor{comment}{// Recursive case: Call recursion of both expressions and intersect them}
+196             set<int> set1, set2;
+197             \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query.substr(0, posAnd), set1);
+198             \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query.substr(posAnd + 1), set2);
+199             set\_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin())
+      );
+200         \} \textcolor{keywordflow}{else} \{
+201             \textcolor{comment}{// If no outer & operators, find the first | operator outside parentheses}
+202             \textcolor{keywordtype}{int} posOr = query.find\_first\_of(\textcolor{charliteral}{'|'});
+203             \textcolor{keywordflow}{while} (posOr != string::npos and \hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{utils::betweenPar}(query, posOr)) \{
+204                 posOr = query.find\_first\_of(\textcolor{charliteral}{'|'}, posOr + 1);
+205             \}
+206             \textcolor{keywordflow}{if} (posOr != string::npos) \{
+207                 \textcolor{comment}{// Recursive case: Call recursion of both expressions and union them}
+208                 set<int> set1, set2;
+209                 \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query.substr(0, posOr), set1);
+210                 \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query.substr(posOr + 1), set2);
+211                 set\_union(set1.begin(), set1.end(), set2.begin(), set2.end(), inserter(pos, pos.begin()));
+212             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\hyperlink{namespaceutils_a1e1de2e5772bffdfe2c8d3309a61ddab}{utils::betweenPar}(query, query.length())) \{
+213                 \textcolor{comment}{// Recursive case: Call recursion of inner parentheses expression}
+214                 \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query.substr(1, query.length() - 2), pos);
+215             \}
+216         \}
+217     \}
+218 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+Information@{print\+Information}}
 \index{print\+Information@{print\+Information}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+Information()}{printInformation()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Information (
@@ -491,6 +817,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Prints the title and author of the \hyperlink{class_book}{Book} 
 \end{DoxyPostcond}
+
+
+Definition at line 220 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+220                             \{
+221     cout << \hyperlink{class_book_a0dcb8f78ffb56c34e28f5d672b422e2a}{authorName} << \textcolor{stringliteral}{" \(\backslash\)""} << \hyperlink{class_book_a111d7b30bddd6166bd09764f050cfee3}{bookTitle} << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+222 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+All\+Lines@{print\+All\+Lines}}
 \index{print\+All\+Lines@{print\+All\+Lines}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+All\+Lines()}{printAllLines()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+All\+Lines (
@@ -508,6 +844,18 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Prints all lines of the content of the implicit book with its number in increasingly ordered for the number 
 \end{DoxyPostcond}
+
+
+Definition at line 224 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+224                          \{
+225     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size(); ++i) \{
+226         cout << i << \textcolor{stringliteral}{" "} << \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1] << endl;
+227     \}
+228 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+Lines@{print\+Lines}}
 \index{print\+Lines@{print\+Lines}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+Lines(string query)}{printLines(string query)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Lines (
@@ -530,6 +878,23 @@ An implicit \hyperlink{class_book}{Book} and logical expression match
 \begin{DoxyPostcond}{Postcondition}
 Prints the lines of the implicit \hyperlink{class_book}{Book} that keep the logical expression 
 \end{DoxyPostcond}
+
+
+Definition at line 230 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+230                                   \{
+231     \textcolor{keywordflow}{if} (\hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{utils::malformedExpression}(query)) \textcolor{keywordflow}{return};
+232     set<int> lines;
+233     \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query, lines);
+234     set<int>::const\_iterator it = lines.begin();
+235     \textcolor{keywordflow}{while} (it != lines.end()) \{
+236         \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(*it, *it);
+237         it++;
+238     \}
+239 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}}
 \index{print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+Lines\+Consecutive\+Words(string query)}{printLinesConsecutiveWords(string query)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Lines\+Consecutive\+Words (
@@ -552,6 +917,23 @@ An implicit \hyperlink{class_book}{Book} and sequence of words
 \begin{DoxyPostcond}{Postcondition}
 Prints the number of the line and the line of the implicit book that contain all the words of the sequence 
 \end{DoxyPostcond}
+
+
+Definition at line 241 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+241                                                   \{
+242     \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(query);
+243     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size(); ++i) \{
+244         \textcolor{keywordtype}{string} line = \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1];
+245         \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{utils::removeDelimiter}(line);
+246         \textcolor{keywordflow}{if} (\hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{utils::containsConsecutive}(line, query)) \{
+247             \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(i, i);
+248         \}
+249     \}
+250 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+Select\+Lines@{print\+Select\+Lines}}
 \index{print\+Select\+Lines@{print\+Select\+Lines}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+Select\+Lines(int start, int end)}{printSelectLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Select\+Lines (
@@ -577,6 +959,22 @@ An implicit \hyperlink{class_book}{Book}, and the range
 \begin{DoxyPostcond}{Postcondition}
 Prints the lines of the range and its number of the implicit book 
 \end{DoxyPostcond}
+
+
+Definition at line 252 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+252                                               \{
+253     \textcolor{keywordflow}{if} ((end < start) or (start < 1) or (end > \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size())) \{
+254         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+255         \textcolor{keywordflow}{return};
+256     \}
+257     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = start; i <= end; ++i) \{
+258         cout << i << \textcolor{stringliteral}{" "} << \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1] << endl;
+259     \}
+260 \}
+\end{DoxyCode}
 \index{Book@{Book}!print\+Frequency\+Table@{print\+Frequency\+Table}}
 \index{print\+Frequency\+Table@{print\+Frequency\+Table}!Book@{Book}}
 \subsubsection[{\texorpdfstring{print\+Frequency\+Table()}{printFrequencyTable()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::print\+Frequency\+Table (
@@ -594,6 +992,23 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Prints all words of the content of the implicit \hyperlink{class_book}{Book} and its frequencies in decreasingly ordered by frequencies 
 \end{DoxyPostcond}
+
+
+Definition at line 262 of file Book.\+cc.
+
+
+\begin{DoxyCode}
+262                                \{
+263     \textcolor{keywordflow}{if} (\hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency}) \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generateFrequencyTable}();
+264     list < pair < string, int > > ::const\_iterator
+265     it = \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.begin();
+266     \textcolor{keywordflow}{while} (it != \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.end()) \{
+267         \textcolor{keywordflow}{if} (it->second > 0 and !it->first.empty())
+268             cout << it->first << \textcolor{stringliteral}{" "} << it->second << endl;
+269         it++;
+270     \}
+271 \}
+\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -735,6 +1150,7 @@ Definition at line 74 of file Book.\+hh.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_book_8hh}{Book.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_book_8hh}{Book.\+hh}\item 
+\hyperlink{_book_8cc}{Book.\+cc}\end{DoxyCompactItemize}

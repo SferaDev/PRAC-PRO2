@@ -34,7 +34,7 @@ void \hyperlink{class_author_ad48c2d5ae47d521bf5d4aa638bb86976}{delete\+Book} (s
 \begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_book}{Book} from the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 void \hyperlink{class_author_a41078931f76f02641f92521a3da5b286}{delete\+Quote} (string reference)
 \begin{DoxyCompactList}\small\item\em Removes a \hyperlink{class_quote}{Quote} from the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
-set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}{get\+Author\+Quotes} ()
+set$<$ string, \hyperlink{structutils_1_1string_natural_comparator}{utils\+::string\+Natural\+Comparator} $>$ \hyperlink{class_author_a4cd2ed9766a907b50b4779987d7b98dd}{get\+Author\+Quotes} ()
 \begin{DoxyCompactList}\small\item\em Delivers the quotes of the implicit \hyperlink{class_author}{Author}. \end{DoxyCompactList}\item 
 bool \hyperlink{class_author_ab0752a3f061a07c6460e52e4386ea5c3}{is\+Empty} ()
 \begin{DoxyCompactList}\small\item\em Checks if the implicit \hyperlink{class_author}{Author} has any book. \end{DoxyCompactList}\item 
@@ -84,6 +84,18 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit empty \hyperlink{class_author}{Author} 
 \end{DoxyPostcond}
+
+
+Definition at line 10 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+10                \{
+11     \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{totalBooks} = 0;
+12     \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{totalLines} = 0;
+13     \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{totalWords} = 0;
+14 \}
+\end{DoxyCode}
 \index{Author@{Author}!Author@{Author}}
 \index{Author@{Author}!Author@{Author}}
 \subsubsection[{\texorpdfstring{Author(string name)}{Author(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::\+Author (
@@ -106,6 +118,19 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit \hyperlink{class_author}{Author} with name 
 \end{DoxyPostcond}
+
+
+Definition at line 16 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+16                           \{
+17     \hyperlink{class_author_a146b76b89d701097c36fb5d29df27bc4}{authorName} = name;
+18     \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{totalBooks} = 0;
+19     \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{totalLines} = 0;
+20     \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{totalWords} = 0;
+21 \}
+\end{DoxyCode}
 \index{Author@{Author}!````~Author@{$\sim$\+Author}}
 \index{````~Author@{$\sim$\+Author}!Author@{Author}}
 \subsubsection[{\texorpdfstring{$\sim$\+Author()}{~Author()}}]{\setlength{\rightskip}{0pt plus 5cm}Author\+::$\sim$\+Author (
@@ -123,6 +148,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Deletes the implicit author 
 \end{DoxyPostcond}
+
+
+Definition at line 23 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+23                 \{
+24     \textcolor{comment}{// no-op}
+25 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -148,6 +183,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Updates total\+Books on the implicit \hyperlink{class_author}{Author} by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
+
+
+Definition at line 27 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+27                                          \{
+28     \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{totalBooks} += value;
+29 \}
+\end{DoxyCode}
 \index{Author@{Author}!increment\+Line\+Count@{increment\+Line\+Count}}
 \index{increment\+Line\+Count@{increment\+Line\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{increment\+Line\+Count(int value)}{incrementLineCount(int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::increment\+Line\+Count (
@@ -170,6 +215,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Updates total\+Lines on the implicit \hyperlink{class_author}{Author} by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
+
+
+Definition at line 31 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+31                                          \{
+32     \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{totalLines} += value;
+33 \}
+\end{DoxyCode}
 \index{Author@{Author}!increment\+Word\+Count@{increment\+Word\+Count}}
 \index{increment\+Word\+Count@{increment\+Word\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{increment\+Word\+Count(int value)}{incrementWordCount(int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::increment\+Word\+Count (
@@ -192,6 +247,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Updates total\+Words on the implicit \hyperlink{class_author}{Author} by increasing by \char`\"{}value\char`\"{} 
 \end{DoxyPostcond}
+
+
+Definition at line 35 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+35                                          \{
+36     \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{totalWords} += value;
+37 \}
+\end{DoxyCode}
 \index{Author@{Author}!get\+Book\+Count@{get\+Book\+Count}}
 \index{get\+Book\+Count@{get\+Book\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{get\+Book\+Count() const }{getBookCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Book\+Count (
@@ -212,6 +277,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns total\+Books of the implicit \hyperlink{class_author}{Author} 
 \end{DoxyReturn}
+
+
+Definition at line 39 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+39                                \{
+40     \textcolor{keywordflow}{return} \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{totalBooks};
+41 \}
+\end{DoxyCode}
 \index{Author@{Author}!get\+Line\+Count@{get\+Line\+Count}}
 \index{get\+Line\+Count@{get\+Line\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{get\+Line\+Count() const }{getLineCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Line\+Count (
@@ -232,6 +307,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns total\+Lines of the implicit \hyperlink{class_author}{Author} 
 \end{DoxyReturn}
+
+
+Definition at line 44 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+44                                \{
+45     \textcolor{keywordflow}{return} \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{totalLines};
+46 \}
+\end{DoxyCode}
 \index{Author@{Author}!get\+Word\+Count@{get\+Word\+Count}}
 \index{get\+Word\+Count@{get\+Word\+Count}!Author@{Author}}
 \subsubsection[{\texorpdfstring{get\+Word\+Count() const }{getWordCount() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Author\+::get\+Word\+Count (
@@ -249,6 +334,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Returns the total\+Words of the implicit \hyperlink{class_author}{Author} 
 \end{DoxyPostcond}
+
+
+Definition at line 49 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+49                                \{
+50     \textcolor{keywordflow}{return} \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{totalWords};
+51 \}
+\end{DoxyCode}
 \index{Author@{Author}!add\+Book@{add\+Book}}
 \index{add\+Book@{add\+Book}!Author@{Author}}
 \subsubsection[{\texorpdfstring{add\+Book(string title)}{addBook(string title)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::add\+Book (
@@ -271,6 +366,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Updates author\+Book with a new element (ref\+: title) 
 \end{DoxyPostcond}
+
+
+Definition at line 53 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+53                                  \{
+54     \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{authorBooks}.insert(title);
+55 \}
+\end{DoxyCode}
 \index{Author@{Author}!add\+Quote@{add\+Quote}}
 \index{add\+Quote@{add\+Quote}!Author@{Author}}
 \subsubsection[{\texorpdfstring{add\+Quote(string reference)}{addQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::add\+Quote (
@@ -293,6 +398,16 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Updates author\+Quotes with a new element (ref\+: reference) 
 \end{DoxyPostcond}
+
+
+Definition at line 57 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+57                                       \{
+58     \hyperlink{class_author_a117bc50449e2f8d61f30632dde7d73ff}{authorQuotes}.insert(reference);
+59 \}
+\end{DoxyCode}
 \index{Author@{Author}!delete\+Book@{delete\+Book}}
 \index{delete\+Book@{delete\+Book}!Author@{Author}}
 \subsubsection[{\texorpdfstring{delete\+Book(string title)}{deleteBook(string title)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::delete\+Book (
@@ -315,6 +430,16 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 Updates author\+Book without a book (ref\+: title) 
 \end{DoxyPostcond}
+
+
+Definition at line 61 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+61                                     \{
+62     \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{authorBooks}.erase(title);
+63 \}
+\end{DoxyCode}
 \index{Author@{Author}!delete\+Quote@{delete\+Quote}}
 \index{delete\+Quote@{delete\+Quote}!Author@{Author}}
 \subsubsection[{\texorpdfstring{delete\+Quote(string reference)}{deleteQuote(string reference)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::delete\+Quote (
@@ -337,13 +462,23 @@ An implicit \hyperlink{class_book}{Book}
 \begin{DoxyPostcond}{Postcondition}
 Updates author\+Quotes without a quote (ref\+: reference) 
 \end{DoxyPostcond}
+
+
+Definition at line 65 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+65                                          \{
+66     \hyperlink{class_author_a117bc50449e2f8d61f30632dde7d73ff}{authorQuotes}.erase(reference);
+67 \}
+\end{DoxyCode}
 \index{Author@{Author}!get\+Author\+Quotes@{get\+Author\+Quotes}}
 \index{get\+Author\+Quotes@{get\+Author\+Quotes}!Author@{Author}}
-\subsubsection[{\texorpdfstring{get\+Author\+Quotes()}{getAuthorQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$string, {\bf utils\+::string\+Natural\+Comparator}$>$ Author\+::get\+Author\+Quotes (
+\subsubsection[{\texorpdfstring{get\+Author\+Quotes()}{getAuthorQuotes()}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ string, {\bf utils\+::string\+Natural\+Comparator} $>$ Author\+::get\+Author\+Quotes (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}{}\label{class_author_ab6de48a5cae0c2f2b9a2b09d9106504b}
+)}\hypertarget{class_author_a4cd2ed9766a907b50b4779987d7b98dd}{}\label{class_author_a4cd2ed9766a907b50b4779987d7b98dd}
 
 
 Delivers the quotes of the implicit \hyperlink{class_author}{Author}. 
@@ -357,6 +492,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns the author\+Quotes set 
 \end{DoxyReturn}
+
+
+Definition at line 69 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+69                                                                    \{
+70     \textcolor{keywordflow}{return} \hyperlink{class_author_a117bc50449e2f8d61f30632dde7d73ff}{authorQuotes};
+71 \}
+\end{DoxyCode}
 \index{Author@{Author}!is\+Empty@{is\+Empty}}
 \index{is\+Empty@{is\+Empty}!Author@{Author}}
 \subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Author\+::is\+Empty (
@@ -377,6 +522,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if \hyperlink{class_author}{Author} is not empty 
 \end{DoxyReturn}
+
+
+Definition at line 73 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+73                      \{
+74     \textcolor{keywordflow}{return} \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{authorBooks}.empty();
+75 \}
+\end{DoxyCode}
 \index{Author@{Author}!print\+Information@{print\+Information}}
 \index{print\+Information@{print\+Information}!Author@{Author}}
 \subsubsection[{\texorpdfstring{print\+Information()}{printInformation()}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Information (
@@ -394,6 +549,18 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 77 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+77                               \{
+78     cout << \hyperlink{class_author_a146b76b89d701097c36fb5d29df27bc4}{authorName} << \textcolor{stringliteral}{" "} << \hyperlink{class_author_ac870b8c861aa0f69cd2c4e7b8d414902}{totalBooks} << \textcolor{stringliteral}{" "} << 
+      \hyperlink{class_author_a8d818414bbd909287641b388601bf61a}{totalLines} << \textcolor{stringliteral}{" "} << \hyperlink{class_author_a478c72fff965eb1ee8fcaddfe173715b}{totalWords};
+79     cout << endl;
+80 \}
+\end{DoxyCode}
 \index{Author@{Author}!print\+Books@{print\+Books}}
 \index{print\+Books@{print\+Books}!Author@{Author}}
 \subsubsection[{\texorpdfstring{print\+Books(bool show\+Author)}{printBooks(bool showAuthor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Author\+::print\+Books (
@@ -411,6 +578,20 @@ An implicit \hyperlink{class_author}{Author}
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 82 of file Author.\+cc.
+
+
+\begin{DoxyCode}
+82                                        \{
+83     set<string>::const\_iterator it = \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{authorBooks}.begin();
+84     \textcolor{keywordflow}{while} (it != \hyperlink{class_author_ad9ffe450cdafed2242936f6fcafa22b4}{authorBooks}.end()) \{
+85         \textcolor{keywordflow}{if} (showAuthor) cout << \hyperlink{class_author_a146b76b89d701097c36fb5d29df27bc4}{authorName} << \textcolor{stringliteral}{" "};
+86         cout << \textcolor{stringliteral}{"\(\backslash\)""} << *it << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+87         ++it;
+88     \}
+89 \}\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -492,6 +673,7 @@ Definition at line 47 of file Author.\+hh.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_author_8hh}{Author.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_author_8hh}{Author.\+hh}\item 
+\hyperlink{_author_8cc}{Author.\+cc}\end{DoxyCompactItemize}

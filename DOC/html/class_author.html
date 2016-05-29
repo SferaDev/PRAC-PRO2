@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41078931f76f02641f92521a3da5b286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a41078931f76f02641f92521a3da5b286">deleteQuote</a> (string reference)</td></tr>
 <tr class="memdesc:a41078931f76f02641f92521a3da5b286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="class_quote.html" title="Data model for Quotes (cites) from Book. ">Quote</a> from the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a41078931f76f02641f92521a3da5b286">More...</a><br /></td></tr>
 <tr class="separator:a41078931f76f02641f92521a3da5b286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6de48a5cae0c2f2b9a2b09d9106504b"><td class="memItemLeft" align="right" valign="top">set&lt; string, <a class="el" href="structutils_1_1string_natural_comparator.html">utils::stringNaturalComparator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#ab6de48a5cae0c2f2b9a2b09d9106504b">getAuthorQuotes</a> ()</td></tr>
-<tr class="memdesc:ab6de48a5cae0c2f2b9a2b09d9106504b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers the quotes of the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#ab6de48a5cae0c2f2b9a2b09d9106504b">More...</a><br /></td></tr>
-<tr class="separator:ab6de48a5cae0c2f2b9a2b09d9106504b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd2ed9766a907b50b4779987d7b98dd"><td class="memItemLeft" align="right" valign="top">set&lt; string, <a class="el" href="structutils_1_1string_natural_comparator.html">utils::stringNaturalComparator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#a4cd2ed9766a907b50b4779987d7b98dd">getAuthorQuotes</a> ()</td></tr>
+<tr class="memdesc:a4cd2ed9766a907b50b4779987d7b98dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers the quotes of the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a>.  <a href="#a4cd2ed9766a907b50b4779987d7b98dd">More...</a><br /></td></tr>
+<tr class="separator:a4cd2ed9766a907b50b4779987d7b98dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0752a3f061a07c6460e52e4386ea5c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_author.html#ab0752a3f061a07c6460e52e4386ea5c3">isEmpty</a> ()</td></tr>
 <tr class="memdesc:ab0752a3f061a07c6460e52e4386ea5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> has any book.  <a href="#ab0752a3f061a07c6460e52e4386ea5c3">More...</a><br /></td></tr>
 <tr class="separator:ab0752a3f061a07c6460e52e4386ea5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +191,11 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Returns an implicit empty <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00010">10</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;               {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">totalBooks</a> = 0;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_author.html#a8d818414bbd909287641b388601bf61a">totalLines</a> = 0;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">totalWords</a> = 0;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="ttc" id="class_author_html_ac870b8c861aa0f69cd2c4e7b8d414902"><div class="ttname"><a href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">Author::totalBooks</a></div><div class="ttdeci">int totalBooks</div><div class="ttdoc">Number of total books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00031">Author.hh:31</a></div></div>
+<div class="ttc" id="class_author_html_a478c72fff965eb1ee8fcaddfe173715b"><div class="ttname"><a href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">Author::totalWords</a></div><div class="ttdeci">int totalWords</div><div class="ttdoc">Number of total words of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00037">Author.hh:37</a></div></div>
+<div class="ttc" id="class_author_html_a8d818414bbd909287641b388601bf61a"><div class="ttname"><a href="class_author.html#a8d818414bbd909287641b388601bf61a">Author::totalLines</a></div><div class="ttdeci">int totalLines</div><div class="ttdoc">Number of total lines of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00034">Author.hh:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4a8afd3af0d6f7492bd04dcd44dc9f95"></a>
@@ -217,6 +222,12 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Returns an implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> with name </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00016">16</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                          {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">authorName</a> = name;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">totalBooks</a> = 0;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_author.html#a8d818414bbd909287641b388601bf61a">totalLines</a> = 0;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">totalWords</a> = 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="ttc" id="class_author_html_ac870b8c861aa0f69cd2c4e7b8d414902"><div class="ttname"><a href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">Author::totalBooks</a></div><div class="ttdeci">int totalBooks</div><div class="ttdoc">Number of total books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00031">Author.hh:31</a></div></div>
+<div class="ttc" id="class_author_html_a478c72fff965eb1ee8fcaddfe173715b"><div class="ttname"><a href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">Author::totalWords</a></div><div class="ttdeci">int totalWords</div><div class="ttdoc">Number of total words of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00037">Author.hh:37</a></div></div>
+<div class="ttc" id="class_author_html_a146b76b89d701097c36fb5d29df27bc4"><div class="ttname"><a href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">Author::authorName</a></div><div class="ttdeci">string authorName</div><div class="ttdoc">Name of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00028">Author.hh:28</a></div></div>
+<div class="ttc" id="class_author_html_a8d818414bbd909287641b388601bf61a"><div class="ttname"><a href="class_author.html#a8d818414bbd909287641b388601bf61a">Author::totalLines</a></div><div class="ttdeci">int totalLines</div><div class="ttdoc">Number of total lines of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00034">Author.hh:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae1d4db056b321487cf7c07a2045d4a2d"></a>
@@ -236,6 +247,8 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Deletes the implicit author </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00023">23</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// no-op</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -263,6 +276,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates totalBooks on the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> by increasing by "value" </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00027">27</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                         {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">totalBooks</a> += value;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="class_author_html_ac870b8c861aa0f69cd2c4e7b8d414902"><div class="ttname"><a href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">Author::totalBooks</a></div><div class="ttdeci">int totalBooks</div><div class="ttdoc">Number of total books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00031">Author.hh:31</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a73814ef0d8d840880415c4020a4d5bf9"></a>
@@ -289,6 +305,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates totalLines on the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> by increasing by "value" </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00031">31</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                         {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_author.html#a8d818414bbd909287641b388601bf61a">totalLines</a> += value;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="ttc" id="class_author_html_a8d818414bbd909287641b388601bf61a"><div class="ttname"><a href="class_author.html#a8d818414bbd909287641b388601bf61a">Author::totalLines</a></div><div class="ttdeci">int totalLines</div><div class="ttdoc">Number of total lines of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00034">Author.hh:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af12d32bb751a9ac3e1508631e4d8fb8e"></a>
@@ -315,6 +334,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates totalWords on the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> by increasing by "value" </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00035">35</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                         {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">totalWords</a> += value;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="class_author_html_a478c72fff965eb1ee8fcaddfe173715b"><div class="ttname"><a href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">Author::totalWords</a></div><div class="ttdeci">int totalWords</div><div class="ttdoc">Number of total words of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00037">Author.hh:37</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a78febe94924896f8d0ce218d5cd41786"></a>
@@ -335,6 +357,9 @@ Private Attributes</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns totalBooks of the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00039">39</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                               {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">totalBooks</a>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="class_author_html_ac870b8c861aa0f69cd2c4e7b8d414902"><div class="ttname"><a href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">Author::totalBooks</a></div><div class="ttdeci">int totalBooks</div><div class="ttdoc">Number of total books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00031">Author.hh:31</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af24acf9a0c70fc700edccfb956c2bace"></a>
@@ -355,6 +380,9 @@ Private Attributes</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns totalLines of the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00044">44</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                               {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_author.html#a8d818414bbd909287641b388601bf61a">totalLines</a>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div><div class="ttc" id="class_author_html_a8d818414bbd909287641b388601bf61a"><div class="ttname"><a href="class_author.html#a8d818414bbd909287641b388601bf61a">Author::totalLines</a></div><div class="ttdeci">int totalLines</div><div class="ttdoc">Number of total lines of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00034">Author.hh:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4899e9145b70a9e6fcad9a55b3b5285d"></a>
@@ -374,6 +402,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Returns the totalWords of the implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00049">49</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                               {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">totalWords</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="class_author_html_a478c72fff965eb1ee8fcaddfe173715b"><div class="ttname"><a href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">Author::totalWords</a></div><div class="ttdeci">int totalWords</div><div class="ttdoc">Number of total words of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00037">Author.hh:37</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5836c0e00e740d4e9e9049e94f032cc3"></a>
@@ -400,6 +431,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates authorBook with a new element (ref: title) </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00053">53</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                 {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">authorBooks</a>.insert(title);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="class_author_html_ad9ffe450cdafed2242936f6fcafa22b4"><div class="ttname"><a href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">Author::authorBooks</a></div><div class="ttdeci">set&lt; string &gt; authorBooks</div><div class="ttdoc">Ordered collection of books. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00042">Author.hh:42</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8605dbbab320ca251f3c64e782cf40b3"></a>
@@ -426,6 +460,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates authorQuotes with a new element (ref: reference) </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00057">57</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                      {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">authorQuotes</a>.insert(reference);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="ttc" id="class_author_html_a117bc50449e2f8d61f30632dde7d73ff"><div class="ttname"><a href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">Author::authorQuotes</a></div><div class="ttdeci">set&lt; string, utils::stringNaturalComparator &gt; authorQuotes</div><div class="ttdoc">Ordered collection of quotes. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00047">Author.hh:47</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad48c2d5ae47d521bf5d4aa638bb86976"></a>
@@ -452,6 +489,9 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates authorBook without a book (ref: title) </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00061">61</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                    {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">authorBooks</a>.erase(title);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="class_author_html_ad9ffe450cdafed2242936f6fcafa22b4"><div class="ttname"><a href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">Author::authorBooks</a></div><div class="ttdeci">set&lt; string &gt; authorBooks</div><div class="ttdoc">Ordered collection of books. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00042">Author.hh:42</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a41078931f76f02641f92521a3da5b286"></a>
@@ -478,14 +518,17 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_book.html" title="Data model for Books (textos) from Library. ">Book</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Updates authorQuotes without a quote (ref: reference) </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00065">65</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                         {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">authorQuotes</a>.erase(reference);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div><div class="ttc" id="class_author_html_a117bc50449e2f8d61f30632dde7d73ff"><div class="ttname"><a href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">Author::authorQuotes</a></div><div class="ttdeci">set&lt; string, utils::stringNaturalComparator &gt; authorQuotes</div><div class="ttdoc">Ordered collection of quotes. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00047">Author.hh:47</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="ab6de48a5cae0c2f2b9a2b09d9106504b"></a>
+<a class="anchor" id="a4cd2ed9766a907b50b4779987d7b98dd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">set&lt;string, <a class="el" href="structutils_1_1string_natural_comparator.html">utils::stringNaturalComparator</a>&gt; Author::getAuthorQuotes </td>
+          <td class="memname">set&lt; string, <a class="el" href="structutils_1_1string_natural_comparator.html">utils::stringNaturalComparator</a> &gt; Author::getAuthorQuotes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -498,6 +541,9 @@ Private Attributes</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the authorQuotes set </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00069">69</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                                   {</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">authorQuotes</a>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div><div class="ttc" id="class_author_html_a117bc50449e2f8d61f30632dde7d73ff"><div class="ttname"><a href="class_author.html#a117bc50449e2f8d61f30632dde7d73ff">Author::authorQuotes</a></div><div class="ttdeci">set&lt; string, utils::stringNaturalComparator &gt; authorQuotes</div><div class="ttdoc">Ordered collection of quotes. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00047">Author.hh:47</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab0752a3f061a07c6460e52e4386ea5c3"></a>
@@ -518,6 +564,9 @@ Private Attributes</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> is not empty </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00073">73</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                     {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">authorBooks</a>.empty();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_author_html_ad9ffe450cdafed2242936f6fcafa22b4"><div class="ttname"><a href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">Author::authorBooks</a></div><div class="ttdeci">set&lt; string &gt; authorBooks</div><div class="ttdoc">Ordered collection of books. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00042">Author.hh:42</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9dff52e2a8bd67ff4509eb00f9235155"></a>
@@ -537,6 +586,12 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00077">77</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                              {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    cout &lt;&lt; <a class="code" href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">authorName</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">totalBooks</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="class_author.html#a8d818414bbd909287641b388601bf61a">totalLines</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">totalWords</a>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    cout &lt;&lt; endl;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div><div class="ttc" id="class_author_html_ac870b8c861aa0f69cd2c4e7b8d414902"><div class="ttname"><a href="class_author.html#ac870b8c861aa0f69cd2c4e7b8d414902">Author::totalBooks</a></div><div class="ttdeci">int totalBooks</div><div class="ttdoc">Number of total books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00031">Author.hh:31</a></div></div>
+<div class="ttc" id="class_author_html_a478c72fff965eb1ee8fcaddfe173715b"><div class="ttname"><a href="class_author.html#a478c72fff965eb1ee8fcaddfe173715b">Author::totalWords</a></div><div class="ttdeci">int totalWords</div><div class="ttdoc">Number of total words of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00037">Author.hh:37</a></div></div>
+<div class="ttc" id="class_author_html_a146b76b89d701097c36fb5d29df27bc4"><div class="ttname"><a href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">Author::authorName</a></div><div class="ttdeci">string authorName</div><div class="ttdoc">Name of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00028">Author.hh:28</a></div></div>
+<div class="ttc" id="class_author_html_a8d818414bbd909287641b388601bf61a"><div class="ttname"><a href="class_author.html#a8d818414bbd909287641b388601bf61a">Author::totalLines</a></div><div class="ttdeci">int totalLines</div><div class="ttdoc">Number of total lines of all of books of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00034">Author.hh:34</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a01c49b9a75e0651c9ebbe4e841d18ae9"></a>
@@ -557,6 +612,10 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>An implicit <a class="el" href="class_author.html" title="Data model for Authors (autors) from Library. ">Author</a> </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 
+<p>Definition at line <a class="el" href="_author_8cc_source.html#l00082">82</a> of file <a class="el" href="_author_8cc_source.html">Author.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                       {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    set&lt;string&gt;::const_iterator it = <a class="code" href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">authorBooks</a>.begin();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">while</span> (it != <a class="code" href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">authorBooks</a>.end()) {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> (showAuthor) cout &lt;&lt; <a class="code" href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">authorName</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; *it &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        ++it;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}<div class="ttc" id="class_author_html_ad9ffe450cdafed2242936f6fcafa22b4"><div class="ttname"><a href="class_author.html#ad9ffe450cdafed2242936f6fcafa22b4">Author::authorBooks</a></div><div class="ttdeci">set&lt; string &gt; authorBooks</div><div class="ttdoc">Ordered collection of books. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00042">Author.hh:42</a></div></div>
+<div class="ttc" id="class_author_html_a146b76b89d701097c36fb5d29df27bc4"><div class="ttname"><a href="class_author.html#a146b76b89d701097c36fb5d29df27bc4">Author::authorName</a></div><div class="ttdeci">string authorName</div><div class="ttdoc">Name of the author. </div><div class="ttdef"><b>Definition:</b> <a href="_author_8hh_source.html#l00028">Author.hh:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -716,8 +775,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_author_8hh_source.html">Author.hh</a></li>
+<li><a class="el" href="_author_8cc_source.html">Author.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

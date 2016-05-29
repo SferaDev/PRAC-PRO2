@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readactions',['readActions',['../program_8cc.html#ac08d8a3d49c58bde936b980d1f69ce52',1,'program.cc']]],
   ['readbook',['readBook',['../class_library.html#a2e296d2dc8e0292f0ea6d8d3511f7ec5',1,'Library']]],
   ['readbookcontent',['readBookContent',['../class_book.html#a3e62d70f19bf6fa8ebef5556882b3ed7',1,'Book']]],
   ['removedelimiter',['removeDelimiter',['../namespaceutils.html#adf961974462ef6e8d7ccc32311397d75',1,'utils']]],

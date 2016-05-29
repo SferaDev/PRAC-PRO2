@@ -1,5 +1,9 @@
+/**
+  @file Utils.cc
+  @brief Utility functions of the utils namespace
+*/
+
 #include "Utils.hh"
-#include <iostream>
 
 namespace utils {
     bool contains(string a, string b) {

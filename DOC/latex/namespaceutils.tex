@@ -71,6 +71,30 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the single word is on the sentence 
 \end{DoxyReturn}
+
+
+Definition at line 9 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+9                                       \{
+10         \textcolor{keywordflow}{if} (a.empty() or b.empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+11         istringstream issB(b);
+12         \textcolor{keywordtype}{string} wordB;
+13         \textcolor{keywordflow}{while} (issB >> wordB) \{
+14             istringstream issA(a);
+15             \textcolor{keywordtype}{string} wordA;
+16             \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};
+17             \textcolor{keywordflow}{while} (issA >> wordA) \{
+18                 \textcolor{keywordflow}{if} (wordA.find\_first\_of(\textcolor{stringliteral}{".!?,;:"}) == wordA.length() - 1)
+19                     wordA.erase(wordA.length() - 1, 1);
+20                 \textcolor{keywordflow}{if} (wordA == wordB) found = \textcolor{keyword}{true};
+21             \}
+22             \textcolor{keywordflow}{if} (!found) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+23         \}
+24         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+25     \}
+\end{DoxyCode}
 \index{utils@{utils}!contains\+Consecutive@{contains\+Consecutive}}
 \index{contains\+Consecutive@{contains\+Consecutive}!utils@{utils}}
 \subsubsection[{\texorpdfstring{contains\+Consecutive(string a, string b)}{containsConsecutive(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::contains\+Consecutive (
@@ -99,6 +123,25 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the sequence of words of \char`\"{}b\char`\"{} is found consecutively on \char`\"{}a\char`\"{} 
 \end{DoxyReturn}
+
+
+Definition at line 27 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+27                                                  \{
+28         \textcolor{keywordflow}{if} (a.empty() or b.empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+29         \textcolor{keywordtype}{int} pos = a.find(b);
+30         \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};
+31         \textcolor{keywordflow}{while} (pos != string::npos) \{
+32             \textcolor{keywordflow}{if} (pos > 0 and a[pos - 1] != \textcolor{charliteral}{' '}) found = \textcolor{keyword}{false};
+33             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pos + b.length() < a.size() and a[pos + b.length()] != \textcolor{charliteral}{' '}) found = \textcolor{keyword}{false};
+34             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+35             pos = a.find(b, pos + 1);
+36         \}
+37         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+38     \}
+\end{DoxyCode}
 \index{utils@{utils}!string\+Uppercase@{string\+Uppercase}}
 \index{string\+Uppercase@{string\+Uppercase}!utils@{utils}}
 \subsubsection[{\texorpdfstring{string\+Uppercase(string \&input)}{stringUppercase(string &input)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::string\+Uppercase (
@@ -121,6 +164,18 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The forwarded param string has all chars uppercase 
 \end{DoxyPostcond}
+
+
+Definition at line 40 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+40                                         \{
+41         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < input.length(); ++i) \{
+42             \textcolor{keywordflow}{if} (!isupper(input[i])) input[i] = toupper(input[i]);
+43         \}
+44     \}
+\end{DoxyCode}
 \index{utils@{utils}!starts\+With@{starts\+With}}
 \index{starts\+With@{starts\+With}!utils@{utils}}
 \subsubsection[{\texorpdfstring{starts\+With(string a, string b)}{startsWith(string a, string b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::starts\+With (
@@ -149,6 +204,17 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the first b.\+size() chars are the same on \char`\"{}a\char`\"{} 
 \end{DoxyReturn}
+
+
+Definition at line 46 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+46                                         \{
+47         \textcolor{keywordflow}{if} (b.size() > a.size()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+48         \textcolor{keywordflow}{return} std::equal(a.begin(), a.begin() + b.size(), b.begin());
+49     \}
+\end{DoxyCode}
 \index{utils@{utils}!between\+Par@{between\+Par}}
 \index{between\+Par@{between\+Par}!utils@{utils}}
 \subsubsection[{\texorpdfstring{between\+Par(string query, int position)}{betweenPar(string query, int position)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::between\+Par (
@@ -177,6 +243,21 @@ True
 \begin{DoxyReturn}{Returns}
 Returns true if the string is between a parentheses on the specified position 
 \end{DoxyReturn}
+
+
+Definition at line 51 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+51                                                 \{
+52         \textcolor{keywordtype}{int} state = 0;
+53         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < position; ++i) \{
+54             \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'('}) state++;
+55             \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{')'}) state--;
+56         \}
+57         \textcolor{keywordflow}{return} state != 0;
+58     \}
+\end{DoxyCode}
 \index{utils@{utils}!trim\+String@{trim\+String}}
 \index{trim\+String@{trim\+String}!utils@{utils}}
 \subsubsection[{\texorpdfstring{trim\+String(string \&query)}{trimString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::trim\+String (
@@ -199,6 +280,23 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The referenced string doesn\textquotesingle{}t have any spaces at start and/or end 
 \end{DoxyPostcond}
+
+
+Definition at line 60 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+60                                    \{
+61         \textcolor{keywordtype}{int} pos = query.find(\textcolor{stringliteral}{"  "});
+62         \textcolor{keywordflow}{while} (pos != string::npos) \{
+63             query.erase(pos, 1);
+64             pos = query.find(\textcolor{stringliteral}{"  "});
+65         \}
+66         \textcolor{keywordflow}{while} (query[0] == \textcolor{charliteral}{' '}) query.erase(0, 1);
+67         \textcolor{keywordflow}{while} (query.length() > 0 and query[query.length() - 1] == \textcolor{charliteral}{' '})
+68             query.erase(query.length() - 1, 1);
+69     \}
+\end{DoxyCode}
 \index{utils@{utils}!trim\+String\+Complex@{trim\+String\+Complex}}
 \index{trim\+String\+Complex@{trim\+String\+Complex}!utils@{utils}}
 \subsubsection[{\texorpdfstring{trim\+String\+Complex(string \&query)}{trimStringComplex(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::trim\+String\+Complex (
@@ -221,6 +319,19 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The referenced string doesn\textquotesingle{}t have any spaces or quotation marks at start and/or end 
 \end{DoxyPostcond}
+
+
+Definition at line 71 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+71                                           \{
+72         \textcolor{keywordflow}{while} (query[0] == \textcolor{charliteral}{' '} or query[0] == \textcolor{charliteral}{'\(\backslash\)"'}) query.erase(0, 1);
+73         \textcolor{keywordflow}{while} (query.length() > 0 and (query[query.length() - 1] == \textcolor{charliteral}{' '} or query[query.length() - 1] == \textcolor{charliteral}{
+      '\(\backslash\)"'}))
+74             query.erase(query.length() - 1, 1);
+75     \}
+\end{DoxyCode}
 \index{utils@{utils}!format\+String@{format\+String}}
 \index{format\+String@{format\+String}!utils@{utils}}
 \subsubsection[{\texorpdfstring{format\+String(string \&query)}{formatString(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::format\+String (
@@ -243,6 +354,21 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The referenced string will have the proper format 
 \end{DoxyPostcond}
+
+
+Definition at line 77 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+77                                      \{
+78         \textcolor{keywordtype}{int} pos = query.find\_first\_of(\textcolor{stringliteral}{",;:.!?"});
+79         \textcolor{keywordflow}{while} (pos != string::npos) \{
+80             \textcolor{keywordflow}{if} (query[pos - 1] == \textcolor{charliteral}{' '} and (pos + 1 == query.length() or query[pos + 1] == \textcolor{charliteral}{' '}))
+81                 query.erase(pos - 1, 1);
+82             pos = query.find\_first\_of(\textcolor{stringliteral}{",;:.!?"}, pos + 1);
+83         \}
+84     \}
+\end{DoxyCode}
 \index{utils@{utils}!remove\+Delimiter@{remove\+Delimiter}}
 \index{remove\+Delimiter@{remove\+Delimiter}!utils@{utils}}
 \subsubsection[{\texorpdfstring{remove\+Delimiter(string \&line)}{removeDelimiter(string &line)}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::remove\+Delimiter (
@@ -265,6 +391,22 @@ True
 \begin{DoxyPostcond}{Postcondition}
 The referenced string doesn\textquotesingle{}t have the end delimiter 
 \end{DoxyPostcond}
+
+
+Definition at line 86 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+86                                        \{
+87         \textcolor{keywordtype}{int} pos = line.find\_first\_of(\textcolor{stringliteral}{",;:.!?"});
+88         \textcolor{keywordflow}{while} (pos != string::npos) \{
+89             \textcolor{keywordflow}{if} (pos + 1 == line.length() or line[pos + 1] == \textcolor{charliteral}{' '})
+90                 line[pos] = \textcolor{charliteral}{' '};
+91             pos = line.find\_first\_of(\textcolor{stringliteral}{",;:.!?"}, pos + 1);
+92         \}
+93         \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trimString}(line);
+94     \}
+\end{DoxyCode}
 \index{utils@{utils}!malformed\+Expression@{malformed\+Expression}}
 \index{malformed\+Expression@{malformed\+Expression}!utils@{utils}}
 \subsubsection[{\texorpdfstring{malformed\+Expression(string \&query)}{malformedExpression(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::malformed\+Expression (
@@ -290,6 +432,39 @@ True
 \begin{DoxyReturn}{Returns}
 If the postion and number of \char`\"{}()\{\}\char`\"{} is correct 
 \end{DoxyReturn}
+
+
+Definition at line 96 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+96                                             \{
+97         \textcolor{keywordtype}{int} statePar, stateWords;
+98         statePar = stateWords = 0;
+99         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < query.length(); ++i) \{
+100             \textcolor{keywordflow}{if} (stateWords < 0) \{
+101                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+102             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'\{'}) \{
+103                 \textcolor{keywordflow}{if} (stateWords > 0) \{
+104                     query[i] = \textcolor{charliteral}{' '};
+105                     stateWords--;
+106                 \}
+107                 stateWords++;
+108             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'\}'}) \{
+109                 stateWords--;
+110             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'('}) \{
+111                 statePar++;
+112             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{')'}) \{
+113                 statePar--;
+114                 \textcolor{keywordflow}{if} (statePar < 0) \{
+115                     query[i] = \textcolor{charliteral}{' '};
+116                     statePar++;
+117                 \}
+118             \}
+119         \}
+120         \textcolor{keywordflow}{return} stateWords < 0 or statePar > 0;
+121     \}
+\end{DoxyCode}
 \index{utils@{utils}!print\+Error@{print\+Error}}
 \index{print\+Error@{print\+Error}!utils@{utils}}
 \subsubsection[{\texorpdfstring{print\+Error()}{printError()}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::print\+Error (
@@ -307,3 +482,13 @@ True
 \begin{DoxyPostcond}{Postcondition}
 True 
 \end{DoxyPostcond}
+
+
+Definition at line 123 of file Utils.\+cc.
+
+
+\begin{DoxyCode}
+123                       \{
+124         cout << \textcolor{stringliteral}{"error"} << endl;
+125     \}
+\end{DoxyCode}

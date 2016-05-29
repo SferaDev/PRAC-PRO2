@@ -74,6 +74,16 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit empty quote 
 \end{DoxyPostcond}
+
+
+Definition at line 11 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+11              \{
+12     \textcolor{comment}{// no-op}
+13 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!Quote@{Quote}}
 \index{Quote@{Quote}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{Quote(string reference, string author, string book)}{Quote(string reference, string author, string book)}}]{\setlength{\rightskip}{0pt plus 5cm}Quote\+::\+Quote (
@@ -102,6 +112,18 @@ True
 \begin{DoxyPostcond}{Postcondition}
 Returns an implicit quote with the reference, author and book 
 \end{DoxyPostcond}
+
+
+Definition at line 15 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+15                                                          \{
+16     \hyperlink{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}{quoteReference} = reference;
+17     \hyperlink{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}{quoteAuthor} = author;
+18     \hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quoteBook} = book;
+19 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!````~Quote@{$\sim$\+Quote}}
 \index{````~Quote@{$\sim$\+Quote}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{$\sim$\+Quote()}{~Quote()}}]{\setlength{\rightskip}{0pt plus 5cm}Quote\+::$\sim$\+Quote (
@@ -119,6 +141,16 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Deletes the implicit \hyperlink{class_quote}{Quote} 
 \end{DoxyPostcond}
+
+
+Definition at line 21 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+21               \{
+22     \textcolor{comment}{// no-op}
+23 \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -142,6 +174,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns quote\+Reference 
 \end{DoxyReturn}
+
+
+Definition at line 25 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+25                                  \{
+26     \textcolor{keywordflow}{return} \hyperlink{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}{quoteReference};
+27 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Author() const }{getAuthor() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Author (
@@ -162,6 +204,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns book\+Author 
 \end{DoxyReturn}
+
+
+Definition at line 29 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+29                               \{
+30     \textcolor{keywordflow}{return} \hyperlink{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}{quoteAuthor};
+31 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!get\+Book\+Title@{get\+Book\+Title}}
 \index{get\+Book\+Title@{get\+Book\+Title}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Book\+Title() const }{getBookTitle() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Quote\+::get\+Book\+Title (
@@ -182,6 +234,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns book\+Title 
 \end{DoxyReturn}
+
+
+Definition at line 33 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+33                                  \{
+34     \textcolor{keywordflow}{return} \hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quoteBook};
+35 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!get\+Start\+Line@{get\+Start\+Line}}
 \index{get\+Start\+Line@{get\+Start\+Line}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+Start\+Line() const }{getStartLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+Start\+Line (
@@ -202,6 +264,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns quote\+Start 
 \end{DoxyReturn}
+
+
+Definition at line 37 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+37                               \{
+38     \textcolor{keywordflow}{return} \hyperlink{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{quoteStart};
+39 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!get\+End\+Line@{get\+End\+Line}}
 \index{get\+End\+Line@{get\+End\+Line}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{get\+End\+Line() const }{getEndLine() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Quote\+::get\+End\+Line (
@@ -222,6 +294,16 @@ True
 \begin{DoxyReturn}{Returns}
 Returns quote\+End 
 \end{DoxyReturn}
+
+
+Definition at line 41 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+41                             \{
+42     \textcolor{keywordflow}{return} \hyperlink{class_quote_aa5953a477b96183c8dc2fc8a42001c29}{quoteEnd};
+43 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!set\+Quote\+Lines@{set\+Quote\+Lines}}
 \index{set\+Quote\+Lines@{set\+Quote\+Lines}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{set\+Quote\+Lines(int start, int end)}{setQuoteLines(int start, int end)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::set\+Quote\+Lines (
@@ -247,6 +329,17 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Updates the quote\+Start and quote\+End 
 \end{DoxyPostcond}
+
+
+Definition at line 45 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+45                                             \{
+46     \hyperlink{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{quoteStart} = start;
+47     \hyperlink{class_quote_aa5953a477b96183c8dc2fc8a42001c29}{quoteEnd} = end;
+48 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!set\+Content@{set\+Content}}
 \index{set\+Content@{set\+Content}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{set\+Content(vector$<$ string $>$ content)}{setContent(vector< string > content)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::set\+Content (
@@ -269,6 +362,17 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Updates the quote\+Content 
 \end{DoxyPostcond}
+
+
+Definition at line 50 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+50                                               \{
+51     \textcolor{comment}{// FIXME: Copy of a vector (slow?)}
+52     \hyperlink{class_quote_a0ffcb584920e14d7dd5c45820997f989}{quoteContent} = content;
+53 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!print\+Information@{print\+Information}}
 \index{print\+Information@{print\+Information}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{print\+Information(bool reference, bool startend)}{printInformation(bool reference, bool startend)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::print\+Information (
@@ -294,6 +398,22 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Prints quote\+Content 
 \end{DoxyPostcond}
+
+
+Definition at line 55 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+55                                                           \{
+56     \textcolor{keywordflow}{if} (!\hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quoteBook}.empty()) \{
+57         \textcolor{keywordflow}{if} (reference) cout << \hyperlink{class_quote_a9c7b2deff2ee9a0a216c360fe304202a}{quoteReference} << endl;
+58         \textcolor{keywordflow}{if} (startend) cout << \hyperlink{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{quoteStart} << \textcolor{stringliteral}{"-"} << \hyperlink{class_quote_aa5953a477b96183c8dc2fc8a42001c29}{quoteEnd} << endl;
+59         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_quote_a0ffcb584920e14d7dd5c45820997f989}{quoteContent}.size(); ++i) \{
+60             cout << i + \hyperlink{class_quote_ac426122ac24638740b2a5c5e8342e8c9}{quoteStart} << \textcolor{stringliteral}{" "} << \hyperlink{class_quote_a0ffcb584920e14d7dd5c45820997f989}{quoteContent}[i] << endl;
+61         \}
+62     \}
+63 \}
+\end{DoxyCode}
 \index{Quote@{Quote}!print\+Information\+Complex@{print\+Information\+Complex}}
 \index{print\+Information\+Complex@{print\+Information\+Complex}!Quote@{Quote}}
 \subsubsection[{\texorpdfstring{print\+Information\+Complex(bool show\+Author\+Name)}{printInformationComplex(bool showAuthorName)}}]{\setlength{\rightskip}{0pt plus 5cm}void Quote\+::print\+Information\+Complex (
@@ -316,6 +436,19 @@ An implicit \hyperlink{class_quote}{Quote}
 \begin{DoxyPostcond}{Postcondition}
 Prints all the quote information 
 \end{DoxyPostcond}
+
+
+Definition at line 65 of file Quote.\+cc.
+
+
+\begin{DoxyCode}
+65                                                        \{
+66     \textcolor{keywordflow}{if} (!\hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quoteBook}.empty()) \{
+67         \hyperlink{class_quote_a0854af3d11ff805991e87ef6e9bebf69}{printInformation}(\textcolor{keyword}{true}, \textcolor{keyword}{false});
+68         \textcolor{keywordflow}{if} (showAuthorName) cout << \hyperlink{class_quote_a930113c4ee0ae5e5506bbc1ea3e79b49}{quoteAuthor} << \textcolor{stringliteral}{" "};
+69         cout << \textcolor{stringliteral}{"\(\backslash\)""} << \hyperlink{class_quote_a7e6968e086bdd45b40627a37ecbbf6fc}{quoteBook} << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+70     \}
+71 \}\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -383,6 +516,7 @@ Definition at line 41 of file Quote.\+hh.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_quote_8hh}{Quote.\+hh}\end{DoxyCompactItemize}
+\hyperlink{_quote_8hh}{Quote.\+hh}\item 
+\hyperlink{_quote_8cc}{Quote.\+cc}\end{DoxyCompactItemize}
