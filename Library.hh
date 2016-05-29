@@ -9,9 +9,10 @@
 #include "Author.hh"
 #include "Book.hh"
 #include "Quote.hh"
-#include "Utils.hh"
 
 #ifndef NO_DIAGRAM
+
+#include "Utils.hh"
 
 #include <iostream>
 #include <map>

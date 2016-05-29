@@ -6,9 +6,9 @@
 #ifndef PRO2_PRAC_BOOK_HH
 #define PRO2_PRAC_BOOK_HH
 
-#include "Utils.hh"
-
 #ifndef NO_DIAGRAM
+
+#include "Utils.hh"
 
 #include <algorithm>
 #include <iostream>

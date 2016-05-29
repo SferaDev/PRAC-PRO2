@@ -1,6 +1,5 @@
 <map id="Library.hh" name="Library.hh">
 <area shape="rect" id="node2" href="$_author_8hh.html" title="Data model that hosts information about an Author. " alt="" coords="5,80,83,107"/>
 <area shape="rect" id="node3" href="$_book_8hh.html" title="Data model that hosts information about a Book. " alt="" coords="107,80,176,107"/>
-<area shape="rect" id="node4" href="$_utils_8hh.html" title="Host for the utils namespace declaration. " alt="" coords="145,155,209,181"/>
-<area shape="rect" id="node5" href="$_quote_8hh.html" title="Data model that hosts information about a Quote. " alt="" coords="251,80,325,107"/>
+<area shape="rect" id="node4" href="$_quote_8hh.html" title="Data model that hosts information about a Quote. " alt="" coords="200,80,275,107"/>
 </map>
