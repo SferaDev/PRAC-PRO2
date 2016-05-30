@@ -112,6 +112,12 @@ triar text {Juan ciencia}
 
 contingut ?
 
+afegir cita 1 1
+
+afegir cita 2 2
+
+eliminar cita "JM2"
+
 taula de frequencies ?
 
 frases 1 2 ?
@@ -133,17 +139,19 @@ se construyen hipotesis                         , se deducen principios y se ela
 
 eliminar text
 
+info ?
+
 tots textos ?
 
+totes cites ?
 
+cites autor "Bekat Mer" ?
 
+cites autor "Bekat" ?
 
+triar text {ciencia}
 
-
-
-
-
-
+taula de frequencies ?
 
 
 
@@ -158,6 +166,228 @@ La ciencia                      un conjunto ordenado de conocimientos           
 Los conocimientos cientificos se obtienen mediante                              observaciones y experimentaciones en ambitos especificos. A partir de estos se generan preguntas y razonamientos,
 se construyen hipotesis                         , se deducen principios y se elaboran leyes                      generales y sistemas organizados por medio de un metodo cientifico.
 ****
+
+substitueix "conocimientos" per "conocimientos"
+
+triar text {ciencia}
+
+info ?
+
+substitueix "conocimientos" per "conocimientos"
+
+substitueix "conocimientos" per "importantes"
+
+contingut ?
+
+afegir cita 1 1
+
+afegir cita 2 1
+
+afegir cita 2 2
+
+afegir text "Prova"
+autor "Jon Martinez"
+Aquest text es una prova. Molt. important. Jordi!
+****
+
+triar text {Jon Molt}
+
+nombre de paraules ?
+
+nombre de frases ?
+
+taula de frequencies ?
+
+substitueix "Jordi" per "jordi"
+
+substitueix "jordi" per "Juan"
+
+nombre de paraules ?
+
+nombre de frases ?
+
+afegir text "Hola"
+autor "A"
+BBBBBB. A.
+****
+
+triar text {Jon}+
+
+info ?
+
+substitueix "A" per "B"
+
+contingut ?
+
+triar text {Juan}
+
+contingut ?
+
+substitueix "A" per "B"
+
+contingut ?
+
+afegir cita 1 1
+
+info cita "JM3" ?
+
+info cita "JM2" ?
+
+eliminar cita "JM2"
+
+info cita "JM2" ?
+
+cites autor "Juan Martinez" ?
+
+afegir text "A, B, C"
+autor "Michael Jackson"
+
+Michael: a buh-buh buh buh-buh
+
+J5: a buh-buh buh buh-buh
+
+Michael: you went to school to learn, girl
+Things you never, never knew before...
+
+Jermaine: like I before e except after c...
+
+Michael: and why 2 plus 2 makes four
+Now now now, Im gonna teach you...
+J5: teach you, teach you
+
+Michael: all about love, dear...
+J5: all about love
+
+Jermaine: sit yourself down, take a seat
+All you gotta do is reapeat after me.
+
+Chorus:
+
+J5: abc
+Michael: easy as...
+J5: 123
+Michael: or simple as...
+J5: do re mi
+Michael: abc, 123, baby, you and me girl!
+J5: abc
+Michael: easy as...
+J5: 123
+Michael: or simple as...
+J5: do re mi
+Michael: abc, 123, baby, you and me!
+
+Tito: come on, let me love you just a little bit!
+Jackie: come on, let me love you just a little bit!
+Jermaine: Im a going to teach how to sing it out!
+Michael: come on, come one, come on
+Let me show you what its all about!
+
+Reading, writing and arithmetic
+Are the branches of the learning tree
+
+Jermaine: but without the roots of love every day, girl
+
+Michael: your education aint complete
+T-t-t-teachers gonna show you
+
+J5: show you, show you
+
+Michael: how to get an a!
+
+J5: nyah nyah nyah nyah nyah nyah!
+
+Michael: spell me you
+J5: add the two!
+Jermaine: listen to me baby, thats all you gotta do!
+
+Repeat chorus
+
+Bridge:
+Michael: sit down, girl!
+I think I love you!
+No!
+Get up, girl!
+Show me what you can do!
+
+Shake it, shake it, baby, come on now!
+Shake it, shake it, baby, ooo oooh!
+Shake it shake it, baby, huh!
+Abc, baby, oo ooo!
+123, baby, nah nah!
+Do re mi, baby, huh!
+Thats how easy love can be.
+
+J5: abc
+Michael: abc, its easy
+
+Easy as123
+Its like counting up to 3
+Or simple as do re mi
+Sing a simple melody
+All: thats how easy love can be!
+****
+
+triar text {A B C}
+
+contingut ?
+
+afegir cita 1 1
+
+substitueix "huh" per "aaaah"
+
+contingut ?
+
+tots textos ?
+
+triar text {Jordi}
+
+eliminar text
+
+tots textos ?
+
+tots autors ?
+
+triar text {aaaah}
+
+contingut ?
+
+taula de frequencies ?
+
+frases 1 50 ?
+
+frases 23 25 ?
+
+nombre de paraules ?
+
+nombre de frases ?
+
+eliminar text
+
+tots autors ?
+
+
+
+
+
+
+
+
+cites autor "Michael Jackson" ?
+
+cites autor "Jackson Michael " ?
+
+info cita "MJ1" ?
+
+eliminar text
+
+info cita "MJ2" ?
+
+info ?
+
+
+
+
+
 
 
 

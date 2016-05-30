@@ -830,6 +830,12 @@ contingut ?
 2 Los conocimientos cientificos se obtienen mediante observaciones y experimentaciones en ambitos especificos.
 3 A partir de estos se generan preguntas y razonamientos, se construyen hipotesis, se deducen principios y se elaboran leyes generales y sistemas organizados por medio de un metodo cientifico.
 
+afegir cita 1 1
+
+afegir cita 2 2
+
+eliminar cita "JM2"
+
 taula de frequencies ?
 se 5
 y 4
@@ -892,7 +898,550 @@ error
 
 eliminar text
 
+info ?
+error
+
 tots textos ?
 
+totes cites ?
+BM1
+1 Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM2
+2 Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM3
+3 Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM4
+4 Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM6
+5 Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM7
+6 Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM8
+7 Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM9
+8 Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM10
+9 Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM11
+10 Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake bo hun xap nir gacipa ro fu yev haqet hi bo nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM12
+11 Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM13
+12 Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM14
+13 Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM15
+14 Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM16
+15 Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM17
+16 Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+BM18
+17 So bo bo bo.
+Bekat Mer "Bifel belipiji zi nuzecu joj"
+JM1
+1 La ciencia un conjunto ordenado de conocimientos estructurados sistematicamente.
+Juan Martinez "La ciencia"
+
+cites autor "Bekat Mer" ?
+BM1
+1 Ya doy zukile lohetiki lev ref qiheve him totecetu pa qut ra leyapix luqobupibuzak.
+"Bifel belipiji zi nuzecu joj"
+BM2
+2 Jat vuqesozo paf la saj gi qi ye mug fowav qeqe ro cub qetum.
+"Bifel belipiji zi nuzecu joj"
+BM3
+3 Luwusesudi va nadac cupeya jo zulu wu ziw xozos bu taz hi pok kab wij bom rucic vozis xi nud jiz te ziwa mejiseqevipiqup kuja god, milapod holanuriko hipiwawe zeciwu wepey fanuyot ke gak tu coh qerezon liqapemop niq kosezasoh zemi de juvag yopawo tu nu fiyo buze ve xor gomega kugopok xif tata wepaqabiqe cubikej zeta yavu wuka facopa qi rusopol je pebif zelun fobiqecur vi qe.
+"Bifel belipiji zi nuzecu joj"
+BM4
+4 Kiq ruw xoka ca rigesi cuti ne hutabez vo hot zosedin pal buz ge hiwipisey qo riz duyom ru fap novok hivamahokuyuhecugadar tu, puy copi tu xapik, hifo zeqov muwo wiyen ziv xayo meqiqejoxevajored ba ho nokewawefex, xub gidepaz holitequz fewuja pupeh kohucon yosaj novem ge favibu leyahazozux delecub moy dez doxuxuqop yi lesice vi yuw cos?
+"Bifel belipiji zi nuzecu joj"
+BM6
+5 Sadozuw xogeco kuma si tiqo qe lo suhojixuh wo log koq pow, jo wi bovogod cewibika red yulu zot li gadegoxa wiju ta suwa dokifucudoros goz za caze quwij vo, la vi zuliqihowit xu ke vu gigu lani tuj bofi gos re fe xokez paqa be ve qazaqey saqosi.
+"Bifel belipiji zi nuzecu joj"
+BM7
+6 Ca qopu xel nuyamazel hom vigi ximewe qojayu tov hi ho ye ke ruh, tuxeba qefexayuz paveq, yeto porig nu xuqo wudowo qama tepuc, bodoho pob wiloyeqe hu ha mab xipeqagisijogoq xuc jiponagap mujog ye xoq sixuvucimi vus gu we cobicapiyo, sa hudoci cuy kobeli bunowo qan yev xuj dodit mufah ja vu nuwihu wosa qoze co jeqoqeb luj moy qa yi cuje, noho wa hega wa.
+"Bifel belipiji zi nuzecu joj"
+BM8
+7 Moso vemohe webi gis tec hit sucevi von cin kesi su niyi jid jewix, siy su ji yekudoxunes qoqe du xolof niz zecu caz to qap jeke fapexore visac xoza.
+"Bifel belipiji zi nuzecu joj"
+BM9
+8 Si ki befi ceqan suruve canu tezij hire fo qi wisofat mazo jol badul sucutidir dope qi to.
+"Bifel belipiji zi nuzecu joj"
+BM10
+9 Wo hupi liho sazenolip pigeduda tu juzu ci qezot liloxo wuzay ko fabelegakof jewewaja zeqiv ha, pokum sajax ya hu yol la cu hup lupud bojibeg virajow wi, nev wiq cuvazewopuj logag zul jaxo ze qi puquruc vifigubu kimonofe mi ji wi nu suf ril lafatoca wa but za sijixe nag ka gotal mibeletowo ha ne.
+"Bifel belipiji zi nuzecu joj"
+BM11
+10 Kiwo vij ho vayiki qo welitoq jaso jinajipi kuyutuq siko ka re niq no ceqinimov duqu tih ya pasanezinocu tezawewav geke yake bo hun xap nir gacipa ro fu yev haqet hi bo nihasonejosabukicivigo fuqusucenaf tadesire pi faqazihoc map xag bu rak powure wu qeg ki tulusa limaxedahifalibagiva di jule mifik noqamul ba fu di xo hu lun yedokofi qis va taboxiniwaqeya boh bafovutoquxij xici lume.
+"Bifel belipiji zi nuzecu joj"
+BM12
+11 Sekoho soxa qo hu vuwaq qu do leq pu vumon be fe woq va vicaguto ba.
+"Bifel belipiji zi nuzecu joj"
+BM13
+12 Vef nenar xe muroxi, jovoqi ju jaka fuw yivu.
+"Bifel belipiji zi nuzecu joj"
+BM14
+13 Tesu bak yig fejaq la hi funal cox huvorukuyuta sejadu, kun lel naqi, sil goqegep jusemevasej fimetopofo hi xe ye qazoxa yu na zoc coc, ha rokol je bu qo lavaze co la banuc co.
+"Bifel belipiji zi nuzecu joj"
+BM15
+14 Zibitaziho nuleyekix kakula ru pi nu zerolej muvas qoce mo vif sawu govuqosuq buja xida si nep zigeyizeq biqoy fuyolo lazipaye favid pe divizin mab hedin kan duz fowijiq heg.
+"Bifel belipiji zi nuzecu joj"
+BM16
+15 Yiqacu lohabajucufekuyojar ger wupebiwelejo, bage peri kep lilukize yuyowezowato ligev, hiqa fe voj pow wo we paxesaqom yite zu noliho so tuy qi ja hoquw wef xem woc qo kurolowis cagaxoyarak megoxo taye hi pavetap lu matip xibuqo qa guti ji puqomod falesorud sog nura goveqewo mupuh vos rayalo go goq de ger pol nasunit qobo fecufehaq ruqoh papow funaqit hoti to jil hef vakowayak xotek pipu gob.
+"Bifel belipiji zi nuzecu joj"
+BM17
+16 Pa pu kaqiv ge liwune tu, lelav ni to meyew nomaf qida giyoz ziv gopu qe xi xip zutadiy qesej gove soqoz mob zu qamalu mi vaw kowo, pi gobiw xu gule qe; niwiqu xog pa kize sufuz vaxi miku wesoxe be kiz famiy pipiv le wiqo, yid, xep xada qom hax yi.
+"Bifel belipiji zi nuzecu joj"
+BM18
+17 So bo bo bo.
+"Bifel belipiji zi nuzecu joj"
+
+cites autor "Bekat" ?
+
+triar text {ciencia}
+error
+
+taula de frequencies ?
+error
+
 afegir text "La ciencia"
+
+substitueix "conocimientos" per "conocimientos"
+error
+
+triar text {ciencia}
+
+info ?
+Juan Martinez "La ciencia" 3 50
+Cites Associades:
+JM1
+1 La ciencia un conjunto ordenado de conocimientos estructurados sistematicamente.
+
+substitueix "conocimientos" per "conocimientos"
+
+substitueix "conocimientos" per "importantes"
+
+contingut ?
+1 La ciencia un conjunto ordenado de importantes estructurados sistematicamente.
+2 Los importantes cientificos se obtienen mediante observaciones y experimentaciones en ambitos especificos.
+3 A partir de estos se generan preguntas y razonamientos, se construyen hipotesis, se deducen principios y se elaboran leyes generales y sistemas organizados por medio de un metodo cientifico.
+
+afegir cita 1 1
+error
+
+afegir cita 2 1
+error
+
+afegir cita 2 2
+
+afegir text "Prova"
+
+triar text {Jon Molt}
+
+nombre de paraules ?
+8
+
+nombre de frases ?
+4
+
+taula de frequencies ?
+es 1
+una 1
+Molt 1
+text 1
+Jordi 1
+prova 1
+Aquest 1
+important 1
+
+substitueix "Jordi" per "jordi"
+
+substitueix "jordi" per "Juan"
+
+nombre de paraules ?
+8
+
+nombre de frases ?
+4
+
+afegir text "Hola"
+
+triar text {Jon}+
+error
+
+info ?
+error
+
+substitueix "A" per "B"
+error
+
+contingut ?
+error
+
+triar text {Juan}
+error
+
+contingut ?
+error
+
+substitueix "A" per "B"
+error
+
+contingut ?
+error
+
+afegir cita 1 1
+error
+
+info cita "JM3" ?
+Juan Martinez "La ciencia"
+2-2
+2 Los importantes cientificos se obtienen mediante observaciones y experimentaciones en ambitos especificos.
+
+info cita "JM2" ?
+error
+
+eliminar cita "JM2"
+error
+
+info cita "JM2" ?
+error
+
+cites autor "Juan Martinez" ?
+JM1
+1 La ciencia un conjunto ordenado de conocimientos estructurados sistematicamente.
+"La ciencia"
+JM3
+2 Los importantes cientificos se obtienen mediante observaciones y experimentaciones en ambitos especificos.
+"La ciencia"
+
+afegir text "A, B, C"
+
+triar text {A B C}
+
+contingut ?
+1 Michael: a buh-buh buh buh-buh J5: a buh-buh buh buh-buh Michael: you went to school to learn, girl Things you never, never knew before...
+2 Jermaine: like I before e except after c...
+3 Michael: and why 2 plus 2 makes four Now now now, Im gonna teach you...
+4 J5: teach you, teach you Michael: all about love, dear...
+5 J5: all about love Jermaine: sit yourself down, take a seat All you gotta do is reapeat after me.
+6 Chorus: J5: abc Michael: easy as...
+7 J5: 123 Michael: or simple as...
+8 J5: do re mi Michael: abc, 123, baby, you and me girl!
+9 J5: abc Michael: easy as...
+10 J5: 123 Michael: or simple as...
+11 J5: do re mi Michael: abc, 123, baby, you and me!
+12 Tito: come on, let me love you just a little bit!
+13 Jackie: come on, let me love you just a little bit!
+14 Jermaine: Im a going to teach how to sing it out!
+15 Michael: come on, come one, come on Let me show you what its all about!
+16 Reading, writing and arithmetic Are the branches of the learning tree Jermaine: but without the roots of love every day, girl Michael: your education aint complete T-t-t-teachers gonna show you J5: show you, show you Michael: how to get an a!
+17 J5: nyah nyah nyah nyah nyah nyah!
+18 Michael: spell me you J5: add the two!
+19 Jermaine: listen to me baby, thats all you gotta do!
+20 Repeat chorus Bridge: Michael: sit down, girl!
+21 I think I love you!
+22 No!
+23 Get up, girl!
+24 Show me what you can do!
+25 Shake it, shake it, baby, come on now!
+26 Shake it, shake it, baby, ooo oooh!
+27 Shake it shake it, baby, huh!
+28 Abc, baby, oo ooo!
+29 123, baby, nah nah!
+30 Do re mi, baby, huh!
+31 Thats how easy love can be.
+32 J5: abc Michael: abc, its easy Easy as123 Its like counting up to 3 Or simple as do re mi Sing a simple melody All: thats how easy love can be!
+
+afegir cita 1 1
+
+substitueix "huh" per "aaaah"
+
+contingut ?
+1 Michael: a buh-buh buh buh-buh J5: a buh-buh buh buh-buh Michael: you went to school to learn, girl Things you never, never knew before...
+2 Jermaine: like I before e except after c...
+3 Michael: and why 2 plus 2 makes four Now now now, Im gonna teach you...
+4 J5: teach you, teach you Michael: all about love, dear...
+5 J5: all about love Jermaine: sit yourself down, take a seat All you gotta do is reapeat after me.
+6 Chorus: J5: abc Michael: easy as...
+7 J5: 123 Michael: or simple as...
+8 J5: do re mi Michael: abc, 123, baby, you and me girl!
+9 J5: abc Michael: easy as...
+10 J5: 123 Michael: or simple as...
+11 J5: do re mi Michael: abc, 123, baby, you and me!
+12 Tito: come on, let me love you just a little bit!
+13 Jackie: come on, let me love you just a little bit!
+14 Jermaine: Im a going to teach how to sing it out!
+15 Michael: come on, come one, come on Let me show you what its all about!
+16 Reading, writing and arithmetic Are the branches of the learning tree Jermaine: but without the roots of love every day, girl Michael: your education aint complete T-t-t-teachers gonna show you J5: show you, show you Michael: how to get an a!
+17 J5: nyah nyah nyah nyah nyah nyah!
+18 Michael: spell me you J5: add the two!
+19 Jermaine: listen to me baby, thats all you gotta do!
+20 Repeat chorus Bridge: Michael: sit down, girl!
+21 I think I love you!
+22 No!
+23 Get up, girl!
+24 Show me what you can do!
+25 Shake it, shake it, baby, come on now!
+26 Shake it, shake it, baby, ooo oooh!
+27 Shake it shake it, baby, aaaah!
+28 Abc, baby, oo ooo!
+29 123, baby, nah nah!
+30 Do re mi, baby, aaaah!
+31 Thats how easy love can be.
+32 J5: abc Michael: abc, its easy Easy as123 Its like counting up to 3 Or simple as do re mi Sing a simple melody All: thats how easy love can be!
+
+tots textos ?
+A "Hola"
+Jon Martinez "Prova"
+Juan Martinez "La ciencia"
+Michael Jackson "A, B, C"
+
+triar text {Jordi}
+error
+
+eliminar text
+error
+
+tots textos ?
+A "Hola"
+Jon Martinez "Prova"
+Juan Martinez "La ciencia"
+Michael Jackson "A, B, C"
+
+tots autors ?
+A 1 2 2
+Jon Martinez 1 4 8
+Juan Martinez 1 3 50
+Michael Jackson 1 32 329
+
+triar text {aaaah}
+
+contingut ?
+1 Michael: a buh-buh buh buh-buh J5: a buh-buh buh buh-buh Michael: you went to school to learn, girl Things you never, never knew before...
+2 Jermaine: like I before e except after c...
+3 Michael: and why 2 plus 2 makes four Now now now, Im gonna teach you...
+4 J5: teach you, teach you Michael: all about love, dear...
+5 J5: all about love Jermaine: sit yourself down, take a seat All you gotta do is reapeat after me.
+6 Chorus: J5: abc Michael: easy as...
+7 J5: 123 Michael: or simple as...
+8 J5: do re mi Michael: abc, 123, baby, you and me girl!
+9 J5: abc Michael: easy as...
+10 J5: 123 Michael: or simple as...
+11 J5: do re mi Michael: abc, 123, baby, you and me!
+12 Tito: come on, let me love you just a little bit!
+13 Jackie: come on, let me love you just a little bit!
+14 Jermaine: Im a going to teach how to sing it out!
+15 Michael: come on, come one, come on Let me show you what its all about!
+16 Reading, writing and arithmetic Are the branches of the learning tree Jermaine: but without the roots of love every day, girl Michael: your education aint complete T-t-t-teachers gonna show you J5: show you, show you Michael: how to get an a!
+17 J5: nyah nyah nyah nyah nyah nyah!
+18 Michael: spell me you J5: add the two!
+19 Jermaine: listen to me baby, thats all you gotta do!
+20 Repeat chorus Bridge: Michael: sit down, girl!
+21 I think I love you!
+22 No!
+23 Get up, girl!
+24 Show me what you can do!
+25 Shake it, shake it, baby, come on now!
+26 Shake it, shake it, baby, ooo oooh!
+27 Shake it shake it, baby, aaaah!
+28 Abc, baby, oo ooo!
+29 123, baby, nah nah!
+30 Do re mi, baby, aaaah!
+31 Thats how easy love can be.
+32 J5: abc Michael: abc, its easy Easy as123 Its like counting up to 3 Or simple as do re mi Sing a simple melody All: thats how easy love can be!
+
+taula de frequencies ?
+you 17
+Michael 16
+J5 13
+me 9
+baby 9
+a 8
+love 8
+it 7
+to 7
+do 6
+abc 6
+come 6
+nyah 6
+on 5
+123 5
+easy 5
+girl 5
+Jermaine 5
+mi 4
+re 4
+all 4
+and 4
+how 4
+the 4
+as.. 4
+show 4
+teach 4
+simple 4
+buh-buh 4
+I 3
+can 3
+now 3
+Shake 3
+about 3
+shake 3
+2 2
+Im 2
+be 2
+of 2
+or 2
+up 2
+All 2
+bit 2
+buh 2
+its 2
+let 2
+nah 2
+ooo 2
+sit 2
+down 2
+just 2
+like 2
+what 2
+aaaah 2
+after 2
+gonna 2
+gotta 2
+never 2
+thats 2
+little 2
+3 1
+e 1
+Do 1
+No 1
+Or 1
+an 1
+as 1
+is 1
+oo 1
+Abc 1
+Are 1
+Get 1
+Its 1
+Let 1
+Now 1
+add 1
+but 1
+c.. 1
+day 1
+get 1
+one 1
+out 1
+two 1
+why 1
+Easy 1
+Show 1
+Sing 1
+Tito 1
+aint 1
+four 1
+knew 1
+oooh 1
+plus 1
+seat 1
+sing 1
+take 1
+tree 1
+went 1
+your 1
+Thats 1
+as123 1
+every 1
+going 1
+learn 1
+makes 1
+roots 1
+spell 1
+think 1
+you.. 1
+Bridge 1
+Chorus 1
+Jackie 1
+Repeat 1
+Things 1
+before 1
+chorus 1
+dear.. 1
+except 1
+listen 1
+melody 1
+school 1
+Reading 1
+reapeat 1
+without 1
+writing 1
+before.. 1
+branches 1
+complete 1
+counting 1
+learning 1
+yourself 1
+education 1
+arithmetic 1
+T-t-t-teachers 1
+
+frases 1 50 ?
+error
+
+frases 23 25 ?
+23 Get up, girl!
+24 Show me what you can do!
+25 Shake it, shake it, baby, come on now!
+
+nombre de paraules ?
+329
+
+nombre de frases ?
+32
+
+eliminar text
+
+tots autors ?
+A 1 2 2
+Jon Martinez 1 4 8
+Juan Martinez 1 3 50
+
+cites autor "Michael Jackson" ?
+MJ1
+1 Michael: a buh-buh buh buh-buh J5: a buh-buh buh buh-buh Michael: you went to school to learn, girl Things you never, never knew before...
+"A, B, C"
+
+cites autor "Jackson Michael " ?
+
+info cita "MJ1" ?
+Michael Jackson "A, B, C"
+1-1
+1 Michael: a buh-buh buh buh-buh J5: a buh-buh buh buh-buh Michael: you went to school to learn, girl Things you never, never knew before...
+
+eliminar text
+error
+
+info cita "MJ2" ?
+error
+
+info ?
+error
 
