@@ -885,15 +885,14 @@ Definition at line 230 of file Book.\+cc.
 
 \begin{DoxyCode}
 230                                   \{
-231     \textcolor{keywordflow}{if} (\hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{utils::malformedExpression}(query)) \textcolor{keywordflow}{return};
-232     set<int> lines;
-233     \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query, lines);
-234     set<int>::const\_iterator it = lines.begin();
-235     \textcolor{keywordflow}{while} (it != lines.end()) \{
-236         \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(*it, *it);
-237         it++;
-238     \}
-239 \}
+231     set<int> lines;
+232     \hyperlink{class_book_acc3fa87ab1c8eb2186a4c2e1e541f368}{findExpression}(query, lines);
+233     set<int>::const\_iterator it = lines.begin();
+234     \textcolor{keywordflow}{while} (it != lines.end()) \{
+235         \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(*it, *it);
+236         it++;
+237     \}
+238 \}
 \end{DoxyCode}
 \index{Book@{Book}!print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}}
 \index{print\+Lines\+Consecutive\+Words@{print\+Lines\+Consecutive\+Words}!Book@{Book}}
@@ -919,20 +918,20 @@ Prints the number of the line and the line of the implicit \hyperlink{class_book
 \end{DoxyPostcond}
 
 
-Definition at line 241 of file Book.\+cc.
+Definition at line 240 of file Book.\+cc.
 
 
 \begin{DoxyCode}
-241                                                   \{
-242     \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(query);
-243     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size(); ++i) \{
-244         \textcolor{keywordtype}{string} line = \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1];
-245         \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{utils::removeDelimiter}(line);
-246         \textcolor{keywordflow}{if} (\hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{utils::containsConsecutive}(line, query)) \{
-247             \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(i, i);
-248         \}
-249     \}
-250 \}
+240                                                   \{
+241     \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{utils::trimString}(query);
+242     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size(); ++i) \{
+243         \textcolor{keywordtype}{string} line = \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1];
+244         \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{utils::removeDelimiter}(line);
+245         \textcolor{keywordflow}{if} (\hyperlink{namespaceutils_af9af9e01b679f955003203f29ddf130b}{utils::containsConsecutive}(line, query)) \{
+246             \hyperlink{class_book_a7193030998d6251851be26196762f8e6}{printSelectLines}(i, i);
+247         \}
+248     \}
+249 \}
 \end{DoxyCode}
 \index{Book@{Book}!print\+Select\+Lines@{print\+Select\+Lines}}
 \index{print\+Select\+Lines@{print\+Select\+Lines}!Book@{Book}}
@@ -961,19 +960,19 @@ Prints the lines of the range and its number of the implicit \hyperlink{class_bo
 \end{DoxyPostcond}
 
 
-Definition at line 252 of file Book.\+cc.
+Definition at line 251 of file Book.\+cc.
 
 
 \begin{DoxyCode}
-252                                               \{
-253     \textcolor{keywordflow}{if} ((end < start) or (start < 1) or (end > \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size())) \{
-254         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
-255         \textcolor{keywordflow}{return};
-256     \}
-257     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = start; i <= end; ++i) \{
-258         cout << i << \textcolor{stringliteral}{" "} << \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1] << endl;
-259     \}
-260 \}
+251                                               \{
+252     \textcolor{keywordflow}{if} ((end < start) or (start < 1) or (end > \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}.size())) \{
+253         \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{utils::printError}();
+254         \textcolor{keywordflow}{return};
+255     \}
+256     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = start; i <= end; ++i) \{
+257         cout << i << \textcolor{stringliteral}{" "} << \hyperlink{class_book_a62ca3f4431b699fa41384c8bab7ef4fa}{bookContent}[i - 1] << endl;
+258     \}
+259 \}
 \end{DoxyCode}
 \index{Book@{Book}!print\+Frequency\+Table@{print\+Frequency\+Table}}
 \index{print\+Frequency\+Table@{print\+Frequency\+Table}!Book@{Book}}
@@ -994,20 +993,20 @@ Prints all words of the content of the implicit \hyperlink{class_book}{Book} and
 \end{DoxyPostcond}
 
 
-Definition at line 262 of file Book.\+cc.
+Definition at line 261 of file Book.\+cc.
 
 
 \begin{DoxyCode}
-262                                \{
-263     \textcolor{keywordflow}{if} (\hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency}) \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generateFrequencyTable}();
-264     list < pair < string, int > > ::const\_iterator
-265     it = \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.begin();
-266     \textcolor{keywordflow}{while} (it != \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.end()) \{
-267         \textcolor{keywordflow}{if} (it->second > 0 and !it->first.empty())
-268             cout << it->first << \textcolor{stringliteral}{" "} << it->second << endl;
-269         it++;
-270     \}
-271 \}
+261                                \{
+262     \textcolor{keywordflow}{if} (\hyperlink{class_book_ad1df1050750f0605efdfab51b86c0765}{dirtyFrequency}) \hyperlink{class_book_a8d232eaeb4207707d77bc18e6dd467cd}{generateFrequencyTable}();
+263     list < pair < string, int > > ::const\_iterator
+264     it = \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.begin();
+265     \textcolor{keywordflow}{while} (it != \hyperlink{class_book_aa9035db1c21cf61eb3af84ad69829069}{wordFrequencyList}.end()) \{
+266         \textcolor{keywordflow}{if} (it->second > 0 and !it->first.empty())
+267             cout << it->first << \textcolor{stringliteral}{" "} << it->second << endl;
+268         it++;
+269     \}
+270 \}
 \end{DoxyCode}
 
 

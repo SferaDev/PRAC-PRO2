@@ -131,9 +131,6 @@ Functions</h2></td></tr>
 <tr class="memitem:adf961974462ef6e8d7ccc32311397d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#adf961974462ef6e8d7ccc32311397d75">removeDelimiter</a> (string &amp;line)</td></tr>
 <tr class="memdesc:adf961974462ef6e8d7ccc32311397d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the delimiter of a given string.  <a href="#adf961974462ef6e8d7ccc32311397d75">More...</a><br /></td></tr>
 <tr class="separator:adf961974462ef6e8d7ccc32311397d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c64225b3c1659211611f32e0776793b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a6c64225b3c1659211611f32e0776793b">malformedExpression</a> (string &amp;query)</td></tr>
-<tr class="memdesc:a6c64225b3c1659211611f32e0776793b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if an expression is well formed.  <a href="#a6c64225b3c1659211611f32e0776793b">More...</a><br /></td></tr>
-<tr class="separator:a6c64225b3c1659211611f32e0776793b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#afd76dd21b41c50ce7396e30fb5d8d75b">printError</a> ()</td></tr>
 <tr class="memdesc:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an error to the output channel.  <a href="#afd76dd21b41c50ce7396e30fb5d8d75b">More...</a><br /></td></tr>
 <tr class="separator:afd76dd21b41c50ce7396e30fb5d8d75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,35 +439,6 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a6c64225b3c1659211611f32e0776793b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool utils::malformedExpression </td>
-          <td>(</td>
-          <td class="paramtype">string &amp;&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Determines if an expression is well formed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">query</td><td>A param string </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Non-null query </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>If the postion and number of "(){}" is correct </dd></dl>
-
-<p>Definition at line <a class="el" href="_utils_8cc_source.html#l00096">96</a> of file <a class="el" href="_utils_8cc_source.html">Utils.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                            {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">int</span> statePar, stateWords;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        statePar = stateWords = 0;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; query.length(); ++i) {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span> (stateWords &lt; 0) {</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (query[i] == <span class="charliteral">&#39;{&#39;</span>) {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (stateWords &gt; 0) {</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    query[i] = <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    stateWords--;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                }</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                stateWords++;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (query[i] == <span class="charliteral">&#39;}&#39;</span>) {</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                stateWords--;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (query[i] == <span class="charliteral">&#39;(&#39;</span>) {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                statePar++;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (query[i] == <span class="charliteral">&#39;)&#39;</span>) {</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                statePar--;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">if</span> (statePar &lt; 0) {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    query[i] = <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    statePar++;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                }</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> stateWords &lt; 0 or statePar &gt; 0;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div></div><!-- fragment -->
-</div>
-</div>
 <a class="anchor" id="afd76dd21b41c50ce7396e30fb5d8d75b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -488,8 +456,8 @@ Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>True </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>True </dd></dl>
 
-<p>Definition at line <a class="el" href="_utils_8cc_source.html#l00123">123</a> of file <a class="el" href="_utils_8cc_source.html">Utils.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                      {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_utils_8cc_source.html#l00096">96</a> of file <a class="el" href="_utils_8cc_source.html">Utils.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                      {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

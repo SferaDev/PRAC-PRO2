@@ -33,8 +33,6 @@ void \hyperlink{namespaceutils_a8b0beed284a3321a1f9a08e23bdb3611}{format\+String
 \begin{DoxyCompactList}\small\item\em Gives proper format with delimiters (.!?,;\+:) \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_adf961974462ef6e8d7ccc32311397d75}{remove\+Delimiter} (string \&line)
 \begin{DoxyCompactList}\small\item\em Removes the delimiter of a given string. \end{DoxyCompactList}\item 
-bool \hyperlink{namespaceutils_a6c64225b3c1659211611f32e0776793b}{malformed\+Expression} (string \&query)
-\begin{DoxyCompactList}\small\item\em Determines if an expression is well formed. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceutils_afd76dd21b41c50ce7396e30fb5d8d75b}{print\+Error} ()
 \begin{DoxyCompactList}\small\item\em Prints an error to the output channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -407,64 +405,6 @@ Definition at line 86 of file Utils.\+cc.
 93         \hyperlink{namespaceutils_a9f184d101ac739ab058355ab5413ca9a}{trimString}(line);
 94     \}
 \end{DoxyCode}
-\index{utils@{utils}!malformed\+Expression@{malformed\+Expression}}
-\index{malformed\+Expression@{malformed\+Expression}!utils@{utils}}
-\subsubsection[{\texorpdfstring{malformed\+Expression(string \&query)}{malformedExpression(string &query)}}]{\setlength{\rightskip}{0pt plus 5cm}bool utils\+::malformed\+Expression (
-\begin{DoxyParamCaption}
-\item[{string \&}]{query}
-\end{DoxyParamCaption}
-)}\hypertarget{namespaceutils_a6c64225b3c1659211611f32e0776793b}{}\label{namespaceutils_a6c64225b3c1659211611f32e0776793b}
-
-
-Determines if an expression is well formed. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em query} & A param string \\
-\hline
-\end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
-Non-\/null query 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondition}
-True 
-\end{DoxyPostcond}
-\begin{DoxyReturn}{Returns}
-If the postion and number of \char`\"{}()\{\}\char`\"{} is correct 
-\end{DoxyReturn}
-
-
-Definition at line 96 of file Utils.\+cc.
-
-
-\begin{DoxyCode}
-96                                             \{
-97         \textcolor{keywordtype}{int} statePar, stateWords;
-98         statePar = stateWords = 0;
-99         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < query.length(); ++i) \{
-100             \textcolor{keywordflow}{if} (stateWords < 0) \{
-101                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-102             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'\{'}) \{
-103                 \textcolor{keywordflow}{if} (stateWords > 0) \{
-104                     query[i] = \textcolor{charliteral}{' '};
-105                     stateWords--;
-106                 \}
-107                 stateWords++;
-108             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'\}'}) \{
-109                 stateWords--;
-110             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{'('}) \{
-111                 statePar++;
-112             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (query[i] == \textcolor{charliteral}{')'}) \{
-113                 statePar--;
-114                 \textcolor{keywordflow}{if} (statePar < 0) \{
-115                     query[i] = \textcolor{charliteral}{' '};
-116                     statePar++;
-117                 \}
-118             \}
-119         \}
-120         \textcolor{keywordflow}{return} stateWords < 0 or statePar > 0;
-121     \}
-\end{DoxyCode}
 \index{utils@{utils}!print\+Error@{print\+Error}}
 \index{print\+Error@{print\+Error}!utils@{utils}}
 \subsubsection[{\texorpdfstring{print\+Error()}{printError()}}]{\setlength{\rightskip}{0pt plus 5cm}void utils\+::print\+Error (
@@ -484,11 +424,11 @@ True
 \end{DoxyPostcond}
 
 
-Definition at line 123 of file Utils.\+cc.
+Definition at line 96 of file Utils.\+cc.
 
 
 \begin{DoxyCode}
-123                       \{
-124         cout << \textcolor{stringliteral}{"error"} << endl;
-125     \}
+96                       \{
+97         cout << \textcolor{stringliteral}{"error"} << endl;
+98     \}
 \end{DoxyCode}
