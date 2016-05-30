@@ -228,7 +228,6 @@ void Book::printAllLines() {
 }
 
 void Book::printLines(string query) {
-    if (utils::malformedExpression(query)) return;
     set<int> lines;
     findExpression(query, lines);
     set<int>::const_iterator it = lines.begin();

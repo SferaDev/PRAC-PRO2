@@ -129,14 +129,6 @@ namespace utils {
     */
     void removeDelimiter(string &line);
 
-    /** @brief Determines if an expression is well formed
-        \param query: A param string
-        \pre Non-null query
-        \post True
-        \returns If the postion and number of "(){}" is correct
-    */
-    bool malformedExpression(string &query);
-
     /** @brief Prints an error to the output channel
         \pre True
         \post True
