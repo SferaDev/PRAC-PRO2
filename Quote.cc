@@ -4,7 +4,6 @@
 */
 
 #include "Quote.hh"
-#include <sstream>
 
 using namespace std;
 
