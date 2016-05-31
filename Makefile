@@ -19,9 +19,6 @@ OBJECTS = $(MAIN:.cc=.o) $(SOURCES:.cc=.o)
 # Executable name: defaults to "program.exe"
 EXECUTABLE = $(MAIN:.cc=.exe)
 
-# Final TAR name: defaults to "practica"
-FINAL_TAR = practica
-
 # Handle the default make command with the program generation
 all: $(EXECUTABLE)
 
@@ -32,8 +29,8 @@ $(EXECUTABLE): clean
 	$(CC) $(FLAGS) -o $(EXECUTABLE) $(OBJECTS)
 
 # Configuration to build final judge tar
-$(FINAL_TAR): docs
-	tar -cvf $(FINAL_TAR).tar $(HEADERS) $(MAIN) $(SOURCES) Makefile jp_*.txt html.zip equip.pdf
+practica: docs
+	tar -cvf practica.tar $(HEADERS) $(MAIN) $(SOURCES) Makefile jp_*.txt html.zip equip.pdf
 
 # Configuration to build Documentation tar
 docs: clean
